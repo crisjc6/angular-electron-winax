@@ -25,22 +25,40 @@ const toArray = (l: wlist): Array<any> => {
 @Injectable({ providedIn: "root" })
 export class WordService {
   private app = undefined;
+  private doc = undefined;
 
   constructor() {}
 
-  private checkApp() {
+  private checkApp(): void {
     if (!this.app || !this.app.documents)
       this.app = new winax.Object("Word.Application");
   }
 
-  open(filename: string): wdoc {
+  open(filename: string): void {
     this.checkApp();
     this.app.visible = true;
-    return this.app.documents.open(filename);
+    this.doc = this.app.documents.open(filename);
   }
 
-  close(doc: wdoc): void {
-    doc.close();
+  setVariable(name: string, val: string): void {
+    this.doc.variables.add(name, val);
+  }
+
+  setId(id: string): void {
+    this.setVariable("id", id);
+  }
+
+  setActiveDocumentById(id: string):void {
+    toArray(this.app.documents).forEach((d) => {
+      const varId = d.variables.item("id");
+      if (varId && varId.value === id) {
+        this.doc = d;
+      }
+    });
+  }
+
+  close(): void {
+    this.doc.activeDocument.close();
   }
 
   quit(): void {
@@ -53,21 +71,26 @@ export class WordService {
     }
   }
 
-  saveAsPdf(doc: wdoc, path: string): void {
-    doc.saveAs(path, wordConsts.WdExportFormat.wdExportFormatPDF);
+  saveAsPdf(path: string): void {
+    this.doc.saveAs(path, wordConsts.WdExportFormat.wdExportFormatPDF);
   }
+
   setVisible(): void {
     this.app.visible = true;
   }
+
   setInvisible(): void {
     this.app.visible = false;
   }
 
-  setTextfield(doc: wdoc, ccname: string, value: string): void {
-    toArray(doc.selectContentControlsByTag(ccname)).forEach((cc) => {
-      cc.lockContents = false;
-      cc.range.text = value;
-      cc.lockContents = true;
+  setTextfield(ccname: string, value: string): void {
+    toArray(this.doc.selectContentControlsByTag(ccname)).forEach((cc) => {
+      const range = cc.range;
+      if (range.text !== value) {
+        cc.lockContents = false;
+        range.text = value;
+        cc.lockContents = true;
+      }
     });
   }
 }
