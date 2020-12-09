@@ -1,9 +1,8 @@
 const fs = (<any>window).require("fs");
 
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-import { WordService } from "../shared/services/word-service";
 import { PdfService } from "../shared/services/pdf.service";
+import { WordService } from "../shared/services/word-service";
 
 @Component({
   selector: "app-home",
