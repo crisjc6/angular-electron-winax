@@ -1,47 +1,44 @@
 const fs = (<any>window).require("fs");
-const fsp = (<any>window).require("fs").promises;
 
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { PDFDocument } from 'pdf-lib';
-// import wordapi from "../../util/wordapi";
-
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { WordService } from "../shared/services/word-service";
+import { PdfService } from "../shared/services/pdf.service";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
+  doc = undefined;
+  constructor(
+    private wordService: WordService,
+    private pdfService: PdfService
+  ) {}
 
-  constructor(private router: Router) { }
-
-  ngOnInit(): void { }
-
-  async mergePdfs(pathToPdfs: string[]): Promise<Uint8Array> {
-    const mergedPdf = await PDFDocument.create();
-    for (const pathToPdf of pathToPdfs) {
-      const pdfData = await fsp.readFile(pathToPdf);
-      const pdfDoc = await PDFDocument.load(pdfData);
-      const pages = await mergedPdf.copyPages(pdfDoc, pdfDoc.getPageIndices());
-      pages.forEach((page) => mergedPdf.addPage(page));
-    }
-    return await mergedPdf.save();
-  }
+  ngOnInit(): void {}
 
   onMergePDF(): void {
     const pdfsToMerge = ["data/1.pdf", "data/2.pdf"];
-    this.mergePdfs(pdfsToMerge).then(pdfdata => fs.writeFileSync("data/merged.pdf", pdfdata));
+    this.pdfService.mergePdfs(pdfsToMerge).then((pdfdata) => {
+      fs.writeFileSync("data/merged.pdf", pdfdata);
+    });
   }
 
-  ccc(): void {
-    const winax = require('winax');
-    const app = new winax.Object('Word.Application');
-    const doc = app.documents.open("/tmp/1.docx");
-    app.visible = true;
-    doc.saveAs("/tmp/test.pdf", 17 /* wdFormatPDF */);
-    doc.close();
-    app.quit();
+  openTestDocument(): void {
+    this.doc = this.wordService.open("/tmp/1.docx");
   }
 
+  saveAsPDF(): void {
+    this.wordService.saveAsPdf(this.doc, "/tmp/test.pdf");
+  }
+
+  close(): void {
+    this.wordService.close(this.doc);
+  }
+
+  quit(): void {
+    this.wordService.quit();
+  }
 }

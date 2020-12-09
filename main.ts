@@ -13,10 +13,10 @@ function createWindow(): BrowserWindow {
 
   // Create the browser window.
   win = new BrowserWindow({
-    x: 0,
-    y: 0,
-    width:300,
-    height: 400,
+    x: 50,
+    y: 50,
+    width: 800,
+    height: 600,
     webPreferences: {
       nodeIntegration: true,
       allowRunningInsecureContent: (serve) ? true : false,
