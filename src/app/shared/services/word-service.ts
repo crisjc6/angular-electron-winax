@@ -2,21 +2,23 @@ import { Injectable } from "@angular/core";
 import wordConsts from "./word-consts";
 import winax from "winax";
 
+interface wapp {
+  activeDocument: wdoc;
+  visible: boolean;
+  documents: any;
+  quit: () => void;
+}
+
 interface wdoc {
-  count: number;
-  item: (arg0: number) => any;
+  variables: any;
+  activeDocument: wdoc;
   save: () => void;
   saveAs: (string, number) => void;
   close: () => void;
   selectContentControlsByTag: (string) => any;
 }
 
-interface wlist {
-  count: number;
-  item: (arg0: number) => any;
-}
-
-const toArray = (l: wlist): Array<any> => {
+const toArray = (l): Array<any> => {
   let res = [];
   for (let i = 1; i <= l.count; i++) res = [...res, l.item(i)];
   return res;
@@ -24,8 +26,8 @@ const toArray = (l: wlist): Array<any> => {
 
 @Injectable({ providedIn: "root" })
 export class WordService {
-  private app = undefined;
-  private doc = undefined;
+  private app: wapp = undefined;
+  private doc: wdoc = undefined;
 
   constructor() {}
 
@@ -48,11 +50,12 @@ export class WordService {
     this.setVariable("id", id);
   }
 
-  setActiveDocumentById(id: string):void {
+  setActiveDocumentById(id: string): void {
     toArray(this.app.documents).forEach((d) => {
       const varId = d.variables.item("id");
       if (varId && varId.value === id) {
         this.doc = d;
+        d.activate();
       }
     });
   }
@@ -85,12 +88,18 @@ export class WordService {
 
   setTextfield(ccname: string, value: string): void {
     toArray(this.doc.selectContentControlsByTag(ccname)).forEach((cc) => {
-      const range = cc.range;
-      if (range.text !== value) {
-        cc.lockContents = false;
-        range.text = value;
-        cc.lockContents = true;
-      }
+      cc.lockContents = false;
+      cc.range.text = value;
+      cc.lockContents = true;
     });
+  }
+
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  runWordTrigger(code: string, data: any): void {
+    data.helpers = {
+      toArray,
+    };
+    const xx = eval(code);
+    xx(this.doc, data);
   }
 }
