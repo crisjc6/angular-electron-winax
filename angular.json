@@ -16,10 +16,16 @@
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
-            "assets": ["src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": [],
-            "allowedCommonJsDependencies": ["pako"],
+            "allowedCommonJsDependencies": [
+              "pako"
+            ],
             "customWebpackConfig": {
               "path": "./angular.webpack.js"
             }
@@ -109,8 +115,12 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "scripts": [],
-            "styles": ["src/styles.scss"],
-            "assets": ["src/assets"],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "assets": [
+              "src/assets"
+            ],
             "customWebpackConfig": {
               "path": "./angular.webpack.js"
             }
@@ -120,7 +130,10 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "eslintConfig": ".eslintrc.json",
-            "lintFilePatterns": ["src/**.ts", "main.ts"]
+            "lintFilePatterns": [
+              "src/**.ts",
+              "main.ts"
+            ]
           }
         }
       }
@@ -133,7 +146,9 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "eslintConfig": ".eslintrc.json",
-            "lintFilePatterns": ["e2e/**.ts"]
+            "lintFilePatterns": [
+              "e2e/**.ts"
+            ]
           }
         }
       }
@@ -148,5 +163,8 @@
     "@schematics/angular:directive": {
       "prefix": "app"
     }
+  },
+  "cli": {
+    "analytics": "1d8e9809-9e77-4dca-b5f7-50c9d3c4c7d1"
   }
 }

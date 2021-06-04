@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
-import wordConsts from "./word-consts";
 import winax from "winax";
+
 
 interface wapp {
   activeDocument: wdoc;
@@ -73,11 +73,6 @@ export class WordService {
       this.app = undefined;
     }
   }
-
-  saveAsPdf(path: string): void {
-    this.doc.saveAs(path, wordConsts.WdExportFormat.wdExportFormatPDF);
-  }
-
   setVisible(): void {
     this.app.visible = true;
   }

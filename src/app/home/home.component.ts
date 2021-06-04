@@ -1,7 +1,6 @@
 const fs = (<any>window).require("fs");
 
 import { Component, OnInit } from "@angular/core";
-import { PdfService } from "../shared/services/pdf.service";
 import { WordService } from "../shared/services/word-service";
 
 const timer = (f) => {
@@ -22,20 +21,12 @@ const kafkaText = `Jemand musste Josef K. verleumdet haben, denn ohne dass er et
 export class HomeComponent implements OnInit {
   constructor(
     private wordService: WordService,
-    private pdfService: PdfService
   ) {}
 
   ngOnInit(): void {}
 
-  onMergePDF(): void {
-    const pdfsToMerge = ["data/1.pdf", "data/2.pdf"];
-    this.pdfService.mergePdfs(pdfsToMerge).then((pdfdata) => {
-      fs.writeFileSync("data/merged.pdf", pdfdata);
-    });
-  }
-
   openTestDocument(): void {
-    this.wordService.open("/tmp/1.docx");
+    this.wordService.open("D:\\repos\\angular-electron-winax\\src\\assets\\tmp\\1.docx");
     this.wordService.setActiveDocumentById(myid);
   }
 
@@ -94,11 +85,6 @@ export class HomeComponent implements OnInit {
       })
     );
   }
-
-  saveAsPDF(): void {
-    this.wordService.saveAsPdf("/tmp/test.pdf");
-  }
-
   close(): void {
     this.wordService.close();
   }

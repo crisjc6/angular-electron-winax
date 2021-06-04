@@ -5,15 +5,20 @@
 
   <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
 
-  <button (click)=onMergePDF()>MERGE PDF</button>
 
   <hr/>
 
   <button (click)=openTestDocument()>OPEN TEST DOCUMENT</button>
+  <br>
+
   <button (click)=testEmpty()>EMPTY TEST DOCUMENT</button>
+  <br>
+
   <button (click)=testFill()>FILL TEST DOCUMENT</button>
+  <br>
+
   <button (click)=testFillEval()>FILL EVAL TEST DOCUMENT</button>
+  <br>
 
   <button (click)=quit()>QUIT</button>
-  <button (click)=saveAsPDF()>SAVE AS PDF</button>
 </div>
