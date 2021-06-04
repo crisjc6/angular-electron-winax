@@ -1,3 +1,5 @@
+import {WeapService} from "../shared/services/weap-service";
+
 const fs = (<any>window).require("fs");
 
 import { Component, OnInit } from "@angular/core";
@@ -21,13 +23,15 @@ const kafkaText = `Jemand musste Josef K. verleumdet haben, denn ohne dass er et
 export class HomeComponent implements OnInit {
   constructor(
     private wordService: WordService,
+    private weapService: WeapService,
   ) {}
 
   ngOnInit(): void {}
 
   openTestDocument(): void {
-    this.wordService.open("D:\\repos\\angular-electron-winax\\src\\assets\\tmp\\1.docx");
-    this.wordService.setActiveDocumentById(myid);
+    this.weapService.openWeap();
+  //  this.wordService.open("D:\\repos\\angular-electron-winax\\src\\assets\\tmp\\1.docx");
+ //   this.wordService.setActiveDocumentById(myid);
   }
 
   testEmpty(): void {
