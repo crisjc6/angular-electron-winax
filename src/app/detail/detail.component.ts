@@ -12,9 +12,13 @@ export class DetailComponent implements OnInit {
   private game: Phaser.Game;
 
   ngOnInit(): void {
+    
     this.game = new Phaser.Game(phaserGameConfig);
+    
   }
 
-  constructor() {}
+  constructor() {
+    
+  }
 
 }

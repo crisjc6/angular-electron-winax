@@ -21,7 +21,7 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             objectHeightRatio: 1,
             objectWidth: 150,
             objectHeight: 40,
-            objectPositionX: 400,
+            objectPositionX: 200,
             objectPositionY: 100,
         }
     },
@@ -44,7 +44,7 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             objectHeightRatio: 1,
             objectWidth: 150,
             objectHeight: 40,
-            objectPositionX: 400,
+            objectPositionX: 200,
             objectPositionY: 150,
         }
     },

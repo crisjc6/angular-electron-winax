@@ -5,7 +5,9 @@
 import { GameFacade } from "../facade-scene/facade-scene";
 import { sceneElemntSpecifictions } from "./main-scene-elements-specificactions";
 import { GameSceneIdsStrings } from "./../../settings/game-constants-strings/game-scene-ids-string";
-
+import { ButtonComponent } from "./../../components/button-component/button-component";
+import { EventsTouchedGameObjectsStrings } from "./../../settings/game-constants-strings/game-events-strings";
+import { WeapService } from "../../../app/shared/services/weap-service";
 
 // {
 //     key: 'continue-button-background',
@@ -14,6 +16,9 @@ import { GameSceneIdsStrings } from "./../../settings/game-constants-strings/gam
 
 export class MainScene extends Phaser.Scene {
     
+    private gameObjects: any;
+    private weapService: WeapService;
+
     init() {
 
     }
@@ -22,6 +27,8 @@ export class MainScene extends Phaser.Scene {
         super({
             key: GameSceneIdsStrings.MAIN_SCENE_ID
         });
+        
+        this.weapService = new WeapService();
     }
 
     preload() {
@@ -29,10 +36,21 @@ export class MainScene extends Phaser.Scene {
             'continue-button-background',
             '../../../assets/game-assets/continue-button-background.png'
         );
+        
+        this.gameObjects = new Map();
     }
 
     create() {
         const fachada = new GameFacade(this, sceneElemntSpecifictions);
+        this.gameObjects = fachada.getGameObjects;
+
+        const button = this.gameObjects.get('play-button').gameObject as ButtonComponent;
+
+        button.setInteractive().on(
+            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+                this.weapService.openWeap();
+            }
+        );
     }
 
     update() {
