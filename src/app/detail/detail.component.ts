@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { phaserGameConfig } from 'src/game/settings/phaser-game-config-specifications';
+// import { phaserGameConfig } from './../../settings/phaser-game-config-specifications';
 import { phaserGameConfig } from '../../game/settings/phaser-game-config-specifications';
 
 @Component({

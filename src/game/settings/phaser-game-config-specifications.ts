@@ -1,7 +1,7 @@
 // import { AbyssGameScene } from "../scenes/games-scenes/abyss-game/abyss-game-scene";
 // import { TestGameScene } from "../scenes/games-scenes/game-test/main-scene";
 // import { LastGameScene } from "../scenes/games-scenes/last-game/last-game-scene";
-// import { MainScene } from "../scenes/main-scene/main-scene";
+import { MainScene } from "../scenes/main-scene/main-scene";
 // import { Phaser } from "./../../phaser@3.52.0/phaser.js";
 
 
@@ -11,10 +11,10 @@ export const phaserGameConfig = {
     parent: 'phaser_game',
     type: Phaser.AUTO,
     scale: {
-        mode: Phaser.Scale.FIT,
-        autoCenter: Phaser.Scale.CENTER_BOTH,
-        with: 200,
-        height: 100,
+        // mode: Phaser.Scale.NONE,
+        // autoCenter: Phaser.Scale.CENTER_BOTH,
+        with: 50,
+        height: 300,
         // with: 1080,
         // height: 1920,
         // width: window.innerWidth/window.innerHeight > 21/9 ? 1366 :
@@ -53,7 +53,7 @@ export const phaserGameConfig = {
         disableWebAudio: true
     },
     scene: [
-        // MainScene
+        MainScene
         // AbyssGameScene
         // TestGameScene
         // LastGameScene
