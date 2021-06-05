@@ -10,7 +10,8 @@
     "experimentalDecorators": true,
     "target": "es5",
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "src/phaser@3.52.0"
     ],
     "lib": [
       "es2017",

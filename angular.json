@@ -22,7 +22,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              
+              "src/phaser@3.52.0/phaser.js",
+              "src/phaser@3.52.0/phaser.min.js"
+
+            ],
             "allowedCommonJsDependencies": [
               "pako"
             ],

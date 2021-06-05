@@ -13,8 +13,8 @@
     "polyfills-test.ts"
   ],
   "include": [
-    "**/*.spec.ts",
-    "**/*.d.ts"
+    "src/**/*.d.ts",
+    "**/*.spec.ts"
   ],
   "exclude": [
     "dist",

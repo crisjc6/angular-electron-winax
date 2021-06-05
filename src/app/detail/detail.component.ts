@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { phaserGameConfig } from 'src/game/settings/phaser-game-config-specifications';
+import { phaserGameConfig } from '../../game/settings/phaser-game-config-specifications';
 
 @Component({
   selector: 'app-detail',
@@ -7,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  private game: Phaser.Game;
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.game = new Phaser.Game(phaserGameConfig);
+  }
+
+  constructor() {}
 
 }
