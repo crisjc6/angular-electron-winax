@@ -54,35 +54,9 @@ export class MainScene extends Phaser.Scene {
 
         button.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                // this.weapService.openWeap();
-                // <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
-                // this.scene.stop();
-                // this.sys.game.destroy(true).then(() => this.goToSubjectPage())
-                // .catch(() => this.goToSubjectPage());
-
-                // gameRouterLink.routerLink.navigate(['/detail']);
-
-                // callback () => {
-                    // this.scene.st
-                    this.sys.game.destroy(true);
+                // this.sys.game.destroy(true);
+                    this.scene.pause();
                     gameRouterLink.routerLink.navigate(['/detail']);
-                // }
-                // this.destroyGame();
-
-            }
-        );
-    }
-
-    private async destroyGame(){
-        let respuesta = await this.sys.game.destroy(true, true);
-        // await phaserGameObject.game.destroy(true,true);
-        // console.log(respuesta);
-        // await gameRouterLink.routerLink.navigate(['/detail']);
-        this.sys.game.events.on(
-            'destroy',
-            (events) => {
-                // console.log(events)
-                gameRouterLink.routerLink.navigate(['/detail']);
             }
         );
     }

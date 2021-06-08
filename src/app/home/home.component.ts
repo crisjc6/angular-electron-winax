@@ -6,6 +6,7 @@ import { Component, OnInit } from "@angular/core";
 import { WordService } from "../shared/services/word-service";
 import { phaserGameConfig } from "../../game/settings/phaser-game-config-specifications";
 import { Router } from "@angular/router";
+import { GameSceneIdsStrings } from "../../game/settings/game-constants-strings/game-scene-ids-string";
 
 // const timer = (f) => {
 //   const t = performance.now();
@@ -35,9 +36,15 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(phaserGameObject.game === null) {
+    // if(phaserGameObject.game === null) {
       phaserGameObject.game = new Phaser.Game(phaserGameConfig);
-    }
+      console.log('phaser...');
+    // } else {
+    //   phaserGameObject.game.scene.start(GameSceneIdsStrings.MAIN_SCENE_ID);
+    //   phaserGameObject.game.;
+    //   console.log(phaserGameObject.game);
+    //   console.log('phaser existente');
+    // }
   }
 
 //   openTestDocument(): void {
