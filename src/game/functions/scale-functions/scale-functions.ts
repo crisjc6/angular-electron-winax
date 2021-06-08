@@ -1,9 +1,9 @@
-import { GameObjectScaleInterface } from "./../../interfaces/game-object-scale-interface";
+import { GameObjectScaleInterface } from "../../interfaces/game-object-scale-interface";
 
 export function scaleGameObject(Scene: Phaser.Scene, currentScale: GameObjectScaleInterface): GameObjectScaleInterface {
     const currentWidthCanvas: number = Scene.sys.canvas.width;
     const currentHeightCanvas: number = Scene.sys.canvas.height;
-    
+
     const defaultWidthCanvas = 1366;
     const defaultHeightCanvas = 768;
     let ratioWidth: number = currentWidthCanvas / defaultWidthCanvas;

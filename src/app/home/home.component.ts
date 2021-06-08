@@ -24,7 +24,7 @@ const kafkaText = `Jemand musste Josef K. verleumdet haben, denn ohne dass er et
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-  
+
   // private game: Phaser.Game;
 
   constructor(
@@ -47,11 +47,11 @@ export class HomeComponent implements OnInit {
     // }
   }
 
-//   openTestDocument(): void {
-//     this.weapService.openWeap();
-//   //  this.wordService.open("D:\\repos\\angular-electron-winax\\src\\assets\\tmp\\1.docx");
-//  //   this.wordService.setActiveDocumentById(myid);
-//   }
+  openTestDocument(): void {
+    this.weapService.openWeap();
+  //  this.wordService.open("D:\\repos\\angular-electron-winax\\src\\assets\\tmp\\1.docx");
+ //   this.wordService.setActiveDocumentById(myid);
+  }
 
   // testEmpty(): void {
   //   const wordTrigger = `(doc, data) => {
