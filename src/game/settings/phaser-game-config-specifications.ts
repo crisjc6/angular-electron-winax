@@ -6,10 +6,26 @@ export const phaserGameConfig = {
     parent: 'phaser_game',
     type: Phaser.AUTO,
     scale: {
-        mode: Phaser.Scale.NONE,
+        // mode: Phaser.Scale.NONE,
+        // autoCenter: Phaser.Scale.CENTER_BOTH,
+        // width: 400,
+        // height: 300,
+        mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
-        width: 400,
-        height: 300,
+        width: window.innerWidth/window.innerHeight > 21/9 ? 1366 :
+                window.innerWidth/window.innerHeight >= 16/10 && window.innerWidth/window.innerHeight <= 21/9 ?
+                    (window.innerWidth > 1440 ? 1440 :  (window.innerWidth < 1024 ? 1366 : window.innerWidth )):
+                window.innerWidth/window.innerHeight > 4/3 && window.innerWidth/window.innerHeight < 16/10 ? 1366 :
+                window.innerWidth/window.innerHeight >= 1 && window.innerWidth/window.innerHeight <= 4/3 ? 1024 :
+                1366,
+
+        height: window.innerWidth/window.innerHeight > 21/9 ? 761 :
+                window.innerWidth/window.innerHeight >= 16/10 && window.innerWidth/window.innerHeight <= 21/9 ?
+                    (window.innerHeight > 800 ? 761 :  (window.innerHeight < 655 ? 761 : window.innerHeight )):
+                window.innerWidth/window.innerHeight > 4/3 && window.innerWidth/window.innerHeight < 16/10 ? 761 :
+                window.innerWidth/window.innerHeight >= 1 && window.innerWidth/window.innerHeight <= 4/3 ? 720 :
+                761,
+
     },
     render: {
         antialias: true

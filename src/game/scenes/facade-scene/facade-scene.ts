@@ -32,7 +32,7 @@ export class GameFacade {
     public generateGameObjectsScene() {
         this.gameElementSpecifications.forEach(
             gameElementSpecification => {
-                // gameElementSpecification.scale = scaleGameObject(this.gameScene, gameElementSpecification.scale);                
+                gameElementSpecification.scale = scaleGameObject(this.gameScene, gameElementSpecification.scale);                
                 this.gameObjects.set(
                     gameElementSpecification.name,
                     this.generateGameObject(JSON.parse(JSON.stringify(gameElementSpecification)))

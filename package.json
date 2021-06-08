@@ -41,6 +41,7 @@
     "lint": "ng lint"
   },
   "dependencies": {
+    "fontfaceobserver": "2.1.0",
     "pdf-lib": "1.13.0",
     "winax": "1.20.0"
   },

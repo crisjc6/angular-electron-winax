@@ -4,8 +4,8 @@ export function scaleGameObject(Scene: Phaser.Scene, currentScale: GameObjectSca
     const currentWidthCanvas: number = Scene.sys.canvas.width;
     const currentHeightCanvas: number = Scene.sys.canvas.height;
     
-    const defaultWidthCanvas = 400;
-    const defaultHeightCanvas = 400;
+    const defaultWidthCanvas = 1366;
+    const defaultHeightCanvas = 768;
     let ratioWidth: number = currentWidthCanvas / defaultWidthCanvas;
     let ratioHeight: number = currentHeightCanvas / defaultHeightCanvas;
 

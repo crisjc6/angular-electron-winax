@@ -8,6 +8,10 @@ import { GameSceneIdsStrings } from "./../../settings/game-constants-strings/gam
 import { ButtonComponent } from "./../../components/button-component/button-component";
 import { EventsTouchedGameObjectsStrings } from "./../../settings/game-constants-strings/game-events-strings";
 import { WeapService } from "../../../app/shared/services/weap-service";
+import { loadFonts } from "../../functions/font-styles/font-styles-functions";
+import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
+import { gameAssets } from "../../settings/game-assets";
+import { gameRouterLink, phaserGameObject } from "../../settings/game-system-specifications";
 
 // {
 //     key: 'continue-button-background',
@@ -32,10 +36,12 @@ export class MainScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image(
-            'continue-button-background',
-            '../../../assets/game-assets/continue-button-background.png'
-        );
+        loadFonts();
+        loadAssetsArrayGame(this, gameAssets);  
+        // this.load.image(
+        //     'continue-button-background',
+        //     '../../../assets/game-assets/continue-button-background.png'
+        // );
         
         this.gameObjects = new Map();
     }
@@ -48,7 +54,35 @@ export class MainScene extends Phaser.Scene {
 
         button.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                this.weapService.openWeap();
+                // this.weapService.openWeap();
+                // <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
+                // this.scene.stop();
+                // this.sys.game.destroy(true).then(() => this.goToSubjectPage())
+                // .catch(() => this.goToSubjectPage());
+
+                // gameRouterLink.routerLink.navigate(['/detail']);
+
+                // callback () => {
+                    // this.scene.st
+                    this.sys.game.destroy(true);
+                    gameRouterLink.routerLink.navigate(['/detail']);
+                // }
+                // this.destroyGame();
+
+            }
+        );
+    }
+
+    private async destroyGame(){
+        let respuesta = await this.sys.game.destroy(true, true);
+        // await phaserGameObject.game.destroy(true,true);
+        // console.log(respuesta);
+        // await gameRouterLink.routerLink.navigate(['/detail']);
+        this.sys.game.events.on(
+            'destroy',
+            (events) => {
+                // console.log(events)
+                gameRouterLink.routerLink.navigate(['/detail']);
             }
         );
     }
