@@ -1,5 +1,12 @@
 export const enum GameSpecifications {
-    GAME_NAME = 'CUENCA HIDROGRAFICA GAME'
+    GAME_NAME = 'DARCH'
 }
 
+export const gameRouterLink: {routerLink: any} = {
+    routerLink: null
+}
+
+export const phaserGameObject: {game: Phaser.Game} = {
+    game: null
+}
 

@@ -59,8 +59,8 @@ export const textFontSize = {
         strokeThickness: 34
     },
     'VeryBig' : {
-        fontSize: '75px',
-        strokeThickness: 30
+        fontSize: '60px',
+        strokeThickness: 25
     },
     'Big' : {
         fontSize: '50px',
