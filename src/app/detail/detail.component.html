@@ -1,15 +1,11 @@
 
-<div class="container" id='angular'>
-    <a href="javascript:void(0);" (click)="goPlaces()">{{ 'PAGES.DETAIL.BACK_TO_HOME' | translate }}</a>
-    <!-- <a href="{{goPlaces()}}" target="_blank">{{ 'PAGES.DETAIL.BACK_TO_HOME' | translate }}</a> -->
-  <button (click)=openTestDocument()>OPEN TEST DOCUMENT</button>
-
-  <!-- <div id = "phaser_game"></div> -->
+<div class="container-fluid container-custmom" id='angular'>
+  <div class="row align-items-center">
+    <div class="col-8">
+      <a href="javascript:void(0);" (click)="goPlaces()">{{ 'PAGES.DETAIL.BACK_TO_HOME' | translate }}</a>
+    </div>
+    <div class="col-4">
+      <button (click)=openTestDocument()>OPEN TEST DOCUMENT</button>
+    </div>
+  </div>
 </div>
-<!-- <div id = "phaser_game"></div> -->
-<!-- <div class="container">
-    <div class="grid-container">
-        <div id = "phaser_game"></div>
-        <a routerLink="/">{{ 'PAGES.DETAIL.BACK_TO_HOME' | translate }}</a>
-     </div>
-</div> -->
