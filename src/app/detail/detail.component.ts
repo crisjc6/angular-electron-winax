@@ -1,14 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import {WeapService} from "../shared/services/weap-service";
+import {ChartComponent,
+  ApexAxisChartSeries,
+  ApexChart,
+  ApexXAxis,
+  ApexTitleSubtitle,
+  ApexResponsive
 
+} from "ng-apexcharts";
+import {Component, OnInit, ViewChild} from "@angular/core";
+import {Router} from "@angular/router";
+
+export type ChartOptions = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  xaxis: ApexXAxis;
+  responsive: ApexResponsive[];
+};
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-
+  @ViewChild("chart", { static: false }) chart: ChartComponent;
+  public chartOptions: Partial<ChartOptions>;
   ngOnInit(): void {
   }
 
@@ -16,7 +31,41 @@ export class DetailComponent implements OnInit {
               private weapService: WeapService,
 
   ) {
-
+    // @ts-ignore
+    this.chartOptions = {
+      series: [
+        {
+          name: "My-series",
+          data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+        }
+      ],
+      chart: {
+        height: 160 ,
+        type: "bar",
+        toolbar: {
+          show: false
+        }
+      },
+      xaxis: {
+        categories: ["Jan", "Feb",  "Mar",  "Apr",  "May",  "Jun",  "Jul",  "Aug", "Sep"]
+      },
+      responsive:
+        [
+          {
+            breakpoint: 1000,
+            options: {
+              plotOptions: {
+                bar: {
+                  horizontal: false
+                }
+              },
+              legend: {
+                position: "bottom"
+              }
+            }
+          }
+        ]
+    };
   }
 
   goPlaces() {
@@ -24,6 +73,11 @@ export class DetailComponent implements OnInit {
   }
   openTestDocument(): void {
     this.weapService.openWeap();
+  }
+  public updateSeries() {
+    this.chartOptions.series = [{
+      data: [23, 44, 1, 22]
+    }];
   }
 
 

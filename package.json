@@ -42,8 +42,10 @@
   },
   "dependencies": {
     "@ng-bootstrap/ng-bootstrap": "9.1.2",
+    "apexcharts": "3.27.1",
     "bootstrap": "5.0.1",
     "fontfaceobserver": "2.1.0",
+    "ng-apexcharts": "1.5.12",
     "pdf-lib": "1.13.0",
     "winax": "1.20.0"
   },

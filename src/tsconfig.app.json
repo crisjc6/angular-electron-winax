@@ -11,10 +11,10 @@
     "polyfill.ts",
     "src/**/*.d.ts",
     "**/*.d.ts",
-    
-  // "exclude": [
-  //   "**/*.spec.ts"
-  // ],
+    // "exclude": [
+    //   "**/*.spec.ts"
+    // ],
+    "../node_modules/apexcharts/types/apexcharts.d.ts"
   ],
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
