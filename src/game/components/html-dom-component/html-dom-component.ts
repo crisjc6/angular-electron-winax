@@ -20,4 +20,8 @@ export class HtmlDOMComponent extends Phaser.GameObjects.Container {
         this.htmlDOM.setPosition(0, 0);
         this.add(this.htmlDOM);
     }
+
+    public getInputText(): string {
+        return this.htmlDOM.node.value;
+    }
 }

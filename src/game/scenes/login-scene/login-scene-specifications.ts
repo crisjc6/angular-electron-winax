@@ -104,7 +104,7 @@ export const loginSceneElementsSpecifications: GameElementSpecificationsInterfac
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.GREEN_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
-            fontSize: textFontSize.Regular.fontSize
+            fontSize: textFontSize.Big.fontSize
         },
         scale: {
             objectWidthRatio: 1,
@@ -112,7 +112,28 @@ export const loginSceneElementsSpecifications: GameElementSpecificationsInterfac
             objectWidth: 600,
             objectHeight: 70,
             objectPositionX: 683,
-            objectPositionY: 400,
+            objectPositionY: 395,
+        }
+    },
+    {
+        type: 'text',
+        element: 'message',
+        name: 'message',
+        content: 'Ingrese un nombre de equipo valido con más de 3 caracteres.',
+        style: {
+            fontFamily: GameFontStylesString.SMALL_FONT,
+            color: ColorsString.GREEN_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: textFontSize.VerySmall.fontSize
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 900,
+            objectHeight: 25,
+            objectPositionX: 683,
+            objectPositionY: 465,
+            // objectPositionY: 729,
         }
     },
     {

@@ -30,6 +30,8 @@ export const enum SceneGameElementsString {
     SCENE_HELP_BUTTON = 'help-button',
     SCENE_PLAY_BUTTON = 'play-button',
     SCENE_SCORE_TABLE = 'score-table',
+    SCENE_MESSAGE = 'message',  
+    SCENE_LOGIN_INPUT = 'login-input',  
 }
 
 export const enum buttonElements {

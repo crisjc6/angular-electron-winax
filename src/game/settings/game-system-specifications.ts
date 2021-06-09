@@ -1,3 +1,5 @@
+import { GameScoreDataInterface } from "../interfaces/game-score-interface"
+
 export const enum GameSpecifications {
     GAME_NAME = 'DARCH'
 }
@@ -20,8 +22,10 @@ export const gameStatus: {
     isSoundMuted: true,
 }
 
-// export const phaserGameObject: {game: Phaser.Game} = {
-//     game: null
-// }
+export const playerData: GameScoreDataInterface = {
+    id: 0,
+    score: 0,
+    teamName: ''
+}
 
 

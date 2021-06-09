@@ -6,7 +6,8 @@ import { ButtonComponent } from "../../components/button-component/button-compon
 import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-strings/game-events-strings";
 import { SceneGameElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
-import { gameRouterLink } from "../../settings/game-system-specifications";
+import { gameRouterLink, playerData } from "../../settings/game-system-specifications";
+import { HtmlDOMComponent } from "../../components/html-dom-component/html-dom-component";
 
 export class LoginScene extends Phaser.Scene {
 
@@ -15,6 +16,8 @@ export class LoginScene extends Phaser.Scene {
     private sceneData: SceneDataInterface;
 
     private sceneBackground: Phaser.GameObjects.Image;
+    private loginInput: HtmlDOMComponent;
+    private messageText: Phaser.GameObjects.Text;
     private closeButton: ButtonComponent;
     private continueButton: ButtonComponent;
     
@@ -50,6 +53,11 @@ export class LoginScene extends Phaser.Scene {
         ).gameObject;
         this.sceneBackground.setTint(ColorsValue.BLACK_HEXADECIMAL_VALUE);
 
+        this.messageText = this.sceneGameObjects.get(
+            SceneGameElementsString.SCENE_MESSAGE
+        ).gameObject;
+        this.messageText.setVisible(false);
+
         this.closeButton = this.sceneGameObjects.get(
             SceneGameElementsString.SCENE_CLOSE_BUTTON
         ).gameObject;
@@ -57,6 +65,11 @@ export class LoginScene extends Phaser.Scene {
         this.continueButton = this.sceneGameObjects.get(
             SceneGameElementsString.SCENE_CONTINUE_BUTTON
         ).gameObject;
+        
+        this.loginInput = this.sceneGameObjects.get(
+            SceneGameElementsString.SCENE_LOGIN_INPUT
+        ).gameObject;
+        
     }
 
     private addFunctionality() {
@@ -71,7 +84,13 @@ export class LoginScene extends Phaser.Scene {
         // addPointerOverOnInteractiveObject(this.saveSettingsButtons);
         this.continueButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                gameRouterLink.routerLink.navigate(['/detail']);
+                
+                if (this.loginInput.getInputText() === '') {
+                    this.messageText.setVisible(true);
+                } else {
+                    playerData.teamName = this.loginInput.getInputText();
+                    gameRouterLink.routerLink.navigate(['/detail']);
+                }
             }
         );
     }
