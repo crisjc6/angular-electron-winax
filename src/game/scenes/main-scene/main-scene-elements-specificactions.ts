@@ -86,8 +86,8 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
     {
         type: 'button',
         element: 'bottom-title-button',
-        assetName: 'assistant-icon-background',
-        name: 'assistant-button',
+        assetName: 'help-icon-background',
+        name: 'help-button',
         content: 'AYUDA',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,

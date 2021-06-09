@@ -18,6 +18,7 @@ export class MainScene extends Phaser.Scene {
     private scoreButton: ButtonComponent;
     private settingsButton: ButtonComponent;
     private infoButton: ButtonComponent;
+    private helpButton: ButtonComponent;
     private sceneData: SceneDataInterface;
 
     init() {
@@ -67,6 +68,10 @@ export class MainScene extends Phaser.Scene {
             SceneGameElementsString.SCENE_INFO_BUTTON,
         ).gameObject;
 
+        this.helpButton = this.gameObjects.get(
+            SceneGameElementsString.SCENE_HELP_BUTTON,
+        ).gameObject;
+
     }
     
     private addFunctionality() {
@@ -109,6 +114,17 @@ export class MainScene extends Phaser.Scene {
                     returnSceneName: this.scene.key
                 }
                 this.scene.launch(GameSceneIdsStrings.INFO_SCENE_ID, gameData);
+            }
+        );
+
+        // addPointerOverOnInteractiveObject(this.infoButton);
+        this.helpButton.setInteractive().on(
+            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+                this.scene.pause();
+                const gameData: SceneDataInterface = {
+                    returnSceneName: this.scene.key
+                }
+                this.scene.launch(GameSceneIdsStrings.HELP_SCENE_ID, gameData);
             }
         );
     }

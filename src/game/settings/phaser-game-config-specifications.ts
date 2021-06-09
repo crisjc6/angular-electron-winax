@@ -2,6 +2,7 @@ import { MainScene } from "../scenes/main-scene/main-scene";
 import { SettingsMenu } from "../scenes/settings-menu/settings-menu";
 import { InfoScene } from "../scenes/info-scene/info-scene";
 import { TopBestPlayerScene } from "../scenes/top-best-players-scene/top-best-players-scene";
+import { HelpScene } from "../scenes/help-scene/help-scene";
 
 export const phaserGameConfig = {
     title: 'CUENCA HIDROGRAFICA GAME',
@@ -51,6 +52,7 @@ export const phaserGameConfig = {
         MainScene,
         SettingsMenu,
         InfoScene,
-        TopBestPlayerScene
+        TopBestPlayerScene,
+        HelpScene
     ]
 };

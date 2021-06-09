@@ -27,7 +27,7 @@ export const enum SceneGameElementsString {
     SCENE_SETTINGS_BUTTON = 'settings-button',
     SCENE_INFO_BUTTON = 'info-button',
     SCENE_SOUND_BUTTON = 'sound-button',
-    SCENE_ASSISTANT_BUTTON = 'sound-button',
+    SCENE_HELP_BUTTON = 'help-button',
     SCENE_PLAY_BUTTON = 'play-button',
     SCENE_SCORE_TABLE = 'score-table',
     
