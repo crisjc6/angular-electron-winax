@@ -4,6 +4,7 @@ export const enum GameElementsString {
     VIDEO_STRING = 'video',
     TEXT_CARD_STRING = 'text-card',
     TABLE_STRING = 'table',
+    HTML_DOM_STRING = 'html-dom',
     
     
     INTERACTIVE_OBJECT_STRING = 'interactiveObject',
@@ -20,7 +21,7 @@ export const enum GameElementsString {
 
 export const enum SceneGameElementsString {
     SCENE_CLOSE_BUTTON = 'close-button',
-    SCENE_SAVE_SETTINGS_BUTTON = 'save-settings-button',
+    SCENE_CONTINUE_BUTTON = 'continue-button',
     SCENE_BACKGROUND = 'scene-backgroud',
     SCENE_SCORE_BUTTON = 'score-button',
     SCENE_SETTINGS_BUTTON = 'settings-button',

@@ -1,7 +1,7 @@
-import { GameElementSpecificationsInterface } from "./../../interfaces/game-element-specifications-interface";
-import { AlingString, ColorsString, GameFontStylesString, textFontSize } from "./../../settings/game-constants-strings/text-styles-string";
+import { GameElementSpecificationsInterface } from "../../interfaces/game-element-specifications-interface";
+import { AlingString, ColorsString, GameFontStylesString, textFontSize } from "../../settings/game-constants-strings/text-styles-string";
 
-export const settingsMenuElementsSpecifications: GameElementSpecificationsInterface[] = [
+export const loginSceneElementsSpecifications: GameElementSpecificationsInterface[] = [
     {
         type: 'image',
         element: 'background',
@@ -20,7 +20,7 @@ export const settingsMenuElementsSpecifications: GameElementSpecificationsInterf
         type: 'image',
         element: 'background',
         assetName: 'panel-card-background',
-        name: 'settings-menu-backgroud',
+        name: 'login-backgroud',
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
@@ -58,7 +58,7 @@ export const settingsMenuElementsSpecifications: GameElementSpecificationsInterf
         type: 'text',
         element: 'title',
         name: 'scene-title',
-        content: 'AJUSTES DEL JUEGO',
+        content: 'INGRESO AL JUEGO',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.RED_HEXADECIMAL_STRING,
@@ -79,7 +79,7 @@ export const settingsMenuElementsSpecifications: GameElementSpecificationsInterf
         type: 'text',
         element: 'title',
         name: 'sound-title',
-        content: 'SONIDO DEL JUEGO',
+        content: 'INGRESA EL NOMBRE DE TU EQUIPO',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.DARK_PURPLE_HEXADECIMAL_STRING,
@@ -97,68 +97,30 @@ export const settingsMenuElementsSpecifications: GameElementSpecificationsInterf
         },
     },
     {
-        type: 'image',
-        element: 'icon',
-        assetName: 'on-switch-icon-background',
-        name: 'sound-switch',
+        type: 'html-dom',
+        element: 'input',
+        name: 'login-input',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.GREEN_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: textFontSize.Regular.fontSize
+        },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 200,
+            objectWidth: 600,
             objectHeight: 70,
-            objectPositionX: 670,
-            // objectPositionY: 340,
-            objectPositionY: 415,
-        },
-    },
-    {
-        type: 'text',
-        element: 'label',
-        name: 'off-sound-title',
-        content: 'APAGADO',
-        style: {
-            fontFamily: GameFontStylesString.BASE_FONT,
-            color: ColorsString.LIGHT_PURPLE_HEXADECIMAL_STRING,
-            align: AlingString.CENTER_STRING,
-            fontSize: textFontSize.Medium.fontSize,
-        },
-        scale: {
-            objectWidthRatio: 1,
-            objectHeightRatio: 1,
-            objectWidth: 170,
-            objectHeight: 50,
-            objectPositionX: 475,
-            // objectPositionY: 340,
-            objectPositionY: 415,
-        },
-    },
-    {
-        type: 'text',
-        element: 'label',
-        name: 'on-sound-title',
-        content: 'ENCENDIDO',
-        style: {
-            fontFamily: GameFontStylesString.BASE_FONT,
-            color: ColorsString.LIGHT_PURPLE_HEXADECIMAL_STRING,
-            align: AlingString.CENTER_STRING,
-            fontSize: textFontSize.Medium.fontSize,
-        },
-        scale: {
-            objectWidthRatio: 1,
-            objectHeightRatio: 1,
-            objectWidth: 170,
-            objectHeight: 50,
-            objectPositionX: 885,
-            // objectPositionY: 340,
-            objectPositionY: 415,
-        },
+            objectPositionX: 683,
+            objectPositionY: 400,
+        }
     },
     {
         type: 'button',
         element: 'simple-button',
         assetName: 'continue-button-background',
-        name: 'save-settings-button',
-        content: 'GUARDAR AJUSTES',
+        name: 'continue-button',
+        content: 'INGRESAR',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.GREEN_HEXADECIMAL_STRING,
@@ -171,7 +133,7 @@ export const settingsMenuElementsSpecifications: GameElementSpecificationsInterf
             objectWidth: 410,
             objectHeight: 75,
             objectPositionX: 683,
-            objectPositionY: 558,
+            objectPositionY: 550,
             // objectPositionY: 729,
         }
     }

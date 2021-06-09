@@ -7,7 +7,7 @@ import { EventsTouchedGameObjectsStrings } from "./../../settings/game-constants
 import { loadFonts } from "../../functions/font-styles/font-styles-functions";
 import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
 import { gameAssets } from "../../settings/game-assets";
-import { gameRouterLink, gameStatus } from "../../settings/game-system-specifications";
+import { gameStatus } from "../../settings/game-system-specifications";
 import { buttonElements, IconsKeyStrings, SceneGameElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { switchGameSoundStatus } from '../../functions/sound-functions/sound-function'; 
 
@@ -89,8 +89,13 @@ export class MainScene extends Phaser.Scene {
         // addPointerOverOnInteractiveObject(this.playButton);
         this.playButton.setInteractive().on(   
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+                // this.scene.pause();
+                // gameRouterLink.routerLink.navigate(['/detail']);
                 this.scene.pause();
-                gameRouterLink.routerLink.navigate(['/detail']);
+                const gameData: SceneDataInterface = {
+                    returnSceneName: this.scene.key
+                }
+                this.scene.launch(GameSceneIdsStrings.LOGIN_SCENE_ID, gameData);
             }
         );
         

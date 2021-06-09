@@ -7,6 +7,7 @@ import { scaleGameObject } from "./../../functions/scale-functions/scale-functio
 import { GameElementFacadeInterface } from "./../../interfaces/game-element-facade-interface";
 import { GameElementSpecificationsInterface } from "./../../interfaces/game-element-specifications-interface";
 import { GameElementsString } from "./../../settings/game-constants-strings/game-elements-strings";
+import { HtmlDOMComponent } from "./../../components/html-dom-component/html-dom-component";
 
 export class GameFacade {
     private gameScene: Phaser.Scene;
@@ -74,6 +75,11 @@ export class GameFacade {
 
             case GameElementsString.TABLE_STRING: {
                 gameObject = generateGameObjectTable(this.gameScene, _gameElementSpecifications);
+                break;
+            }
+
+            case GameElementsString.HTML_DOM_STRING: {
+                gameObject = new HtmlDOMComponent(this.gameScene, _gameElementSpecifications);
                 break;
             }
 
