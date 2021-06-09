@@ -109,9 +109,9 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
     {
         type: 'button',
         element: 'bottom-title-button',
-        assetName: 'settings-icon-background',
-        content: 'AJUSTES',
-        name: 'settings-button',
+        assetName: 'on-sound-icon-background',
+        name: 'sound-button',
+        content: 'SONIDO',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.BLACK_HEXADECIMAL_STRING,

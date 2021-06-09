@@ -18,7 +18,6 @@ export const enum GameElementsString {
     SPRITE_STRING = 'sprite',
 }
 
-
 export const enum SceneGameElementsString {
     SCENE_CLOSE_BUTTON = 'close-button',
     SCENE_SAVE_SETTINGS_BUTTON = 'save-settings-button',
@@ -30,7 +29,22 @@ export const enum SceneGameElementsString {
     SCENE_HELP_BUTTON = 'help-button',
     SCENE_PLAY_BUTTON = 'play-button',
     SCENE_SCORE_TABLE = 'score-table',
-    
+}
+
+export const enum buttonElements {
+    BUTTON_BACKGROUND = 'button-Background',
+    BUTTON_TEXT = 'button-text',
+}
+
+export const enum IconsKeyStrings {
+    START_ICON_OBTAINED = 'star-icon-obtained-background',
+    START_ICON_NOT_OBTAINED = 'star-icon-not-obtained-background',
+    BIG_START_ICON_OBTAINED = 'big-star-icon-obtained-background',
+    BIG_START_ICON_NOT_OBTAINED = 'big-star-icon-not-obtained-background',
+    ON_SOUND_ICON = 'on-sound-icon-background',
+    OFF_SOUND_ICON = 'off-sound-icon-background',
+    CHECK_ICON = 'check-icon-background',
+    BLANK_CHECK_ICON = 'blank-check-icon-background',
 }
 
 

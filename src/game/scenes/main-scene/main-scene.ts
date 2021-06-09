@@ -4,19 +4,19 @@ import { sceneElemntSpecifictions } from "./main-scene-elements-specificactions"
 import { GameSceneIdsStrings } from "./../../settings/game-constants-strings/game-scene-ids-string";
 import { ButtonComponent } from "./../../components/button-component/button-component";
 import { EventsTouchedGameObjectsStrings } from "./../../settings/game-constants-strings/game-events-strings";
-import { WeapService } from "../../../app/shared/services/weap-service";
 import { loadFonts } from "../../functions/font-styles/font-styles-functions";
 import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
 import { gameAssets } from "../../settings/game-assets";
-import { gameRouterLink } from "../../settings/game-system-specifications";
-import { SceneGameElementsString } from "../../settings/game-constants-strings/game-elements-strings";
+import { gameRouterLink, gameStatus } from "../../settings/game-system-specifications";
+import { buttonElements, IconsKeyStrings, SceneGameElementsString } from "../../settings/game-constants-strings/game-elements-strings";
+import { switchGameSoundStatus } from '../../functions/sound-functions/sound-function'; 
 
 export class MainScene extends Phaser.Scene {
     
     private gameObjects: any;    
     private playButton: ButtonComponent;
     private scoreButton: ButtonComponent;
-    private settingsButton: ButtonComponent;
+    private soundButton: ButtonComponent;
     private infoButton: ButtonComponent;
     private helpButton: ButtonComponent;
     private sceneData: SceneDataInterface;
@@ -43,13 +43,13 @@ export class MainScene extends Phaser.Scene {
 
         this.getElements();
         this.addFunctionality();
+        this.updateSoundButtonStatus();
     }
 
     update() {
 
     }
 
-    
     private getElements() {
         
         this.scoreButton = this.gameObjects.get(
@@ -60,8 +60,8 @@ export class MainScene extends Phaser.Scene {
             SceneGameElementsString.SCENE_PLAY_BUTTON,
         ).gameObject;
 
-        this.settingsButton = this.gameObjects.get(
-            SceneGameElementsString.SCENE_SETTINGS_BUTTON,
+        this.soundButton = this.gameObjects.get(
+            SceneGameElementsString.SCENE_SOUND_BUTTON,
         ).gameObject;
 
         this.infoButton = this.gameObjects.get(
@@ -75,21 +75,9 @@ export class MainScene extends Phaser.Scene {
     }
     
     private addFunctionality() {
-        // addSettingsButtonFunctionality(this, this.settingsButton);
-        this.settingsButton.setInteractive().on(
-            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                this.scene.pause();
-                const gameData: SceneDataInterface = {
-                    returnSceneName: this.scene.key
-                }
-                this.scene.launch(GameSceneIdsStrings.SETTINGS_SCENE_ID, gameData);
-            }
-        );
-
         // addPointerOverOnInteractiveObject(this.scoreButton);
         this.scoreButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                console.log('score...');
                 this.scene.pause();
                 const gameData: SceneDataInterface = {
                     returnSceneName: this.scene.key
@@ -127,6 +115,27 @@ export class MainScene extends Phaser.Scene {
                 this.scene.launch(GameSceneIdsStrings.HELP_SCENE_ID, gameData);
             }
         );
+        
+        // addSettingsButtonFunctionality(this, this.settingsButton);
+        this.soundButton.setInteractive().on(
+            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+                switchGameSoundStatus(this, this.soundButton, true);
+                // this.scene.pause();
+                // const gameData: SceneDataInterface = {
+                //     returnSceneName: this.scene.key
+                // }
+                // this.scene.launch(GameSceneIdsStrings.SETTINGS_SCENE_ID, gameData);
+            }
+        );
+    }
+
+    private updateSoundButtonStatus() {
+        const buttonBackground = this.soundButton.getByName(buttonElements.BUTTON_BACKGROUND) as Phaser.GameObjects.Image;
+        if (gameStatus.isSoundMuted === true) {
+            buttonBackground.setTexture(IconsKeyStrings.OFF_SOUND_ICON);
+        } else {
+            buttonBackground.setTexture(IconsKeyStrings.ON_SOUND_ICON);
+        }
     }
 
 }

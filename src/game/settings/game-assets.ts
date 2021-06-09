@@ -18,8 +18,8 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
    
     {
         type: GameElementsString.IMAGE_STRING,
-        key: 'assistant-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/assistant-icon-background.png'
+        key: 'help-icon-background',
+        path: '../../assets/game-assets/boot-load-assets/icons-assets/help-icon-background.png'
     },
     {
         type: GameElementsString.IMAGE_STRING,

@@ -1,7 +1,7 @@
 import { generateGameObjectImage } from "./../../functions/image-functions/image-functions";
 import { generateGameObjectText } from "./../../functions/text-functions/text-functions";
 import { GameElementSpecificationsInterface } from "./../../interfaces/game-element-specifications-interface";
-import { GameElementsString } from "./../../settings/game-constants-strings/game-elements-strings";
+import { buttonElements, GameElementsString } from "./../../settings/game-constants-strings/game-elements-strings";
 
 export class ButtonComponent extends Phaser.GameObjects.Container {
 
@@ -19,7 +19,7 @@ export class ButtonComponent extends Phaser.GameObjects.Container {
 
     private generateButton() {
         this.buttonBackground = generateGameObjectImage(this.scene, this.buttonSpecifications);
-        // this.buttonBackground.setName(buttonElements.BUTTON_BACKGROUND);
+        this.buttonBackground.setName(buttonElements.BUTTON_BACKGROUND);
         this.buttonBackground.setPosition(0, 0);
         this.buttonBackground.setDisplaySize(this.buttonSpecifications.scale.objectWidth, this.buttonSpecifications.scale.objectHeight);
 
@@ -27,7 +27,7 @@ export class ButtonComponent extends Phaser.GameObjects.Container {
         buttonTextSpecifications.scale.objectHeight = parseInt(buttonTextSpecifications.style.fontSize) * 1.9;
         buttonTextSpecifications.scale.objectWidth = this.buttonSpecifications.scale.objectWidth * 0.95;
         this.buttonText = generateGameObjectText(this.scene, buttonTextSpecifications);
-        // this.buttonText.setName(buttonElements.BUTTON_TEXT);
+        this.buttonText.setName(buttonElements.BUTTON_TEXT);
         this.buttonText.setPosition(0, this.calculatePositionYofButtonText());
         
         this.add([this.buttonBackground, this.buttonText]);
