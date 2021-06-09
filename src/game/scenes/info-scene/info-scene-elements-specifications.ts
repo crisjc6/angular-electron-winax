@@ -20,7 +20,7 @@ export const infoSceneElementsSpecifications: GameElementSpecificationsInterface
         type: 'image',
         element: 'background',
         assetName: 'panel-card-background',
-        name: 'settings-menu-backgroud',
+        name: 'info-panel-backgroud',
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,

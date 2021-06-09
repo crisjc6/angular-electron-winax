@@ -148,34 +148,4 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
         key: 'modal-scene-background',
         path: '../../assets/game-assets/boot-load-assets/scene-backgrounds-assets/modal-scene-background.png'
     },
-    // {
-    //     type: GameElementsString.IMAGE_STRING,
-    //     key: 'main-scene-background',
-    //     path: '../../assets/game-assets/main-scene-background.png'
-    // },
-    // {
-    //     type: GameElementsString.IMAGE_STRING,
-    //     key: 'play-game-button-background',
-    //     path: '../../assets/game-assets/play-game-button-background.png'
-    // },
-    // {
-    //     type: GameElementsString.IMAGE_STRING,
-    //     key: 'info-icon-background',
-    //     path: '../../assets/game-assets/info-icon-background.png'
-    // },
-    // {
-    //     type: GameElementsString.IMAGE_STRING,
-    //     key: 'assistant-icon-background',
-    //     path: '../../assets/game-assets/assistant-icon-background.png'
-    // },
-    // {
-    //     type: GameElementsString.IMAGE_STRING,
-    //     key: 'settings-icon-background',
-    //     path: '../../assets/game-assets/settings-icon-background.png'
-    // },
-    // {
-    //     type: GameElementsString.IMAGE_STRING,
-    //     key: 'score-icon-background',
-    //     path: '../../assets/game-assets/score-icon-background.png'
-    // }
 ];

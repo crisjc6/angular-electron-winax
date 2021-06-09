@@ -1,6 +1,7 @@
 import { MainScene } from "../scenes/main-scene/main-scene";
 import { SettingsMenu } from "../scenes/settings-menu/settings-menu";
 import { InfoScene } from "../scenes/info-scene/info-scene";
+import { TopBestPlayerScene } from "../scenes/top-best-players-scene/top-best-players-scene";
 
 export const phaserGameConfig = {
     title: 'CUENCA HIDROGRAFICA GAME',
@@ -8,10 +9,6 @@ export const phaserGameConfig = {
     parent: 'phaser_game',
     type: Phaser.AUTO,
     scale: {
-        // mode: Phaser.Scale.NONE,
-        // autoCenter: Phaser.Scale.CENTER_BOTH,
-        // width: 400,
-        // height: 300,
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
         width: window.innerWidth/window.innerHeight > 21/9 ? 1366 :
@@ -53,6 +50,7 @@ export const phaserGameConfig = {
     scene: [
         MainScene,
         SettingsMenu,
-        InfoScene
+        InfoScene,
+        TopBestPlayerScene
     ]
 };

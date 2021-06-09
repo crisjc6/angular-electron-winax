@@ -1,8 +1,9 @@
 import { ButtonComponent } from "./../../components/button-component/button-component";
 import { generateGameObjectImage } from "./../../functions/image-functions/image-functions";
 import { generateGameObjectSprite } from "./../../functions/sprite-functions/sprite-functions";
-import { scaleGameObject } from "./../../functions/scale-functions/scale-functions";
 import { generateGameObjectText } from "./../../functions/text-functions/text-functions";
+import { generateGameObjectTable } from "./../../functions/table-functions/table-functions";
+import { scaleGameObject } from "./../../functions/scale-functions/scale-functions";
 import { GameElementFacadeInterface } from "./../../interfaces/game-element-facade-interface";
 import { GameElementSpecificationsInterface } from "./../../interfaces/game-element-specifications-interface";
 import { GameElementsString } from "./../../settings/game-constants-strings/game-elements-strings";
@@ -61,13 +62,18 @@ export class GameFacade {
                 break;
             }
 
-            case GameElementsString.TEXT_CARD: {
+            case GameElementsString.TEXT_CARD_STRING: {
                 gameObject = null;
                 break;
             }
 
             case GameElementsString.SPRITE_STRING: {
                 gameObject = generateGameObjectSprite(this.gameScene, _gameElementSpecifications);
+                break;
+            }
+
+            case GameElementsString.TABLE_STRING: {
+                gameObject = generateGameObjectTable(this.gameScene, _gameElementSpecifications);
                 break;
             }
 

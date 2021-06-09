@@ -2,7 +2,9 @@ export const enum GameElementsString {
     TEXT_STRING = 'text',
     IMAGE_STRING = 'image',
     VIDEO_STRING = 'video',
-    TEXT_CARD = 'text-card',
+    TEXT_CARD_STRING = 'text-card',
+    TABLE_STRING = 'table',
+    
     
     INTERACTIVE_OBJECT_STRING = 'interactiveObject',
     
@@ -27,6 +29,7 @@ export const enum SceneGameElementsString {
     SCENE_SOUND_BUTTON = 'sound-button',
     SCENE_ASSISTANT_BUTTON = 'sound-button',
     SCENE_PLAY_BUTTON = 'play-button',
+    SCENE_SCORE_TABLE = 'score-table',
     
 }
 

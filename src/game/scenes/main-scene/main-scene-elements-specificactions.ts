@@ -20,9 +20,7 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
         type: 'text',
         element: 'title',
         name: 'game-title',
-        content: 'JUEGO SERIO GIRHA\nRÍO SAN PEDRO - CHISINCHE', 
-        // GIRHA (Gestión Integral del Recurso Hídrico y Ambiental)
-        // GIRHA alrededor del  rio San Pedro – Chisinche
+        content: 'JUEGO SERIO GIRHA\nRÍO SAN PEDRO - CHISINCHE',
         style: {
             fontFamily: GameFontStylesString.BIG_FONT,
             color: ColorsString.RED_HEXADECIMAL_STRING,
@@ -37,7 +35,6 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             objectWidth: 1200,
             objectHeight: 100,
             objectPositionX: 683,
-            // objectPositionY: 112,
             objectPositionY: 170,
         }
     },
@@ -45,8 +42,6 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
         
         type: 'button',
         element: 'simple-button',
-        // type: 'interactiveObject',
-        // element: 'simple-button',
         assetName: 'play-game-button-background',
         name: 'play-button',
         content: 'JUGAR',
@@ -61,8 +56,6 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             objectHeightRatio: 1,
             objectWidth: 420,
             objectHeight: 162,
-            // objectPositionX: 1076,
-            // objectPositionY: 406,
             objectPositionX: 1120,
             objectPositionY: 640,
         }
@@ -73,7 +66,6 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
         assetName: 'info-icon-background',
         content: 'INFORMACIÓN',
         name: 'info-button',
-        // name: globalGameElementsName.INFO_BUTTON,
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.BLACK_HEXADECIMAL_STRING,
@@ -87,7 +79,6 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             objectHeightRatio: 1,
             objectWidth: 100,
             objectHeight: 140,
-            // objectPositionX: 175,
             objectPositionX: 148,
             objectPositionY: 660,
         }
@@ -97,7 +88,6 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
         element: 'bottom-title-button',
         assetName: 'assistant-icon-background',
         name: 'assistant-button',
-        // name: globalGameElementsName.ASSISTANT_BUTTON,
         content: 'AYUDA',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
@@ -112,7 +102,6 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             objectHeightRatio: 1,
             objectWidth: 100,
             objectHeight: 140,
-            // objectPositionX: 410,
             objectPositionX: 363,
             objectPositionY: 660,
         },
@@ -122,7 +111,6 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
         element: 'bottom-title-button',
         assetName: 'settings-icon-background',
         content: 'AJUSTES',
-        // name: globalGameElementsName.SETTINGS_BUTTON,
         name: 'settings-button',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
@@ -137,9 +125,6 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             objectHeightRatio: 1,
             objectWidth: 100,
             objectHeight: 140,
-            // objectPositionX: 1258,
-            // objectPositionY: 641,
-            // objectPositionX: 602,
             objectPositionX: 555,
             objectPositionY: 660,
         }
@@ -149,7 +134,6 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
         element: 'bottom-title-button',
         assetName: 'score-icon-background',
         content: 'PUNTUACIONES',
-        // name: globalGameElementsName.SCORE_BUTTON,
         name: 'score-button',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
@@ -164,8 +148,6 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             objectHeightRatio: 1,
             objectWidth: 100,
             objectHeight: 140,
-            // objectPositionX: 824,
-            // objectPositionY: 635,
             objectPositionX: 777,
             objectPositionY: 660,
         }
