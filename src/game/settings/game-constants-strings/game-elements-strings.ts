@@ -20,6 +20,13 @@ export const enum GameElementsString {
 export const enum SceneGameElementsString {
     SCENE_CLOSE_BUTTON = 'close-button',
     SCENE_SAVE_SETTINGS_BUTTON = 'save-settings-button',
+    SCENE_BACKGROUND = 'scene-backgroud',
+    SCENE_SCORE_BUTTON = 'score-button',
+    SCENE_SETTINGS_BUTTON = 'settings-button',
+    SCENE_INFO_BUTTON = 'info-button',
+    SCENE_SOUND_BUTTON = 'sound-button',
+    SCENE_ASSISTANT_BUTTON = 'sound-button',
+    SCENE_PLAY_BUTTON = 'play-button',
     
 }
 

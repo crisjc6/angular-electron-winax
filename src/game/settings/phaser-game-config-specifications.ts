@@ -1,5 +1,6 @@
 import { MainScene } from "../scenes/main-scene/main-scene";
 import { SettingsMenu } from "../scenes/settings-menu/settings-menu";
+import { InfoScene } from "../scenes/info-scene/info-scene";
 
 export const phaserGameConfig = {
     title: 'CUENCA HIDROGRAFICA GAME',
@@ -51,6 +52,7 @@ export const phaserGameConfig = {
     },
     scene: [
         MainScene,
-        SettingsMenu
+        SettingsMenu,
+        InfoScene
     ]
 };

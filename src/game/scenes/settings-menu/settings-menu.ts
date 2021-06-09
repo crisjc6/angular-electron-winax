@@ -4,11 +4,8 @@ import { settingsMenuElementsSpecifications } from "./settings-menu-elements-spe
 import { GameSceneIdsStrings } from "./../../settings/game-constants-strings/game-scene-ids-string";
 import { ButtonComponent } from "./../../components/button-component/button-component";
 import { EventsTouchedGameObjectsStrings } from "./../../settings/game-constants-strings/game-events-strings";
-import { WeapService } from "../../../app/shared/services/weap-service";
-import { loadFonts } from "../../functions/font-styles/font-styles-functions";
-import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
 import { SceneGameElementsString } from "../../settings/game-constants-strings/game-elements-strings";
-
+import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
 
 export class SettingsMenu extends Phaser.Scene {
 
@@ -64,10 +61,11 @@ export class SettingsMenu extends Phaser.Scene {
     }
 
     private getElements() {
-        // this.sceneBackground = this.sceneGameObjects.get(
-        //     globalGameElementsName.SCENE_BACKGROUND
-        // ).gameObject;
-        // this.sceneBackground.setTint(ColorsValue.BLACK_HEXADECIMAL_VALUE);
+        
+        this.sceneBackground = this.sceneGameObjects.get(
+            SceneGameElementsString.SCENE_BACKGROUND
+        ).gameObject;
+        this.sceneBackground.setTint(ColorsValue.BLACK_HEXADECIMAL_VALUE);
 
         this.closeButton = this.sceneGameObjects.get(
             SceneGameElementsString.SCENE_CLOSE_BUTTON
