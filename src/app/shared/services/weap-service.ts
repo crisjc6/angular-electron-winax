@@ -26,7 +26,7 @@ export class WeapService {
 
 */
 
-    
+
     WEAP_App.ActiveArea = "SimBasinModel";
     WEAP_App.ActiveScenario = "SimBasin";
 
@@ -35,14 +35,14 @@ export class WeapService {
     // }
 
     // WEAP_App.ActiveScenario = "SimBasin";
-    
+
     // for (let index = 1; index <= WEAP_App.Branch("\Demand Sites").Children.Count; index++) {
     //     console.log(WEAP_App.Branch("\Demand Sites").Children(index).Name+'\n');
     // }
 
     // console.log(WEAP_App.ResultValue("\Demand Sites and Catchments\Napa:Agricola"));
     // Key\Kc\Agricola
-    
+
     console.log(WEAP_App.ResultValue("Key\\Kc\\Agricola"));
     console.log(WEAP_App.ResultValue('Key\\AgriGrowth'));
     console.log(WEAP_App.BaseYear);
@@ -53,6 +53,8 @@ export class WeapService {
     // WEAP_App.Branch("Key\\Kc").Variables("Agricola").Expression = "2"
 
     WEAP_App.ExportResults("C:\\CSV\\Groundwater.csv");
+    const variable = WEAP_App.ExportResults("C:\\CSV\\Groundwater.csv");
+    console.log(variable,' respuesta de la variable')
     WEAP_App.BranchVariable("\\Key\\Kc\\Agricola").Expression = 1.5;
 
     console.log(WEAP_App.ResultValue('Key\\Kc\\Agricola'));
@@ -79,4 +81,6 @@ export class WeapService {
 
 
   }
+
+
 }
