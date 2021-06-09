@@ -15,6 +15,23 @@ html, body {
   // -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   // background-size: cover; /* version standardisée */
 
+  .score {
+    color: #33485F;
+    font-size: 30px;
+    letter-spacing: -0.1em;
+  }
+
+  .box-cj {
+    box-shadow: -5px 7px 46px 10px rgba(221,167,167,0.7);
+    margin-top: 0.2em;
+    border-radius: 15px 15px 37px 15px;
+    background-color: azure;
+    color: #33485F;
+  }
+  .mt-1 {
+    margin-top: 0.2em !important;
+    margin-bottom: 0.2em !important;
+  }
   .title {
     color: white;
     margin: 0;
