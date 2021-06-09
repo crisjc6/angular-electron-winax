@@ -3,6 +3,7 @@
 // import { GameSceneIdsStrings } from "./../../settings/game-constants-strings/game-scene-ids-string";
 // import { AlingString, ColorsString, textFontSize } from "./../../settings/game-constants-strings/text-styles-string";
 import { GameFacade } from "../facade-scene/facade-scene";
+import { SceneDataInterface } from "../../interfaces/scene-data-interface";
 import { sceneElemntSpecifictions } from "./main-scene-elements-specificactions";
 import { GameSceneIdsStrings } from "./../../settings/game-constants-strings/game-scene-ids-string";
 import { ButtonComponent } from "./../../components/button-component/button-component";
@@ -51,7 +52,6 @@ export class MainScene extends Phaser.Scene {
         this.gameObjects = fachada.getGameObjects;
 
         const button = this.gameObjects.get('play-button').gameObject as ButtonComponent;
-
         button.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 // this.sys.game.destroy(true);
@@ -59,6 +59,20 @@ export class MainScene extends Phaser.Scene {
                     gameRouterLink.routerLink.navigate(['/detail']);
             }
         );
+
+            
+        const buttonSettings = this.gameObjects.get('settings-button').gameObject as ButtonComponent;
+        buttonSettings.setInteractive().on(
+            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+                console.log('settings scene');
+                this.scene.pause();
+                const gameData: SceneDataInterface = {
+                    returnSceneName: this.scene.key
+                }
+                this.scene.launch(GameSceneIdsStrings.SETTINGS_SCENE_ID, gameData);
+            }
+        );
+
     }
 
     update() {

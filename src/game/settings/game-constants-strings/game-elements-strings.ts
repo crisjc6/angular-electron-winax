@@ -15,3 +15,12 @@ export const enum GameElementsString {
     MATTER_STRING = 'matter',
     SPRITE_STRING = 'sprite',
 }
+
+
+export const enum SceneGameElementsString {
+    SCENE_CLOSE_BUTTON = 'close-button',
+    SCENE_SAVE_SETTINGS_BUTTON = 'save-settings-button',
+    
+}
+
+

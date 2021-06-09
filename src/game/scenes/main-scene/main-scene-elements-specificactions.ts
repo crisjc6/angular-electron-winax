@@ -11,7 +11,7 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             objectWidthRatio: 1,
             objectHeightRatio: 1,
             objectWidth: 1366,
-            objectHeight: 768,
+            objectHeight: 770,
             objectPositionX: 683,
             objectPositionY: 384,
         }
@@ -20,23 +20,25 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
         type: 'text',
         element: 'title',
         name: 'game-title',
-        content: 'BIENVENIDO AL JUEGO DARCH',
+        content: 'JUEGO SERIO GIRHA\nRÍO SAN PEDRO - CHISINCHE', 
+        // GIRHA (Gestión Integral del Recurso Hídrico y Ambiental)
+        // GIRHA alrededor del  rio San Pedro – Chisinche
         style: {
             fontFamily: GameFontStylesString.BIG_FONT,
             color: ColorsString.RED_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-            strokeThickness: textFontSize.VeryBig.strokeThickness,
-            fontSize: textFontSize.VeryBig.fontSize,
+            strokeThickness: textFontSize.ExtraBig.strokeThickness,
+            fontSize: textFontSize.ExtraBig.fontSize,
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 1102,
-            objectHeight: 81,
+            objectWidth: 1200,
+            objectHeight: 100,
             objectPositionX: 683,
             // objectPositionY: 112,
-            objectPositionY: 112,
+            objectPositionY: 170,
         }
     },
     {
@@ -57,10 +59,12 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 400,
-            objectHeight: 152,
-            objectPositionX: 1076,
-            objectPositionY: 406,
+            objectWidth: 420,
+            objectHeight: 162,
+            // objectPositionX: 1076,
+            // objectPositionY: 406,
+            objectPositionX: 1120,
+            objectPositionY: 640,
         }
     },
     {

@@ -1,8 +1,9 @@
 import { MainScene } from "../scenes/main-scene/main-scene";
+import { SettingsMenu } from "../scenes/settings-menu/settings-menu";
 
 export const phaserGameConfig = {
     title: 'CUENCA HIDROGRAFICA GAME',
-    backgroundColor: '#00FF00',
+    backgroundColor: '#000000',
     parent: 'phaser_game',
     type: Phaser.AUTO,
     scale: {
@@ -49,6 +50,7 @@ export const phaserGameConfig = {
         disableWebAudio: true
     },
     scene: [
-        MainScene
+        MainScene,
+        SettingsMenu
     ]
 };
