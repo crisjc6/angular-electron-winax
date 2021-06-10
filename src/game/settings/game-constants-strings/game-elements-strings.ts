@@ -2,7 +2,10 @@ export const enum GameElementsString {
     TEXT_STRING = 'text',
     IMAGE_STRING = 'image',
     VIDEO_STRING = 'video',
-    TEXT_CARD = 'text-card',
+    TEXT_CARD_STRING = 'text-card',
+    TABLE_STRING = 'table',
+    HTML_DOM_STRING = 'html-dom',
+    
     
     INTERACTIVE_OBJECT_STRING = 'interactiveObject',
     
@@ -15,3 +18,36 @@ export const enum GameElementsString {
     MATTER_STRING = 'matter',
     SPRITE_STRING = 'sprite',
 }
+
+export const enum SceneGameElementsString {
+    SCENE_CLOSE_BUTTON = 'close-button',
+    SCENE_CONTINUE_BUTTON = 'continue-button',
+    SCENE_BACKGROUND = 'scene-backgroud',
+    SCENE_SCORE_BUTTON = 'score-button',
+    SCENE_SETTINGS_BUTTON = 'settings-button',
+    SCENE_INFO_BUTTON = 'info-button',
+    SCENE_SOUND_BUTTON = 'sound-button',
+    SCENE_HELP_BUTTON = 'help-button',
+    SCENE_PLAY_BUTTON = 'play-button',
+    SCENE_SCORE_TABLE = 'score-table',
+    SCENE_MESSAGE = 'message',  
+    SCENE_LOGIN_INPUT = 'login-input',  
+}
+
+export const enum buttonElements {
+    BUTTON_BACKGROUND = 'button-Background',
+    BUTTON_TEXT = 'button-text',
+}
+
+export const enum IconsKeyStrings {
+    START_ICON_OBTAINED = 'star-icon-obtained-background',
+    START_ICON_NOT_OBTAINED = 'star-icon-not-obtained-background',
+    BIG_START_ICON_OBTAINED = 'big-star-icon-obtained-background',
+    BIG_START_ICON_NOT_OBTAINED = 'big-star-icon-not-obtained-background',
+    ON_SOUND_ICON = 'on-sound-icon-background',
+    OFF_SOUND_ICON = 'off-sound-icon-background',
+    CHECK_ICON = 'check-icon-background',
+    BLANK_CHECK_ICON = 'blank-check-icon-background',
+}
+
+

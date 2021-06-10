@@ -3,7 +3,9 @@ export const enum GameSceneIdsStrings {
     LOAD_SCENE_ID = 'LoadScene',
     START_SCENE_ID = 'StartScene',
     INFO_SCENE_ID = 'InfoScene',
-    SETTINGS_SCENE_ID = 'SettingsScene',
+    LOGIN_SCENE_ID = 'LoginScene',
+    TOP_BEST_PLAYER_SCENE_ID = 'TopBestPlayerScene',
+    HELP_SCENE_ID = 'HelpScene',
     MAIN_SCENE_ID = 'MainScene',
 
     ABYSS_GAME_SCENE_ID = 'AbyssGameScene',

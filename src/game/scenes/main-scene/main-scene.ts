@@ -1,27 +1,25 @@
-// import { ButtonComponent } from "././.components/button-component/button-component";
-// import { GameElementSpecificationsInterface } from "./../../interfaces/game-element-specifications-interface";
-// import { GameSceneIdsStrings } from "./../../settings/game-constants-strings/game-scene-ids-string";
-// import { AlingString, ColorsString, textFontSize } from "./../../settings/game-constants-strings/text-styles-string";
 import { GameFacade } from "../facade-scene/facade-scene";
+import { SceneDataInterface } from "../../interfaces/scene-data-interface";
 import { sceneElemntSpecifictions } from "./main-scene-elements-specificactions";
 import { GameSceneIdsStrings } from "./../../settings/game-constants-strings/game-scene-ids-string";
 import { ButtonComponent } from "./../../components/button-component/button-component";
 import { EventsTouchedGameObjectsStrings } from "./../../settings/game-constants-strings/game-events-strings";
-import { WeapService } from "../../../app/shared/services/weap-service";
 import { loadFonts } from "../../functions/font-styles/font-styles-functions";
 import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
 import { gameAssets } from "../../settings/game-assets";
-import { gameRouterLink, phaserGameObject } from "../../settings/game-system-specifications";
-
-// {
-//     key: 'continue-button-background',
-//     path: '../../assets/game_assets/boot-load-assets/buttons-assets/continue-button-background.png'
-// },
+import { gameStatus } from "../../settings/game-system-specifications";
+import { buttonElements, IconsKeyStrings, SceneGameElementsString } from "../../settings/game-constants-strings/game-elements-strings";
+import { switchGameSoundStatus } from '../../functions/sound-functions/sound-function'; 
 
 export class MainScene extends Phaser.Scene {
     
-    private gameObjects: any;
-    private weapService: WeapService;
+    private gameObjects: any;    
+    private playButton: ButtonComponent;
+    private scoreButton: ButtonComponent;
+    private soundButton: ButtonComponent;
+    private infoButton: ButtonComponent;
+    private helpButton: ButtonComponent;
+    private sceneData: SceneDataInterface;
 
     init() {
 
@@ -31,18 +29,11 @@ export class MainScene extends Phaser.Scene {
         super({
             key: GameSceneIdsStrings.MAIN_SCENE_ID
         });
-        
-        this.weapService = new WeapService();
     }
 
     preload() {
         loadFonts();
-        loadAssetsArrayGame(this, gameAssets);  
-        // this.load.image(
-        //     'continue-button-background',
-        //     '../../../assets/game-assets/continue-button-background.png'
-        // );
-        
+        loadAssetsArrayGame(this, gameAssets);        
         this.gameObjects = new Map();
     }
 
@@ -50,21 +41,106 @@ export class MainScene extends Phaser.Scene {
         const fachada = new GameFacade(this, sceneElemntSpecifictions);
         this.gameObjects = fachada.getGameObjects;
 
-        const button = this.gameObjects.get('play-button').gameObject as ButtonComponent;
-
-        button.setInteractive().on(
-            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                // this.sys.game.destroy(true);
-                    this.scene.pause();
-                    gameRouterLink.routerLink.navigate(['/detail']);
-            }
-        );
+        this.getElements();
+        this.addFunctionality();
+        this.updateSoundButtonStatus();
     }
 
     update() {
 
     }
 
+    private getElements() {
+        
+        this.scoreButton = this.gameObjects.get(
+            SceneGameElementsString.SCENE_SCORE_BUTTON,
+        ).gameObject;
 
+        this.playButton = this.gameObjects.get(
+            SceneGameElementsString.SCENE_PLAY_BUTTON,
+        ).gameObject;
+
+        this.soundButton = this.gameObjects.get(
+            SceneGameElementsString.SCENE_SOUND_BUTTON,
+        ).gameObject;
+
+        this.infoButton = this.gameObjects.get(
+            SceneGameElementsString.SCENE_INFO_BUTTON,
+        ).gameObject;
+
+        this.helpButton = this.gameObjects.get(
+            SceneGameElementsString.SCENE_HELP_BUTTON,
+        ).gameObject;
+
+    }
+    
+    private addFunctionality() {
+        // addPointerOverOnInteractiveObject(this.scoreButton);
+        this.scoreButton.setInteractive().on(
+            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+                this.scene.pause();
+                const gameData: SceneDataInterface = {
+                    returnSceneName: this.scene.key
+                }
+                this.scene.launch(GameSceneIdsStrings.TOP_BEST_PLAYER_SCENE_ID, gameData);
+            }
+        );
+
+        // addPointerOverOnInteractiveObject(this.playButton);
+        this.playButton.setInteractive().on(   
+            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+                // this.scene.pause();
+                // gameRouterLink.routerLink.navigate(['/detail']);
+                this.scene.pause();
+                const gameData: SceneDataInterface = {
+                    returnSceneName: this.scene.key
+                }
+                this.scene.launch(GameSceneIdsStrings.LOGIN_SCENE_ID, gameData);
+            }
+        );
+        
+        // addPointerOverOnInteractiveObject(this.infoButton);
+        this.infoButton.setInteractive().on(
+            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+                this.scene.pause();
+                const gameData: SceneDataInterface = {
+                    returnSceneName: this.scene.key
+                }
+                this.scene.launch(GameSceneIdsStrings.INFO_SCENE_ID, gameData);
+            }
+        );
+
+        // addPointerOverOnInteractiveObject(this.infoButton);
+        this.helpButton.setInteractive().on(
+            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+                this.scene.pause();
+                const gameData: SceneDataInterface = {
+                    returnSceneName: this.scene.key
+                }
+                this.scene.launch(GameSceneIdsStrings.HELP_SCENE_ID, gameData);
+            }
+        );
+        
+        // addSettingsButtonFunctionality(this, this.settingsButton);
+        this.soundButton.setInteractive().on(
+            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+                switchGameSoundStatus(this, this.soundButton, true);
+                // this.scene.pause();
+                // const gameData: SceneDataInterface = {
+                //     returnSceneName: this.scene.key
+                // }
+                // this.scene.launch(GameSceneIdsStrings.SETTINGS_SCENE_ID, gameData);
+            }
+        );
+    }
+
+    private updateSoundButtonStatus() {
+        const buttonBackground = this.soundButton.getByName(buttonElements.BUTTON_BACKGROUND) as Phaser.GameObjects.Image;
+        if (gameStatus.isSoundMuted === true) {
+            buttonBackground.setTexture(IconsKeyStrings.OFF_SOUND_ICON);
+        } else {
+            buttonBackground.setTexture(IconsKeyStrings.ON_SOUND_ICON);
+        }
+    }
 
 }

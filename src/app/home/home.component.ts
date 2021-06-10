@@ -1,5 +1,5 @@
 import { WeapService } from "../shared/services/weap-service";
-import { gameRouterLink, phaserGameObject } from "../../game/settings/game-system-specifications";
+import { gameRouterLink } from "../../game/settings/game-system-specifications";
 // const fs = (<any>window).require("fs");
 
 import { Component, OnInit } from "@angular/core";
@@ -24,8 +24,8 @@ const kafkaText = `Jemand musste Josef K. verleumdet haben, denn ohne dass er et
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-
-  // private game: Phaser.Game;
+  
+  private game: Phaser.Game;
 
   constructor(
     private wordService: WordService,
@@ -37,7 +37,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     // if(phaserGameObject.game === null) {
-      phaserGameObject.game = new Phaser.Game(phaserGameConfig);
+      this.game = new Phaser.Game(phaserGameConfig);
+      
+      // phaserGameObject.game = new Phaser.Game(phaserGameConfig);
       console.log('phaser...');
     // } else {
     //   phaserGameObject.game.scene.start(GameSceneIdsStrings.MAIN_SCENE_ID);

@@ -21,7 +21,7 @@ export function generateGameObjectImage(
         _imageSpecifications.originX,
         _imageSpecifications.originY
     );
-    // gameObjectImage.scale = 0.5;
+    
     return gameObjectImage;
 }
 
