@@ -9,6 +9,7 @@ import {ChartComponent,
 } from "ng-apexcharts";
 import {Component, OnInit, ViewChild} from "@angular/core";
 import {Router} from "@angular/router";
+import {CsvService} from "../shared/services/csv.service";
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -29,9 +30,12 @@ export class DetailComponent implements OnInit {
 
   constructor(private router: Router,
               private weapService: WeapService,
+              private csvService: CsvService,
 
   ) {
     // @ts-ignore
+    this.csvService.printdirname();
+
     this.chartOptions = {
       series: [
         {
