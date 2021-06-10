@@ -1,7 +1,8 @@
-import { generateGameObjectImage } from "./../../functions/image-functions/image-functions";
-import { generateGameObjectText } from "./../../functions/text-functions/text-functions";
-import { GameElementSpecificationsInterface } from "./../../interfaces/game-element-specifications-interface";
-import { buttonElements, GameElementsString } from "./../../settings/game-constants-strings/game-elements-strings";
+import { generateGameObjectImage } from "../../functions/image-functions/image-functions";
+import { generateGameObjectText } from "../../functions/text-functions/text-functions";
+import { GameElementSpecificationsInterface } from "../../interfaces/game-element-specifications-interface";
+// @ts-ignore
+import { buttonElements, GameElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 
 export class ButtonComponent extends Phaser.GameObjects.Container {
 
@@ -29,7 +30,7 @@ export class ButtonComponent extends Phaser.GameObjects.Container {
         this.buttonText = generateGameObjectText(this.scene, buttonTextSpecifications);
         this.buttonText.setName(buttonElements.BUTTON_TEXT);
         this.buttonText.setPosition(0, this.calculatePositionYofButtonText());
-        
+
         this.add([this.buttonBackground, this.buttonText]);
         this.setSize(this.buttonSpecifications.scale.objectWidth, this.buttonSpecifications.scale.objectHeight );
     }
@@ -45,7 +46,7 @@ export class ButtonComponent extends Phaser.GameObjects.Container {
         if (isSimpleButton) {
             verticalAlignment = -this.buttonSpecifications.scale.objectHeight * 0.1;
         }
-        
+
         if (isButton) {
             verticalAlignment = 0;
         }

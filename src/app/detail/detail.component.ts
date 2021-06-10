@@ -4,16 +4,13 @@ import {ChartComponent,
   ApexChart,
   ApexXAxis,
   ApexTitleSubtitle,
-  ApexResponsive
-import { Component, OnInit } from '@angular/core';
+  ApexResponsive,
+} from "ng-apexcharts";
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
 import { GameSceneIdsStrings } from '../../game/settings/game-constants-strings/game-scene-ids-string';
 // import { phaserGameConfig } from './../../settings/phaser-game-config-specifications';
 import { phaserGameConfig } from '../../game/settings/phaser-game-config-specifications';
-
-} from "ng-apexcharts";
-import {Component, OnInit, ViewChild} from "@angular/core";
-import {Router} from "@angular/router";
 import {CsvService} from "../shared/services/csv.service";
 
 export type ChartOptions = {
