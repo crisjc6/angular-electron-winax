@@ -1,24 +1,37 @@
+* { margin: 0; padding: 0;}
 /* You can add global styles to this file, and also import other style files */
 html, body {
   margin: 0;
   padding: 0;
 
   height: 100%;
+  // width: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  background: url(assets/background.jpg) no-repeat center fixed;
 }
 
 /* CAN (MUST) BE REMOVED ! Sample Global style */
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.container-custmom {
+  // -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  // background-size: cover; /* version standardisée */
 
-  background: url(./assets/background.jpg) no-repeat center fixed;
-  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  background-size: cover; /* version standardisée */
+  .score {
+    color: #33485F;
+    font-size: 30px;
+    letter-spacing: -0.1em;
+  }
 
+  .box-cj {
+    box-shadow: -5px 7px 46px 10px rgba(221,167,167,0.7);
+    margin-top: 0.2em;
+    border-radius: 15px 15px 37px 15px;
+    background-color: azure;
+    color: #33485F;
+  }
+  .mt-1 {
+    margin-top: 0.2em !important;
+    margin-bottom: 0.2em !important;
+  }
   .title {
     color: white;
     margin: 0;
@@ -47,3 +60,7 @@ html, body {
     }
   }
 }
+
+@font-face { font-family: "Comfortaa"; src: url("assets/font_familys/Comfortaa/Comfortaa-VariableFont_wght.ttf") format("truetype");}
+@font-face { font-family: "Fredoka One"; src: url("assets/font_familys/Fredoka_One/FredokaOne-Regular.ttf") format("truetype");}
+@font-face { font-family: "Wendy One"; src: url("assets/font_familys/Wendy_One/WendyOne-Regular.ttf") format("truetype");}

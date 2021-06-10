@@ -1,7 +1,65 @@
-<div class="container">
-  <h1 class="title">
-    {{ 'PAGES.DETAIL.TITLE' | translate }}
-  </h1>
 
-  <a routerLink="/">{{ 'PAGES.DETAIL.BACK_TO_HOME' | translate }}</a>
+<div class="container-fluid container-custmom" id='angular'>
+  <div class="row align-items-center">
+    <div class="col-8">
+      <a href="javascript:void(0);" (click)="goPlaces()">{{ 'PAGES.DETAIL.BACK_TO_HOME' | translate }}</a>
+      <button  (click)=openTestDocument() type="button" class="btn btn-primary">ABRIR WEAP</button>
+    </div>
+    <div class="col-4  box-cj">
+      <div class="row mt-1">
+        <div class="col-6">
+          <span>Año:</span>
+          <div class="progress" style="align-content: start">
+            <div class="progress-bar " role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">2045</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+                      <span>
+             Puntaje: <strong class="score">
+                        60!
+                      </strong>
+          </span>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div style="text-align:center">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [xaxis]="chartOptions.xaxis"
+          ></apx-chart>
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div style="text-align:center">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [xaxis]="chartOptions.xaxis"
+          ></apx-chart>
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div style="text-align:center">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [xaxis]="chartOptions.xaxis"
+          ></apx-chart>
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div style="text-align:center">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [xaxis]="chartOptions.xaxis"
+            [responsive]="chartOptions.responsive"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
