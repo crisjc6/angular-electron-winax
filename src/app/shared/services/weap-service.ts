@@ -79,4 +79,9 @@ export class WeapService {
 
 
   }
+  estaCalculado() {
+    const WEAP_App = new winax.Object("WEAP.WEAPApplication");
+    return WEAP_App.IsCalculating
+
+  }
 }

@@ -1,5 +1,4 @@
-
-<div class="container-fluid container-custmom" id='angular'>
+<div class="container-fluid container-custmom " id='angular' *ngIf="!bloqueado">
   <div class="row align-items-center">
     <div class="col-8">
       <a href="javascript:void(0);" (click)="goPlaces()">{{ 'PAGES.DETAIL.BACK_TO_HOME' | translate }}</a>
@@ -62,4 +61,10 @@
       </div>
     </div>
   </div>
+</div>
+<div class="cargando" *ngIf="bloqueado">
+  <button class="btn btn-primary" type="button" disabled>
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Cargando...
+  </button>
 </div>
