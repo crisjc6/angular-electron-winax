@@ -1,12 +1,15 @@
 
 <div class="container-fluid container-custmom" id='angular'>
   <div class="row align-items-center">
-    <div class="col-8">
-      <a href="javascript:void(0);" (click)="goPlaces()">{{ 'PAGES.DETAIL.BACK_TO_HOME' | translate }}</a>
-      <button  (click)=openTestDocument() type="button" class="btn btn-primary">ABRIR WEAP</button>
+    <div class="col-8 phaser" >
+      <div id = "phaser_game_map"></div>
+      <!-- <a href="javascript:void(0);" (click)="goPlaces()">{{ 'PAGES.DETAIL.BACK_TO_HOME' | translate }}</a>
+      <button  (click)=openTestDocument() type="button" class="btn btn-primary">ABRIR WEAP</button> -->
     </div>
+
     <div class="col-4  box-cj">
-      <div class="row mt-1">
+      <!-- <div class="row align-items-center"> -->
+      <!-- <div class="row mt-1">
         <div class="col-6">
           <span>Año:</span>
           <div class="progress" style="align-content: start">
@@ -22,7 +25,7 @@
           </span>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="row mt-1">
         <div style="text-align:center">
           <apx-chart

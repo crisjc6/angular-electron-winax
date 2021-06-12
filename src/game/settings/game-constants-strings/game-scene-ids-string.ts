@@ -7,8 +7,6 @@ export const enum GameSceneIdsStrings {
     TOP_BEST_PLAYER_SCENE_ID = 'TopBestPlayerScene',
     HELP_SCENE_ID = 'HelpScene',
     MAIN_SCENE_ID = 'MainScene',
-
-    ABYSS_GAME_SCENE_ID = 'AbyssGameScene',
-    TEST_GAME = 'TestGame',
-    LAST_GAME_ID = 'LastGame'
+    MAP_SCENE_ID = 'MapScene',
+    DECISION_MAKING_SCENE_ID = 'DecisionMakingScene',
 }

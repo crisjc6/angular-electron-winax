@@ -11,10 +11,10 @@ export class ButtonComponent extends Phaser.GameObjects.Container {
     private buttonBackground: Phaser.GameObjects.Image;
     private buttonText: Phaser.GameObjects.Text;
 
-    constructor(scene: Phaser.Scene, buttonElement: GameElementSpecificationsInterface) {
-        super(scene, buttonElement.scale.objectPositionX, buttonElement.scale.objectPositionY);
-        this.scene = scene;
-        this.buttonSpecifications = buttonElement;
+    constructor(_scene: Phaser.Scene, _buttonElement: GameElementSpecificationsInterface) {
+        super(_scene, _buttonElement.scale.objectPositionX, _buttonElement.scale.objectPositionY);
+        this.scene = _scene;
+        this.buttonSpecifications = _buttonElement;
         this.generateButton();
     }
 

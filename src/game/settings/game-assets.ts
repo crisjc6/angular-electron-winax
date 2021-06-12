@@ -43,36 +43,6 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
     },
     {
         type: GameElementsString.IMAGE_STRING,
-        key: 'on-switch-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/on-switch-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'off-switch-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/off-switch-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'check-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/check-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'blank-check-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/blank-check-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'home-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/home-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'return-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/return-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
         key: 'off-sound-icon-background',
         path: '../../assets/game-assets/boot-load-assets/icons-assets/off-sound-icon-background.png'
     },
@@ -80,31 +50,6 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
         type: GameElementsString.IMAGE_STRING,
         key: 'on-sound-icon-background',
         path: '../../assets/game-assets/boot-load-assets/icons-assets/on-sound-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'pause-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/pause-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'star-icon-obtained-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/star-icon-obtained-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'star-icon-not-obtained-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/star-icon-not-obtained-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'big-star-icon-not-obtained-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/big-star-icon-not-obtained-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'big-star-icon-obtained-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/big-star-icon-obtained-background.png'
     },
      /*************************** CARDS *******************************/
     {
@@ -116,24 +61,6 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
         type: GameElementsString.IMAGE_STRING,
         key: 'score-table-background',
         path: '../../assets/game-assets/boot-load-assets/cards-assets/score-table-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'instruction-card-background',
-        path: '../../assets/game-assets/boot-load-assets/cards-assets/instruction-card-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'pause-menu-card-background',
-        path: '../../assets/game-assets/boot-load-assets/cards-assets/pause-menu-card-background.png'
-    },
-    
-    /*************************** MAPS *******************************/
-    
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'map-background',
-        path: '../../assets/game-assets/boot-load-assets/world-assets/maps-assets/map-background.png'
     },
 
     /*************************** BACKGROUNS *******************************/

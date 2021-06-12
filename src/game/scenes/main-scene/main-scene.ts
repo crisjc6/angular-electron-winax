@@ -1,15 +1,17 @@
 import { GameFacade } from "../facade-scene/facade-scene";
 import { SceneDataInterface } from "../../interfaces/scene-data-interface";
-import { sceneElemntSpecifictions } from "./main-scene-elements-specificactions";
+import { mainSceneElementSpecifictions } from "./main-scene-elements-specificactions";
 import { GameSceneIdsStrings } from "./../../settings/game-constants-strings/game-scene-ids-string";
 import { ButtonComponent } from "./../../components/button-component/button-component";
 import { EventsTouchedGameObjectsStrings } from "./../../settings/game-constants-strings/game-events-strings";
 import { loadFonts } from "../../functions/font-styles/font-styles-functions";
 import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
 import { gameAssets } from "../../settings/game-assets";
-import { gameStatus } from "../../settings/game-system-specifications";
-import { buttonElements, IconsKeyStrings, SceneGameElementsString } from "../../settings/game-constants-strings/game-elements-strings";
+import { GameSpecifications, gameStatus } from "../../settings/game-system-specifications";
+import { buttonElements, IconsKeyStrings, GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { switchGameSoundStatus } from '../../functions/sound-functions/sound-function'; 
+import { GameDecisionInterface } from "../../interfaces/game-decision-interface";
+// import { GameDecisions } from "../../settings/game-decisions";
 
 export class MainScene extends Phaser.Scene {
     
@@ -22,7 +24,7 @@ export class MainScene extends Phaser.Scene {
     private sceneData: SceneDataInterface;
 
     init() {
-
+        gameStatus.status = 'mainScene'; 
     }
     
     constructor() {
@@ -35,10 +37,13 @@ export class MainScene extends Phaser.Scene {
         loadFonts();
         loadAssetsArrayGame(this, gameAssets);        
         this.gameObjects = new Map();
+        // console.log(decisions);
+        // console.log(decisions[2]);
+        // this.getGameData();
     }
 
     create() {
-        const fachada = new GameFacade(this, sceneElemntSpecifictions);
+        const fachada = new GameFacade(this, mainSceneElementSpecifictions);
         this.gameObjects = fachada.getGameObjects;
 
         this.getElements();
@@ -53,23 +58,23 @@ export class MainScene extends Phaser.Scene {
     private getElements() {
         
         this.scoreButton = this.gameObjects.get(
-            SceneGameElementsString.SCENE_SCORE_BUTTON,
+            GameSceneElementsString.SCENE_SCORE_BUTTON,
         ).gameObject;
 
         this.playButton = this.gameObjects.get(
-            SceneGameElementsString.SCENE_PLAY_BUTTON,
+            GameSceneElementsString.SCENE_PLAY_BUTTON,
         ).gameObject;
 
         this.soundButton = this.gameObjects.get(
-            SceneGameElementsString.SCENE_SOUND_BUTTON,
+            GameSceneElementsString.SCENE_SOUND_BUTTON,
         ).gameObject;
 
         this.infoButton = this.gameObjects.get(
-            SceneGameElementsString.SCENE_INFO_BUTTON,
+            GameSceneElementsString.SCENE_INFO_BUTTON,
         ).gameObject;
 
         this.helpButton = this.gameObjects.get(
-            SceneGameElementsString.SCENE_HELP_BUTTON,
+            GameSceneElementsString.SCENE_HELP_BUTTON,
         ).gameObject;
 
     }
@@ -142,5 +147,7 @@ export class MainScene extends Phaser.Scene {
             buttonBackground.setTexture(IconsKeyStrings.ON_SOUND_ICON);
         }
     }
+
+    // private 
 
 }

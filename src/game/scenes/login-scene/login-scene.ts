@@ -4,10 +4,11 @@ import { loginSceneElementsSpecifications } from "./login-scene-specifications";
 import { GameSceneIdsStrings } from "../../settings/game-constants-strings/game-scene-ids-string";
 import { ButtonComponent } from "../../components/button-component/button-component";
 import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-strings/game-events-strings";
-import { SceneGameElementsString } from "../../settings/game-constants-strings/game-elements-strings";
+import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
-import { gameRouterLink, playerData } from "../../settings/game-system-specifications";
+import { gameRouterLink, GameSpecifications, gameStatus, playerData } from "../../settings/game-system-specifications";
 import { HtmlDOMComponent } from "../../components/html-dom-component/html-dom-component";
+import { getGameData } from "../../functions/game-decision-data-functions/game-decision-data-functions";
 
 export class LoginScene extends Phaser.Scene {
 
@@ -49,25 +50,25 @@ export class LoginScene extends Phaser.Scene {
     private getElements() {
         
         this.sceneBackground = this.sceneGameObjects.get(
-            SceneGameElementsString.SCENE_BACKGROUND
+            GameSceneElementsString.SCENE_BACKGROUND
         ).gameObject;
         this.sceneBackground.setTint(ColorsValue.BLACK_HEXADECIMAL_VALUE);
 
         this.messageText = this.sceneGameObjects.get(
-            SceneGameElementsString.SCENE_MESSAGE
+            GameSceneElementsString.SCENE_MESSAGE
         ).gameObject;
         this.messageText.setVisible(false);
 
         this.closeButton = this.sceneGameObjects.get(
-            SceneGameElementsString.SCENE_CLOSE_BUTTON
+            GameSceneElementsString.SCENE_CLOSE_BUTTON
         ).gameObject;
 
         this.continueButton = this.sceneGameObjects.get(
-            SceneGameElementsString.SCENE_CONTINUE_BUTTON
+            GameSceneElementsString.SCENE_CONTINUE_BUTTON
         ).gameObject;
         
         this.loginInput = this.sceneGameObjects.get(
-            SceneGameElementsString.SCENE_LOGIN_INPUT
+            GameSceneElementsString.SCENE_LOGIN_INPUT
         ).gameObject;
         
     }
@@ -88,6 +89,9 @@ export class LoginScene extends Phaser.Scene {
                 if (this.loginInput.getInputText() === '') {
                     this.messageText.setVisible(true);
                 } else {
+                    gameStatus.status = 'mapScene';
+                    console.log('clic...............')
+                    getGameData();
                     playerData.teamName = this.loginInput.getInputText();
                     gameRouterLink.routerLink.navigate(['/detail']);
                 }

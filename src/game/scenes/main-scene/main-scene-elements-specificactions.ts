@@ -1,7 +1,7 @@
 import { GameElementSpecificationsInterface } from "./../../interfaces/game-element-specifications-interface";
 import { AlingString, ColorsString, GameFontStylesString, textFontSize } from "./../../settings/game-constants-strings/text-styles-string";
 
-export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
+export const mainSceneElementSpecifictions: GameElementSpecificationsInterface[] = [
     {
         type: 'image',
         element: 'background',
@@ -10,10 +10,11 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 1366,
-            objectHeight: 770,
-            objectPositionX: 683,
-            objectPositionY: 384,
+            // objectWidth: 1366,
+            objectWidth: 1480,
+            objectHeight: 870,
+            objectPositionX: 690,
+            objectPositionY: 425,
         }
     },
     {
@@ -26,14 +27,14 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             color: ColorsString.RED_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-            strokeThickness: textFontSize.ExtraBig.strokeThickness,
-            fontSize: textFontSize.ExtraBig.fontSize,
+            strokeThickness: textFontSize.VeryBig.strokeThickness,
+            fontSize: '70px',
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
             objectWidth: 1200,
-            objectHeight: 100,
+            objectHeight: 70,
             objectPositionX: 683,
             objectPositionY: 170,
         }
@@ -54,10 +55,10 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 420,
-            objectHeight: 162,
-            objectPositionX: 1120,
-            objectPositionY: 640,
+            objectWidth: 380,
+            objectHeight: 160,
+            objectPositionX: 1080,
+            objectPositionY: 642,
         }
     },
     {
@@ -71,16 +72,20 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             color: ColorsString.BLACK_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-            strokeThickness: textFontSize.Small.strokeThickness,
-            fontSize: textFontSize.Small.fontSize,
+            // strokeThickness: textFontSize.Small.strokeThickness,
+            // fontSize: textFontSize.Small.fontSize,
+            strokeThickness: textFontSize.VerySmall.strokeThickness,
+            fontSize: textFontSize.VerySmall.fontSize,
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 100,
-            objectHeight: 140,
-            objectPositionX: 148,
-            objectPositionY: 660,
+            objectWidth: 71,
+            objectHeight: 100,
+            // objectWidth: 100,
+            // objectHeight: 140,
+            objectPositionX: 180,
+            objectPositionY: 666,
         }
     },
     {
@@ -94,16 +99,20 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             color: ColorsString.BLACK_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-            strokeThickness: textFontSize.Small.strokeThickness,
-            fontSize: textFontSize.Small.fontSize,
+            // strokeThickness: textFontSize.Small.strokeThickness,
+            // fontSize: textFontSize.Small.fontSize,
+            strokeThickness: textFontSize.VerySmall.strokeThickness,
+            fontSize: textFontSize.VerySmall.fontSize,
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 100,
-            objectHeight: 140,
-            objectPositionX: 363,
-            objectPositionY: 660,
+            objectWidth: 71,
+            objectHeight: 100,
+            // objectWidth: 100,
+            // objectHeight: 140,
+            objectPositionX: 360,
+            objectPositionY: 666,
         },
     },
     {
@@ -117,16 +126,20 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             color: ColorsString.BLACK_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-            strokeThickness: textFontSize.Small.strokeThickness,
-            fontSize: textFontSize.Small.fontSize,
+            // strokeThickness: textFontSize.Small.strokeThickness,
+            // fontSize: textFontSize.Small.fontSize,
+            strokeThickness: textFontSize.VerySmall.strokeThickness,
+            fontSize: textFontSize.VerySmall.fontSize,
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 100,
-            objectHeight: 140,
-            objectPositionX: 555,
-            objectPositionY: 660,
+            objectWidth: 71,
+            objectHeight: 100,
+            // objectWidth: 100,
+            // objectHeight: 140,
+            objectPositionX: 520,
+            objectPositionY: 666,
         }
     },
     {
@@ -140,16 +153,20 @@ export const sceneElemntSpecifictions: GameElementSpecificationsInterface[] = [
             color: ColorsString.BLACK_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-            strokeThickness: textFontSize.Small.strokeThickness,
-            fontSize: textFontSize.Small.fontSize,
+            // strokeThickness: textFontSize.Small.strokeThickness,
+            // fontSize: textFontSize.Small.fontSize,
+            strokeThickness: textFontSize.VerySmall.strokeThickness,
+            fontSize: textFontSize.VerySmall.fontSize,
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 100,
-            objectHeight: 140,
-            objectPositionX: 777,
-            objectPositionY: 660,
+            objectWidth: 71,
+            objectHeight: 100,
+            // objectWidth: 100,
+            // objectHeight: 140,
+            objectPositionX: 695,
+            objectPositionY: 666,
         }
     }
 ]

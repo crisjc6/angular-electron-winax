@@ -8,6 +8,7 @@ import { GameElementFacadeInterface } from "./../../interfaces/game-element-faca
 import { GameElementSpecificationsInterface } from "./../../interfaces/game-element-specifications-interface";
 import { GameElementsString } from "./../../settings/game-constants-strings/game-elements-strings";
 import { HtmlDOMComponent } from "./../../components/html-dom-component/html-dom-component";
+import { DecisionBoxComponent } from "./../../components/decision-box-component/decision-box-component";
 
 export class GameFacade {
     private gameScene: Phaser.Scene;
@@ -80,6 +81,11 @@ export class GameFacade {
 
             case GameElementsString.HTML_DOM_STRING: {
                 gameObject = new HtmlDOMComponent(this.gameScene, _gameElementSpecifications);
+                break;
+            }
+
+            case GameElementsString.DECISION_BOX_STRING: {
+                gameObject = new DecisionBoxComponent(this.gameScene, _gameElementSpecifications);
                 break;
             }
 
