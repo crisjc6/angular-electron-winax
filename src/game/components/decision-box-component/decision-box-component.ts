@@ -20,7 +20,7 @@ export class DecisionBoxComponent extends Phaser.GameObjects.Container {
         this.scene = _scene;
         this.decisionBoxSpecifications = _decisionBoxSpecifications;
         this.generateBox();
-        this.addFuncionality();
+        // this.addFuncionality();
     }
 
     private generateBox() {
@@ -61,19 +61,20 @@ export class DecisionBoxComponent extends Phaser.GameObjects.Container {
         this.setSize(this.decisionBoxSpecifications.scale.objectWidth, this.decisionBoxSpecifications.scale.objectHeight );
     }
 
-    private addFuncionality() {
-        this.setInteractive().on(
-            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                // this.updateSelectedCheckBox(this.checkBoxBackground);
-                // _gameObjectImage.texture.key === IconsKeyStrings.BLANK_CHECK_ICON ? IconsKeyStrings.CHECK_ICON : IconsKeyStrings.BLANK_CHECK_ICON,
-                this.checkBoxBackground.texture.key === IconsKeyStrings.BLANK_CHECK_ICON ? this.updateToSelectedCheckBox() : this.updateToBlankCheckBox();
-                // this.up
-            }
-        );
-    }
+    // private addFuncionality() {
+    //     this.setInteractive().on(
+    //         EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+    //             // this.updateSelectedCheckBox(this.checkBoxBackground);
+    //             // _gameObjectImage.texture.key === IconsKeyStrings.BLANK_CHECK_ICON ? IconsKeyStrings.CHECK_ICON : IconsKeyStrings.BLANK_CHECK_ICON,
+    //             this.checkBoxBackground.texture.key === IconsKeyStrings.BLANK_CHECK_ICON ? this.updateToSelectedCheckBox() : this.updateToBlankCheckBox();
+    //             // this.up
+    //         }
+    //     );
+    // }
 
-    public updateOption(optionText: string) {
+    public updateOption(optionId: string, optionText: string) {
         this.updateToBlankCheckBox();
+        this.setData('optionId', optionId);
         this.decisionText.setText(optionText);
     }
 

@@ -35,7 +35,6 @@ export class LoginScene extends Phaser.Scene {
     }
 
     create() {
-        
         this.generateScene();
         this.getElements();
         this.addFunctionality();
@@ -44,7 +43,6 @@ export class LoginScene extends Phaser.Scene {
     private generateScene() {
         this.gameFacade = new GameFacade(this, loginSceneElementsSpecifications);
         this.sceneGameObjects = this.gameFacade.getGameObjects;
-
     }
 
     private getElements() {
@@ -90,7 +88,6 @@ export class LoginScene extends Phaser.Scene {
                     this.messageText.setVisible(true);
                 } else {
                     gameStatus.status = 'mapScene';
-                    console.log('clic...............')
                     getGameData();
                     playerData.teamName = this.loginInput.getInputText();
                     gameRouterLink.routerLink.navigate(['/detail']);

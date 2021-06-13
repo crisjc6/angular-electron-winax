@@ -26,7 +26,7 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectHeightRatio: 1,
             // objectWidth: 1066,
             objectWidth: 750,
-            objectHeight: 500,
+            objectHeight: 560,
             objectPositionX: 405,
             objectPositionY: 315,
         },
@@ -51,7 +51,8 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectWidth: 55,
             objectHeight: 75,
             objectPositionX: 762,
-            objectPositionY: 90,
+            // objectPositionY: 90,
+            objectPositionY: 60,
         },
     },
     {
@@ -72,7 +73,8 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectHeight: 70,
             objectPositionX: 405,
             // objectPositionY: 154,
-            objectPositionY: 120,
+            // objectPositionY: 120,
+            objectPositionY: 90,
         },
     },
     {
@@ -93,7 +95,8 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectHeight: 60,
             objectPositionX: 405,
             // objectPositionY: 241,
-            objectPositionY: 210,
+            // objectPositionY: 210,
+            objectPositionY: 180,
         },
     },
     {
@@ -113,7 +116,7 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectWidth: 600,
             objectHeight: 70,
             objectPositionX: 405,
-            objectPositionY: 300,
+            objectPositionY: 290,
             // objectPositionY: 729,
         }
     },
@@ -134,7 +137,7 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectWidth: 600,
             objectHeight: 70,
             objectPositionX: 405,
-            objectPositionY: 380,
+            objectPositionY: 370,
             // objectPositionY: 729,
         }
     },
@@ -155,7 +158,7 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectWidth: 600,
             objectHeight: 70,
             objectPositionX: 405,
-            objectPositionY: 465,
+            objectPositionY: 455,
             // objectPositionY: 729,
         }
     },
@@ -177,7 +180,7 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectWidth: 200,
             objectHeight: 60,
             objectPositionX: 550,
-            objectPositionY: 555,
+            objectPositionY: 540,
             // objectPositionY: 729,
         }
     },
@@ -199,7 +202,7 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectWidth: 200,
             objectHeight: 60,
             objectPositionX: 250,
-            objectPositionY: 555,
+            objectPositionY: 540,
             // objectPositionY: 729,
         }
     }

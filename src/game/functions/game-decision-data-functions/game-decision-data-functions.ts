@@ -10,12 +10,13 @@ export function getGameData() {
     for(let periodId in GameSpecifications.gameDecisionsData) {
         GameSpecifications.decisionPeriodIds.push(periodId);
     }
-    GameSpecifications.currentPeriodId = GameSpecifications.decisionPeriodIds[GameSpecifications.currentPeriodIndex];
+    GameSpecifications.decisionPeriodIds.reverse();
+    // GameSpecifications.currentPeriodId = GameSpecifications.decisionPeriodIds[GameSpecifications.currentPeriodIndex];
 
-    GameSpecifications.currentDecisionsPeriod = JSON.parse(JSON.stringify(GameSpecifications.gameDecisionsData[GameSpecifications.currentPeriodId]));
-    for(let decisionId in GameSpecifications.currentDecisionsPeriod.decisions) {
-        GameSpecifications.decisionIds.push(decisionId);
-    }
-    GameSpecifications.currentDecisionId = GameSpecifications.decisionIds[GameSpecifications.currentDecisionIndex];
-    GameSpecifications.currentDecision = JSON.parse(JSON.stringify(GameSpecifications.currentDecisionsPeriod.decisions[GameSpecifications.currentDecisionId]));
+    // GameSpecifications.currentDecisionsPeriod = JSON.parse(JSON.stringify(GameSpecifications.gameDecisionsData[GameSpecifications.currentPeriodId]));
+    // for(let decisionId in GameSpecifications.currentDecisionsPeriod.decisions) {
+    //     GameSpecifications.decisionIds.push(decisionId);
+    // }
+    // GameSpecifications.currentDecisionId = GameSpecifications.decisionIds[GameSpecifications.currentDecisionIndex];
+    // GameSpecifications.currentDecision = JSON.parse(JSON.stringify(GameSpecifications.currentDecisionsPeriod.decisions[GameSpecifications.currentDecisionId]));
 }

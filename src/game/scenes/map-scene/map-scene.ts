@@ -7,7 +7,7 @@ import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-s
 import { loadFonts } from "../../functions/font-styles/font-styles-functions";
 import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
 import { gameMapAssets } from "../../settings/game-map-assets";
-import { gameRouterLink, gameStatus } from "../../settings/game-system-specifications";
+import { gameRouterLink, GameSpecifications, gameStatus } from "../../settings/game-system-specifications";
 import { buttonElements, IconsKeyStrings, GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { switchGameSoundStatus } from '../../functions/sound-functions/sound-function'; 
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
@@ -100,11 +100,15 @@ export class MapScene extends Phaser.Scene {
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 // this.scene.pause();
                 // gameRouterLink.routerLink.navigate(['/detail']);
-                this.scene.pause();
-                const gameData: SceneDataInterface = {
-                    returnSceneName: this.scene.key
+                console.log(GameSpecifications.decisionPeriodIds.length);
+                if (GameSpecifications.decisionPeriodIds.length > 0) {
+                    this.scene.pause();
+                    const gameData: SceneDataInterface = {
+                        returnSceneName: this.scene.key
+                    }
+                    this.scene.launch(GameSceneIdsStrings.DECISION_MAKING_SCENE_ID, gameData);    
                 }
-                this.scene.launch(GameSceneIdsStrings.DECISION_MAKING_SCENE_ID, gameData);
+                
             }
         );
 

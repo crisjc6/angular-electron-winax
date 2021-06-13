@@ -10,7 +10,7 @@ export const GameSpecifications:{
     currentPeriodId: string;
     currentDecisionsPeriod: GameDecisionInterface; //Corregir o aumentar el data de cada decicion debe ser: Periodo-Decicion-Opcion
     currentDecisionIndex: number;
-    currentDecision: DecisionInterface; //Corregir o aumentar el data de cada decicion debe ser: Periodo-Decicion-Opcion
+    // currentDecision: DecisionInterface; //Corregir o aumentar el data de cada decicion debe ser: Periodo-Decicion-Opcion
     decisionIds: string[];
     currentDecisionId: string;
 } = {
@@ -22,7 +22,7 @@ export const GameSpecifications:{
     currentPeriodId: '',
     currentDecisionsPeriod: null,
     currentDecisionIndex: 0,
-    currentDecision: null,
+    // currentDecision: null,
     decisionIds: [],
     currentDecisionId: ''
 }
