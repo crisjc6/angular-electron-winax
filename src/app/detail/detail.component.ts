@@ -52,7 +52,7 @@ export class DetailComponent implements OnInit {
       ],
       chart: {
         height: 160 ,
-        type: "bar",
+        type: "line",
         toolbar: {
           show: false
         }

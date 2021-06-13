@@ -9,7 +9,6 @@ export class WeapService {
   constructor() {
 
   }
-
   openWeap() {
       const WEAP_App = new winax.Object("WEAP.WEAPApplication");
 /*
