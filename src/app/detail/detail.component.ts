@@ -13,6 +13,7 @@ import { GameSceneIdsStrings } from '../../game/settings/game-constants-strings/
 import { phaserGameConfigMap } from '../../game/settings/phaser-game-config-specifications-map';
 import {CsvService} from "../shared/services/csv.service";
 import { gameRouterLink } from "../../game/settings/game-system-specifications";
+import {CargandoService} from "../shared/services/cargando.service";
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -29,7 +30,8 @@ export class DetailComponent implements OnInit {
   @ViewChild("chart", { static: false }) chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   private game: Phaser.Game;
-  
+  bloqueado = false;
+
   ngOnInit(): void {
     this.game = new Phaser.Game(phaserGameConfigMap);
   }
@@ -37,6 +39,7 @@ export class DetailComponent implements OnInit {
   constructor(private router: Router,
               private weapService: WeapService,
               private csvService: CsvService,
+              private readonly _cargandoService: CargandoService,
               private _router: Router
   ) {
     gameRouterLink.routerLink = this._router;
@@ -51,7 +54,7 @@ export class DetailComponent implements OnInit {
       ],
       chart: {
         height: 160 ,
-        type: "bar",
+        type: "line",
         toolbar: {
           show: false
         }
@@ -77,12 +80,26 @@ export class DetailComponent implements OnInit {
         ]
     };
   }
+  async escucharCambiosEnCargandoService() {
+    await this._cargandoService
+      .cambioCargando
+      .subscribe(
+        (cambio) => {
+          this.bloqueado = cambio;
+        }
+      );
+  }
+
 
   goPlaces() {
     this.router.navigate(['/']);
   }
   openTestDocument(): void {
-    this.weapService.openWeap();
+    this._cargandoService.habilitarCargando();
+    setTimeout (()=> {
+      this.weapService.openWeap();
+      this._cargandoService.deshabilitarCargando()
+    },500 );
   }
   public updateSeries() {
     this.chartOptions.series = [{

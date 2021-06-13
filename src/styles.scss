@@ -13,7 +13,9 @@ html, body {
 /* CAN (MUST) BE REMOVED ! Sample Global style */
 .container-custmom {
   // -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  // background-size: cover; /* version standardisée */
+  // background-size: cover; /* version st  andardisée */
+
+  margin: 0; height: 100%; overflow: hidden;
 
   .score {
     color: #33485F;
@@ -65,7 +67,21 @@ html, body {
     }
   }
 }
+.cargando {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(assets/background.jpg) no-repeat center fixed;
+  box-shadow:  35px 35px 70px #bebebe,
+  -35px -35px 70px #ffffff;
+}
 
+.col-lg-4 {
+  height: 42em;
+  overflow-y: scroll;
+}
 @font-face { font-family: "Comfortaa"; src: url("assets/font_familys/Comfortaa/Comfortaa-VariableFont_wght.ttf") format("truetype");}
 @font-face { font-family: "Fredoka One"; src: url("assets/font_familys/Fredoka_One/FredokaOne-Regular.ttf") format("truetype");}
 @font-face { font-family: "Wendy One"; src: url("assets/font_familys/Wendy_One/WendyOne-Regular.ttf") format("truetype");}
