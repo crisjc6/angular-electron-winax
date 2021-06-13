@@ -72,10 +72,15 @@ export class DecisionBoxComponent extends Phaser.GameObjects.Container {
     //     );
     // }
 
-    public updateOption(optionId: string, optionText: string) {
+    public updateOption(optionId: string, optionText: string, optionValue: number) {
         this.updateToBlankCheckBox();
         this.setData('optionId', optionId);
         this.decisionText.setText(optionText);
+        if (optionValue === 1) {
+            this.updateToSelectedCheckBox();
+        } else {
+            this.updateToBlankCheckBox();
+        }
     }
 
     public updateToSelectedCheckBox() {
