@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
       this.game = new Phaser.Game(phaserGameConfig);
 
       // phaserGameObject.game = new Phaser.Game(phaserGameConfig);
-      console.log('phaser...');
+      // console.log('phaser...');
     // } else {
     //   phaserGameObject.game.scene.start(GameSceneIdsStrings.MAIN_SCENE_ID);
     //   phaserGameObject.game.;

@@ -64,7 +64,11 @@ export const textFontSize = {
     },
     'Big' : {
         fontSize: '50px',
-        strokeThickness: 20
+        strokeThickness: 21
+    },
+    'LittleBig' : {
+        fontSize: '45px',
+        strokeThickness: 18
     },
     'Regular' : {
         fontSize: '35px',
@@ -81,6 +85,14 @@ export const textFontSize = {
     'VerySmall' : {
         fontSize: '20px',
         strokeThickness: 8
+    },
+    'LitleVerySmall' : {
+        fontSize: '18px',
+        strokeThickness: 7
+    },
+    'VeryVerySmall' : {
+        fontSize: '16px',
+        strokeThickness: 6
     },
 }
 

@@ -10,8 +10,9 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
 import { GameSceneIdsStrings } from '../../game/settings/game-constants-strings/game-scene-ids-string';
 // import { phaserGameConfig } from './../../settings/phaser-game-config-specifications';
-import { phaserGameConfig } from '../../game/settings/phaser-game-config-specifications';
+import { phaserGameConfigMap } from '../../game/settings/phaser-game-config-specifications-map';
 import {CsvService} from "../shared/services/csv.service";
+import { gameRouterLink } from "../../game/settings/game-system-specifications";
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -27,15 +28,18 @@ export type ChartOptions = {
 export class DetailComponent implements OnInit {
   @ViewChild("chart", { static: false }) chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
+  private game: Phaser.Game;
+  
   ngOnInit(): void {
+    this.game = new Phaser.Game(phaserGameConfigMap);
   }
 
   constructor(private router: Router,
               private weapService: WeapService,
               private csvService: CsvService,
-
+              private _router: Router
   ) {
-    // @ts-ignore
+    gameRouterLink.routerLink = this._router;
     this.csvService.printdirname();
 
     this.chartOptions = {

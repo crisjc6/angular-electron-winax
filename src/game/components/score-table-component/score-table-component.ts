@@ -23,7 +23,7 @@ export class ScoreTableComponent extends Phaser.GameObjects.Container {
         this.tableData = tableData;
         this.setSize(this.scoreTableSpecifications.scale.objectWidth, this.scoreTableSpecifications.scale.objectHeight);
         this.setPosition(this.scoreTableSpecifications.scale.objectPositionX, this.scoreTableSpecifications.scale.objectPositionY);
-        this.rowsNumber = 10;
+        this.rowsNumber = 4;
         this.generateScoreTable(10);
         // this.scoreTableBackground.setAlpha(0.60);
         this.scoreTableBackground.displayHeight *= 1.04;
