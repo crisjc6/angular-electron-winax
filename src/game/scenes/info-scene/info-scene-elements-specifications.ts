@@ -77,7 +77,7 @@ export const infoSceneElementsSpecifications: GameElementSpecificationsInterface
         type: 'text',
         element: 'title',
         name: 'game-info',
-        content: 'GIRHA (Gestión Integral del Recurso Hídrico y Ambiental)\nes un Juego Serio creado con el objetivo de promover de una manera atractiva y divertida el uso adecuado de los recursos hídricos de la cuenca del Río San Pedro, mediante la toma de decisión, comunicación y trabajo en equipo, con un diseño amigable y fácil de usar.',
+        content: 'GIRHA (Gestión Integral del Recurso Hídrico y Ambiental)\nes un Juego Serio creado con el objetivo de promover de una manera atractiva y divertida el uso adecuado de los recursos hídricos de la cuenca del Río San Pedro, mediante la toma de decisiones, comunicación y trabajo en equipo, con un diseño amigable y fácil de usar.',
         style: {
             fontFamily: GameFontStylesString.SMALL_FONT,
             color: ColorsString.BLUE_HEXADECIMAL_STRING,

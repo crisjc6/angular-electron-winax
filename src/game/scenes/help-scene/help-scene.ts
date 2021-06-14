@@ -4,7 +4,7 @@ import { helpSceneElementsSpecifications } from "./help-scene-elements-specifica
 import { GameSceneIdsStrings } from "../../settings/game-constants-strings/game-scene-ids-string";
 import { ButtonComponent } from "../../components/button-component/button-component";
 import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-strings/game-events-strings";
-import { SceneGameElementsString } from "../../settings/game-constants-strings/game-elements-strings";
+import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
 
 export class HelpScene extends Phaser.Scene {
@@ -40,12 +40,12 @@ export class HelpScene extends Phaser.Scene {
 
     private getElements() {
         this.sceneBackground = this.sceneGameObjects.get(
-            SceneGameElementsString.SCENE_BACKGROUND
+            GameSceneElementsString.SCENE_BACKGROUND
         ).gameObject;
         this.sceneBackground.setTint(ColorsValue.BLACK_HEXADECIMAL_VALUE);
 
         this.closeButton = this.sceneGameObjects.get(
-            SceneGameElementsString.SCENE_CLOSE_BUTTON
+            GameSceneElementsString.SCENE_CLOSE_BUTTON
         ).gameObject;
     }
 
