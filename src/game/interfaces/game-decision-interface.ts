@@ -17,6 +17,8 @@ export interface DecisionOptionInterface {
     decision_option_id: number;
     decision_option_text: string;
     decision_option_asset: string;
+    decision_option_was_selected: boolean;
     decision_option_value: number;
+    decision_option_area_value: number;
     decision_option_weap_variable: string;
 };

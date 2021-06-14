@@ -5,6 +5,8 @@ import { GameSceneIdsStrings } from "../../settings/game-constants-strings/game-
 import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
 import { GameSpecifications } from "../../settings/game-system-specifications";
+import { getConservationAreData } from "../../functions/conservation-area-data/conservation-area-data";
+
 import winax from "winax";
 
 export class LoadScene extends Phaser.Scene {
@@ -30,9 +32,17 @@ export class LoadScene extends Phaser.Scene {
         this.generateScene();
         this.getElements();
 
+        // setTimeout(() => {
+        //     this.loadWeapValue();
+        // }, 100);
         setTimeout(() => {
-            this.loadWeapValue();
+            getConservationAreData();
         }, 100);
+
+        setTimeout(() => {
+            this.startNextScene();
+        }, 1000);
+        this.startNextScene();
     }
 
     private generateScene() {
@@ -58,13 +68,19 @@ export class LoadScene extends Phaser.Scene {
 
         for(let decisionId in GameSpecifications.currentDecisionsPeriod.decisions) {
             for(let decisionOptionId in GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options) {
+                const decisionOptionWasSelected = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_was_selected;
                 const decisionOptionWeapVariable = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_weap_variable;
                 const decisionOptionValue = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_value;
-                // console.log(decisionOptionWeapVariable + ' = ' + decisionOptionValue);
-                WEAP.BranchVariable(decisionOptionWeapVariable).Expression = decisionOptionValue;
+                
+                if (decisionOptionWasSelected) {
+                    WEAP.BranchVariable(decisionOptionWeapVariable).Expression = decisionOptionValue;
+                } else {
+                    WEAP.BranchVariable(decisionOptionWeapVariable).Expression = 0;
+                }
+                
             }
         }
-        WEAP.ExportResults("C:\\CSV\\datos_game2.csv")
+        WEAP.ExportResults("C:\\CSV\\datos_game2.csv");
         this.startNextScene();
         
     }
