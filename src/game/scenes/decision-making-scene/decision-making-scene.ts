@@ -128,6 +128,7 @@ export class DecisionMakingScene extends Phaser.Scene {
                     this.disableButton(this.continueButton);
                 } else {
                     GameSpecifications.currentDecisionIndex = 0;
+
                     this.scene.stop(this.scene.key);
 
                     const gameData: SceneDataInterface = {
@@ -187,7 +188,7 @@ export class DecisionMakingScene extends Phaser.Scene {
                     GameSpecifications.currentDecisionId
                 ].decision_options[
                     optionId
-                ].decision_option_value = 0;
+                ].decision_option_was_selected = false;
         }
         
         GameSpecifications.currentDecisionsPeriod
@@ -195,7 +196,8 @@ export class DecisionMakingScene extends Phaser.Scene {
                 GameSpecifications.currentDecisionId
             ].decision_options[
                 selectedOtionId
-            ].decision_option_value = 1;
+            ].decision_option_was_selected = true;
+            // console.log(GameSpecifications.currentDecisionsPeriod);
     }
 
     private selectedDecision(decisionOption: DecisionBoxComponent){
@@ -241,15 +243,6 @@ export class DecisionMakingScene extends Phaser.Scene {
     }
 
     private updateDecisionOption(optionId: string, decisionOption: DecisionBoxComponent, decisionOptionText: string) {
-        
-        console.log(optionId + ' = ' + GameSpecifications.currentDecisionsPeriod
-                .decisions[
-                    GameSpecifications.currentDecisionId
-                ].decision_options[
-                    optionId
-                ].decision_option_value
-        );
-
         decisionOption.updateOption(
             optionId,
             decisionOptionText,
@@ -258,7 +251,7 @@ export class DecisionMakingScene extends Phaser.Scene {
                         GameSpecifications.currentDecisionId
                     ].decision_options[
                         optionId
-                    ].decision_option_value
+                    ].decision_option_was_selected
         );
     }
 
