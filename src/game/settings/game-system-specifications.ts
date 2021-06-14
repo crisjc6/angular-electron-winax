@@ -31,6 +31,11 @@ export const gameRouterLink: {routerLink: any} = {
     routerLink: null
 }
 
+export const servicioGraficaAC: {serviceArea: any} = {
+  serviceArea: null
+}
+
+
 export const gameStatus: {
     status: string;
     conectionStatus: boolean;

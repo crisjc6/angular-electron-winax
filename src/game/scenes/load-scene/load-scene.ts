@@ -4,7 +4,7 @@ import { loadSceneElementsSpecifications } from "./load-scene-specifications";
 import { GameSceneIdsStrings } from "../../settings/game-constants-strings/game-scene-ids-string";
 import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
-import { GameSpecifications } from "../../settings/game-system-specifications";
+import {GameSpecifications, servicioGraficaAC} from "../../settings/game-system-specifications";
 import { getConservationAreData } from "../../functions/conservation-area-data/conservation-area-data";
 
 import winax from "winax";
@@ -36,7 +36,7 @@ export class LoadScene extends Phaser.Scene {
         //     this.loadWeapValue();
         // }, 100);
         setTimeout(() => {
-            getConservationAreData();
+          servicioGraficaAC.serviceArea.habilitarActualizacion();
         }, 100);
 
         setTimeout(() => {
@@ -61,7 +61,7 @@ export class LoadScene extends Phaser.Scene {
         const WEAP = new winax.Object("WEAP.WEAPApplication");
         WEAP.ActiveArea = "Tesis_IR_6";
         WEAP.ActiveScenario = "Escenarios_juego";
-        
+
         WEAP.ExportResults("C:\\CSV\\datos_game.csv");
         // WEAP.BranchVariable("\\Key\\Kc\\Agricola").Expression = 1.5;
         // WEAP.ExportResults("C:\\CSV\\datos_game2.csv");
@@ -71,23 +71,25 @@ export class LoadScene extends Phaser.Scene {
                 const decisionOptionWasSelected = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_was_selected;
                 const decisionOptionWeapVariable = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_weap_variable;
                 const decisionOptionValue = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_value;
-                
+
                 if (decisionOptionWasSelected) {
                     WEAP.BranchVariable(decisionOptionWeapVariable).Expression = decisionOptionValue;
                 } else {
                     WEAP.BranchVariable(decisionOptionWeapVariable).Expression = 0;
                 }
-                
+
             }
         }
         WEAP.ExportResults("C:\\CSV\\datos_game2.csv");
         this.startNextScene();
-        
+
     }
 
     private startNextScene() {
+
+        servicioGraficaAC.serviceArea.deshabilitarActualizacion();
         this.scene.stop();
-        console.log(this.sceneData.returnSceneName);
+        // console.log(this.sceneData.returnSceneName);
         this.scene.wake(this.sceneData.returnSceneName);
     }
 }
