@@ -35,6 +35,17 @@ export const servicioGraficaAC: {serviceArea: any} = {
   serviceArea: null
 }
 
+export const indicatorsScores: {
+  conservationArea: number;
+  hydroelectricTurbine: number;
+  coverageDeficit: number;
+  helpcareRiver: number;
+} = {
+  conservationArea: 0,
+  hydroelectricTurbine: 0,
+  coverageDeficit: 0,
+  helpcareRiver: 0
+}
 
 export const gameStatus: {
     status: string;

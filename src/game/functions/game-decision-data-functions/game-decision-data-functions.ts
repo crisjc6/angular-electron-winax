@@ -1,12 +1,17 @@
 import { GameSpecifications } from '../../settings/game-system-specifications';
 import { GameDecisionsData } from '../../settings/game-decisions-data'
+import {conservationAreasData, conservationAreasDataDefault} from "../../settings/conservation_areas_data";
 // /setting/game-decisions';
 
 export function getGameData() {
+
     if (!GameSpecifications.continueGame) {
-        GameSpecifications.gameDecisionsData = JSON.parse(JSON.stringify(GameDecisionsData));
+      GameSpecifications.gameDecisionsData = JSON.parse(JSON.stringify(GameDecisionsData));
+      conservationAreasData.area = conservationAreasDataDefault.area;
+      conservationAreasData.year = conservationAreasDataDefault.year;
+
     }
-    
+
     for(let periodId in GameSpecifications.gameDecisionsData) {
         GameSpecifications.decisionPeriodIds.push(periodId);
     }

@@ -11,85 +11,83 @@ import winax from "winax";
 
 export class LoadScene extends Phaser.Scene {
 
-    private gameFacade: GameFacade;
-    private sceneGameObjects;
-    private sceneData: SceneDataInterface;
+  private gameFacade: GameFacade;
+  private sceneGameObjects;
+  private sceneData: SceneDataInterface;
 
-    private sceneBackground: Phaser.GameObjects.Image;
+  private sceneBackground: Phaser.GameObjects.Image;
 
-    init(sceneData: SceneDataInterface) {
-        this.sceneData = sceneData;
-    }
+  init(sceneData: SceneDataInterface) {
+    this.sceneData = sceneData;
+  }
 
-    constructor() {
-        super({
-            key: GameSceneIdsStrings.LOAD_SCENE_ID
-        });
-        this.sceneGameObjects = new Map();
-    }
+  constructor() {
+    super({
+      key: GameSceneIdsStrings.LOAD_SCENE_ID
+    });
+    this.sceneGameObjects = new Map();
+  }
 
-    create() {
-        this.generateScene();
-        this.getElements();
+  create() {
+    this.generateScene();
+    this.getElements();
 
-        // setTimeout(() => {
-        //     this.loadWeapValue();
-        // }, 100);
-        setTimeout(() => {
-          servicioGraficaAC.serviceArea.habilitarActualizacion();
-        }, 100);
+    // setTimeout(() => {
+    //     this.loadWeapValue();
+    // }, 100);
+    servicioGraficaAC.serviceArea.habilitarActualizacion();
 
-        setTimeout(() => {
-            this.startNextScene();
-        }, 1000);
-        this.startNextScene();
-    }
 
-    private generateScene() {
-        this.gameFacade = new GameFacade(this, loadSceneElementsSpecifications);
-        this.sceneGameObjects = this.gameFacade.getGameObjects;
-    }
+    setTimeout(() => {
+      this.startNextScene();
+    }, 1000);
+  }
 
-    private getElements() {
-        this.sceneBackground = this.sceneGameObjects.get(
-            GameSceneElementsString.SCENE_BACKGROUND
-        ).gameObject;
-        this.sceneBackground.setTint(ColorsValue.BLACK_HEXADECIMAL_VALUE);
-    }
+  private generateScene() {
+    this.gameFacade = new GameFacade(this, loadSceneElementsSpecifications);
+    this.sceneGameObjects = this.gameFacade.getGameObjects;
+  }
 
-    private loadWeapValue() {
-        const WEAP = new winax.Object("WEAP.WEAPApplication");
-        WEAP.ActiveArea = "Tesis_IR_6";
-        WEAP.ActiveScenario = "Escenarios_juego";
+  private getElements() {
+    this.sceneBackground = this.sceneGameObjects.get(
+      GameSceneElementsString.SCENE_BACKGROUND
+    ).gameObject;
+    this.sceneBackground.setTint(ColorsValue.BLACK_HEXADECIMAL_VALUE);
+  }
 
-        WEAP.ExportResults("C:\\CSV\\datos_game.csv");
-        // WEAP.BranchVariable("\\Key\\Kc\\Agricola").Expression = 1.5;
-        // WEAP.ExportResults("C:\\CSV\\datos_game2.csv");
+  private loadWeapValue() {
+    const WEAP = new winax.Object("WEAP.WEAPApplication");
+    WEAP.ActiveArea = "Tesis_IR_6";
+    WEAP.ActiveScenario = "Escenarios_juego";
 
-        for(let decisionId in GameSpecifications.currentDecisionsPeriod.decisions) {
-            for(let decisionOptionId in GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options) {
-                const decisionOptionWasSelected = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_was_selected;
-                const decisionOptionWeapVariable = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_weap_variable;
-                const decisionOptionValue = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_value;
+    WEAP.ExportResults("C:\\CSV\\datos_game.csv");
+    // WEAP.BranchVariable("\\Key\\Kc\\Agricola").Expression = 1.5;
+    // WEAP.ExportResults("C:\\CSV\\datos_game2.csv");
 
-                if (decisionOptionWasSelected) {
-                    WEAP.BranchVariable(decisionOptionWeapVariable).Expression = decisionOptionValue;
-                } else {
-                    WEAP.BranchVariable(decisionOptionWeapVariable).Expression = 0;
-                }
+    for(let decisionId in GameSpecifications.currentDecisionsPeriod.decisions) {
+      for(let decisionOptionId in GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options) {
+        const decisionOptionWasSelected = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_was_selected;
+        const decisionOptionWeapVariable = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_weap_variable;
+        const decisionOptionValue = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_value;
 
-            }
+        if (decisionOptionWasSelected) {
+          WEAP.BranchVariable(decisionOptionWeapVariable).Expression = decisionOptionValue;
+        } else {
+          WEAP.BranchVariable(decisionOptionWeapVariable).Expression = 0;
         }
-        WEAP.ExportResults("C:\\CSV\\datos_game2.csv");
-        this.startNextScene();
 
+      }
     }
+    WEAP.ExportResults("C:\\CSV\\datos_game2.csv");
+    this.startNextScene();
 
-    private startNextScene() {
+  }
 
-        servicioGraficaAC.serviceArea.deshabilitarActualizacion();
-        this.scene.stop();
-        // console.log(this.sceneData.returnSceneName);
-        this.scene.wake(this.sceneData.returnSceneName);
-    }
+  private startNextScene() {
+
+    servicioGraficaAC.serviceArea.deshabilitarActualizacion();
+    this.scene.stop();
+    // console.log(this.sceneData.returnSceneName);
+    this.scene.wake(this.sceneData.returnSceneName);
+  }
 }

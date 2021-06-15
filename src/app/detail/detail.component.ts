@@ -5,6 +5,8 @@ import {ChartComponent,
   ApexXAxis,
   ApexTitleSubtitle,
   ApexResponsive,
+  ApexYAxis,
+  ApexDataLabels,
 } from "ng-apexcharts";
 import { phaserGameConfigMap } from '../../game/settings/phaser-game-config-specifications-map';
 import {CsvService} from "../shared/services/csv.service";
@@ -18,9 +20,11 @@ export type ChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;
   xaxis: ApexXAxis;
+  yaxis: ApexYAxis;
   colors: string[];
   responsive: ApexResponsive[];
   title: ApexTitleSubtitle;
+  dataLabels: ApexDataLabels;
 };
 @Component({
   selector: 'app-detail',
@@ -34,6 +38,7 @@ export class DetailComponent implements OnInit {
   private game: Phaser.Game;
   graficaAreaConservacion;
   bloqueado = false;
+  puntajeAreaConservacion;
   constructor(private router: Router,
               private weapService: WeapService,
               private csvService: CsvService,
@@ -44,29 +49,38 @@ export class DetailComponent implements OnInit {
     servicioGraficaAC.serviceArea = graficaAreaConservacioService;
 
     this.csvService.printdirname();
-    this.graficaAreaConservacion = this.graficaAreaConservacioService.exportarDataXY();
+    this.graficaAreaConservacion = this.graficaAreaConservacioService.exportarDataXY().conservationAreasData;
+    this.puntajeAreaConservacion = this.graficaAreaConservacioService.exportarDataXY().indicatorsScores.conservationArea;
     this.chartOptionsAC = {
       series: [
         {
-          name: "My-series",
+          name: "Area Conservación",
           data: this.graficaAreaConservacion.area
         }
       ],
       title: {
-        text: "Áreas de Conservación y Uso Sostenible",
+        text: "Áreas de Conservación",
         align: "left"
       },
       chart: {
         height: 160 ,
-        type: "line",
+        type: "area",
         toolbar: {
           show: true
         }
+      },
+      dataLabels: {
+        enabled: false
       },
       xaxis: {
         // categories: this.graficaAreaConservacion.year
         categories: this.graficaAreaConservacion.year
       },
+      yaxis: {
+        title: {
+          text: "Hectáreas (Ha)"
+        }
+      }
     };
     this.chartOptions = {
       series: [
@@ -140,31 +154,41 @@ export class DetailComponent implements OnInit {
     this.graficaAreaConservacioService.seActualizoDatos
       .subscribe((cambio)=>{
         if(cambio == true) {
-          this. graficaAreaConservacion = this.graficaAreaConservacioService.exportarDataXY();
+          console.log('cambios true');
+          this. graficaAreaConservacion = this.graficaAreaConservacioService.exportarDataXY().conservationAreasData;
+          this.puntajeAreaConservacion = this.graficaAreaConservacioService.exportarDataXY().indicatorsScores.conservationArea;
           // this.chartOptionsAC.series.data = this.graficaAreaConservacion.area;
           // this.chartOptionsAC.series.data = this.graficaAreaConservacion.area;
           this.chartOptionsAC = {
             series: [
               {
-                name: "My-series",
+                name: "Area Conservación",
                 data: this.graficaAreaConservacion.area
               }
             ],
             title: {
-              text: "Áreas de Conservación y Uso Sostenible",
+              text: "Áreas de Conservación",
               align: "left"
             },
             chart: {
               height: 160 ,
-              type: "line",
+              type: "area",
               toolbar: {
                 show: true
               }
+            },
+            dataLabels: {
+              enabled: false
             },
             xaxis: {
               // categories: this.graficaAreaConservacion.year
               categories: this.graficaAreaConservacion.year
             },
+            yaxis: {
+              title: {
+                text: "Hectáreas (Ha)"
+              }
+            }
           };
         }
       })
