@@ -21,7 +21,7 @@ export class LoginScene extends Phaser.Scene {
     private messageText: Phaser.GameObjects.Text;
     private closeButton: ButtonComponent;
     private continueButton: ButtonComponent;
-    
+
 
     init(sceneData: SceneDataInterface) {
         this.sceneData = sceneData;
@@ -46,7 +46,7 @@ export class LoginScene extends Phaser.Scene {
     }
 
     private getElements() {
-        
+
         this.sceneBackground = this.sceneGameObjects.get(
             GameSceneElementsString.SCENE_BACKGROUND
         ).gameObject;
@@ -64,11 +64,11 @@ export class LoginScene extends Phaser.Scene {
         this.continueButton = this.sceneGameObjects.get(
             GameSceneElementsString.SCENE_CONTINUE_BUTTON
         ).gameObject;
-        
+
         this.loginInput = this.sceneGameObjects.get(
             GameSceneElementsString.SCENE_LOGIN_INPUT
         ).gameObject;
-        
+
     }
 
     private addFunctionality() {
@@ -83,13 +83,14 @@ export class LoginScene extends Phaser.Scene {
         // addPointerOverOnInteractiveObject(this.saveSettingsButtons);
         this.continueButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                
+
                 if (this.loginInput.getInputText() === '') {
                     this.messageText.setVisible(true);
                 } else {
                     gameStatus.status = 'mapScene';
                     getGameData();
                     playerData.teamName = this.loginInput.getInputText();
+                    playerData.score = 0;
                     gameRouterLink.routerLink.navigate(['/detail']);
                 }
             }

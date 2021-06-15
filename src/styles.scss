@@ -17,11 +17,6 @@ html, body {
 
   margin: 0; height: 100%; overflow: hidden;
 
-  .score {
-    color: #33485F;
-    font-size: 30px;
-    letter-spacing: -0.1em;
-  }
 
   .box-cj {
     box-shadow: -5px 7px 46px 10px rgba(221,167,167,0.7);
@@ -76,6 +71,11 @@ html, body {
 .col-lg-4 {
   height: 42em;
   overflow-y: scroll;
+}
+.score {
+  color: #33485F;
+  font-size: 20px;
+  //letter-spacing: -0.em;
 }
 @font-face { font-family: "Comfortaa"; src: url("assets/font_familys/Comfortaa/Comfortaa-VariableFont_wght.ttf") format("truetype");}
 @font-face { font-family: "Fredoka One"; src: url("assets/font_familys/Fredoka_One/FredokaOne-Regular.ttf") format("truetype");}

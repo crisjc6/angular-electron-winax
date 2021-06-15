@@ -5,10 +5,10 @@ export const enum GameElementsString {
     TEXT_CARD_STRING = 'text-card',
     TABLE_STRING = 'table',
     HTML_DOM_STRING = 'html-dom',
-    
-    
+
+
     INTERACTIVE_OBJECT_STRING = 'interactiveObject',
-    
+
     BUTTON_STRING = 'button',
     SIMPLE_BUTTON_STRING = 'simple-button',
     TOP_TITLE_BUTTON_STRING = 'top-title-button',
@@ -35,6 +35,7 @@ export const enum GameSceneElementsString {
     SCENE_SCORE_TABLE = 'score-table',
     SCENE_MESSAGE = 'message',
     SCENE_LOGIN_INPUT = 'login-input',
+    SCENE_TOTAL_SCORE = 'total-score'
 }
 
 export const enum DecisionSceneElementsString {
