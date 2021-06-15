@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { read, WorkBook, utils, WorkSheet } from 'xlsx';
+// import { hydropowerTurbineData } from '../../../game/settings/hydropower_turbine_data'
 
 @Injectable({ providedIn: "root" })
 export class CsvService {
@@ -45,17 +46,18 @@ export function dataAxisXY(columnasCamposDatos: Array<any>){
       anios.forEach(
         (valor)=> {
           if(key.endsWith(`/${valor}`)) {
-            valores.push({
-              anio: valor,
-              valor: +value,
-              // @ts-ignore
-              clase: valoresEscenarioJuego.__EMPTY,
-            });
-            console.log(`valoroes `, valores[0].clase)
-            console.log(`valoroes `, valores[0].anio)
-            console.log(`valoroes `, valores.length)
-            console.log(`anños 20${valor}`, key)
-            console.log(`valroes 20${valor}`, value)
+            // hydropowerTurbineData[].years[].
+            // valores.push({
+            //   anio: valor,
+            //   valor: +value,
+            //   // @ts-ignore
+            //   clase: valoresEscenarioJuego.__EMPTY,
+            // });
+            // console.log(`valoroes `, valores[0].clase)
+            // console.log(`valoroes `, valores[0].anio)
+            // console.log(`valoroes `, valores.length)
+            // console.log(`anños 20${valor}`, key)
+            // console.log(`valroes 20${valor}`, value)
           }
         }
       )

@@ -63,7 +63,7 @@ export function calculateConservationAreaScore(_periodArea: number, _periodId: s
 
 
  // console.log("indicador valor",indicatorsScores.conservationArea)
-  // playerData.score += indicatorsScores.conservationArea;
+  playerData.score = indicatorsScores.conservationArea + indicatorsScores.coverageDeficit + indicatorsScores.helpcareRiver + indicatorsScores.hydroelectricTurbine;
   // conservationPeriodScore
 
 }

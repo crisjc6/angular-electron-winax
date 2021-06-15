@@ -32,7 +32,7 @@ export const gameRouterLink: {routerLink: any} = {
 }
 
 export const servicioGraficaAC: {serviceArea: any} = {
-  serviceArea: null
+    serviceArea: null
 }
 
 export const indicatorsScores: {
@@ -65,6 +65,20 @@ export const playerData: GameScoreDataInterface = {
     id: 0,
     score: 0,
     teamName: 'crisweb.me'
+}
+
+export const IndicatorsData: {
+    periodDataIds: string[];
+    conservationAreaData: any[];
+    hydroelectricTurbineData: any[];
+    coverageDeficitData: any[];
+    helpcareRiverData: any[];
+} = {
+    periodDataIds: [],
+    conservationAreaData: [],
+    hydroelectricTurbineData: [],
+    coverageDeficitData: [],
+    helpcareRiverData: []
 }
 
 

@@ -3,6 +3,8 @@ import { read, WorkBook, utils, WorkSheet } from 'xlsx';
 import {getConservationAreData} from "../../../game/functions/conservation-area-data/conservation-area-data";
 import {conservationAreasData} from "../../../game/settings/conservation_areas_data";
 import {indicatorsScores} from "../../../game/settings/game-system-specifications";
+import {getHydropowerChartData} from '../../../game/functions/hydropower-turbine-data-functions/hydropower-turbine-data-functions';
+
 
 @Injectable({ providedIn: "root" })
 export class GraficaAreaConvervacionService {
@@ -15,6 +17,7 @@ export class GraficaAreaConvervacionService {
     this.seActualizoDatos.emit(false)
   }
   exportarDataXY() {
+    getHydropowerChartData();
     getConservationAreData();
     return {conservationAreasData, indicatorsScores};
   }
