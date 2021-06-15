@@ -24,7 +24,7 @@ export class CsvService {
     // @ts-ignore
     console.log("resultado csv parseado empty", columnasCampos[0].__EMPTY)
     console.log("resultado csv parseado", columnasCampos)
-    //dataAxisXY(columnasCampos);
+    dataAxisXY(columnasCampos);
     return fileBuffer
   }
 }
@@ -37,11 +37,11 @@ export function camposRangoAreaPisos() {
   };
   return {  range: rangoCamposexcel };
 }
-export function dataAxisXY(columnasCamposDatos: []){
+export function dataAxisXY(columnasCamposDatos: Array<any>){
   const anios = [20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50];
-  columnasCamposDatos.filter( (fila)=> {
+  const valoresEscenarioJuego = columnasCamposDatos[1];
     const valores: valores[] = [];
-    const object = Object.entries(fila).filter(([key, value]) => {
+    const object = Object.entries(valoresEscenarioJuego).filter(([key, value]) => {
       anios.forEach(
         (valor)=> {
           if(key.endsWith(`/${valor}`)) {
@@ -49,7 +49,7 @@ export function dataAxisXY(columnasCamposDatos: []){
               anio: valor,
               valor: +value,
               // @ts-ignore
-              clase: fila.__EMPTY,
+              clase: valoresEscenarioJuego.__EMPTY,
             });
             console.log(`valoroes `, valores[0].clase)
             console.log(`valoroes `, valores[0].anio)
@@ -77,7 +77,7 @@ export function dataAxisXY(columnasCamposDatos: []){
       //   })
       //   console.log("valores", valores);
       //   console.log("ano6 20-30: ",key+ value);
-      //   console.log("fila 20-30",fila);
+      //   console.log("valoresEscenarioJuego 20-30",valoresEscenarioJuego);
       // } else if (+ultimoValorAnio > 30 && +ultimoValorAnio <= 40 ) {
       //
       //   console.log("ano 30-40: ",key+ value);
@@ -85,9 +85,6 @@ export function dataAxisXY(columnasCamposDatos: []){
       //   console.log("ano 40-50:",key+ value);
       // }
     })
-    console.log(fila, "fila ");
-  })
-
 }
 export interface valoresGrafica {
   series: [

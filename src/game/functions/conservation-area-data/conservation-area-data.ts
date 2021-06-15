@@ -60,7 +60,7 @@ export function calculateConservationAreaScore(_periodArea: number, _periodId: s
       indicatorsScores.conservationArea += element.score;
     }
   );
-  
+
 
  // console.log("indicador valor",indicatorsScores.conservationArea)
   // playerData.score += indicatorsScores.conservationArea;
