@@ -86,7 +86,7 @@ export const GameDecisionsData = {
     },
     'Periodo30_40' : {
         id: 'Periodo30_40',
-        year_start: 2030,
+        year_start: 2031,
         year_end: 2040,
         completed: false,
         decisions:{
@@ -162,7 +162,7 @@ export const GameDecisionsData = {
     },
     'Periodo40_50' : {
         id: 'Periodo40_50',
-        year_start: 2040,
+        year_start: 2041,
         year_end: 2050,
         completed: false,
         decisions:{

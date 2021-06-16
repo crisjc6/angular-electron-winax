@@ -88,6 +88,6 @@ export class LoadScene extends Phaser.Scene {
     servicioGraficaAC.serviceArea.deshabilitarActualizacion();
     this.scene.stop();
     // console.log(this.sceneData.returnSceneName);
-    this.scene.wake(this.sceneData.returnSceneName);
+    this.scene.wake(this.sceneData.returnSceneName, {data:'runnnn'});
   }
 }

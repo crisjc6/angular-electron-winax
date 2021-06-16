@@ -9,6 +9,7 @@ import { ColorsValue } from "../../settings/game-constants-strings/text-styles-s
 import { gameRouterLink, GameSpecifications, gameStatus, playerData } from "../../settings/game-system-specifications";
 import { HtmlDOMComponent } from "../../components/html-dom-component/html-dom-component";
 import { getGameData } from "../../functions/game-decision-data-functions/game-decision-data-functions";
+import { readCSV } from "../../functions/csv-functions/csv-functions"
 
 export class LoginScene extends Phaser.Scene {
 
@@ -91,6 +92,7 @@ export class LoginScene extends Phaser.Scene {
                     getGameData();
                     playerData.teamName = this.loginInput.getInputText();
                     playerData.score = 0;
+                    readCSV();
                     gameRouterLink.routerLink.navigate(['/detail']);
                 }
             }

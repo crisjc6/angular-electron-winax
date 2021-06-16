@@ -26,9 +26,10 @@ export class MapScene extends Phaser.Scene {
     // private helpButton: ButtonComponent;
     private sceneData: SceneDataInterface;
 
-    init() {
+    init(data) {
         gameStatus.status = 'mapScene';
-        this.updateSceneScore()
+        this.updateSceneScore();
+        console.log(data);
     }
 
     constructor() {
@@ -49,6 +50,7 @@ export class MapScene extends Phaser.Scene {
 
         this.getElements();
         this.addFunctionality();
+        this.updateSceneScore();
         // this.updateSoundButtonStatus();
     }
 
@@ -64,10 +66,10 @@ export class MapScene extends Phaser.Scene {
         this.sceneBackground.setTint(ColorsValue.BLACK_HEXADECIMAL_VALUE);
         this.sceneBackground.setAlpha(0.5);
 
-      this.totalScore = this.gameObjects.get(
-        GameSceneElementsString.SCENE_TOTAL_SCORE
-      ).gameObject;
-      this.totalScore.setText(playerData.score+'');
+        this.totalScore = this.gameObjects.get(
+            GameSceneElementsString.SCENE_TOTAL_SCORE
+        ).gameObject;
+
         this.playButton = this.gameObjects.get(
             GameSceneElementsString.SCENE_CONTINUE_BUTTON,
         ).gameObject;
@@ -90,6 +92,16 @@ export class MapScene extends Phaser.Scene {
     }
 
     private addFunctionality() {
+
+        this.events.on(
+            'wake',
+            () => {
+                this.updateSceneScore();
+            }
+        );
+
+        // scene.events.on('wake', function(){});
+
         // addPointerOverOnInteractiveObject(this.scoreButton);
         // this.scoreButton.setInteractive().on(
         //     EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
@@ -104,8 +116,6 @@ export class MapScene extends Phaser.Scene {
         // addPointerOverOnInteractiveObject(this.playButton);
         this.playButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                // this.scene.pause();
-                // gameRouterLink.routerLink.navigate(['/detail']);
                 console.log(GameSpecifications.decisionPeriodIds.length);
                 if (GameSpecifications.decisionPeriodIds.length > 0) {
                     this.scene.pause();
@@ -172,7 +182,7 @@ export class MapScene extends Phaser.Scene {
 
     private updateSceneScore() {
       if (this.totalScore !== undefined) {
-        this.totalScore.setText(playerData.score+'');
+        this.totalScore.setText('PUNTAJE: '+playerData.score);
       }
 
     }

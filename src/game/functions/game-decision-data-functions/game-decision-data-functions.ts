@@ -1,6 +1,7 @@
-import { GameSpecifications } from '../../settings/game-system-specifications';
+import { GameSpecifications, IndicatorsData } from '../../settings/game-system-specifications';
 import { GameDecisionsData } from '../../settings/game-decisions-data'
 import {conservationAreasData, conservationAreasDataDefault} from "../../settings/conservation_areas_data";
+import { _hydropowerTurbineData } from '../../settings/hydropower_turbine_data';
 // /setting/game-decisions';
 
 export function getGameData() {
@@ -14,8 +15,10 @@ export function getGameData() {
 
     for(let periodId in GameSpecifications.gameDecisionsData) {
         GameSpecifications.decisionPeriodIds.push(periodId);
+        IndicatorsData.periodDataIds.push(periodId);
     }
     GameSpecifications.decisionPeriodIds.reverse();
+    IndicatorsData.hydroelectricTurbineData = JSON.parse(JSON.stringify(_hydropowerTurbineData));
     // GameSpecifications.currentPeriodId = GameSpecifications.decisionPeriodIds[GameSpecifications.currentPeriodIndex];
 
     // GameSpecifications.currentDecisionsPeriod = JSON.parse(JSON.stringify(GameSpecifications.gameDecisionsData[GameSpecifications.currentPeriodId]));
