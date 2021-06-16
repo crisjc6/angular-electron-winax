@@ -1,4 +1,4 @@
-export const conservationAreasDataDefault: {
+export const _conservationAreasDataDefault: {
   year: number [];
   area: number [];
 } = {

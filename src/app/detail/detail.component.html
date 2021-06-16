@@ -27,6 +27,28 @@
         </div>
       </div>
       <div class="row mt-1">
+        <div class="col-11" style="padding:0;">
+          <div style="text-align:center">
+            <apx-chart
+              [series]="chartOptionsHT.series"
+              [chart]="chartOptionsHT.chart"
+              [xaxis]="chartOptionsHT.xaxis"
+              [yaxis]="chartOptionsHT.yaxis"
+              [title]="chartOptionsHT.title"
+              [colors]="chartOptionsHT.colors"
+              [dataLabels]="chartOptionsHT.dataLabels"
+            ></apx-chart>
+          </div>
+        </div>
+        <div class="col-1" style="padding:0;">
+          <br>
+          <br>
+          <span class="score">Pts.</span>
+          <br>
+          <span class="score">{{hydricScore}}</span>
+        </div>
+      </div>
+      <div class="row mt-1">
         <div style="text-align:center">
           <apx-chart
             [series]="chartOptions.series"
@@ -41,6 +63,17 @@
             [series]="chartOptions.series"
             [chart]="chartOptions.chart"
             [xaxis]="chartOptions.xaxis"
+            [responsive]="chartOptions.responsive"
+          ></apx-chart>
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div style="text-align:center">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [xaxis]="chartOptions.xaxis"
+            [responsive]="chartOptions.responsive"
           ></apx-chart>
         </div>
       </div>

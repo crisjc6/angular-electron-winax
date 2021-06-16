@@ -4,6 +4,7 @@ import {getConservationAreData} from "../../../game/functions/conservation-area-
 import {conservationAreasData} from "../../../game/settings/conservation_areas_data";
 import {indicatorsScores} from "../../../game/settings/game-system-specifications";
 import {getHydropowerChartData} from '../../../game/functions/hydropower-turbine-data-functions/hydropower-turbine-data-functions';
+import {HydropowerChartData} from "../../../game/settings/hydropower_turbine_data";
 
 
 @Injectable({ providedIn: "root" })
@@ -19,6 +20,6 @@ export class GraficaAreaConvervacionService {
   exportarDataXY() {
     getHydropowerChartData();
     getConservationAreData();
-    return {conservationAreasData, indicatorsScores};
+    return {conservationAreasData, indicatorsScores, HydropowerChartData};
   }
 }

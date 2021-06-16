@@ -17,14 +17,14 @@ import {Component, OnInit, ViewChild} from "@angular/core";
 import {Router} from "@angular/router";
 
 export type ChartOptions = {
-  series: ApexAxisChartSeries;
-  chart: ApexChart;
-  xaxis: ApexXAxis;
-  yaxis: ApexYAxis;
-  colors: string[];
-  responsive: ApexResponsive[];
-  title: ApexTitleSubtitle;
-  dataLabels: ApexDataLabels;
+  series?: ApexAxisChartSeries;
+  chart?: ApexChart;
+  xaxis?: ApexXAxis;
+  yaxis?: ApexYAxis;
+  colors?: string[];
+  responsive?: ApexResponsive[];
+  title?: ApexTitleSubtitle;
+  dataLabels?: ApexDataLabels;
 };
 @Component({
   selector: 'app-detail',
@@ -35,10 +35,17 @@ export class DetailComponent implements OnInit {
   @ViewChild("chart", { static: false }) chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   public chartOptionsAC: Partial<ChartOptions>;
+  public chartOptionsHT: Partial<ChartOptions>;
+  public chartOptionsDC: Partial<ChartOptions>;
+  public chartOptionsSR: Partial<ChartOptions>;
+  public chartOptionsP: Partial<ChartOptions>;
+  public chartOptionsPR: Partial<ChartOptions>;
   private game: Phaser.Game;
   graficaAreaConservacion;
+  graficaHydroPower;
   bloqueado = false;
   puntajeAreaConservacion;
+  hydricScore;
   constructor(private router: Router,
               private weapService: WeapService,
               private csvService: CsvService,
@@ -48,9 +55,14 @@ export class DetailComponent implements OnInit {
     gameRouterLink.routerLink = this.router;
     servicioGraficaAC.serviceArea = graficaAreaConservacioService;
 
-    this.csvService.printdirname();
+    //this.csvService.printdirname();
     this.graficaAreaConservacion = this.graficaAreaConservacioService.exportarDataXY().conservationAreasData;
+    this. graficaHydroPower = this.graficaAreaConservacioService.exportarDataXY().HydropowerChartData;
     this.puntajeAreaConservacion = this.graficaAreaConservacioService.exportarDataXY().indicatorsScores.conservationArea;
+    this.hydricScore = this.graficaAreaConservacioService.exportarDataXY().indicatorsScores.hydroelectricTurbine;
+    this.chartOptionsHT = this.drawHydropowerChart(
+      this. graficaHydroPower
+    );
     this.chartOptionsAC = {
       series: [
         {
@@ -154,11 +166,15 @@ export class DetailComponent implements OnInit {
     this.graficaAreaConservacioService.seActualizoDatos
       .subscribe((cambio)=>{
         if(cambio == true) {
-          console.log('cambios true');
           this. graficaAreaConservacion = this.graficaAreaConservacioService.exportarDataXY().conservationAreasData;
+          this. graficaHydroPower = this.graficaAreaConservacioService.exportarDataXY().HydropowerChartData;
           this.puntajeAreaConservacion = this.graficaAreaConservacioService.exportarDataXY().indicatorsScores.conservationArea;
+          this.hydricScore = this.graficaAreaConservacioService.exportarDataXY().indicatorsScores.hydroelectricTurbine;
           // this.chartOptionsAC.series.data = this.graficaAreaConservacion.area;
           // this.chartOptionsAC.series.data = this.graficaAreaConservacion.area;
+          this.chartOptionsHT = this.drawHydropowerChart(
+            this. graficaHydroPower
+          );
           this.chartOptionsAC = {
             series: [
               {
@@ -193,5 +209,110 @@ export class DetailComponent implements OnInit {
         }
       })
   }
+
+  drawConservationAreaChart(dataSet: {year: number[]; value: number[]}): Partial<ChartOptions> {
+    return {
+      series: [
+        {
+          name: 'Hidroenergia',
+          data: dataSet.value
+        }
+      ],
+      title: {
+        text: 'Hidroenergia (Hidroelectrica)',
+        align: 'left'
+      },
+      chart: {
+        height: 160,
+        type: 'line',
+        toolbar: {
+          show: true,
+        }
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      xaxis: {
+        // categories: this.graficaAreaConservacion.year
+        categories: dataSet.year,
+      },
+      yaxis: {
+        title: {
+          text: 'Metros cúbicos',
+        }
+      }
+    }
+  }
+
+  drawHydropowerChart( dataSet: {year: number[]; value: number[]}): Partial<ChartOptions> {
+    return {
+      series: [
+        {
+          name: 'Hidroenergia',
+          data: dataSet.value
+        }
+      ],
+      title: {
+        text: 'Hidroenergia (Hidroelectrica)',
+        align: 'left'
+      },
+      chart: {
+        height: 160,
+        type: 'line',
+        toolbar: {
+          show: true,
+        }
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      xaxis: {
+        // categories: this.graficaAreaConservacion.year
+        categories: dataSet.year,
+      },
+      yaxis: {
+        title: {
+          text: 'Caudal M^3/s',
+        }
+      }
+    }
+  }
+
+}
+export function graficaData (infoData:DataChartInterface): DataChartInterface {
+
+  const datachartinfo =  infoData;
+  return datachartinfo
+}
+export interface DataChartInterface {
+    series:
+      [ {
+        name: string;
+        data: number[];
+      }]
+    ,
+    title: {
+      text: string;
+      align: string;
+    },
+    chart: {
+      height: 160;
+      type: string;
+      toolbar: {
+        show: boolean;
+      }
+    },
+    dataLabels: {
+      enabled: boolean;
+    },
+    xaxis: {
+      // categories: this.graficaAreaConservacion.year
+      categories: number[];
+    },
+    yaxis: {
+      title: {
+        text: string;
+      }
+    }
 
 }

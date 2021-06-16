@@ -14,6 +14,23 @@ export const HydropowerChartData: {
   value: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 }
 
+
+export const hydropowerPeriodScore: {periodId: string; score: number}[]= [
+  {
+    periodId: 'Periodo20_30',
+    score: 0
+  },
+  {
+    periodId: 'Periodo30_40',
+    score: 0
+  },
+  {
+    periodId: 'Periodo40_50',
+    score: 0
+  }
+]
+
+
 export const conservationPeriodScore: {periodId: string; score: number}[]= [
   {
     periodId: 'Periodo20_30',
@@ -36,60 +53,73 @@ export const _hydropowerTurbineData = {
     year_start: 2020,
     year_end: 2030,
     unit: '',
+    period_percent: 0,
     years:{
-      2020 : {
+        2020 : {
         year_id: 2020,
         month_start: 1,
         month_end: 12,
         year_value: 0,
-        months:{
+        months : {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -102,50 +132,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -158,50 +200,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -214,50 +268,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -270,50 +336,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -326,50 +404,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -382,50 +472,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
 
@@ -439,50 +541,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
 
@@ -496,50 +610,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
 
@@ -553,50 +679,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
 
@@ -610,50 +748,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
 
@@ -665,6 +815,7 @@ export const _hydropowerTurbineData = {
     year_start: 2031,
     year_end: 2040,
     unit: '',
+    period_percent:0,
     years:{
       2031 : {
         year_id: 2031,
@@ -675,50 +826,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -731,50 +894,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -787,50 +962,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -843,50 +1030,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -899,50 +1098,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -955,50 +1166,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1011,50 +1234,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1067,50 +1302,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1123,50 +1370,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1179,50 +1438,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       }
@@ -1233,6 +1504,7 @@ export const _hydropowerTurbineData = {
     year_start: 2041,
     year_end: 2050,
     unit: '',
+    period_percent:0,
     years:{
       2041 : {
         year_id: 2041,
@@ -1243,50 +1515,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1299,50 +1583,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1355,50 +1651,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1411,50 +1719,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1467,50 +1787,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1523,50 +1855,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1579,50 +1923,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1635,50 +1991,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1691,50 +2059,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       },
@@ -1747,50 +2127,62 @@ export const _hydropowerTurbineData = {
           1 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           2 : {
             id_month : 2,
             value_month : 0,
+            percent_month : 0
           },
           3 : {
             id_month : 3,
             value_month : 0,
+            percent_month : 0
           },
           4 : {
             id_month : 4,
             value_month : 0,
+            percent_month : 0
           },
           5 : {
             id_month : 5,
             value_month : 0,
+            percent_month : 0
           },
           6 : {
             id_month : 6,
             value_month : 0,
+            percent_month : 0
           },
           7 : {
             id_month : 7,
             value_month : 0,
+            percent_month : 0
           },
           8 : {
             id_month : 8,
             value_month : 0,
+            percent_month : 0
           },
           9 : {
             id_month : 9,
             value_month : 0,
+            percent_month : 0
           },
           10 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           11 : {
             id_month : 1,
             value_month : 0,
+            percent_month : 0
           },
           12 : {
             id_month : 12,
             value_month : 0,
+            percent_month : 0
           }
         }
       }

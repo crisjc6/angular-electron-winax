@@ -47,17 +47,17 @@ export function dataAxisXY(columnasCamposDatos: Array<any>){
         (valor)=> {
           if(key.endsWith(`/${valor}`)) {
             // hydropowerTurbineData[].years[].
-            // valores.push({
-            //   anio: valor,
-            //   valor: +value,
-            //   // @ts-ignore
-            //   clase: valoresEscenarioJuego.__EMPTY,
-            // });
-            // console.log(`valoroes `, valores[0].clase)
-            // console.log(`valoroes `, valores[0].anio)
-            // console.log(`valoroes `, valores.length)
-            // console.log(`anños 20${valor}`, key)
-            // console.log(`valroes 20${valor}`, value)
+            valores.push({
+              anio: valor,
+              valor: +value,
+              // @ts-ignore
+              clase: valoresEscenarioJuego.__EMPTY,
+            });
+            console.log(`valoroes `, valores[0].clase)
+            console.log(`valoroes `, valores[0].anio)
+            console.log(`valoroes `, valores.length)
+            console.log(`anños 20${valor}`, key)
+            console.log(`valroes 20${valor}`, value)
           }
         }
       )
@@ -65,27 +65,27 @@ export function dataAxisXY(columnasCamposDatos: Array<any>){
       // value 154515454
 
 
-      // const arreglocadena: string[] = key.split("/");
-      // const ultimoValorAnio: number = +arreglocadena[arreglocadena.length-1]
-      // const valorMes: number = +arreglocadena[arreglocadena.length-2]
-      // if (+ultimoValorAnio >= 20 && +ultimoValorAnio <= 30 ){
-      //  const valore = this.anios.forEach((anio)=> {
-      //     return this.reduce(function(groups, item) {
-      //       const val = item[key]
-      //       groups[val] = groups[val] || []
-      //       groups[val].push(item)
-      //       return groups
-      //     }, {})
-      //   })
-      //   console.log("valores", valores);
-      //   console.log("ano6 20-30: ",key+ value);
-      //   console.log("valoresEscenarioJuego 20-30",valoresEscenarioJuego);
-      // } else if (+ultimoValorAnio > 30 && +ultimoValorAnio <= 40 ) {
-      //
-      //   console.log("ano 30-40: ",key+ value);
-      // } else if (+ultimoValorAnio > 40 && +ultimoValorAnio <= 50 ) {
-      //   console.log("ano 40-50:",key+ value);
-      // }
+      const arreglocadena: string[] = key.split("/");
+      const ultimoValorAnio: number = +arreglocadena[arreglocadena.length-1]
+      const valorMes: number = +arreglocadena[arreglocadena.length-2]
+      if (+ultimoValorAnio >= 20 && +ultimoValorAnio <= 30 ){
+       const valore = this.anios.forEach((anio)=> {
+          return this.reduce(function(groups, item) {
+            const val = item[key]
+            groups[val] = groups[val] || []
+            groups[val].push(item)
+            return groups
+          }, {})
+        })
+        console.log("valores", valores);
+        console.log("ano6 20-30: ",key+ value);
+        console.log("valoresEscenarioJuego 20-30",valoresEscenarioJuego);
+      } else if (+ultimoValorAnio > 30 && +ultimoValorAnio <= 40 ) {
+
+        console.log("ano 30-40: ",key+ value);
+      } else if (+ultimoValorAnio > 40 && +ultimoValorAnio <= 50 ) {
+        console.log("ano 40-50:",key+ value);
+      }
     })
 }
 export interface valoresGrafica {
