@@ -6,10 +6,11 @@ import { ButtonComponent } from "../../components/button-component/button-compon
 import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-strings/game-events-strings";
 import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
-import { gameRouterLink, GameSpecifications, gameStatus, playerData } from "../../settings/game-system-specifications";
+import { gameRouterLink, gameStatus } from "../../settings/game-system-specifications";
 import { HtmlDOMComponent } from "../../components/html-dom-component/html-dom-component";
-import { getGameData } from "../../functions/game-decision-data-functions/game-decision-data-functions";
-import { readCSV } from "../../functions/csv-functions/csv-functions"
+import { getGameData } from "../../functions/game-data-functions/game-data-functions";
+import { readHydropowerCSV, readDemandSiteCoverageCSV } from "../../functions/csv-functions/csv-functions"
+import { gameData } from "../../settings/game-data/game-data";
 
 export class LoginScene extends Phaser.Scene {
 
@@ -90,9 +91,11 @@ export class LoginScene extends Phaser.Scene {
                 } else {
                     gameStatus.status = 'mapScene';
                     getGameData();
-                    playerData.teamName = this.loginInput.getInputText();
-                    playerData.score = 0;
-                    readCSV();
+                    
+                    gameData.playerData.teamName = this.loginInput.getInputText();
+                    gameData.playerData.score = 0;
+                    readHydropowerCSV();
+                    readDemandSiteCoverageCSV();
                     gameRouterLink.routerLink.navigate(['/detail']);
                 }
             }

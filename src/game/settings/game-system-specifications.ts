@@ -35,17 +35,17 @@ export const servicioGraficaAC: {serviceArea: any} = {
     serviceArea: null
 }
 
-export const indicatorsScores: {
-  conservationArea: number;
-  hydroelectricTurbine: number;
-  coverageDeficit: number;
-  helpcareRiver: number;
-} = {
-  conservationArea: 0,
-  hydroelectricTurbine: 0,
-  coverageDeficit: 0,
-  helpcareRiver: 0
-}
+// export const indicatorsScores: {
+//   conservationArea: number;
+//   hydroelectricTurbine: number;
+//   coverageDeficit: number;
+//   helpcareRiver: number;
+// } = {
+//   conservationArea: 0,
+//   hydroelectricTurbine: 0,
+//   coverageDeficit: 0,
+//   helpcareRiver: 0
+// }
 
 export const gameStatus: {
     status: string;
@@ -59,26 +59,6 @@ export const gameStatus: {
     gameMusic: null,
     isMusicPlaying: false,
     isSoundMuted: true,
-}
-
-export const playerData: GameScoreDataInterface = {
-    id: 0,
-    score: 0,
-    teamName: 'crisweb.me'
-}
-
-export const IndicatorsData: {
-    periodDataIds: string[];
-    conservationAreaData: any[];
-    hydroelectricTurbineData: any[];
-    coverageDeficitData: any[];
-    helpcareRiverData: any[];
-} = {
-    periodDataIds: [],
-    conservationAreaData: [],
-    hydroelectricTurbineData: [],
-    coverageDeficitData: [],
-    helpcareRiverData: []
 }
 
 
