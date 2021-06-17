@@ -5,7 +5,7 @@ import { GameSceneIdsStrings } from "../../settings/game-constants-strings/game-
 import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
 import {GameSpecifications, servicioGraficaAC} from "../../settings/game-system-specifications";
-import { getConservationAreData } from "../../functions/conservation-area-data/conservation-area-data";
+import { getConservationAreData } from "../../functions/conservation-area-data-functions/conservation-area-data";
 
 import winax from "winax";
 

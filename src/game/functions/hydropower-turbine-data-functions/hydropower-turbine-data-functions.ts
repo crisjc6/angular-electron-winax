@@ -30,9 +30,6 @@ export function calculateHydropowerScore(_periodId: string) {
                 _periodId
               ].period_percent / 10
             );
-            console.log(gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData[
-              _periodId
-            ]);
       }
       hydroelectricTurbineTotalScore += peridoSore.score;
     }
