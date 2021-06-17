@@ -24,7 +24,6 @@ export class LoginScene extends Phaser.Scene {
     private closeButton: ButtonComponent;
     private continueButton: ButtonComponent;
 
-
     init(sceneData: SceneDataInterface) {
         this.sceneData = sceneData;
     }
@@ -74,7 +73,7 @@ export class LoginScene extends Phaser.Scene {
     }
 
     private addFunctionality() {
-    //     addTintOnGameButton(this.closeButton);
+        // addTintOnGameButton(this.closeButton);
         this.closeButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 this.scene.stop(this.scene.key);

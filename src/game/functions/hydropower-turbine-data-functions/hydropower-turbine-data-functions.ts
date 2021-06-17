@@ -35,15 +35,10 @@ export function calculateHydropowerScore(_periodId: string) {
             ]);
       }
       hydroelectricTurbineTotalScore += peridoSore.score;
-      // console.log(hydroelectricTurbineTotalScore);
     }
   );
-  
-  // console.log(hydroelectricTurbineTotalScore);
 
   gameData.gameScores.hydroelectricTurbineScores.indicatorTotalScore = +(hydroelectricTurbineTotalScore).toFixed(2);
-  // console.log(gameData.gameScores.hydroelectricTurbineScores.indicatorTotalScore);
-
   gameData.gameScores.totalScore = +(
       gameData.gameScores.conservationAreaScores.indicatorTotalScore +
       gameData.gameScores.hydroelectricTurbineScores.indicatorTotalScore +
@@ -52,8 +47,5 @@ export function calculateHydropowerScore(_periodId: string) {
     ).toFixed(2);
     
   gameData.playerData.score = gameData.gameScores.totalScore;
-  
-  // gameData.gameScores.hydroelectricTurbineScores.indicatorTotalScore
-  // conservationPeriodScore
 }
 

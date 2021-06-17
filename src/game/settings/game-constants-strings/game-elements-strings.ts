@@ -6,7 +6,6 @@ export const enum GameElementsString {
     TABLE_STRING = 'table',
     HTML_DOM_STRING = 'html-dom',
 
-
     INTERACTIVE_OBJECT_STRING = 'interactiveObject',
 
     BUTTON_STRING = 'button',

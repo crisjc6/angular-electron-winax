@@ -19,7 +19,6 @@ export class GraficaAreaConvervacionService {
   exportarDataXY() {
     getConservationAreData();
     getHydropowerChartData();
-    // return {conservationAreasData, indicatorsScores, HydropowerChartData};
     return gameData;
   }
 }

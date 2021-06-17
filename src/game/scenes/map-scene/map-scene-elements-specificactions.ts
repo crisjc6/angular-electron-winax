@@ -10,7 +10,6 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            // objectWidth: 1366,
             objectWidth: 810,
             objectHeight: 630,
             objectPositionX: 405,
@@ -101,7 +100,6 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
         originY: 0
     },
     {
-        
         type: 'button',
         element: 'simple-button',
         assetName: 'play-game-button-background',
@@ -122,112 +120,4 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
             objectPositionY: 580,
         }
     },
-    // {
-    //     type: 'button',
-    //     element: 'bottom-title-button',
-    //     assetName: 'info-icon-background',
-    //     content: 'INFORMACIÓN',
-    //     name: 'info-button',
-    //     style: {
-    //         fontFamily: GameFontStylesString.BASE_FONT,
-    //         color: ColorsString.BLACK_HEXADECIMAL_STRING,
-    //         align: AlingString.CENTER_STRING,
-    //         stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-    //         // strokeThickness: textFontSize.Small.strokeThickness,
-    //         // fontSize: textFontSize.Small.fontSize,
-    //         strokeThickness: textFontSize.VerySmall.strokeThickness,
-    //         fontSize: textFontSize.VerySmall.fontSize,
-    //     },
-    //     scale: {
-    //         objectWidthRatio: 1,
-    //         objectHeightRatio: 1,
-    //         objectWidth: 71,
-    //         objectHeight: 100,
-    //         // objectWidth: 100,
-    //         // objectHeight: 140,
-    //         objectPositionX: 180,
-    //         objectPositionY: 666,
-    //     }
-    // },
-    // {
-    //     type: 'button',
-    //     element: 'bottom-title-button',
-    //     assetName: 'help-icon-background',
-    //     name: 'help-button',
-    //     content: 'AYUDA',
-    //     style: {
-    //         fontFamily: GameFontStylesString.BASE_FONT,
-    //         color: ColorsString.BLACK_HEXADECIMAL_STRING,
-    //         align: AlingString.CENTER_STRING,
-    //         stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-    //         // strokeThickness: textFontSize.Small.strokeThickness,
-    //         // fontSize: textFontSize.Small.fontSize,
-    //         strokeThickness: textFontSize.VerySmall.strokeThickness,
-    //         fontSize: textFontSize.VerySmall.fontSize,
-    //     },
-    //     scale: {
-    //         objectWidthRatio: 1,
-    //         objectHeightRatio: 1,
-    //         objectWidth: 71,
-    //         objectHeight: 100,
-    //         // objectWidth: 100,
-    //         // objectHeight: 140,
-    //         objectPositionX: 360,
-    //         objectPositionY: 666,
-    //     },
-    // },
-    // {
-    //     type: 'button',
-    //     element: 'bottom-title-button',
-    //     assetName: 'on-sound-icon-background',
-    //     name: 'sound-button',
-    //     content: 'SONIDO',
-    //     style: {
-    //         fontFamily: GameFontStylesString.BASE_FONT,
-    //         color: ColorsString.BLACK_HEXADECIMAL_STRING,
-    //         align: AlingString.CENTER_STRING,
-    //         stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-    //         // strokeThickness: textFontSize.Small.strokeThickness,
-    //         // fontSize: textFontSize.Small.fontSize,
-    //         strokeThickness: textFontSize.VerySmall.strokeThickness,
-    //         fontSize: textFontSize.VerySmall.fontSize,
-    //     },
-    //     scale: {
-    //         objectWidthRatio: 1,
-    //         objectHeightRatio: 1,
-    //         objectWidth: 71,
-    //         objectHeight: 100,
-    //         // objectWidth: 100,
-    //         // objectHeight: 140,
-    //         objectPositionX: 520,
-    //         objectPositionY: 666,
-    //     }
-    // },
-    // {
-    //     type: 'button',
-    //     element: 'bottom-title-button',
-    //     assetName: 'score-icon-background',
-    //     content: 'PUNTUACIONES',
-    //     name: 'score-button',
-    //     style: {
-    //         fontFamily: GameFontStylesString.BASE_FONT,
-    //         color: ColorsString.BLACK_HEXADECIMAL_STRING,
-    //         align: AlingString.CENTER_STRING,
-    //         stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-    //         // strokeThickness: textFontSize.Small.strokeThickness,
-    //         // fontSize: textFontSize.Small.fontSize,
-    //         strokeThickness: textFontSize.VerySmall.strokeThickness,
-    //         fontSize: textFontSize.VerySmall.fontSize,
-    //     },
-    //     scale: {
-    //         objectWidthRatio: 1,
-    //         objectHeightRatio: 1,
-    //         objectWidth: 71,
-    //         objectHeight: 100,
-    //         // objectWidth: 100,
-    //         // objectHeight: 140,
-    //         objectPositionX: 695,
-    //         objectPositionY: 666,
-    //     }
-    // }
 ]

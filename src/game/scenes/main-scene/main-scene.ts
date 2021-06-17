@@ -7,11 +7,9 @@ import { EventsTouchedGameObjectsStrings } from "./../../settings/game-constants
 import { loadFonts } from "../../functions/font-styles/font-styles-functions";
 import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
 import { gameAssets } from "../../settings/game-assets";
-import { GameSpecifications, gameStatus } from "../../settings/game-system-specifications";
+import { gameStatus } from "../../settings/game-system-specifications";
 import { buttonElements, IconsKeyStrings, GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { switchGameSoundStatus } from '../../functions/sound-functions/sound-function'; 
-import { GameDecisionInterface } from "../../interfaces/game-decision-interface";
-// import { GameDecisions } from "../../settings/game-decisions";
 
 export class MainScene extends Phaser.Scene {
     
@@ -21,7 +19,6 @@ export class MainScene extends Phaser.Scene {
     private soundButton: ButtonComponent;
     private infoButton: ButtonComponent;
     private helpButton: ButtonComponent;
-    private sceneData: SceneDataInterface;
 
     init() {
         gameStatus.status = 'mainScene'; 
@@ -37,9 +34,6 @@ export class MainScene extends Phaser.Scene {
         loadFonts();
         loadAssetsArrayGame(this, gameAssets);        
         this.gameObjects = new Map();
-        // console.log(decisions);
-        // console.log(decisions[2]);
-        // this.getGameData();
     }
 
     create() {
@@ -130,11 +124,6 @@ export class MainScene extends Phaser.Scene {
         this.soundButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 switchGameSoundStatus(this, this.soundButton, true);
-                // this.scene.pause();
-                // const gameData: SceneDataInterface = {
-                //     returnSceneName: this.scene.key
-                // }
-                // this.scene.launch(GameSceneIdsStrings.SETTINGS_SCENE_ID, gameData);
             }
         );
     }
@@ -147,7 +136,4 @@ export class MainScene extends Phaser.Scene {
             buttonBackground.setTexture(IconsKeyStrings.ON_SOUND_ICON);
         }
     }
-
-    // private 
-
 }

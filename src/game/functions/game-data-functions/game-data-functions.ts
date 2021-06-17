@@ -1,10 +1,7 @@
 import { GameSpecifications } from '../../settings/game-system-specifications';
 import { GameDecisionsData } from '../../settings/game-decisions-data'
-import { _conservationAreasDataDefault} from "../../settings/conservation_areas_data";
-import { _hydropowerTurbineData } from '../../settings/hydropower_turbine_data';
 import { gameData } from '../../settings/game-data/game-data';
-import { _gameDataDefault, _gameScoresDefault, _indicatorsDataChartDefault, _indicatorsPeriodDataDefault, _playerDataDefault } from '../../settings/game-data/game-data-default';
-// /setting/game-decisions';
+import { _gameScoresDefault, _indicatorsDataChartDefault, _indicatorsPeriodDataDefault, _playerDataDefault } from '../../settings/game-data/game-data-default';
 
 export function getGameData() {
 
@@ -24,14 +21,4 @@ export function getGameData() {
 
       GameSpecifications.decisionPeriodIds.reverse();
     }
-
-   
-    // GameSpecifications.currentPeriodId = GameSpecifications.decisionPeriodIds[GameSpecifications.currentPeriodIndex];
-
-    // GameSpecifications.currentDecisionsPeriod = JSON.parse(JSON.stringify(GameSpecifications.gameDecisionsData[GameSpecifications.currentPeriodId]));
-    // for(let decisionId in GameSpecifications.currentDecisionsPeriod.decisions) {
-    //     GameSpecifications.decisionIds.push(decisionId);
-    // }
-    // GameSpecifications.currentDecisionId = GameSpecifications.decisionIds[GameSpecifications.currentDecisionIndex];
-    // GameSpecifications.currentDecision = JSON.parse(JSON.stringify(GameSpecifications.currentDecisionsPeriod.decisions[GameSpecifications.currentDecisionId]));
 }
