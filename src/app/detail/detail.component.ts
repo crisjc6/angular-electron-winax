@@ -60,76 +60,6 @@ export class DetailComponent implements OnInit {
     this.gameDataCharts = this.graficaAreaConservacioService.exportarDataXY().indicatorsDataChart;
     this.gameDataScores = this.graficaAreaConservacioService.exportarDataXY().gameScores;
     this.drawAllCharts(this.gameDataCharts);
-
-  //   this.chartOptionsHT = this.drawHydropowerChart(
-  //     this. graficaHydroPower
-  //   );
-  //   this.chartOptionsAC = {
-  //     series: [
-  //       {
-  //         name: "Area Conservación",
-  //         data: this.graficaAreaConservacion.area
-  //       }
-  //     ],
-  //     title: {
-  //       text: "Áreas de Conservación",
-  //       align: "left"
-  //     },
-  //     chart: {
-  //       height: 160 ,
-  //       type: "area",
-  //       toolbar: {
-  //         show: true
-  //       }
-  //     },
-  //     dataLabels: {
-  //       enabled: false
-  //     },
-  //     xaxis: {
-  //       // categories: this.graficaAreaConservacion.year
-  //       categories: this.graficaAreaConservacion.year
-  //     },
-  //     yaxis: {
-  //       title: {
-  //         text: "Hectáreas (Ha)"
-  //       }
-  //     }
-  //   };
-  //   this.chartOptions = {
-  //     series: [
-  //       {
-  //         name: "My-series",
-  //         data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-  //       }
-  //     ],
-  //     chart: {
-  //       height: 160 ,
-  //       type: "line",
-  //       toolbar: {
-  //         show: false
-  //       }
-  //     },
-  //     colors: ["#77B6EA", "#545454"],
-  //     xaxis: {
-  //       categories: ["Jan", "Feb",  "Mar",  "Apr",  "May",  "Jun",  "Jul",  "Aug", "Sep"]
-  //     },
-  //     responsive:
-  //       [
-  //         {
-  //           breakpoint: 1000,
-  //           options: {
-  //             plotOptions: {
-  //               bar: {
-  //                 horizontal: false
-  //               }
-  //             },
-  //             legend: {
-  //               position: "bottom"
-  //             }
-  //           }
-  //         }
-  //       ]
-  //   };
   }
 
   ngOnInit(): void {
@@ -150,6 +80,7 @@ export class DetailComponent implements OnInit {
   goPlaces() {
     this.router.navigate(['/']);
   }
+  
   openTestDocument(): void {
     this._cargandoService.habilitarCargando();
     setTimeout (()=> {
