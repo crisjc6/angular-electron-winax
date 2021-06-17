@@ -46,7 +46,6 @@ export function getConservationAreData() {
 }
 
 export function calculateConservationAreaScore(_periodArea: number, _periodId: string) {
-  // indicatorsScores.conservationArea = 0;
   let conservationAreaTotalScore = 0;
   
   const initialArea = -200; //x0
