@@ -7,6 +7,13 @@ export function getGameData() {
 
     if (!GameSpecifications.continueGame) {
       GameSpecifications.gameDecisionsData = JSON.parse(JSON.stringify(GameDecisionsData));
+      GameSpecifications.currentPeriodIndex = 0;
+      GameSpecifications.decisionPeriodIds = [];
+      GameSpecifications.currentPeriodId = '';
+      GameSpecifications.currentDecisionsPeriod = null;
+      GameSpecifications.currentDecisionIndex = 0;
+      GameSpecifications.decisionIds = [];
+      GameSpecifications.currentDecisionId = '';
 
       gameData.playerData = JSON.parse(JSON.stringify(_playerDataDefault));
       gameData.indicatorsPeriodData = JSON.parse(JSON.stringify(_indicatorsPeriodDataDefault));
