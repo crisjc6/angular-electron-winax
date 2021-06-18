@@ -15,6 +15,9 @@ import {CargandoService} from "../shared/services/cargando.service";
 import {GraficaAreaConvervacionService} from "../shared/services/grafica-area-convervacion.service";
 import {Component, OnInit, ViewChild} from "@angular/core";
 import {Router} from "@angular/router";
+import {DataChartInterface} from "../../game/interfaces/game-data-chart-interface";
+import {IndicatorsDataChartsInterface} from "../../game/interfaces/indicators-data-interface"
+import { GameScoresinterface } from "../../game/interfaces/game-score-interface";
 
 export type ChartOptions = {
   series?: ApexAxisChartSeries;
@@ -41,94 +44,23 @@ export class DetailComponent implements OnInit {
   public chartOptionsP: Partial<ChartOptions>;
   public chartOptionsPR: Partial<ChartOptions>;
   private game: Phaser.Game;
-  graficaAreaConservacion;
-  graficaHydroPower;
   bloqueado = false;
-  puntajeAreaConservacion;
-  hydricScore;
+  gameDataCharts: IndicatorsDataChartsInterface;
+  gameDataScores: GameScoresinterface;
+  
   constructor(private router: Router,
               private weapService: WeapService,
-              private csvService: CsvService,
+              // private csvService: CsvService,
               private readonly _cargandoService: CargandoService,
               private graficaAreaConservacioService: GraficaAreaConvervacionService,
   ) {
     gameRouterLink.routerLink = this.router;
     servicioGraficaAC.serviceArea = graficaAreaConservacioService;
 
-    //this.csvService.printdirname();
-    this.graficaAreaConservacion = this.graficaAreaConservacioService.exportarDataXY().conservationAreasData;
-    this. graficaHydroPower = this.graficaAreaConservacioService.exportarDataXY().HydropowerChartData;
-    this.puntajeAreaConservacion = this.graficaAreaConservacioService.exportarDataXY().indicatorsScores.conservationArea;
-    this.hydricScore = this.graficaAreaConservacioService.exportarDataXY().indicatorsScores.hydroelectricTurbine;
-    this.chartOptionsHT = this.drawHydropowerChart(
-      this. graficaHydroPower
-    );
-    this.chartOptionsAC = {
-      series: [
-        {
-          name: "Area Conservación",
-          data: this.graficaAreaConservacion.area
-        }
-      ],
-      title: {
-        text: "Áreas de Conservación",
-        align: "left"
-      },
-      chart: {
-        height: 160 ,
-        type: "area",
-        toolbar: {
-          show: true
-        }
-      },
-      dataLabels: {
-        enabled: false
-      },
-      xaxis: {
-        // categories: this.graficaAreaConservacion.year
-        categories: this.graficaAreaConservacion.year
-      },
-      yaxis: {
-        title: {
-          text: "Hectáreas (Ha)"
-        }
-      }
-    };
-    this.chartOptions = {
-      series: [
-        {
-          name: "My-series",
-          data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-        }
-      ],
-      chart: {
-        height: 160 ,
-        type: "line",
-        toolbar: {
-          show: false
-        }
-      },
-      colors: ["#77B6EA", "#545454"],
-      xaxis: {
-        categories: ["Jan", "Feb",  "Mar",  "Apr",  "May",  "Jun",  "Jul",  "Aug", "Sep"]
-      },
-      responsive:
-        [
-          {
-            breakpoint: 1000,
-            options: {
-              plotOptions: {
-                bar: {
-                  horizontal: false
-                }
-              },
-              legend: {
-                position: "bottom"
-              }
-            }
-          }
-        ]
-    };
+    /**********Corregir cambiarlo a una sola llamada ***********/
+    this.gameDataCharts = this.graficaAreaConservacioService.exportarDataXY().indicatorsDataChart;
+    this.gameDataScores = this.graficaAreaConservacioService.exportarDataXY().gameScores;
+    this.drawAllCharts(this.gameDataCharts);
   }
 
   ngOnInit(): void {
@@ -146,10 +78,10 @@ export class DetailComponent implements OnInit {
       );
   }
 
-
   goPlaces() {
     this.router.navigate(['/']);
   }
+  
   openTestDocument(): void {
     this._cargandoService.habilitarCargando();
     setTimeout (()=> {
@@ -157,65 +89,69 @@ export class DetailComponent implements OnInit {
       this._cargandoService.deshabilitarCargando()
     },500 );
   }
-  public updateSeries() {
-    this.chartOptions.series = [{
-      data: [23, 44, 1, 22]
-    }];
-  }
-  escucharCambiosGraficaAC(){
+
+  escucharCambiosGraficaAC() {
     this.graficaAreaConservacioService.seActualizoDatos
       .subscribe((cambio)=>{
         if(cambio == true) {
-          this. graficaAreaConservacion = this.graficaAreaConservacioService.exportarDataXY().conservationAreasData;
-          this. graficaHydroPower = this.graficaAreaConservacioService.exportarDataXY().HydropowerChartData;
-          this.puntajeAreaConservacion = this.graficaAreaConservacioService.exportarDataXY().indicatorsScores.conservationArea;
-          this.hydricScore = this.graficaAreaConservacioService.exportarDataXY().indicatorsScores.hydroelectricTurbine;
-          // this.chartOptionsAC.series.data = this.graficaAreaConservacion.area;
-          // this.chartOptionsAC.series.data = this.graficaAreaConservacion.area;
-          this.chartOptionsHT = this.drawHydropowerChart(
-            this. graficaHydroPower
-          );
-          this.chartOptionsAC = {
-            series: [
-              {
-                name: "Area Conservación",
-                data: this.graficaAreaConservacion.area
-              }
-            ],
-            title: {
-              text: "Áreas de Conservación",
-              align: "left"
-            },
-            chart: {
-              height: 160 ,
-              type: "area",
-              toolbar: {
-                show: true
-              }
-            },
-            dataLabels: {
-              enabled: false
-            },
-            xaxis: {
-              // categories: this.graficaAreaConservacion.year
-              categories: this.graficaAreaConservacion.year
-            },
-            yaxis: {
-              title: {
-                text: "Hectáreas (Ha)"
-              }
-            }
-          };
+          /**********Corregir cambiarlo a una sola llamada ***********/
+          this.gameDataCharts = this.graficaAreaConservacioService.exportarDataXY().indicatorsDataChart;
+          this.gameDataScores = this.graficaAreaConservacioService.exportarDataXY().gameScores;
+          this.drawAllCharts(this.gameDataCharts);
         }
       })
   }
 
-  drawConservationAreaChart(dataSet: {year: number[]; value: number[]}): Partial<ChartOptions> {
+  drawAllCharts(_gameDataCharts: IndicatorsDataChartsInterface) {
+    this.chartOptionsAC = this.drawConservationAreaChart(_gameDataCharts.conservationAreaDataChart);
+    this.chartOptionsHT = this.drawHydropowerChart(_gameDataCharts.hydroelectricTurbineDataChart);
+    
+    /********************* Modificar para aceptar todos los riegos*****************************/
+    this.chartOptionsDC = this.drawCoverageChart(_gameDataCharts.demandSiteDataChart.riegoC3);
+    
+    this.chartOptionsSR = this.drawStreamFlowChart(_gameDataCharts.helpcareRiverDataChart);
+  }
+
+  drawConservationAreaChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
+    return {
+      series: [
+        {
+          name: 'Area Conservación',
+          data: _dataSet.values
+        }
+      ],
+      title: {
+        text: 'Áreas de Conservación',
+        align: 'left'
+      },
+      chart: {
+        height: 160,
+        type: 'area',
+        toolbar: {
+          show: true,
+        }
+      },
+      colors: ['#77B6EA', '#545454'],
+      dataLabels: {
+        enabled: false,
+      },
+      xaxis: {
+        categories: _dataSet.years,
+      },
+      yaxis: {
+        title: {
+          text: 'Hectáreas (Ha)'
+        }
+      }
+    }
+  }
+
+  drawHydropowerChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
     return {
       series: [
         {
           name: 'Hidroenergia',
-          data: dataSet.value
+          data: _dataSet.values
         }
       ],
       title: {
@@ -224,95 +160,92 @@ export class DetailComponent implements OnInit {
       },
       chart: {
         height: 160,
-        type: 'line',
+        type: 'area',
         toolbar: {
           show: true,
         }
       },
+      colors: ['#77B6EA', '#545454'],
       dataLabels: {
         enabled: false,
       },
       xaxis: {
-        // categories: this.graficaAreaConservacion.year
-        categories: dataSet.year,
+        categories: _dataSet.years,
       },
       yaxis: {
         title: {
-          text: 'Metros cúbicos',
+          text: 'Caudal (M^3/s)',
         }
       }
     }
   }
-
-  drawHydropowerChart( dataSet: {year: number[]; value: number[]}): Partial<ChartOptions> {
+  
+  drawCoverageChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
     return {
       series: [
         {
-          name: 'Hidroenergia',
-          data: dataSet.value
+          name: 'Covertura',
+          data: _dataSet.values
         }
       ],
       title: {
-        text: 'Hidroenergia (Hidroelectrica)',
+        text: 'Demanda cobertura del sitio ',
         align: 'left'
       },
       chart: {
         height: 160,
-        type: 'line',
+        type: 'area',
         toolbar: {
           show: true,
         }
       },
+      colors: ['#77B6EA', '#545454'],
       dataLabels: {
         enabled: false,
       },
       xaxis: {
-        // categories: this.graficaAreaConservacion.year
-        categories: dataSet.year,
+        categories: _dataSet.years,
       },
       yaxis: {
         title: {
-          text: 'Caudal M^3/s',
+          text: 'Porcentaje (%)',
         }
       }
     }
   }
-
-}
-export function graficaData (infoData:DataChartInterface): DataChartInterface {
-
-  const datachartinfo =  infoData;
-  return datachartinfo
-}
-export interface DataChartInterface {
-    series:
-      [ {
-        name: string;
-        data: number[];
-      }]
-    ,
-    title: {
-      text: string;
-      align: string;
-    },
-    chart: {
-      height: 160;
-      type: string;
-      toolbar: {
-        show: boolean;
-      }
-    },
-    dataLabels: {
-      enabled: boolean;
-    },
-    xaxis: {
-      // categories: this.graficaAreaConservacion.year
-      categories: number[];
-    },
-    yaxis: {
+  
+  drawStreamFlowChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
+    return {
+      series: [
+        {
+          name: 'Fujo del rio',
+          data: _dataSet.values
+        }
+      ],
       title: {
-        text: string;
+        text: 'Salud del rio',
+        align: 'left'
+      },
+      chart: {
+        height: 160,
+        type: 'area',
+        toolbar: {
+          show: true,
+        }
+      },
+      colors: ['#77B6EA', '#545454'],
+      dataLabels: {
+        enabled: false,
+      },
+      xaxis: {
+        categories: _dataSet.years,
+      },
+      yaxis: {
+        title: {
+          text: 'Flujo (M^3/s)',
+        }
       }
     }
-
+  }
+  
 }

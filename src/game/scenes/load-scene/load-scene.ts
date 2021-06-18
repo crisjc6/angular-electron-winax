@@ -5,9 +5,10 @@ import { GameSceneIdsStrings } from "../../settings/game-constants-strings/game-
 import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
 import {GameSpecifications, servicioGraficaAC} from "../../settings/game-system-specifications";
-import { getConservationAreData } from "../../functions/conservation-area-data/conservation-area-data";
+import { getConservationAreData } from "../../functions/conservation-area-data-functions/conservation-area-data";
 
 import winax from "winax";
+import { runWEAP } from "../../functions/weap-functions/weap-functions";
 
 export class LoadScene extends Phaser.Scene {
 
@@ -32,10 +33,11 @@ export class LoadScene extends Phaser.Scene {
     this.generateScene();
     this.getElements();
 
-    // setTimeout(() => {
-    //     this.loadWeapValue();
-    // }, 100);
-    servicioGraficaAC.serviceArea.habilitarActualizacion();
+    setTimeout(() => {
+        // runWEAP();
+        servicioGraficaAC.serviceArea.habilitarActualizacion();
+        // this.loadWeapValue();
+    }, 100);
 
 
     setTimeout(() => {
@@ -87,7 +89,6 @@ export class LoadScene extends Phaser.Scene {
 
     servicioGraficaAC.serviceArea.deshabilitarActualizacion();
     this.scene.stop();
-    // console.log(this.sceneData.returnSceneName);
     this.scene.wake(this.sceneData.returnSceneName, {data:'runnnn'});
   }
 }

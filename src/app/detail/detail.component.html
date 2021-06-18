@@ -23,7 +23,7 @@
           <br>
           <span class="score">Pts.</span>
           <br>
-          <span class="score">{{puntajeAreaConservacion}}</span>
+          <span class="score">{{gameDataScores.conservationAreaScores.indicatorTotalScore}}</span>
         </div>
       </div>
       <div class="row mt-1">
@@ -45,47 +45,73 @@
           <br>
           <span class="score">Pts.</span>
           <br>
-          <span class="score">{{hydricScore}}</span>
+          <span class="score">{{gameDataScores.hydroelectricTurbineScores.indicatorTotalScore}}</span>
         </div>
       </div>
       <div class="row mt-1">
-        <div style="text-align:center">
+        <div class="col-11" style="padding:0;">
+          <div style="text-align:center">
+            <apx-chart
+              [series]="chartOptionsDC.series"
+              [chart]="chartOptionsDC.chart"
+              [xaxis]="chartOptionsDC.xaxis"
+              [yaxis]="chartOptionsDC.yaxis"
+              [title]="chartOptionsDC.title"
+              [colors]="chartOptionsDC.colors"
+              [dataLabels]="chartOptionsDC.dataLabels"
+            ></apx-chart>
+          </div>
+        </div>
+        <!-- <div style="text-align:center">
           <apx-chart
             [series]="chartOptions.series"
             [chart]="chartOptions.chart"
             [xaxis]="chartOptions.xaxis"
           ></apx-chart>
-        </div>
+        </div> -->
       </div>
       <div class="row mt-1">
-        <div style="text-align:center">
+        <div class="col-11" style="padding:0;">
+          <div style="text-align:center">
+            <apx-chart
+              [series]="chartOptionsSR.series"
+              [chart]="chartOptionsSR.chart"
+              [xaxis]="chartOptionsSR.xaxis"
+              [yaxis]="chartOptionsSR.yaxis"
+              [title]="chartOptionsSR.title"
+              [colors]="chartOptionsSR.colors"
+              [dataLabels]="chartOptionsSR.dataLabels"
+            ></apx-chart>
+          </div>
+        </div>
+        <!-- <div style="text-align:center">
           <apx-chart
             [series]="chartOptions.series"
             [chart]="chartOptions.chart"
             [xaxis]="chartOptions.xaxis"
             [responsive]="chartOptions.responsive"
           ></apx-chart>
-        </div>
+        </div> -->
       </div>
       <div class="row mt-1">
-        <div style="text-align:center">
+        <!-- <div style="text-align:center">
           <apx-chart
             [series]="chartOptions.series"
             [chart]="chartOptions.chart"
             [xaxis]="chartOptions.xaxis"
             [responsive]="chartOptions.responsive"
           ></apx-chart>
-        </div>
+        </div> -->
       </div>
       <div class="row mt-1">
-        <div style="text-align:center">
+        <!-- <div style="text-align:center">
           <apx-chart
             [series]="chartOptions.series"
             [chart]="chartOptions.chart"
             [xaxis]="chartOptions.xaxis"
             [responsive]="chartOptions.responsive"
           ></apx-chart>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

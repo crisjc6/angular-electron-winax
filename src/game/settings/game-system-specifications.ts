@@ -1,5 +1,4 @@
-import { DecisionInterface, GameDecisionInterface } from "../interfaces/game-decision-interface"
-import { GameScoreDataInterface } from "../interfaces/game-score-interface"
+import { GameDecisionInterface } from "../interfaces/game-decision-interface"
 
 export const GameSpecifications:{
     name: string;
@@ -8,11 +7,11 @@ export const GameSpecifications:{
     currentPeriodIndex: number;
     decisionPeriodIds: string[];
     currentPeriodId: string;
-    currentDecisionsPeriod: GameDecisionInterface; //Corregir o aumentar el data de cada decicion debe ser: Periodo-Decicion-Opcion
+    currentDecisionsPeriod: GameDecisionInterface;
     currentDecisionIndex: number;
-    // currentDecision: DecisionInterface; //Corregir o aumentar el data de cada decicion debe ser: Periodo-Decicion-Opcion
     decisionIds: string[];
     currentDecisionId: string;
+    appPath: string;
 } = {
     name: 'DARCH',
     continueGame: false,
@@ -22,9 +21,9 @@ export const GameSpecifications:{
     currentPeriodId: '',
     currentDecisionsPeriod: null,
     currentDecisionIndex: 0,
-    // currentDecision: null,
     decisionIds: [],
-    currentDecisionId: ''
+    currentDecisionId: '',
+    appPath: ''
 }
 
 export const gameRouterLink: {routerLink: any} = {
@@ -33,18 +32,6 @@ export const gameRouterLink: {routerLink: any} = {
 
 export const servicioGraficaAC: {serviceArea: any} = {
     serviceArea: null
-}
-
-export const indicatorsScores: {
-  conservationArea: number;
-  hydroelectricTurbine: number;
-  coverageDeficit: number;
-  helpcareRiver: number;
-} = {
-  conservationArea: 0,
-  hydroelectricTurbine: 0,
-  coverageDeficit: 0,
-  helpcareRiver: 0
 }
 
 export const gameStatus: {
@@ -59,26 +46,6 @@ export const gameStatus: {
     gameMusic: null,
     isMusicPlaying: false,
     isSoundMuted: true,
-}
-
-export const playerData: GameScoreDataInterface = {
-    id: 0,
-    score: 0,
-    teamName: 'crisweb.me'
-}
-
-export const IndicatorsData: {
-    periodDataIds: string[];
-    conservationAreaData: any[];
-    hydroelectricTurbineData: any[];
-    coverageDeficitData: any[];
-    helpcareRiverData: any[];
-} = {
-    periodDataIds: [],
-    conservationAreaData: [],
-    hydroelectricTurbineData: [],
-    coverageDeficitData: [],
-    helpcareRiverData: []
 }
 
 

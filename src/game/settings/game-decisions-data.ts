@@ -1,6 +1,4 @@
 
-
-
 export const DecisionStatus = {
     current_period_id: 'Periodo20_30',
     current_decicion_id: 'P_20_30_1',

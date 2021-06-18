@@ -1,11 +1,12 @@
 import {EventEmitter, Injectable} from "@angular/core";
-import { read, WorkBook, utils, WorkSheet } from 'xlsx';
-import {getConservationAreData} from "../../../game/functions/conservation-area-data/conservation-area-data";
-import {conservationAreasData} from "../../../game/settings/conservation_areas_data";
-import {indicatorsScores} from "../../../game/settings/game-system-specifications";
+import {getConservationAreData} from "../../../game/functions/conservation-area-data-functions/conservation-area-data";
+// import {conservationAreasData} from "../../../game/settings/conservation_areas_data";
 import {getHydropowerChartData} from '../../../game/functions/hydropower-turbine-data-functions/hydropower-turbine-data-functions';
-import {HydropowerChartData} from "../../../game/settings/hydropower_turbine_data";
+import {getDemandSiteChartData} from '../../../game/functions/demand-site-data-functions/demand-site-data-functions';
+import {getStreamFlowChartData} from '../../../game/functions/streamflow-data-function/streamflow-data-function';
 
+// import {HydropowerChartData} from "../../../game/settings/hydropower_turbine_data";
+import { gameData } from "../../../game/settings/game-data/game-data";
 
 @Injectable({ providedIn: "root" })
 export class GraficaAreaConvervacionService {
@@ -17,9 +18,14 @@ export class GraficaAreaConvervacionService {
   deshabilitarActualizacion() {
     this.seActualizoDatos.emit(false)
   }
+
   exportarDataXY() {
-    getHydropowerChartData();
     getConservationAreData();
-    return {conservationAreasData, indicatorsScores, HydropowerChartData};
+    getHydropowerChartData();
+    getDemandSiteChartData();
+    getStreamFlowChartData();
+    // readStreamflowCSV();
+    console.log(gameData);
+    return gameData;
   }
 }

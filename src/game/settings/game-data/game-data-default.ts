@@ -1,53 +1,78 @@
-export const _hydropowerChartDataDefault: {
-  year: number [];
-  value: number [];
-} = {
-  year:[2020,2021,2022,2023,2024,2025,2026,2027,2028, 2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040,2041,2042,2043,2044,2045,2046,2047,2048,2049,2050],
-  value: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+import { GameScoreDataInterface, GameScoresinterface } from "../../interfaces/game-score-interface"
+import { DataChartInterface } from "../../interfaces/game-data-chart-interface"
+import { IndicatorsDataChartsInterface, IndicatorsPeriodDataInterface } from "../../interfaces/indicators-data-interface"
+
+export enum PeriodsIdStrings {
+  PERIOD_20_30_ID = 'Periodo20_30',
+  PERIOD_30_40_ID = 'Periodo30_40',
+  PERIOD_40_50_ID = 'Periodo40_50',
 }
 
-export const HydropowerChartData: {
-  year: number [];
-  value: number [];
-} = {
-  year:[2020,2021,2022,2023,2024,2025,2026,2027,2028, 2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040,2041,2042,2043,2044,2045,2046,2047,2048,2049,2050],
-  value: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-}
-
-
-export const hydropowerPeriodScore: {periodId: string; score: number}[]= [
+export const _periodScoreDefault: {
+  periodId: string;
+  score: number
+} [] = [
   {
-    periodId: 'Periodo20_30',
+    periodId: PeriodsIdStrings.PERIOD_20_30_ID,
     score: 0
   },
   {
-    periodId: 'Periodo30_40',
+    periodId: PeriodsIdStrings.PERIOD_30_40_ID,
     score: 0
   },
   {
-    periodId: 'Periodo40_50',
+    periodId: PeriodsIdStrings.PERIOD_40_50_ID,
     score: 0
   }
 ]
 
-
-export const conservationPeriodScore: {periodId: string; score: number}[]= [
-  {
-    periodId: 'Periodo20_30',
-    score: 0
+export const _gameScoresDefault: GameScoresinterface = {
+  periodDataIds: [],
+  totalScore: 0,
+  conservationAreaScores: {
+    indicatorTotalScore: 0,
+    periodScores: JSON.parse(JSON.stringify(_periodScoreDefault))
   },
-  {
-    periodId: 'Periodo30_40',
-    score: 0
+  hydroelectricTurbineScores: {
+    indicatorTotalScore: 0,
+    periodScores: JSON.parse(JSON.stringify(_periodScoreDefault))
   },
-  {
-    periodId: 'Periodo40_50',
-    score: 0
+  demandSiteScores: {
+    indicatorTotalScore: 0,
+    periodScores: JSON.parse(JSON.stringify(_periodScoreDefault))
+  },
+  helpcareRiverScores: {
+    indicatorTotalScore: 0,
+    periodScores: JSON.parse(JSON.stringify(_periodScoreDefault))
   }
-]
+}
 
+export const _dataChartDefault: DataChartInterface = {
+  years: [2020,2021,2022,2023,2024,2025,2026,2027,2028, 2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040,2041,2042,2043,2044,2045,2046,2047,2048,2049,2050],
+  values: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+}
 
-export const _hydropowerTurbineData = {
+export const _indicatorsDataChartDefault: IndicatorsDataChartsInterface = {
+  periodDataIds: [],
+  conservationAreaDataChart: JSON.parse(JSON.stringify(_dataChartDefault)),
+  hydroelectricTurbineDataChart: JSON.parse(JSON.stringify(_dataChartDefault)),
+  demandSiteDataChart: {
+      plantaProcesadoraLeche: JSON.parse(JSON.stringify(_dataChartDefault)),
+      plantaProcesadoraPapa: JSON.parse(JSON.stringify(_dataChartDefault)),
+      plantacionUvilla: JSON.parse(JSON.stringify(_dataChartDefault)),
+      riegoC1: JSON.parse(JSON.stringify(_dataChartDefault)),
+      riegoC2: JSON.parse(JSON.stringify(_dataChartDefault)),
+      riegoC3: JSON.parse(JSON.stringify(_dataChartDefault)),
+      riegoC4: JSON.parse(JSON.stringify(_dataChartDefault)),
+      riegoC5: JSON.parse(JSON.stringify(_dataChartDefault)),
+      riegoC6: JSON.parse(JSON.stringify(_dataChartDefault)),
+      riegoC7: JSON.parse(JSON.stringify(_dataChartDefault)),
+      riegoC8: JSON.parse(JSON.stringify(_dataChartDefault))
+  },
+  helpcareRiverDataChart: JSON.parse(JSON.stringify(_dataChartDefault))
+}
+
+export const _periodDataDefault = {
   'Periodo20_30' : {
     id: 'Periodo20_30',
     year_start: 2020,
@@ -599,7 +624,6 @@ export const _hydropowerTurbineData = {
             percent_month : 0
           }
         }
-
       },
       2028 : {
         year_id: 2028,
@@ -2188,4 +2212,42 @@ export const _hydropowerTurbineData = {
       }
     }
   }
+}
+
+export const _indicatorsPeriodDataDefault: IndicatorsPeriodDataInterface = {
+  periodDataIds: [],
+  conservationAreaPeriodData: JSON.parse(JSON.stringify(_periodDataDefault)),
+  hydroelectricTurbinePeriodData: JSON.parse(JSON.stringify(_periodDataDefault)),
+  demandSitePeriodData: {
+      plantaProcesadoraLeche: JSON.parse(JSON.stringify(_periodDataDefault)),
+      plantaProcesadoraPapa: JSON.parse(JSON.stringify(_periodDataDefault)),
+      plantacionUvilla: JSON.parse(JSON.stringify(_periodDataDefault)),
+      riegoC1: JSON.parse(JSON.stringify(_periodDataDefault)),
+      riegoC2: JSON.parse(JSON.stringify(_periodDataDefault)),
+      riegoC3: JSON.parse(JSON.stringify(_periodDataDefault)),
+      riegoC4: JSON.parse(JSON.stringify(_periodDataDefault)),
+      riegoC5: JSON.parse(JSON.stringify(_periodDataDefault)),
+      riegoC6: JSON.parse(JSON.stringify(_periodDataDefault)),
+      riegoC7: JSON.parse(JSON.stringify(_periodDataDefault)),
+      riegoC8: JSON.parse(JSON.stringify(_periodDataDefault)),
+  },
+  helpcareRiverPeriodData: JSON.parse(JSON.stringify(_periodDataDefault))
+}
+
+export const _playerDataDefault: GameScoreDataInterface = {
+  id: 0,
+  score: 0,
+  teamName: 'crisweb.me'
+}
+
+export const _gameDataDefault: {
+  playerDataDefault: GameScoreDataInterface,
+  indicatorsPeriodData: any,
+  indicatorsDataChart: any,
+  gameScores: GameScoresinterface
+} = {
+  playerDataDefault: JSON.parse(JSON.stringify(_playerDataDefault)),
+  indicatorsPeriodData: JSON.parse(JSON.stringify(_indicatorsPeriodDataDefault)),
+  indicatorsDataChart: JSON.parse(JSON.stringify(_indicatorsDataChartDefault)),
+  gameScores: JSON.parse(JSON.stringify(_gameScoresDefault))
 }

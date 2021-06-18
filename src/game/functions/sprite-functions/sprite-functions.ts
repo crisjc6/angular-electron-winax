@@ -5,7 +5,7 @@ export function generateGameObjectSprite (
     _matterSpecifications: GameElementSpecificationsInterface
 ): Phaser.Physics.Matter.Sprite {
     const shapes = _scene.cache.json.get(_matterSpecifications.assetName + '-json');
-    console.log(shapes);
+
     const gameObjectSprite = _scene.matter.add.sprite(
         _matterSpecifications.scale.objectPositionX,
         _matterSpecifications.scale.objectPositionY,
