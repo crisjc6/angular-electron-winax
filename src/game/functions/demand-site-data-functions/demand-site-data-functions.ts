@@ -4,9 +4,9 @@ import { GameSpecifications } from '../../settings/game-system-specifications';
 
 export function getDemandSiteChartData() {
     if (GameSpecifications.currentDecisionsPeriod != null) {
-      for (let i = 0; i < gameData.indicatorsDataChart.hydroelectricTurbineDataChart.years.length; i++ ) {
+      for (let i = 0; i < gameData.indicatorsDataChart.demandSiteDataChart.plantaProcesadoraLeche.years.length; i++ ) {
         for (let year = GameSpecifications.currentDecisionsPeriod.year_start; year <= GameSpecifications.currentDecisionsPeriod.year_end; year++) {
-          if (gameData.indicatorsDataChart.hydroelectricTurbineDataChart.years[i] === year) {
+          if (gameData.indicatorsDataChart.demandSiteDataChart.plantaProcesadoraLeche.years[i] === year) {
             addYearValue(year, i);
             // gameData.indicatorsDataChart.hydroelectricTurbineDataChart.values[i] = +(gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData[
             //                                               GameSpecifications.currentDecisionsPeriod.id
@@ -18,7 +18,7 @@ export function getDemandSiteChartData() {
       }
     //   calculateDemandSiteScore(GameSpecifications.currentDecisionsPeriod.id);
     }
-    console.log(gameData.indicatorsDataChart);
+    // console.log(gameData.indicatorsDataChart);
 }
 
 export function addYearValue(year: number, valueIndex: number) {
@@ -91,24 +91,25 @@ export function addYearValue(year: number, valueIndex: number) {
 }
 
 export function addIndicatorYearValue(indicatorValueChart: DataChartInterface, valueIndex: number, valueYearChart: number ) {
-    indicatorValueChart.values[valueIndex] = +(valueYearChart);
+    indicatorValueChart.values[valueIndex] = +(valueYearChart).toFixed(2);
 }
 
 export function calculateDemandSiteScore(_periodId: string) {
     let hydroelectricTurbineTotalScore = 0;
   
-    gameData.gameScores.hydroelectricTurbineScores.periodScores.forEach(
+    gameData.gameScores.demandSiteScores.periodScores.forEach(
       (peridoSore) => {
         peridoSore.score = 0;
         if (peridoSore.periodId === _periodId) {
+          /**************AÑADIR LOGICA PARA CALCULAR SCORE****************/
             peridoSore.score = +(
-                gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData[
+                gameData.indicatorsPeriodData.demandSitePeriodData.riegoC3[
                   _periodId
                 ].period_percent / 10
               );
-              console.log(gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData[
-                _periodId
-              ]);
+              // console.log(gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData[
+              //   _periodId
+              // ]);
         }
         hydroelectricTurbineTotalScore += peridoSore.score;
       }

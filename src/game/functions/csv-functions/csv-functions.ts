@@ -7,7 +7,7 @@ export function readHydropowerCSV () {
 
     const fs = (window as any).fs;
     fs.readFile(
-        'C:/CSV/Hydropower Turbine Flow.csv',
+        'C:/CSV/HydropowerTurbineFlow.csv',
         (err,data) => {
   
             if (err) {
@@ -15,7 +15,7 @@ export function readHydropowerCSV () {
             }
             
             const csvData = data.toString().split('\n');
-            const _data = csvData[5].split(',');
+            const _data = csvData[4].split(',');
 
             let index = 1;
             
@@ -46,7 +46,7 @@ export function readDemandSiteCoverageCSV () {
 
     const fs = (window as any).fs;
     fs.readFile(
-        'C:/CSV/Demand Site Coverage.csv',
+        'C:/CSV/DemandSiteCoverage.csv',
         (err,data) => {
   
             if (err) {
@@ -54,17 +54,17 @@ export function readDemandSiteCoverageCSV () {
             }
             
             const csvData = data.toString().split('\n');
-            const _plantaProcesadoraLecheData = csvData[5].split(',');
-            const _plantaProcesadoraPapaData = csvData[6].split(',');
-            const _plantacionUvillaData = csvData[7].split(',');
-            const _riegoC1Data = csvData[8].split(',');
-            const _riegoC2Data = csvData[9].split(',');
-            const _riegoC3Data = csvData[10].split(',');
-            const _riegoC4Data = csvData[11].split(',');
-            const _riegoC5Data = csvData[12].split(',');
-            const _riegoC6Data = csvData[13].split(',');
-            const _riegoC7Data = csvData[14].split(',');
-            const _riegoC8Data = csvData[15].split(',');
+            const _plantaProcesadoraLecheData = csvData[4].split(',');
+            const _plantaProcesadoraPapaData = csvData[5].split(',');
+            const _plantacionUvillaData = csvData[6].split(',');
+            const _riegoC1Data = csvData[7].split(',');
+            const _riegoC2Data = csvData[8].split(',');
+            const _riegoC3Data = csvData[9].split(',');
+            const _riegoC4Data = csvData[10].split(',');
+            const _riegoC5Data = csvData[11].split(',');
+            const _riegoC6Data = csvData[12].split(',');
+            const _riegoC7Data = csvData[13].split(',');
+            const _riegoC8Data = csvData[14].split(',');
 
             let index = 1;
 
@@ -133,8 +133,43 @@ export function readDemandSiteCoverageCSV () {
                     gameData.indicatorsPeriodData.demandSitePeriodData.riegoC6[periodId].years[year].year_value = yearValueRiegoC6 / 12;
                     gameData.indicatorsPeriodData.demandSitePeriodData.riegoC7[periodId].years[year].year_value = yearValueRiegoC7 / 12;
                     gameData.indicatorsPeriodData.demandSitePeriodData.riegoC8[periodId].years[year].year_value = yearValueRiegoC8 / 12;
+                }
+            }
+        }
+    );
+
+}
+
+export function readStreamflowCSV () {
+
+    const fs = (window as any).fs;
+    fs.readFile(
+        'C:/CSV/Streamflow.csv',
+        (err,data) => {
+  
+            if (err) {
+                return console.log(err);
+            }
+            
+            const csvData = data.toString().split('\n');
+            const _aguasAbJambeliData = csvData[4].split(',');
+
+            let index = 1;
+
+            for(let periodId in gameData.indicatorsPeriodData.helpcareRiverPeriodData) {
+                for (let year = gameData.indicatorsPeriodData.helpcareRiverPeriodData[periodId].year_start; year <= gameData.indicatorsPeriodData.helpcareRiverPeriodData[periodId].year_end; year++) {
+                    let yearValueStreamflow = 0;
                     
-                    // IndicatorsData.hydroelectricTurbineData[periodId].years[year].year_value = yearValueAux / 12;
+                    for (let month = 1; month <= 12; month++) {
+                        gameData.indicatorsPeriodData.helpcareRiverPeriodData[periodId].years[year].months[month].id_month = month;
+                        gameData.indicatorsPeriodData.helpcareRiverPeriodData[periodId].years[year].months[month].value_month = +(_aguasAbJambeliData[index]);
+                        yearValueStreamflow += +(_aguasAbJambeliData[index]);
+
+                        index++;
+                    }
+                    
+                    gameData.indicatorsPeriodData.helpcareRiverPeriodData[periodId].years[year].year_value = yearValueStreamflow / 12;
+                    
                 }
             }
         }

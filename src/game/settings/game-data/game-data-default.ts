@@ -1,6 +1,6 @@
 import { GameScoreDataInterface, GameScoresinterface } from "../../interfaces/game-score-interface"
 import { DataChartInterface } from "../../interfaces/game-data-chart-interface"
-import { IndicatorsDataChartsInterface } from "../../interfaces/indicators-data-interface"
+import { IndicatorsDataChartsInterface, IndicatorsPeriodDataInterface } from "../../interfaces/indicators-data-interface"
 
 export enum PeriodsIdStrings {
   PERIOD_20_30_ID = 'Periodo20_30',
@@ -2214,25 +2214,7 @@ export const _periodDataDefault = {
   }
 }
 
-export const _indicatorsPeriodDataDefault: {
-  periodDataIds: string[];
-  conservationAreaPeriodData: any;
-  hydroelectricTurbinePeriodData: any;
-  demandSitePeriodData: {
-      plantaProcesadoraLeche: any;
-      plantaProcesadoraPapa: any;
-      plantacionUvilla: any;
-      riegoC1: any;
-      riegoC2: any;
-      riegoC3: any;
-      riegoC4: any;
-      riegoC5: any;
-      riegoC6: any;
-      riegoC7: any;
-      riegoC8: any;
-  };
-  helpcareRiverPeriodData: any;
-} = {
+export const _indicatorsPeriodDataDefault: IndicatorsPeriodDataInterface = {
   periodDataIds: [],
   conservationAreaPeriodData: JSON.parse(JSON.stringify(_periodDataDefault)),
   hydroelectricTurbinePeriodData: JSON.parse(JSON.stringify(_periodDataDefault)),

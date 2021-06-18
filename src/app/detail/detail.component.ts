@@ -57,6 +57,7 @@ export class DetailComponent implements OnInit {
     gameRouterLink.routerLink = this.router;
     servicioGraficaAC.serviceArea = graficaAreaConservacioService;
 
+    /**********Corregir cambiarlo a una sola llamada ***********/
     this.gameDataCharts = this.graficaAreaConservacioService.exportarDataXY().indicatorsDataChart;
     this.gameDataScores = this.graficaAreaConservacioService.exportarDataXY().gameScores;
     this.drawAllCharts(this.gameDataCharts);
@@ -93,6 +94,7 @@ export class DetailComponent implements OnInit {
     this.graficaAreaConservacioService.seActualizoDatos
       .subscribe((cambio)=>{
         if(cambio == true) {
+          /**********Corregir cambiarlo a una sola llamada ***********/
           this.gameDataCharts = this.graficaAreaConservacioService.exportarDataXY().indicatorsDataChart;
           this.gameDataScores = this.graficaAreaConservacioService.exportarDataXY().gameScores;
           this.drawAllCharts(this.gameDataCharts);
@@ -103,6 +105,11 @@ export class DetailComponent implements OnInit {
   drawAllCharts(_gameDataCharts: IndicatorsDataChartsInterface) {
     this.chartOptionsAC = this.drawConservationAreaChart(_gameDataCharts.conservationAreaDataChart);
     this.chartOptionsHT = this.drawHydropowerChart(_gameDataCharts.hydroelectricTurbineDataChart);
+    
+    /********************* Modificar para aceptar todos los riegos*****************************/
+    this.chartOptionsDC = this.drawCoverageChart(_gameDataCharts.demandSiteDataChart.riegoC3);
+    
+    this.chartOptionsSR = this.drawStreamFlowChart(_gameDataCharts.helpcareRiverDataChart);
   }
 
   drawConservationAreaChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
@@ -167,9 +174,78 @@ export class DetailComponent implements OnInit {
       },
       yaxis: {
         title: {
-          text: 'Caudal M^3/s',
+          text: 'Caudal (M^3/s)',
         }
       }
     }
   }
+  
+  drawCoverageChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
+    return {
+      series: [
+        {
+          name: 'Covertura',
+          data: _dataSet.values
+        }
+      ],
+      title: {
+        text: 'Demanda cobertura del sitio ',
+        align: 'left'
+      },
+      chart: {
+        height: 160,
+        type: 'area',
+        toolbar: {
+          show: true,
+        }
+      },
+      colors: ['#77B6EA', '#545454'],
+      dataLabels: {
+        enabled: false,
+      },
+      xaxis: {
+        categories: _dataSet.years,
+      },
+      yaxis: {
+        title: {
+          text: 'Porcentaje (%)',
+        }
+      }
+    }
+  }
+  
+  drawStreamFlowChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
+    return {
+      series: [
+        {
+          name: 'Fujo del rio',
+          data: _dataSet.values
+        }
+      ],
+      title: {
+        text: 'Salud del rio',
+        align: 'left'
+      },
+      chart: {
+        height: 160,
+        type: 'area',
+        toolbar: {
+          show: true,
+        }
+      },
+      colors: ['#77B6EA', '#545454'],
+      dataLabels: {
+        enabled: false,
+      },
+      xaxis: {
+        categories: _dataSet.years,
+      },
+      yaxis: {
+        title: {
+          text: 'Flujo (M^3/s)',
+        }
+      }
+    }
+  }
+  
 }

@@ -20,3 +20,22 @@ export interface IndicatorsDataChartsInterface {
   helpcareRiverDataChart: DataChartInterface;
 }
 
+export interface IndicatorsPeriodDataInterface {
+  periodDataIds: string[];
+  conservationAreaPeriodData: any;
+  hydroelectricTurbinePeriodData: any;
+  demandSitePeriodData: {
+      plantaProcesadoraLeche: any;
+      plantaProcesadoraPapa: any;
+      plantacionUvilla: any;
+      riegoC1: any;
+      riegoC2: any;
+      riegoC3: any;
+      riegoC4: any;
+      riegoC5: any;
+      riegoC6: any;
+      riegoC7: any;
+      riegoC8: any;
+  };
+  helpcareRiverPeriodData: any;
+}

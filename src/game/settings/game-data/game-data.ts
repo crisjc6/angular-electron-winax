@@ -1,10 +1,10 @@
 import { GameScoreDataInterface, GameScoresinterface } from "../../interfaces/game-score-interface";
-import { IndicatorsDataChartsInterface } from "../../interfaces/indicators-data-interface";
+import { IndicatorsDataChartsInterface, IndicatorsPeriodDataInterface } from "../../interfaces/indicators-data-interface";
 import { _gameScoresDefault, _indicatorsDataChartDefault, _indicatorsPeriodDataDefault, _playerDataDefault } from "./game-data-default";
 
 export const gameData: {
     playerData: GameScoreDataInterface,
-    indicatorsPeriodData: any,
+    indicatorsPeriodData: IndicatorsPeriodDataInterface,
     indicatorsDataChart: IndicatorsDataChartsInterface,
     gameScores: GameScoresinterface
 } = {
