@@ -11,6 +11,7 @@ import { HtmlDOMComponent } from "../../components/html-dom-component/html-dom-c
 import { getGameData } from "../../functions/game-data-functions/game-data-functions";
 import { readHydropowerCSV, readDemandSiteCoverageCSV } from "../../functions/csv-functions/csv-functions"
 import { gameData } from "../../settings/game-data/game-data";
+import { makeDirectory, runWEAP } from "../../functions/weap-functions/weap-functions";
 
 export class LoginScene extends Phaser.Scene {
 
@@ -89,7 +90,10 @@ export class LoginScene extends Phaser.Scene {
                     this.messageText.setVisible(true);
                 } else {
                     gameStatus.status = 'mapScene';
+                    makeDirectory();
                     getGameData();
+                    
+                    // runWEAP();
                     
                     gameData.playerData.teamName = this.loginInput.getInputText();
                     gameData.playerData.score = 0;

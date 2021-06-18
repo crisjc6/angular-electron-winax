@@ -8,6 +8,7 @@ import {GameSpecifications, servicioGraficaAC} from "../../settings/game-system-
 import { getConservationAreData } from "../../functions/conservation-area-data-functions/conservation-area-data";
 
 import winax from "winax";
+import { runWEAP } from "../../functions/weap-functions/weap-functions";
 
 export class LoadScene extends Phaser.Scene {
 
@@ -32,10 +33,11 @@ export class LoadScene extends Phaser.Scene {
     this.generateScene();
     this.getElements();
 
-    // setTimeout(() => {
-    //     this.loadWeapValue();
-    // }, 100);
-    servicioGraficaAC.serviceArea.habilitarActualizacion();
+    setTimeout(() => {
+        // runWEAP();
+        servicioGraficaAC.serviceArea.habilitarActualizacion();
+        // this.loadWeapValue();
+    }, 100);
 
 
     setTimeout(() => {

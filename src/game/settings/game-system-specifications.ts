@@ -11,6 +11,7 @@ export const GameSpecifications:{
     currentDecisionIndex: number;
     decisionIds: string[];
     currentDecisionId: string;
+    appPath: string;
 } = {
     name: 'DARCH',
     continueGame: false,
@@ -21,7 +22,8 @@ export const GameSpecifications:{
     currentDecisionsPeriod: null,
     currentDecisionIndex: 0,
     decisionIds: [],
-    currentDecisionId: ''
+    currentDecisionId: '',
+    appPath: ''
 }
 
 export const gameRouterLink: {routerLink: any} = {
