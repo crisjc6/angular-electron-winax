@@ -15,10 +15,11 @@ export function readHydropowerCSV () {
             }
             
             const csvData = data.toString().split('\n');
+            const _dataMonth = csvData[3].split(',');
             const _data = csvData[4].split(',');
 
             let index = 1;
-            
+        
             for(let periodId in gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData) {
                 let todalPriodPercent = 0;
                 let months = 0;
@@ -26,13 +27,13 @@ export function readHydropowerCSV () {
                     let yearValueAux = 0;
                     for (let month = 1; month <= 12; month++) {
                         gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData[periodId].years[year].months[month].id_month = month;
-                        gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData[periodId].years[year].months[month].value_month = +(_data[index]);
-                        gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData[periodId].years[year].months[month].percent_month = +(_data[index]) * 100 / 4.5;
+                        gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData[periodId].years[year].months[month].value_month = +_data[index];
+                        gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData[periodId].years[year].months[month].percent_month = +_data[index] * 100 / 4.5;
                         
                         yearValueAux += +(_data[index]);
-                        index++;
-                        months++;
                         todalPriodPercent += (+(_data[index]) * 100 / 4.5);
+                        index++;
+                        months++;                        
                     }
                     gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData[periodId].years[year].year_value = yearValueAux / 12;
                 }

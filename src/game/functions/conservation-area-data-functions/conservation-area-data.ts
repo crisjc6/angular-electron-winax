@@ -4,10 +4,11 @@ import { GameSpecifications } from '../../settings/game-system-specifications';
 import { DecisionOptionInterface } from '../../interfaces/game-decision-interface';
 
 export function getConservationAreData() {
-  let periodArea = 10809;
+  // let periodArea = 10809;
+  let periodArea = 0;
 
   if(GameSpecifications.currentDecisionsPeriod != null){
-    for (let index = 0; index < GameSpecifications.decisionIds.length; index++) {
+    for (let index = 1; index < GameSpecifications.decisionIds.length; index++) {
       const decisionID = GameSpecifications.decisionIds[index];
       const decisionOptions: DecisionOptionInterface[] = JSON.parse(JSON.stringify(GameSpecifications.currentDecisionsPeriod.decisions[decisionID].decision_options));
 
