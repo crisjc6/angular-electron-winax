@@ -31,7 +31,8 @@ export class LoadScene extends Phaser.Scene {
     this.getElements();
     // this.animateTextLoad();
     setTimeout(() => {
-      this.loadWeapValue();
+      this.startNextScene();
+      // this.loadWeapValue();
     }, 2);
   }
 

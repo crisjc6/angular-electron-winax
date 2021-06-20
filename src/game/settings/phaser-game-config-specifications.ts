@@ -1,8 +1,10 @@
+import { BootLoadScene } from "../scenes/boot-load/boot-load-scene";
 import { MainScene } from "../scenes/main-scene/main-scene";
 import { InfoScene } from "../scenes/info-scene/info-scene";
 import { TopBestPlayerScene } from "../scenes/top-best-players-scene/top-best-players-scene";
 import { HelpScene } from "../scenes/help-scene/help-scene";
 import { LoginScene } from "../scenes/login-scene/login-scene";
+import { IntroductionScene } from "../scenes/introduction-scene/introduction-scene";
 
 export const phaserGameConfig = {
     title: 'CUENCA HIDROGRAFICA GAME',
@@ -49,10 +51,12 @@ export const phaserGameConfig = {
         disableWebAudio: true
     },
     scene: [
+        BootLoadScene,
         MainScene,
         InfoScene,
         TopBestPlayerScene,
         HelpScene,
-        LoginScene
+        LoginScene,
+        IntroductionScene
     ]
 };

@@ -1,6 +1,7 @@
 import { MapScene } from "../scenes/map-scene/map-scene";
 import { DecisionMakingScene } from "../scenes/decision-making-scene/decision-making-scene";
 import { LoadScene } from "../scenes/load-scene/load-scene";
+import { EndScene } from "../scenes/end-scene/end-scene";
 
 export const phaserGameConfigMap = {
     title: 'CUENCA HIDROGRAFICA GAME',
@@ -51,6 +52,7 @@ export const phaserGameConfigMap = {
     scene: [
         MapScene,
         DecisionMakingScene,
-        LoadScene
+        LoadScene,
+        EndScene
     ]
 };

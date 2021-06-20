@@ -57,7 +57,6 @@ export class DecisionMakingScene extends Phaser.Scene {
     private generateScene() {
         this.gameFacade = new GameFacade(this, decisionMakingSceneElementsSpecifications);
         this.sceneGameObjects = this.gameFacade.getGameObjects;
-
     }
 
     private getElements() {
@@ -161,8 +160,6 @@ export class DecisionMakingScene extends Phaser.Scene {
         
         this.disableButton(this.continueButton);
     }
-
-  
 
     private getDecisionPeriod() {
         GameSpecifications.currentPeriodId = GameSpecifications.decisionPeriodIds.pop();

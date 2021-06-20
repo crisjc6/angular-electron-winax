@@ -1,5 +1,5 @@
 import { WeapService } from "../shared/services/weap-service";
-import { gameRouterLink } from "../../game/settings/game-system-specifications";
+import { gameRouterLink, GameSpecifications } from "../../game/settings/game-system-specifications";
 // const fs = (<any>window).require("fs");
 
 import { WordService } from "../shared/services/word-service";
@@ -38,7 +38,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     // if(phaserGameObject.game === null) {
       this.game = new Phaser.Game(phaserGameConfig);
-
+      GameSpecifications.canvasWidth = this.game.canvas.width;
+      GameSpecifications.canvasHeight = this.game.canvas.height;
+      
       // phaserGameObject.game = new Phaser.Game(phaserGameConfig);
       // console.log('phaser...');
     // } else {

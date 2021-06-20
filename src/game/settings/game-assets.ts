@@ -70,9 +70,9 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
         key: 'main-scene-background',
         path: '../../assets/game-assets/boot-load-assets/scene-backgrounds-assets/main-scene-background.png'
     },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'modal-scene-background',
-        path: '../../assets/game-assets/boot-load-assets/scene-backgrounds-assets/modal-scene-background.png'
-    },
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'modal-scene-background',
+    //     path: '../../assets/game-assets/boot-load-assets/scene-backgrounds-assets/modal-scene-background.png'
+    // },
 ];

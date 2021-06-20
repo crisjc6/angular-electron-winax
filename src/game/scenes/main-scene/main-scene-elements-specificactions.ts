@@ -33,8 +33,8 @@ export const mainSceneElementSpecifictions: GameElementSpecificationsInterface[]
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 1200,
-            objectHeight: 70,
+            objectWidth: 1300,
+            objectHeight: 230,
             objectPositionX: 683,
             objectPositionY: 170,
         }
