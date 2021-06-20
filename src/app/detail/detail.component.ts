@@ -7,6 +7,7 @@ import {ChartComponent,
   ApexResponsive,
   ApexYAxis,
   ApexDataLabels,
+  ApexAnnotations
 } from "ng-apexcharts";
 import { phaserGameConfigMap } from '../../game/settings/phaser-game-config-specifications-map';
 import {CsvService} from "../shared/services/csv.service";
@@ -28,6 +29,8 @@ export type ChartOptions = {
   responsive?: ApexResponsive[];
   title?: ApexTitleSubtitle;
   dataLabels?: ApexDataLabels;
+  anotations?: ApexAnnotations;
+
 };
 @Component({
   selector: 'app-detail',
@@ -47,7 +50,7 @@ export class DetailComponent implements OnInit {
   bloqueado = false;
   gameDataCharts: IndicatorsDataChartsInterface;
   gameDataScores: GameScoresinterface;
-  
+
   constructor(private router: Router,
               private weapService: WeapService,
               // private csvService: CsvService,
@@ -81,7 +84,7 @@ export class DetailComponent implements OnInit {
   goPlaces() {
     this.router.navigate(['/']);
   }
-  
+
   openTestDocument(): void {
     this._cargandoService.habilitarCargando();
     setTimeout (()=> {
@@ -105,10 +108,10 @@ export class DetailComponent implements OnInit {
   drawAllCharts(_gameDataCharts: IndicatorsDataChartsInterface) {
     this.chartOptionsAC = this.drawConservationAreaChart(_gameDataCharts.conservationAreaDataChart);
     this.chartOptionsHT = this.drawHydropowerChart(_gameDataCharts.hydroelectricTurbineDataChart);
-    
+
     /********************* Modificar para aceptar todos los riegos*****************************/
-    this.chartOptionsDC = this.drawCoverageChart(_gameDataCharts.demandSiteDataChart.riegoC3);
-    
+    this.chartOptionsDC = this.drawCoverageChart(_gameDataCharts.demandSiteDataChart);
+
     this.chartOptionsSR = this.drawStreamFlowChart(_gameDataCharts.helpcareRiverDataChart);
   }
 
@@ -125,15 +128,68 @@ export class DetailComponent implements OnInit {
         align: 'left'
       },
       chart: {
-        height: 160,
+        height: 200,
         type: 'area',
         toolbar: {
           show: true,
-        }
+        },
+
       },
-      colors: ['#77B6EA', '#545454'],
+      colors: ['#e2bf41', '#545454'],
       dataLabels: {
         enabled: false,
+      },
+      anotations : {
+        xaxis: [
+          {
+            x: 2030,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P1"
+            },
+          },
+          {
+            x: 2040,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P2"
+            },
+          },
+          {
+            x: 2050,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P3"
+            },
+          },
+        ]
       },
       xaxis: {
         categories: _dataSet.years,
@@ -159,15 +215,67 @@ export class DetailComponent implements OnInit {
         align: 'left'
       },
       chart: {
-        height: 160,
+        height: 200,
         type: 'area',
         toolbar: {
           show: true,
         }
       },
-      colors: ['#77B6EA', '#545454'],
+      colors: ['#0A1931', '#545454'],
       dataLabels: {
         enabled: false,
+      },
+      anotations : {
+        xaxis: [
+          {
+            x: 2030,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P1"
+            },
+          },
+          {
+            x: 2040,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P2"
+            },
+          },
+          {
+            x: 2050,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P3"
+            },
+          },
+        ]
       },
       xaxis: {
         categories: _dataSet.years,
@@ -179,32 +287,128 @@ export class DetailComponent implements OnInit {
       }
     }
   }
-  
-  drawCoverageChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
+
+  drawCoverageChart(_dataSet: DataChartInterface | any ): Partial<ChartOptions> {
     return {
       series: [
         {
-          name: 'Covertura',
-          data: _dataSet.values
-        }
+          name: 'P.P Leche',
+          data: _dataSet.plantaProcesadoraLeche.values
+        },
+        {
+          name: 'P.P Papa',
+          data: _dataSet.plantaProcesadoraPapa.values
+        },
+        {
+          name: 'P. Uvilla',
+          data: _dataSet.plantacionUvilla.values
+        },
+        {
+          name: 'RC1',
+          data: _dataSet.riegoC1.values
+        },
+        {
+          name: 'RC2',
+          data: _dataSet.riegoC2.values
+        },
+        {
+          name: 'RC3',
+          data: _dataSet.riegoC3.values
+        },
+        {
+          name: 'RC4',
+          data: _dataSet.riegoC4.values
+        },
+        {
+          name: 'RC5',
+          data: _dataSet.riegoC5.values
+        },
+        {
+          name: 'RC6',
+          data: _dataSet.riegoC6.values
+        },
+        {
+          name: 'RC7',
+          data: _dataSet.riegoC7.values
+        },
+        {
+          name: 'RC8',
+          data: _dataSet.riegoC8.values
+        },
+
       ],
       title: {
         text: 'Demanda cobertura del sitio ',
         align: 'left'
       },
       chart: {
-        height: 160,
-        type: 'area',
+        height: 300,
+        type: 'line',
         toolbar: {
           show: true,
         }
       },
-      colors: ['#77B6EA', '#545454'],
+      colors: ['#77B6EA', '#545454','#E99497', '#F3C583', '#E8E46E','#B3E283', '#542E71', '#FB3640', '#FDCA40', '#A799B7', '#185ADB'],
       dataLabels: {
         enabled: false,
       },
+      anotations : {
+        xaxis: [
+          {
+            x: 2030,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P1"
+            },
+          },
+          {
+            x: 2040,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P2"
+            },
+          },
+          {
+            x: 2050,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P3"
+            },
+          },
+        ]
+      },
       xaxis: {
-        categories: _dataSet.years,
+        labels: {
+          trim: false
+        },
+        categories: _dataSet.riegoC7.years,
       },
       yaxis: {
         title: {
@@ -213,7 +417,7 @@ export class DetailComponent implements OnInit {
       }
     }
   }
-  
+
   drawStreamFlowChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
     return {
       series: [
@@ -227,7 +431,7 @@ export class DetailComponent implements OnInit {
         align: 'left'
       },
       chart: {
-        height: 160,
+        height: 200,
         type: 'area',
         toolbar: {
           show: true,
@@ -236,6 +440,58 @@ export class DetailComponent implements OnInit {
       colors: ['#77B6EA', '#545454'],
       dataLabels: {
         enabled: false,
+      },
+      anotations : {
+        xaxis: [
+          {
+            x: 2030,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P1"
+            },
+          },
+          {
+            x: 2040,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P2"
+            },
+          },
+          {
+            x: 2050,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P3"
+            },
+          },
+        ]
       },
       xaxis: {
         categories: _dataSet.years,
@@ -247,5 +503,5 @@ export class DetailComponent implements OnInit {
       }
     }
   }
-  
+
 }
