@@ -4,7 +4,8 @@ import { GameSpecifications } from '../../settings/game-system-specifications';
 import { DecisionOptionInterface } from '../../interfaces/game-decision-interface';
 
 export function getConservationAreData() {
-  let periodArea = 10809;
+  // let periodArea = 10809;
+  let periodArea = 0;
 
   if(GameSpecifications.currentDecisionsPeriod != null){
     for (let index = 0; index < GameSpecifications.decisionIds.length; index++) {
@@ -49,11 +50,11 @@ export function calculateConservationAreaScore(_periodArea: number, _periodId: s
   let conservationAreaTotalScore = 0;
   
   const initialArea = -200; //x0
-  const finalArea = 1140; //x1
+  const finalArea = 100 // 1140; //x1
   const initialSore = 0; //y0
   const finalScore = 10; //y1
 
-  const conservationAreaScore = +(initialSore + ((_periodArea - initialArea) / (finalArea - initialArea) * (finalScore - initialSore))).toFixed(1);
+  const conservationAreaScore = +(initialSore + (((_periodArea - initialArea) / (finalArea - initialArea)) * (finalScore - initialSore))).toFixed(1);
 
   gameData.gameScores.conservationAreaScores.periodScores.forEach(
     (periodScore)  => {

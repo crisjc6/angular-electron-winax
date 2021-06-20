@@ -1,8 +1,65 @@
-import { GameSpecifications } from "../../settings/game-system-specifications";
-// import { app } from "electron/main";
-import winax from "winax";
+// import winax from "winax";
+// // import { readCvsGame } from "../../functions/csv-functions/csv-functions";
 
-export function runWEAP() {
+// export function makeDirectory(pathDirectory: string) {
+//     const fs = (window as any).fs;
+
+//     if (!fs.existsSync(pathDirectory)){
+//         fs.mkdirSync(pathDirectory);
+//     }
+// }
+
+// // import winax from "winax";
+
+// export function runWEAP(): any {
+//     const WEAP = new winax.Object("WEAP.WEAPApplication");
+//     WEAP.ActiveArea = "Tesis_IR_6";
+//     return WEAP;
+// }
+
+// export function getDataWeap() {
+//     const weapApi = runWEAP();
+
+// }
+
+// export function generateWeapCsv(
+//     _weap: any,
+//     _chartName: string,
+//     _csvName: string,
+//     _directoryPath: string
+// ) {
+//     _weap.ResultSetting('Variable', _chartName );
+//     _weap.ResultSetting('Scenario', 'Escenarios_juego');
+//     _weap.ResultSetting('Year', 'All');
+//     _weap.ResultSetting('XAxis', 'Year');
+//     _weap.ResultSetting("Month", "All");
+//     _weap.ExportResults(_directoryPath + _csvName + '.csv');
+
+// }
+
+// export function generateCsv(_weapApi: any) {
+//     const directoryPath = 'C:\\CSV\\';
+//     makeDirectory(directoryPath);
+
+//     //'PRINT WEAP.ResultValue("Supply and Resources\River\C3 River\Reaches\Below Aguas_ab_Jambeli:Streamflow[CMS]", 2020, 1, "Escenarios_juego")'
+//     // console.log( _weapApi.ResultValue("\\Supply and Resources\\River\\C3 River\\Reaches\\Below Aguas_ab_Jambeli:Streamflow[CMS]", 2020, 1, "Escenarios_juego"));
+//     // console.log( _weapApi.ResultValue("\\Supply and Resources\\River\\C3 River\\Reaches\\Below Aguas_ab_Jambeli:Streamflow[CMS]", 2020, 1, "Escenarios_juego", 2050, 12));
+//     // const weapApi = runWEAP();
+//     generateWeapCsv(_weapApi, 'Coverage', 'DemandSiteCoverage', directoryPath);
+//     // setTimeout(() => {
+//         generateWeapCsv(_weapApi, 'Hydropower Turbine Flow[CMS]', 'HydropowerTurbineFlow', directoryPath);
+//         generateWeapCsv(_weapApi, 'Streamflow[CMS]', 'Streamflow', directoryPath);
+//         readCvsGame();
+//     // }, 250);
+// }
+
+/*
+' ResultSetting("Variable") = "Hydropower Turbine Flow [CMS]"
+ Setting(Key, Section)
+*/
+
+/*
+export function __runWEAP() {
     const WEAP = new winax.Object("WEAP.WEAPApplication");
     WEAP.Visible = true;
     WEAP.ActiveArea = "Tesis_IR_6";
@@ -13,8 +70,14 @@ export function runWEAP() {
 
     //PrevTSValue(Aguas_ab_Jambeli:Streamflow[m^3])
     WEAP.ResultSetting("Variable", "Streamflow [Cubic Meters per Second]");
-    WEAP.ResultSetting("Scenario", "Escenarios_juego, River: C3 River");
-    // WEAP.ResultSetting("Branch", "Aguas_ab_Jambeli");
+    // WEAP.ResultSetting("Scenario", "All");
+    WEAP.ResultSetting("Scenario", "Escenarios_juego");
+    // WEAP.ResultSetting("Branch", "River: C3 River");
+    // WEAP.ResultSetting("Branch", "Selected C3 River Nodes and Reaches: 15 \\ Aguas_ab_Jambeli");
+    WEAP.ResultSetting("Branch", "Supply and Resources\\River\\C3 River\\Reaches\\Below Aguas_ab_Jambeli");
+    // WEAP.ResultSetting("Branch", "\\Supply and Resources\\River\\C3 River\\Reaches\\Below Aguas_ab_Jambeli:Streamflow[m^3]");
+    // WEAP.ResultSetting("Branch", "\\Demand Sites and Catchments\\Riego_C3\\Aguas_ab_Jambeli");
+    // WEAP.ResultSetting("Branch", "\\Demand Sites and Catchments\\Riego_C3\\Aguas_ab_Jambeli");
     // WEAP.ResultSetting("Branch", "Below Aguas_ab_Jambeli:Surface Water Inflow[CMS]");
     
     // WEAP.ResultSetting("Scenario", "15 \\ Aguas_ab_Jambeli");
@@ -81,7 +144,7 @@ export function runWEAP() {
 
 }
 
-export function makeDirectory(){
+export function __makeDirectory(){
     
     // const app = require('electron').remote.app;
     // const remote = require('remote');
@@ -106,3 +169,4 @@ export function makeDirectory(){
         fs.mkdirSync(dir);
     }
 }
+*/

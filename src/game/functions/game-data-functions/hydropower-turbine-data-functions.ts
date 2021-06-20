@@ -2,7 +2,6 @@ import { gameData } from '../../settings/game-data/game-data';
 import { GameSpecifications } from '../../settings/game-system-specifications';
 
 export function getHydropowerChartData() {
-  
   if (GameSpecifications.currentDecisionsPeriod != null) {
     for (let i = 0; i < gameData.indicatorsDataChart.hydroelectricTurbineDataChart.years.length; i++ ) {
       for (let year = GameSpecifications.currentDecisionsPeriod.year_start; year <= GameSpecifications.currentDecisionsPeriod.year_end; year++) {

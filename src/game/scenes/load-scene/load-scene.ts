@@ -4,11 +4,8 @@ import { loadSceneElementsSpecifications } from "./load-scene-specifications";
 import { GameSceneIdsStrings } from "../../settings/game-constants-strings/game-scene-ids-string";
 import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
-import {GameSpecifications, servicioGraficaAC} from "../../settings/game-system-specifications";
-import { getConservationAreData } from "../../functions/conservation-area-data-functions/conservation-area-data";
-
-import winax from "winax";
-import { runWEAP } from "../../functions/weap-functions/weap-functions";
+import { GameSpecifications, servicioGraficaAC } from "../../settings/game-system-specifications";
+import { getDataWeap, runWEAP } from "../../functions/weap-data-functions/weap-data-functions"
 
 export class LoadScene extends Phaser.Scene {
 
@@ -32,17 +29,10 @@ export class LoadScene extends Phaser.Scene {
   create() {
     this.generateScene();
     this.getElements();
-
+    // this.animateTextLoad();
     setTimeout(() => {
-        // runWEAP();
-        servicioGraficaAC.serviceArea.habilitarActualizacion();
-        // this.loadWeapValue();
-    }, 100);
-
-
-    setTimeout(() => {
-      this.startNextScene();
-    }, 1000);
+      this.loadWeapValue();
+    }, 2);
   }
 
   private generateScene() {
@@ -58,13 +48,7 @@ export class LoadScene extends Phaser.Scene {
   }
 
   private loadWeapValue() {
-    const WEAP = new winax.Object("WEAP.WEAPApplication");
-    WEAP.ActiveArea = "Tesis_IR_6";
-    WEAP.ActiveScenario = "Escenarios_juego";
-
-    WEAP.ExportResults("C:\\CSV\\datos_game.csv");
-    // WEAP.BranchVariable("\\Key\\Kc\\Agricola").Expression = 1.5;
-    // WEAP.ExportResults("C:\\CSV\\datos_game2.csv");
+    const weapApi = runWEAP();
 
     for(let decisionId in GameSpecifications.currentDecisionsPeriod.decisions) {
       for(let decisionOptionId in GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options) {
@@ -73,22 +57,23 @@ export class LoadScene extends Phaser.Scene {
         const decisionOptionValue = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_value;
 
         if (decisionOptionWasSelected) {
-          WEAP.BranchVariable(decisionOptionWeapVariable).Expression = decisionOptionValue;
+          weapApi.BranchVariable(decisionOptionWeapVariable).Expression = decisionOptionValue;
         } else {
-          WEAP.BranchVariable(decisionOptionWeapVariable).Expression = 0;
+          weapApi.BranchVariable(decisionOptionWeapVariable).Expression = 0;
         }
 
       }
     }
-    WEAP.ExportResults("C:\\CSV\\datos_game2.csv");
+    // generateCsv(WEAP);
+    getDataWeap(weapApi);
+    
+    servicioGraficaAC.serviceArea.habilitarActualizacion();
     this.startNextScene();
-
   }
 
   private startNextScene() {
-
     servicioGraficaAC.serviceArea.deshabilitarActualizacion();
     this.scene.stop();
-    this.scene.wake(this.sceneData.returnSceneName, {data:'runnnn'});
+    this.scene.wake(this.sceneData.returnSceneName);
   }
 }
