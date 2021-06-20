@@ -34,7 +34,8 @@ export const enum GameSceneElementsString {
     SCENE_SCORE_TABLE = 'score-table',
     SCENE_MESSAGE = 'message',
     SCENE_LOGIN_INPUT = 'login-input',
-    SCENE_TOTAL_SCORE = 'total-score'
+    SCENE_TOTAL_SCORE = 'total-score',
+    SCENE_PROGRESS_TEXT = 'progress-text'
 }
 
 export const enum DecisionSceneElementsString {

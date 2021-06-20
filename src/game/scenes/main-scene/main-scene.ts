@@ -39,7 +39,6 @@ export class MainScene extends Phaser.Scene {
     create() {
         const fachada = new GameFacade(this, mainSceneElementSpecifictions);
         this.gameObjects = fachada.getGameObjects;
-
         this.getElements();
         this.addFunctionality();
         this.updateSoundButtonStatus();

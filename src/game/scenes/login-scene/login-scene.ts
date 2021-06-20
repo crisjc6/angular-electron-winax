@@ -8,10 +8,8 @@ import { GameSceneElementsString } from "../../settings/game-constants-strings/g
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
 import { gameRouterLink, gameStatus } from "../../settings/game-system-specifications";
 import { HtmlDOMComponent } from "../../components/html-dom-component/html-dom-component";
-import { getGameData } from "../../functions/game-data-functions/game-data-functions";
-import { readHydropowerCSV, readDemandSiteCoverageCSV, readStreamflowCSV } from "../../functions/csv-functions/csv-functions"
+import { getGameDataDefault } from "../../functions/game-data-functions/game-data-default-functions";
 import { gameData } from "../../settings/game-data/game-data";
-import { makeDirectory, runWEAP } from "../../functions/weap-functions/weap-functions";
 
 export class LoginScene extends Phaser.Scene {
 
@@ -90,16 +88,13 @@ export class LoginScene extends Phaser.Scene {
                     this.messageText.setVisible(true);
                 } else {
                     gameStatus.status = 'mapScene';
-                    makeDirectory();
-                    getGameData();
-                    
-                    // runWEAP();
-                    
                     gameData.playerData.teamName = this.loginInput.getInputText();
                     gameData.playerData.score = 0;
-                    readHydropowerCSV();
-                    readDemandSiteCoverageCSV();
-                    readStreamflowCSV();
+                    // makeDirectory();
+                    getGameDataDefault();
+                    // readHydropowerCSV();
+                    // readDemandSiteCoverageCSV();
+                    // readStreamflowCSV();
                     gameRouterLink.routerLink.navigate(['/detail']);
                 }
             }

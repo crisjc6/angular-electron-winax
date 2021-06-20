@@ -3,7 +3,7 @@ import { GameDecisionsData } from '../../settings/game-decisions-data'
 import { gameData } from '../../settings/game-data/game-data';
 import { _gameScoresDefault, _indicatorsDataChartDefault, _indicatorsPeriodDataDefault, _playerDataDefault } from '../../settings/game-data/game-data-default';
 
-export function getGameData() {
+export function getGameDataDefault() {
 
     if (!GameSpecifications.continueGame) {
       GameSpecifications.gameDecisionsData = JSON.parse(JSON.stringify(GameDecisionsData));
