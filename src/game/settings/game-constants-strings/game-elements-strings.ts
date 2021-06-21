@@ -36,7 +36,8 @@ export const enum GameSceneElementsString {
     SCENE_LOGIN_INPUT = 'login-input',
     SCENE_TOTAL_SCORE = 'total-score',
     SCENE_PROGRESS_TEXT = 'progress-text',
-    SCENE_QUIT_BUTTON = 'quit-button'
+    SCENE_QUIT_BUTTON = 'quit-button',
+    SCENE_TITLE_TEXT = 'scene-title'
 }
 
 export const enum DecisionSceneElementsString {
@@ -46,6 +47,26 @@ export const enum DecisionSceneElementsString {
     DECISION_OPTION_1 = 'decision-opcion-1',
     DECISION_OPTION_2 = 'decision-opcion-2',
     DECISION_OPTION_3 = 'decision-opcion-3',
+}
+
+export const enum TypeResultsElementsString {
+    TOTAL_SCORE_TEXT = 'total-score-text',
+    
+    ACUS_20_30_TEXT = 'acus-20-30-text',
+    ACUS_30_40_TEXT = 'acus-30-40-text',
+    ACUS_40_50_TEXT = 'acus-40-50-text',
+
+    HYDROELECTRIC_20_30_TEXT = 'hydroelectric-20-30-text',
+    HYDROELECTRIC_30_40_TEXT = 'hydroelectric-30-40-text',
+    HYDROELECTRIC_40_50_TEXT = 'hydroelectric-40-50-text',
+    
+    COVERAGE_20_30_TEXT = 'coverage-20-30-text',
+    COVERAGE_30_40_TEXT = 'coverage-30-40-text',
+    COVERAGE_40_50_TEXT = 'coverage-40-50-text',
+    
+    RIVER_HEALTH_20_30_TEXT = 'river-health-20-30-text',
+    RIVER_HEALTH_30_40_TEXT = 'river-health-30-40-text',
+    RIVER_HEALTH_40_50_TEXT = 'river-health-40-50-text',
 }
 
 export const enum buttonElements {

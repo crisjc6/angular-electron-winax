@@ -120,7 +120,7 @@ export const _progressTextSpecifications: GameElementSpecificationsInterface = {
     content: 'CARGANDO: 0%',
     style: {
         fontFamily: GameFontStylesString.BASE_FONT,
-        color: ColorsString.BLACK_HEXADECIMAL_STRING,
+        color: ColorsString.WHITE_HEXADECIMAL_STRING,
         align: AlingString.CENTER_STRING,
         stroke: ColorsString.LIGHT_GRAY_HEXADECIMAL_STRING,
         fontSize: textFontSize.Medium.fontSize,

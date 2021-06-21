@@ -13,6 +13,11 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
         key: 'continue-button-background',
         path: '../../assets/game-assets/boot-load-assets/buttons-assets/continue-button-background.png'
     },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'next-button-background',
+        path: '../../assets/game-assets/boot-load-assets/buttons-assets/next-button-background.png'
+    },
 
     /*************************** ICONS *******************************/
    
@@ -20,6 +25,11 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
         type: GameElementsString.IMAGE_STRING,
         key: 'help-icon-background',
         path: '../../assets/game-assets/boot-load-assets/icons-assets/help-icon-background.png'
+    },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'home-icon-background',
+        path: '../../assets/game-assets/boot-load-assets/icons-assets/home-icon-background.png'
     },
     {
         type: GameElementsString.IMAGE_STRING,
@@ -51,6 +61,11 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
         type: GameElementsString.IMAGE_STRING,
         key: 'panel-card-background',
         path: '../../assets/game-assets/boot-load-assets/cards-assets/panel-card-background.png'
+    },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'panel-card-2-background',
+        path: '../../assets/game-assets/boot-load-assets/cards-assets/panel-card-2-background.png'
     },
     {
         type: GameElementsString.IMAGE_STRING,

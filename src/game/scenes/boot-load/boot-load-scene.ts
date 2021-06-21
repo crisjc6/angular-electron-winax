@@ -162,7 +162,7 @@ export class BootLoadScene extends Phaser.Scene {
     this.progressBarScale.objectPositionY = scale.objectPositionY - scale.objectHeight / 2;
 
     const progressBar = new Phaser.Geom.Rectangle(this.progressBarScale.objectPositionX, this.progressBarScale.objectPositionY, this.progressBarScale.objectWidth, this.progressBarScale.objectHeight);
-    this.graphics.fillStyle(ColorsValue.DARK_BLUE_HEXADECIMAL_VALUE, 1);
+    this.graphics.fillStyle(ColorsValue.WHITE_HEXADECIMAL_VALUE, 1);
     this.graphics.fillRectShape(progressBar);
 
     this.loadBarScale = scale;
@@ -176,7 +176,7 @@ export class BootLoadScene extends Phaser.Scene {
 
   private updateLoadBar(percentage: number) {
     this.newGraphics.clear();
-    this.newGraphics.fillStyle(ColorsValue.DARK_PURPLE_HEXADECIMAL_VALUE, 1);
+    this.newGraphics.fillStyle(ColorsValue.DARK_GRAY_HEXADECIMAL_VALUE, 1);
     this.newGraphics.fillRectShape(new Phaser.Geom.Rectangle(this.loadBarScale.objectPositionX, this.loadBarScale.objectPositionY, percentage * this.loadBarScale.objectWidth, this.loadBarScale.objectHeight));
     percentage = percentage * 100;
     this.progressBarText.setText("CARGANDO: " + percentage.toFixed(2) + "%");

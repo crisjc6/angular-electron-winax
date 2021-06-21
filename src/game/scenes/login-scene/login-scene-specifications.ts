@@ -63,12 +63,12 @@ export const loginSceneElementsSpecifications: GameElementSpecificationsInterfac
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.RED_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
-            fontSize: textFontSize.Big.fontSize,
+            fontSize: textFontSize.LittleBig.fontSize,
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 720,
+            objectWidth: 900,
             objectHeight: 70,
             objectPositionX: 683,
             // objectPositionY: 154,
@@ -84,12 +84,12 @@ export const loginSceneElementsSpecifications: GameElementSpecificationsInterfac
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.DARK_PURPLE_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
-            fontSize: textFontSize.Regular.fontSize,
+            fontSize: textFontSize.Medium.fontSize,
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 720,
+            objectWidth: 900,
             objectHeight: 60,
             objectPositionX: 683,
             // objectPositionY: 241,
@@ -104,13 +104,13 @@ export const loginSceneElementsSpecifications: GameElementSpecificationsInterfac
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.GREEN_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
-            fontSize: textFontSize.Big.fontSize
+            fontSize: textFontSize.VeryBig.fontSize
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 600,
-            objectHeight: 70,
+            objectWidth: 700,
+            objectHeight: 60,
             objectPositionX: 683,
             objectPositionY: 395,
         }
