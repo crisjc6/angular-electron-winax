@@ -23,7 +23,7 @@ export function calculateHydropowerScore(_periodId: string) {
 
   gameData.gameScores.hydroelectricTurbineScores.periodScores.forEach(
     (peridoSore) => {
-      peridoSore.score = 0;
+      // peridoSore.score = 0;
       if (peridoSore.periodId === _periodId) {
           peridoSore.score = +(
               gameData.indicatorsPeriodData.hydroelectricTurbinePeriodData[

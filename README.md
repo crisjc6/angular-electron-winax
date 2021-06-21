@@ -124,4 +124,13 @@ Note: To make it work behind a proxy, you can add this proxy exception in your t
 [maintained-badge]: https://img.shields.io/badge/maintained-yes-brightgreen
 
 
--
+## Cargar modelo en el programa WEAP
+- En windows, abrir el programa WEAP.
+- Ir a la opción "AREA" en la barra de opciones.
+- Después seleccionar "Manage Areas" o "Gestion de Areas".
+  (Se abrira una ventana con diferentes opciones)
+- Dar clic en el icono "RESTORE".
+- Después buscar el archivo del modelo con la extencion .zip o .WEAP.
+- Después de seleccionar el archivo, dar clic en el Bóton "ABRIR".
+- Y listo, solo queda esperar a que el modelo se carge completamente. 
+

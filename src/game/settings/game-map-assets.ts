@@ -33,16 +33,6 @@ export const gameMapAssets: GameAssetsSpecificationsInterface[] = [
     },
     {
         type: GameElementsString.IMAGE_STRING,
-        key: 'info-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/info-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'settings-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/settings-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
         key: 'close-button-background',
         path: '../../assets/game-assets/boot-load-assets/icons-assets/close-button-background.png'
     },
@@ -76,36 +66,41 @@ export const gameMapAssets: GameAssetsSpecificationsInterface[] = [
         key: 'on-sound-icon-background',
         path: '../../assets/game-assets/boot-load-assets/icons-assets/on-sound-icon-background.png'
     },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'pause-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/pause-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'star-icon-obtained-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/star-icon-obtained-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'star-icon-not-obtained-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/star-icon-not-obtained-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'big-star-icon-not-obtained-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/big-star-icon-not-obtained-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'big-star-icon-obtained-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/big-star-icon-obtained-background.png'
-    },
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'star-icon-obtained-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/star-icon-obtained-background.png'
+    // },
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'star-icon-not-obtained-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/star-icon-not-obtained-background.png'
+    // },
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'big-star-icon-not-obtained-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/big-star-icon-not-obtained-background.png'
+    // },
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'big-star-icon-obtained-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/big-star-icon-obtained-background.png'
+    // },
      /*************************** CARDS *******************************/
-    {
+     {
         type: GameElementsString.IMAGE_STRING,
         key: 'panel-card-background',
         path: '../../assets/game-assets/boot-load-assets/cards-assets/panel-card-background.png'
+    },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'panel-card-2-background',
+        path: '../../assets/game-assets/boot-load-assets/cards-assets/panel-card-2-background.png'
+    },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'scene-title-background',
+        path: '../../assets/game-assets/boot-load-assets/cards-assets/scene-title-background.png'
     },
     
     /*************************** MAPS *******************************/

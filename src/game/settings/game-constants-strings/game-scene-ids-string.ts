@@ -9,4 +9,6 @@ export const enum GameSceneIdsStrings {
     MAIN_SCENE_ID = 'MainScene',
     MAP_SCENE_ID = 'MapScene',
     DECISION_MAKING_SCENE_ID = 'DecisionMakingScene',
+    INTRODUCTION_SCENE_ID = 'IntroductionScene',
+    END_SCENE_ID = 'EndScene',
 }

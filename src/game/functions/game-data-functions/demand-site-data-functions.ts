@@ -139,7 +139,7 @@ export function calculateDemandSiteScore(_periodId: string) {
 
     gameData.gameScores.demandSiteScores.periodScores.forEach(
       (peridoSore) => {
-        peridoSore.score = 0;
+        // peridoSore.score = 0;
         if (peridoSore.periodId === _periodId) {
           // /**************AÑADIR LOGICA PARA CALCULAR SCORE****************/
             // console.log(

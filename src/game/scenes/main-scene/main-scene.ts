@@ -30,11 +30,11 @@ export class MainScene extends Phaser.Scene {
         });
     }
 
-    preload() {
-        loadFonts();
-        loadAssetsArrayGame(this, gameAssets);        
-        this.gameObjects = new Map();
-    }
+    // preload() {
+    //     loadFonts();
+    //     loadAssetsArrayGame(this, gameAssets);        
+    //     this.gameObjects = new Map();
+    // }
 
     create() {
         const fachada = new GameFacade(this, mainSceneElementSpecifictions);

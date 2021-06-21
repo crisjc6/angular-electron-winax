@@ -87,15 +87,12 @@ export class LoginScene extends Phaser.Scene {
                 if (this.loginInput.getInputText() === '') {
                     this.messageText.setVisible(true);
                 } else {
-                    gameStatus.status = 'mapScene';
-                    gameData.playerData.teamName = this.loginInput.getInputText();
-                    gameData.playerData.score = 0;
-                    // makeDirectory();
                     getGameDataDefault();
-                    // readHydropowerCSV();
-                    // readDemandSiteCoverageCSV();
-                    // readStreamflowCSV();
-                    gameRouterLink.routerLink.navigate(['/detail']);
+                    gameData.playerData.teamName = (this.loginInput.getInputText()).toUpperCase();
+                    gameData.playerData.score = 0;
+                    this.scene.stop();
+                    this.scene.start(GameSceneIdsStrings.INTRODUCTION_SCENE_ID);
+                    // gameRouterLink.routerLink.navigate(['/detail']);
                 }
             }
         );

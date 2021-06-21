@@ -57,7 +57,6 @@ export class DecisionMakingScene extends Phaser.Scene {
     private generateScene() {
         this.gameFacade = new GameFacade(this, decisionMakingSceneElementsSpecifications);
         this.sceneGameObjects = this.gameFacade.getGameObjects;
-
     }
 
     private getElements() {
@@ -162,8 +161,6 @@ export class DecisionMakingScene extends Phaser.Scene {
         this.disableButton(this.continueButton);
     }
 
-  
-
     private getDecisionPeriod() {
         GameSpecifications.currentPeriodId = GameSpecifications.decisionPeriodIds.pop();
         GameSpecifications.currentDecisionsPeriod = JSON.parse(JSON.stringify(GameSpecifications.gameDecisionsData[GameSpecifications.currentPeriodId]));
@@ -183,20 +180,38 @@ export class DecisionMakingScene extends Phaser.Scene {
         const decisionOptions: DecisionOptionInterface[] = JSON.parse(JSON.stringify(this.currentDecision.decision_options));
         
         for(let optionId in decisionOptions) {
-            GameSpecifications.currentDecisionsPeriod
-                .decisions[
-                    GameSpecifications.currentDecisionId
-                ].decision_options[
-                    optionId
-                ].decision_option_was_selected = false;
+            GameSpecifications.gameDecisionsData[
+                GameSpecifications.currentDecisionsPeriod.id
+            ].decisions[
+                GameSpecifications.currentDecisionId
+            ].decision_options[
+                optionId
+            ].decision_option_was_selected = false;
         }
         
-        GameSpecifications.currentDecisionsPeriod
-            .decisions[
+            GameSpecifications.gameDecisionsData[
+                GameSpecifications.currentDecisionsPeriod.id
+            ].decisions[
                 GameSpecifications.currentDecisionId
             ].decision_options[
                 selectedOtionId
             ].decision_option_was_selected = true;
+
+        // for(let optionId in decisionOptions) {
+        //     GameSpecifications.currentDecisionsPeriod
+        //         .decisions[
+        //             GameSpecifications.currentDecisionId
+        //         ].decision_options[
+        //             optionId
+        //         ].decision_option_was_selected = false;
+        // }
+        
+        // GameSpecifications.currentDecisionsPeriod
+        //     .decisions[
+        //         GameSpecifications.currentDecisionId
+        //     ].decision_options[
+        //         selectedOtionId
+        //     ].decision_option_was_selected = true;
             // console.log(GameSpecifications.currentDecisionsPeriod);
     }
 

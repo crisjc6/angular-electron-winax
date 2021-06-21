@@ -13,6 +13,11 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
         key: 'continue-button-background',
         path: '../../assets/game-assets/boot-load-assets/buttons-assets/continue-button-background.png'
     },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'next-button-background',
+        path: '../../assets/game-assets/boot-load-assets/buttons-assets/next-button-background.png'
+    },
 
     /*************************** ICONS *******************************/
    
@@ -23,6 +28,11 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
     },
     {
         type: GameElementsString.IMAGE_STRING,
+        key: 'home-icon-background',
+        path: '../../assets/game-assets/boot-load-assets/icons-assets/home-icon-background.png'
+    },
+    {
+        type: GameElementsString.IMAGE_STRING,
         key: 'info-icon-background',
         path: '../../assets/game-assets/boot-load-assets/icons-assets/info-icon-background.png'
     },
@@ -30,11 +40,6 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
         type: GameElementsString.IMAGE_STRING,
         key: 'score-icon-background',
         path: '../../assets/game-assets/boot-load-assets/icons-assets/score-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'settings-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/settings-icon-background.png'
     },
     {
         type: GameElementsString.IMAGE_STRING,
@@ -59,17 +64,16 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
     },
     {
         type: GameElementsString.IMAGE_STRING,
+        key: 'panel-card-2-background',
+        path: '../../assets/game-assets/boot-load-assets/cards-assets/panel-card-2-background.png'
+    },
+    {
+        type: GameElementsString.IMAGE_STRING,
         key: 'score-table-background',
         path: '../../assets/game-assets/boot-load-assets/cards-assets/score-table-background.png'
     },
 
     /*************************** BACKGROUNS *******************************/
-    
-    {
-        type: GameElementsString.IMAGE_STRING,
-        key: 'main-scene-background',
-        path: '../../assets/game-assets/boot-load-assets/scene-backgrounds-assets/main-scene-background.png'
-    },
     {
         type: GameElementsString.IMAGE_STRING,
         key: 'modal-scene-background',

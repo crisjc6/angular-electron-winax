@@ -24,9 +24,9 @@ export class ScoreTableComponent extends Phaser.GameObjects.Container {
         this.setSize(this.scoreTableSpecifications.scale.objectWidth, this.scoreTableSpecifications.scale.objectHeight);
         this.setPosition(this.scoreTableSpecifications.scale.objectPositionX, this.scoreTableSpecifications.scale.objectPositionY);
         this.rowsNumber = 4;
-        this.generateScoreTable(10);
+        this.generateScoreTable(4);
         // this.scoreTableBackground.setAlpha(0.60);
-        this.scoreTableBackground.displayHeight *= 1.04;
+        // this.scoreTableBackground.displayHeight *= 1.04;
         this.updateDependenceScoreTable();
     }
 
@@ -37,8 +37,8 @@ export class ScoreTableComponent extends Phaser.GameObjects.Container {
         // this.scoreTableBackground.setAlpha(0.50);
 
         const containerScale: GameObjectScaleInterface = JSON.parse(JSON.stringify(this.scoreTableSpecifications.scale));
-        containerScale.objectWidth *= 0.95;
-        containerScale.objectHeight *= 0.99;
+        containerScale.objectWidth *= 0.90;
+        containerScale.objectHeight *= 0.96;
     
         this.scoreItems = new Map();
 
@@ -49,20 +49,20 @@ export class ScoreTableComponent extends Phaser.GameObjects.Container {
         let originPositionY = (- containerScale.objectHeight / 2) + (boxHeight * 0.60);
     
         const titleSecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(this.scoreTableSpecifications));
-        titleSecifications.style.fontSize = (boxHeight * 0.55) +'px'
+        titleSecifications.style.fontSize = (boxHeight * 0.50) +'px'
         titleSecifications.scale.objectPositionX = originPositionX;
         titleSecifications.scale.objectPositionY = originPositionY;
         titleSecifications.scale.objectWidth = boxWidth;
         titleSecifications.scale.objectHeight = boxHeight * 2;
         this.scoreTableTitle = generateGameObjectText(this.scene, titleSecifications);
-        originPositionY += boxHeight * 1.25;
+        originPositionY += boxHeight * 1.06;
         
         const scoreRowSpecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(this.scoreTableSpecifications));
 
         scoreRowSpecifications.scale.objectPositionX = 0;
         scoreRowSpecifications.scale.objectPositionY = 0;
-        scoreRowSpecifications.style.fontSize = (boxHeight * 0.40) + 'px';
-        scoreRowSpecifications.style.color = ColorsString.BLACK_HEXADECIMAL_STRING,
+        scoreRowSpecifications.style.fontSize = (boxHeight * 0.43) + 'px';
+        scoreRowSpecifications.style.color = ColorsString.DARK_BLUE_HEXADECIMAL_STRING,
         scoreRowSpecifications.scale.objectWidth = boxWidth;
         scoreRowSpecifications.scale.objectHeight = boxHeight * 0.95;
 
@@ -76,7 +76,7 @@ export class ScoreTableComponent extends Phaser.GameObjects.Container {
         this.add([this.scoreTableBackground, this.scoreTableTitle]);
 
         for (let row = 0 ; row < scoresNumber; row++) {
-            const positionY = (originPositionY + (boxHeight * row) );
+            const positionY = (originPositionY + (boxHeight * row * 0.95) );
             
             const playerNumberSpecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(scoreRowSpecifications));
             playerNumberSpecifications.content = (row + 1) + '° ';

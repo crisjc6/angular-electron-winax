@@ -7,9 +7,8 @@ import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-s
 import { loadFonts } from "../../functions/font-styles/font-styles-functions";
 import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
 import { gameMapAssets } from "../../settings/game-map-assets";
-import {gameRouterLink, GameSpecifications, gameStatus} from "../../settings/game-system-specifications";
-import { buttonElements, IconsKeyStrings, GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
-import { switchGameSoundStatus } from '../../functions/sound-functions/sound-function';
+import { gameRouterLink, GameSpecifications, gameStatus } from "../../settings/game-system-specifications";
+import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
 import { gameData } from "../../settings/game-data/game-data";
 
@@ -29,7 +28,7 @@ export class MapScene extends Phaser.Scene {
 
     init(data) {
         gameStatus.status = 'mapScene';
-        this.updateSceneScore();
+        // this.updateSceneScore();
     }
 
     constructor() {
@@ -64,8 +63,8 @@ export class MapScene extends Phaser.Scene {
             GameSceneElementsString.SCENE_BACKGROUND
         ).gameObject;
         this.sceneBackground.setTint(ColorsValue.BLACK_HEXADECIMAL_VALUE);
-        this.sceneBackground.setAlpha(0.5);
-
+        this.sceneBackground.setAlpha(0.1);
+        
         this.totalScore = this.gameObjects.get(
             GameSceneElementsString.SCENE_TOTAL_SCORE
         ).gameObject;
@@ -96,6 +95,8 @@ export class MapScene extends Phaser.Scene {
         this.events.on(
             'wake',
             () => {
+                GameSpecifications.gameOver = !(GameSpecifications.decisionPeriodIds.length > 0);
+                console.log(GameSpecifications.gameOver);
                 this.updateSceneScore();
             }
         );
@@ -121,7 +122,8 @@ export class MapScene extends Phaser.Scene {
                     const gameData: SceneDataInterface = {
                         returnSceneName: this.scene.key
                     }
-                    this.scene.launch(GameSceneIdsStrings.DECISION_MAKING_SCENE_ID, gameData);
+                    this.scene.launch(GameSceneIdsStrings.END_SCENE_ID, gameData);
+                    // this.scene.launch(GameSceneIdsStrings.DECISION_MAKING_SCENE_ID, gameData);
                 }
 
             }
@@ -130,6 +132,7 @@ export class MapScene extends Phaser.Scene {
         this.homeButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 // this.scene.pause();
+                gameStatus.status = 'mainScene';
                 gameRouterLink.routerLink.navigate(['/']);
             }
         );
@@ -181,8 +184,16 @@ export class MapScene extends Phaser.Scene {
     private updateSceneScore() {
       if (this.totalScore !== undefined) {
         this.totalScore.setText('PUNTAJE: ' + gameData.playerData.score);
+        if (GameSpecifications.gameOver) {
+            setTimeout(
+                () => {
+                    this.scene.pause();
+                    this.scene.start(GameSceneIdsStrings.END_SCENE_ID);
+                },
+                10
+            );
+        }
       }
-
     }
 
 }

@@ -12,6 +12,9 @@ export const GameSpecifications:{
     decisionIds: string[];
     currentDecisionId: string;
     appPath: string;
+    gameOver: boolean;
+    canvasWidth: number;
+    canvasHeight: number;
 } = {
     name: 'DARCH',
     continueGame: false,
@@ -23,7 +26,10 @@ export const GameSpecifications:{
     currentDecisionIndex: 0,
     decisionIds: [],
     currentDecisionId: '',
-    appPath: ''
+    appPath: '',
+    gameOver: false,
+    canvasWidth: 1366,
+    canvasHeight: 761
 }
 
 export const gameRouterLink: {routerLink: any} = {

@@ -1,9 +1,14 @@
 import { GameObjectScaleInterface } from "../../interfaces/game-object-scale-interface";
-import { gameStatus } from "../../settings/game-system-specifications";
+import { GameSpecifications, gameStatus } from "../../settings/game-system-specifications";
 
 export function scaleGameObject(Scene: Phaser.Scene, currentScale: GameObjectScaleInterface): GameObjectScaleInterface {
-    const currentWidthCanvas: number = Scene.sys.canvas.width;
-    const currentHeightCanvas: number = Scene.sys.canvas.height;
+    let currentWidthCanvas: number = Scene.sys.canvas.width;
+    let currentHeightCanvas: number = Scene.sys.canvas.height;
+
+    if (gameStatus.status !== 'mapScene') {
+        currentWidthCanvas = GameSpecifications.canvasWidth;
+        currentHeightCanvas = GameSpecifications.canvasHeight;    
+    }
 
     let defaultWidthCanvas = gameStatus.status === 'mapScene' ? 810 : 1366;
     let defaultHeightCanvas = gameStatus.status === 'mapScene' ? 630 : 768;
