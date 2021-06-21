@@ -31,8 +31,8 @@ export class LoadScene extends Phaser.Scene {
     this.getElements();
     // this.animateTextLoad();
     setTimeout(() => {
-      this.startNextScene();
-      // this.loadWeapValue();
+      // this.startNextScene();
+      this.loadWeapValue();
     }, 2);
   }
 
@@ -50,21 +50,36 @@ export class LoadScene extends Phaser.Scene {
 
   private loadWeapValue() {
     const weapApi = runWEAP();
-
-    for(let decisionId in GameSpecifications.currentDecisionsPeriod.decisions) {
-      for(let decisionOptionId in GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options) {
-        const decisionOptionWasSelected = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_was_selected;
-        const decisionOptionWeapVariable = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_weap_variable;
-        const decisionOptionValue = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_value;
-
-        if (decisionOptionWasSelected) {
-          weapApi.BranchVariable(decisionOptionWeapVariable).Expression = decisionOptionValue;
-        } else {
-          weapApi.BranchVariable(decisionOptionWeapVariable).Expression = 0;
+    
+    for (let periodoId in GameSpecifications.gameDecisionsData) {
+      for (let decisionId in GameSpecifications.gameDecisionsData[periodoId].decisions) {
+        for (let decisionOptionId in GameSpecifications.gameDecisionsData[periodoId].decisions[decisionId].decision_options) {
+          const decisionOptionWasSelected = GameSpecifications.gameDecisionsData[periodoId].decisions[decisionId].decision_options[decisionOptionId].decision_option_was_selected;
+          const decisionOptionWeapVariable = GameSpecifications.gameDecisionsData[periodoId].decisions[decisionId].decision_options[decisionOptionId].decision_option_weap_variable;
+          const decisionOptionValue = GameSpecifications.gameDecisionsData[periodoId].decisions[decisionId].decision_options[decisionOptionId].decision_option_value;
+          if (decisionOptionWasSelected) {
+            weapApi.BranchVariable(decisionOptionWeapVariable).Expression = decisionOptionValue;
+          } else {
+            weapApi.BranchVariable(decisionOptionWeapVariable).Expression = 0;
+          }
         }
-
       }
     }
+
+    // for(let decisionId in GameSpecifications.currentDecisionsPeriod.decisions) {
+    //   for(let decisionOptionId in GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options) {
+    //     const decisionOptionWasSelected = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_was_selected;
+    //     const decisionOptionWeapVariable = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_weap_variable;
+    //     const decisionOptionValue = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_value;
+
+    //     if (decisionOptionWasSelected) {
+    //       weapApi.BranchVariable(decisionOptionWeapVariable).Expression = decisionOptionValue;
+    //     } else {
+    //       weapApi.BranchVariable(decisionOptionWeapVariable).Expression = 0;
+    //     }
+
+    //   }
+    // }
     // generateCsv(WEAP);
     getDataWeap(weapApi);
     

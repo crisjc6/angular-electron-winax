@@ -14,6 +14,7 @@ export function getGameDataDefault() {
       GameSpecifications.currentDecisionIndex = 0;
       GameSpecifications.decisionIds = [];
       GameSpecifications.currentDecisionId = '';
+      GameSpecifications.gameOver = false;
 
       gameData.playerData = JSON.parse(JSON.stringify(_playerDataDefault));
       gameData.indicatorsPeriodData = JSON.parse(JSON.stringify(_indicatorsPeriodDataDefault));

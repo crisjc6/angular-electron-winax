@@ -13,7 +13,9 @@ exports.GameSpecifications = {
     decisionIds: [],
     currentDecisionId: '',
     appPath: '',
-    gameOver: false
+    gameOver: false,
+    canvasWidth: 1366,
+    canvasHeight: 761
 };
 exports.gameRouterLink = {
     routerLink: null
