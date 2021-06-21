@@ -5,10 +5,11 @@ import {NgApexchartsModule} from "ng-apexcharts";
 import {CommonModule} from "@angular/common";
 import {NgModule} from "@angular/core";
 import {CsvService} from "../shared/services/csv.service";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [DetailComponent],
-  imports: [CommonModule, SharedModule, DetailRoutingModule, NgApexchartsModule],
+    imports: [CommonModule, SharedModule, DetailRoutingModule, NgApexchartsModule, NgbModule],
   providers: [CsvService]
 })
 export class DetailModule {}
