@@ -155,7 +155,7 @@ export class DetailComponent implements OnInit {
         }
       ],
       title: {
-        text: 'Hidroenergia (Hidroelectrica)',
+        text: 'Hidroenergía (Hidroeléctrica)',
         align: 'left'
       },
       chart: {
@@ -189,7 +189,7 @@ export class DetailComponent implements OnInit {
         }
       ],
       title: {
-        text: 'Demanda cobertura del sitio ',
+        text: 'Demanda cobertura del sítio',
         align: 'left'
       },
       chart: {

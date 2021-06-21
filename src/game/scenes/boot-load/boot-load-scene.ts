@@ -30,27 +30,28 @@ export class BootLoadScene extends Phaser.Scene {
 
     loadFonts();
     
-    this.load.image('modal-scene-background', '.../../assets/game-assets/boot-load-assets/scene-backgrounds-assets/modal-scene-background.png');
+    this.load.image('main-scene-background', '.../../assets/game-assets/boot-load-assets/scene-backgrounds-assets/main-scene-background.png');
 
-    this.load.on('filecomplete-image-modal-scene-background',
-      () => {
-        this.load.image('first-logo-background', '../../assets/game-assets/boot-load-assets/logos-assets/first-logo-background.png');
-      }
-    )
+    // this.load.on('filecomplete-image-modal-scene-background',
+    //   () => {
+    //     this.load.image('first-logo-background', '../../assets/game-assets/boot-load-assets/logos-assets/first-logo-background.png');
+    //   }
+    // )
     
-    this.load.on('filecomplete-image-first-logo-background',
-      () => {
-        this.load.image('second-logo-background', '.../../assets/game-assets/boot-load-assets/logos-assets/second-logo-background.png');
-      }
-    )
+    // this.load.on('filecomplete-image-first-logo-background',
+    //   () => {
+    //     this.load.image('second-logo-background', '.../../assets/game-assets/boot-load-assets/logos-assets/second-logo-background.png');
+    //   }
+    // )
 
-    this.load.on('filecomplete-image-second-logo-background',
-      () => {
-        this.load.image('third-logo-background', '.../../assets/game-assets/boot-load-assets/logos-assets/third-logo-background.png');
-      }
-    )
+    // this.load.on('filecomplete-image-second-logo-background',
+    //   () => {
+    //     this.load.image('third-logo-background', '.../../assets/game-assets/boot-load-assets/logos-assets/third-logo-background.png');
+    //   }
+    // )
 
-    this.load.on('filecomplete-image-third-logo-background',
+    // this.load.on('filecomplete-image-third-logo-background',
+    this.load.on('filecomplete-image-main-scene-background',
       () => {
 
         this.createScene();
@@ -69,17 +70,17 @@ export class BootLoadScene extends Phaser.Scene {
   private createScene() {
 
     const backgroundSpecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(_loadBackgroundSpecifications));
-    const sceneBackground = this.generateLogo(backgroundSpecifications);
-    sceneBackground.setAlpha(0.25);
+    const sceneBackground = this.generateImage(backgroundSpecifications);
+    // sceneBackground.setAlpha(0.25);
 
-    const firstLogoSpecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(_firstLogoSpecifications));
-    this.generateLogo(firstLogoSpecifications);
+    // const firstLogoSpecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(_firstLogoSpecifications));
+    // this.generateLogo(firstLogoSpecifications);
 
-    const secondLogoSpecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(_secondLogoSpecifications));
-    this.generateLogo(secondLogoSpecifications);
+    // const secondLogoSpecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(_secondLogoSpecifications));
+    // this.generateLogo(secondLogoSpecifications);
 
-    const thirdLogoSpecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(_thirdLogoSpecifications));
-    this.generateLogo(thirdLogoSpecifications);
+    // const thirdLogoSpecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(_thirdLogoSpecifications));
+    // this.generateLogo(thirdLogoSpecifications);
 
     const titleGameSceneSpecification: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(_titleGameSpecifications));
     this.generateText(titleGameSceneSpecification);
@@ -137,7 +138,7 @@ export class BootLoadScene extends Phaser.Scene {
     }
   }
 
-  private generateLogo(logoSpecifications: GameElementSpecificationsInterface): Phaser.GameObjects.Image {
+  private generateImage(logoSpecifications: GameElementSpecificationsInterface): Phaser.GameObjects.Image {
     logoSpecifications.scale = scaleGameObject(this, logoSpecifications.scale);
     const logo = generateGameObjectImage(this, logoSpecifications);
     logo.setOrigin(logoSpecifications.originX, logoSpecifications.originY);

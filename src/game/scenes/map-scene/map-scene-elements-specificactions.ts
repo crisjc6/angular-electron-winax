@@ -40,7 +40,7 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
             color: ColorsString.RED_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-            strokeThickness: textFontSize.Medium.strokeThickness,
+            // strokeThickness: textFontSize.Medium.strokeThickness,
             fontSize: '30px',
         },
         scale: {
@@ -49,7 +49,8 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
             objectWidth: 600,
             objectHeight: 40,
             objectPositionX: 405,
-            objectPositionY: 70,
+            // objectPositionY: 70,
+            objectPositionY: 102,
         }
     },
     {
@@ -94,7 +95,8 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
             objectWidth: 450,
             objectHeight: 40,
             objectPositionX: 775,
-            objectPositionY: 26,
+            // objectPositionY: 26,
+            objectPositionY: 30,
         },
         originX: 1,
         originY: 0
@@ -116,7 +118,7 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
             objectHeightRatio: 1,
             objectWidth: 250,
             objectHeight: 50,
-            objectPositionX: 630,
+            objectPositionX: 660,
             objectPositionY: 580,
         }
     },

@@ -4,7 +4,7 @@ import { AlingString, ColorsString, GameFontStylesString, textFontSize } from ".
 export const _loadBackgroundSpecifications: GameElementSpecificationsInterface = {
     type: 'image',
     element: 'background',
-    assetName: 'modal-scene-background',
+    assetName: 'main-scene-background',
     name: 'scene-backgroud',
     scale: {
         objectWidthRatio: 1,
@@ -78,17 +78,17 @@ export const _titleGameSpecifications: GameElementSpecificationsInterface = {
         fontFamily: GameFontStylesString.BIG_FONT,
         color: ColorsString.RED_HEXADECIMAL_STRING,
         align: AlingString.CENTER_STRING,
-        stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-        strokeThickness: textFontSize.VeryBig.strokeThickness,
+        stroke: ColorsString.LIGHT_GRAY_HEXADECIMAL_STRING,
+        strokeThickness: textFontSize.Regular.strokeThickness,
         fontSize: '70px',
     },
     scale: {
         objectWidthRatio: 1,
         objectHeightRatio: 1,
-        objectWidth: 1300,
-        objectHeight: 230,
+        objectWidth: 1340,
+        objectHeight: 200,
         objectPositionX: 683,
-        objectPositionY: 417,
+        objectPositionY: 400,
     }
 }
 
@@ -109,7 +109,7 @@ export const _progressBarSpecifications: GameElementSpecificationsInterface = {
         objectWidth: 1150,
         objectHeight: 50,
         objectPositionX: 683,
-        objectPositionY: 610,
+        objectPositionY: 590,
     }
 };
 
@@ -122,7 +122,7 @@ export const _progressTextSpecifications: GameElementSpecificationsInterface = {
         fontFamily: GameFontStylesString.BASE_FONT,
         color: ColorsString.BLACK_HEXADECIMAL_STRING,
         align: AlingString.CENTER_STRING,
-        stroke: ColorsString.BLACK_HEXADECIMAL_STRING,
+        stroke: ColorsString.LIGHT_GRAY_HEXADECIMAL_STRING,
         fontSize: textFontSize.Medium.fontSize,
     },
     scale: {
@@ -131,6 +131,6 @@ export const _progressTextSpecifications: GameElementSpecificationsInterface = {
         objectWidth: 700,
         objectHeight: 50,
         objectPositionX: 683,
-        objectPositionY: 680,
+        objectPositionY: 650,
     }
 };

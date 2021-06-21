@@ -63,8 +63,8 @@ export class MapScene extends Phaser.Scene {
             GameSceneElementsString.SCENE_BACKGROUND
         ).gameObject;
         this.sceneBackground.setTint(ColorsValue.BLACK_HEXADECIMAL_VALUE);
-        this.sceneBackground.setAlpha(0.5);
-
+        this.sceneBackground.setAlpha(0.1);
+        
         this.totalScore = this.gameObjects.get(
             GameSceneElementsString.SCENE_TOTAL_SCORE
         ).gameObject;
@@ -122,7 +122,8 @@ export class MapScene extends Phaser.Scene {
                     const gameData: SceneDataInterface = {
                         returnSceneName: this.scene.key
                     }
-                    this.scene.launch(GameSceneIdsStrings.DECISION_MAKING_SCENE_ID, gameData);
+                    this.scene.launch(GameSceneIdsStrings.END_SCENE_ID, gameData);
+                    // this.scene.launch(GameSceneIdsStrings.DECISION_MAKING_SCENE_ID, gameData);
                 }
 
             }

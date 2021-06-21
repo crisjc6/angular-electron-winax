@@ -33,11 +33,6 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
     },
     {
         type: GameElementsString.IMAGE_STRING,
-        key: 'settings-icon-background',
-        path: '../../assets/game-assets/boot-load-assets/icons-assets/settings-icon-background.png'
-    },
-    {
-        type: GameElementsString.IMAGE_STRING,
         key: 'close-button-background',
         path: '../../assets/game-assets/boot-load-assets/icons-assets/close-button-background.png'
     },
@@ -64,15 +59,9 @@ export const gameAssets: GameAssetsSpecificationsInterface[] = [
     },
 
     /*************************** BACKGROUNS *******************************/
-    
     {
         type: GameElementsString.IMAGE_STRING,
-        key: 'main-scene-background',
-        path: '../../assets/game-assets/boot-load-assets/scene-backgrounds-assets/main-scene-background.png'
+        key: 'modal-scene-background',
+        path: '../../assets/game-assets/boot-load-assets/scene-backgrounds-assets/modal-scene-background.png'
     },
-    // {
-    //     type: GameElementsString.IMAGE_STRING,
-    //     key: 'modal-scene-background',
-    //     path: '../../assets/game-assets/boot-load-assets/scene-backgrounds-assets/modal-scene-background.png'
-    // },
 ];
