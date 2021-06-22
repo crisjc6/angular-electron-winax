@@ -433,7 +433,7 @@ export class DetailComponent implements OnInit {
       },
       chart: {
         height: 200,
-        type: 'area',
+        type: 'line',
         toolbar: {
           show: true,
         }
@@ -621,7 +621,7 @@ export class DetailComponent implements OnInit {
       },
       chart: {
         height: 200,
-        type: 'line',
+        type: 'bar',
         toolbar: {
           show: true,
         }
