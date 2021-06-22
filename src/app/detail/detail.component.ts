@@ -202,6 +202,7 @@ export class DetailComponent implements OnInit {
       }
     }
   }
+
   drawHydropowerChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
     return {
       series: [
@@ -221,7 +222,7 @@ export class DetailComponent implements OnInit {
           show: true,
         }
       },
-      colors: ['#0A1931', '#545454'],
+      colors: ['#2eeed7'],
       dataLabels: {
         enabled: false,
       },
@@ -287,6 +288,7 @@ export class DetailComponent implements OnInit {
       }
     }
   }
+
   drawCoverageChart(_dataSet: DataChartInterface | any ): Partial<ChartOptions> {
     return {
       series: [
@@ -416,6 +418,7 @@ export class DetailComponent implements OnInit {
       }
     }
   }
+
   drawStreamFlowChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
     return {
       series: [
@@ -435,12 +438,75 @@ export class DetailComponent implements OnInit {
           show: true,
         }
       },
-      colors: ['#9be99f'],
+      colors: ['#008bff'],
       dataLabels: {
         enabled: false,
       },
       anotations : {
-
+        yaxis: [
+          {
+            y: 1.4,
+            y2: 0,
+            borderColor: '#000',
+            fillColor: '#fa4646'
+          },
+          {
+            y: 5,
+            y2: 1.4,
+            borderColor: '#000',
+            fillColor: '#8df58a'
+          }
+        ],
+        xaxis: [
+          {
+            x: 2030,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P1"
+            },
+          },
+          {
+            x: 2040,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P2"
+            },
+          },
+          {
+            x: 2050,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P3"
+            },
+          },
+        ]
       },
       xaxis: {
         categories: _dataSet.years,
