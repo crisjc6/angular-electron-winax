@@ -29,15 +29,15 @@
             type="button"
             class="btn btn-warning"
             [autoClose]="true"
-            [ngbPopover]="popContent"
-            [popoverTitle]="popTitle"
+            [ngbPopover]="popContent1"
+            [popoverTitle]="popTitle1"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-joystick" viewBox="0 0 16 16">
               <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
               <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
             </svg>
           </button>
-          <ng-template #popContent>
+          <ng-template #popContent1>
             <div style="z-index: 100;">
               <div class="row" style="width: auto;z-index: 3">
                 <table class="table">
@@ -62,7 +62,7 @@
               </div>
             </div>
           </ng-template>
-          <ng-template #popTitle>Puntaje<b> Periodo!!</b></ng-template>
+          <ng-template #popTitle1>Puntaje<b> Periodo!!</b></ng-template>
         </div>
       </div>
       <div class="row mt-1">
@@ -82,10 +82,48 @@
         </div>
         <div class="col-1" style="padding:0;">
           <br>
-          <br>
           <span class="score">Pts.</span>
           <br>
           <span class="score">{{gameDataScores.hydroelectricTurbineScores.indicatorTotalScore}}</span>
+          <br>
+          <button
+            type="button"
+            class="btn btn-warning"
+            [autoClose]="true"
+            [ngbPopover]="popContent2"
+            [popoverTitle]="popTitle2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-joystick" viewBox="0 0 16 16">
+              <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
+              <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
+            </svg>
+          </button>
+          <ng-template #popContent2>
+            <div style="z-index: 100;">
+              <div class="row" style="width: auto;z-index: 3">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th scope="col">Periodo</th>
+                    <th scope="col">Puntaje</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr  *ngFor="let score of gameDataScores.hydroelectricTurbineScores.periodScores">
+                    <th>{{score.periodId}}</th>
+                    <td>{{score.score}}</td>
+                  </tr>
+                  <tr>
+                    <th class="bg-light">Total:
+                    </th>
+                    <td class="bg-light">{{gameDataScores.hydroelectricTurbineScores.indicatorTotalScore}}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template #popTitle2>Puntaje<b> Periodo!!</b></ng-template>
         </div>
       </div>
       <div class="row mt-1">
@@ -109,6 +147,45 @@
           <span class="score">Pts.</span>
           <br>
           <span class="score">{{gameDataScores.demandSiteScores.indicatorTotalScore}}</span>
+          <br>
+          <button
+            type="button"
+            class="btn btn-warning"
+            [autoClose]="true"
+            [ngbPopover]="popContent3"
+            [popoverTitle]="popTitle3"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-joystick" viewBox="0 0 16 16">
+              <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
+              <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
+            </svg>
+          </button>
+          <ng-template #popContent3>
+            <div style="z-index: 100;">
+              <div class="row" style="width: auto;z-index: 3">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th scope="col">Periodo</th>
+                    <th scope="col">Puntaje</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr  *ngFor="let score of gameDataScores.demandSiteScores.periodScores">
+                    <th>{{score.periodId}}</th>
+                    <td>{{score.score}}</td>
+                  </tr>
+                  <tr>
+                    <th class="bg-light">Total:
+                    </th>
+                    <td class="bg-light">{{gameDataScores.demandSiteScores.indicatorTotalScore}}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template #popTitle3>Puntaje<b> Periodo!!</b></ng-template>
         </div>
       </div>
       <div class="row mt-1">
@@ -128,10 +205,48 @@
         </div>
         <div class="col-1" style="padding:0;">
           <br>
-          <br>
           <span class="score">Pts.</span>
           <br>
           <span class="score">{{gameDataScores.helpcareRiverScores.indicatorTotalScore}}</span>
+          <br>
+          <button
+            type="button"
+            class="btn btn-warning"
+            [autoClose]="true"
+            [ngbPopover]="popContent4"
+            [popoverTitle]="popTitle4"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-joystick" viewBox="0 0 16 16">
+              <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
+              <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
+            </svg>
+          </button>
+          <ng-template #popContent4>
+            <div style="z-index: 100;">
+              <div class="row" style="width: auto;z-index: 3">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th scope="col">Periodo</th>
+                    <th scope="col">Puntaje</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr  *ngFor="let score of gameDataScores.helpcareRiverScores.periodScores">
+                    <th>{{score.periodId}}</th>
+                    <td>{{score.score}}</td>
+                  </tr>
+                  <tr>
+                    <th class="bg-light">Total:
+                    </th>
+                    <td class="bg-light">{{gameDataScores.helpcareRiverScores.indicatorTotalScore}}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template #popTitle4>Puntaje<b> Periodo!!</b></ng-template>
         </div>
         <!-- <div style="text-align:center">
           <apx-chart
