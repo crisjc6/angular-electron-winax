@@ -6,7 +6,7 @@ export const gameData: {
     playerData: GameScoreDataInterface,
     indicatorsPeriodData: IndicatorsPeriodDataInterface,
     indicatorsDataChart: IndicatorsDataChartsInterface,
-    gameScores: GameScoresinterface
+      gameScores: GameScoresinterface
 } = {
     playerData: JSON.parse(JSON.stringify(_playerDataDefault)),
     indicatorsPeriodData: JSON.parse(JSON.stringify(_indicatorsPeriodDataDefault)),

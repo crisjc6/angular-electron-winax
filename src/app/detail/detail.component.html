@@ -30,7 +30,6 @@
             class="btn btn-warning"
             [autoClose]="true"
             [ngbPopover]="popContent1"
-            [popoverTitle]="popTitle1"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-joystick" viewBox="0 0 16 16">
               <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
@@ -91,7 +90,6 @@
             class="btn btn-warning"
             [autoClose]="true"
             [ngbPopover]="popContent2"
-            [popoverTitle]="popTitle2"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-joystick" viewBox="0 0 16 16">
               <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
@@ -153,7 +151,6 @@
             class="btn btn-warning"
             [autoClose]="true"
             [ngbPopover]="popContent3"
-            [popoverTitle]="popTitle3"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-joystick" viewBox="0 0 16 16">
               <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
@@ -214,7 +211,6 @@
             class="btn btn-warning"
             [autoClose]="true"
             [ngbPopover]="popContent4"
-            [popoverTitle]="popTitle4"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-joystick" viewBox="0 0 16 16">
               <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
@@ -258,24 +254,32 @@
         </div> -->
       </div>
       <div class="row mt-1">
-        <!-- <div style="text-align:center">
+         <div style="text-align:center">
           <apx-chart
-            [series]="chartOptions.series"
-            [chart]="chartOptions.chart"
-            [xaxis]="chartOptions.xaxis"
-            [responsive]="chartOptions.responsive"
+            [series]="chartOptionsPR.series"
+            [chart]="chartOptionsPR.chart"
+            [xaxis]="chartOptionsPR.xaxis"
+            [yaxis]="chartOptionsPR.yaxis"
+            [title]="chartOptionsPR.title"
+            [colors]="chartOptionsPR.colors"
+            [dataLabels]="chartOptionsPR.dataLabels"
+            [annotations]="chartOptionsPR.anotations"
           ></apx-chart>
-        </div> -->
+        </div>
       </div>
       <div class="row mt-1">
-        <!-- <div style="text-align:center">
+         <div style="text-align:center">
           <apx-chart
-            [series]="chartOptions.series"
-            [chart]="chartOptions.chart"
-            [xaxis]="chartOptions.xaxis"
-            [responsive]="chartOptions.responsive"
+            [series]="chartOptionsP.series"
+            [chart]="chartOptionsP.chart"
+            [xaxis]="chartOptionsP.xaxis"
+            [yaxis]="chartOptionsP.yaxis"
+            [title]="chartOptionsP.title"
+            [colors]="chartOptionsP.colors"
+            [dataLabels]="chartOptionsP.dataLabels"
+            [annotations]="chartOptionsP.anotations"
           ></apx-chart>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>

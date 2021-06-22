@@ -19,6 +19,8 @@ import {Router} from "@angular/router";
 import {DataChartInterface} from "../../game/interfaces/game-data-chart-interface";
 import {IndicatorsDataChartsInterface} from "../../game/interfaces/indicators-data-interface"
 import { GameScoresinterface } from "../../game/interfaces/game-score-interface";
+import {precipitationYearsValues} from "../costantes/precipitacion";
+import {populationYearsValues} from "../costantes/poblacion";
 
 export type ChartOptions = {
   series?: ApexAxisChartSeries;
@@ -108,11 +110,10 @@ export class DetailComponent implements OnInit {
   drawAllCharts(_gameDataCharts: IndicatorsDataChartsInterface) {
     this.chartOptionsAC = this.drawConservationAreaChart(_gameDataCharts.conservationAreaDataChart);
     this.chartOptionsHT = this.drawHydropowerChart(_gameDataCharts.hydroelectricTurbineDataChart);
-
-    /********************* Modificar para aceptar todos los riegos*****************************/
     this.chartOptionsDC = this.drawCoverageChart(_gameDataCharts.demandSiteDataChart);
-
     this.chartOptionsSR = this.drawStreamFlowChart(_gameDataCharts.helpcareRiverDataChart);
+    this.chartOptionsPR = this.precipitationChart(precipitationYearsValues);
+    this.chartOptionsP = this.populationChart(populationYearsValues);
   }
 
   drawConservationAreaChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
@@ -201,7 +202,6 @@ export class DetailComponent implements OnInit {
       }
     }
   }
-
   drawHydropowerChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
     return {
       series: [
@@ -287,7 +287,6 @@ export class DetailComponent implements OnInit {
       }
     }
   }
-
   drawCoverageChart(_dataSet: DataChartInterface | any ): Partial<ChartOptions> {
     return {
       series: [
@@ -417,7 +416,6 @@ export class DetailComponent implements OnInit {
       }
     }
   }
-
   drawStreamFlowChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
     return {
       series: [
@@ -433,6 +431,46 @@ export class DetailComponent implements OnInit {
       chart: {
         height: 200,
         type: 'area',
+        toolbar: {
+          show: true,
+        }
+      },
+      colors: ['#9be99f'],
+      dataLabels: {
+        enabled: false,
+      },
+      anotations : {
+
+      },
+      xaxis: {
+        categories: _dataSet.years,
+      },
+      yaxis: {
+        title: {
+          text: 'Flujo (M^3/s)',
+        }
+      }
+    }
+  }
+  precipitationChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
+    return {
+      series: [
+        {
+          name: 'Precipitacion',
+          data: _dataSet.values.map(
+            (valor)=> {
+              return +valor.toFixed(2)
+            }
+          )
+        }
+      ],
+      title: {
+        text: 'Precipitación',
+        align: 'left'
+      },
+      chart: {
+        height: 200,
+        type: 'line',
         toolbar: {
           show: true,
         }
@@ -498,7 +536,92 @@ export class DetailComponent implements OnInit {
       },
       yaxis: {
         title: {
-          text: 'Flujo (M^3/s)',
+          text: 'Milímetros Agua (mm)',
+        }
+      }
+    }
+  }
+  populationChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
+    return {
+      series: [
+        {
+          name: 'Población',
+          data: _dataSet.values
+        }
+      ],
+      title: {
+        text: 'Población',
+        align: 'left'
+      },
+      chart: {
+        height: 200,
+        type: 'line',
+        toolbar: {
+          show: true,
+        }
+      },
+      colors: ['#deec55'],
+      dataLabels: {
+        enabled: false,
+      },
+      anotations : {
+        xaxis: [
+          {
+            x: 2030,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P1"
+            },
+          },
+          {
+            x: 2040,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P2"
+            },
+          },
+          {
+            x: 2050,
+            opacity: 0.3,
+            strokeDashArray: 0,
+            borderColor: "#775DD0",
+            label: {
+              position: 'top',
+              orientation: 'vertical',
+              borderColor: "#775DD0",
+              style: {
+                color: "#fff",
+                background: "#775DD0"
+              },
+              text: "P3"
+            },
+          },
+        ]
+      },
+      xaxis: {
+        categories: _dataSet.years,
+      },
+      yaxis: {
+        title: {
+          text: 'N° Personas',
         }
       }
     }
