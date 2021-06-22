@@ -32,6 +32,7 @@ export function calculateStreamflowScore(_periodId: string) {
                 let peridoScore = 0;
                 for (let year = idealFlowPeriodData[_periodId].year_start; year <= idealFlowPeriodData[_periodId].year_end; year++) {
                     let yearScore = 0;
+                    
                     for (let month = 1; month <= 12; month++) {
                         let score = 0;
                         if (
@@ -44,16 +45,17 @@ export function calculateStreamflowScore(_periodId: string) {
                           score = 10;
                         } else {
 
-                            score = gameData.indicatorsPeriodData
+                            score = (gameData.indicatorsPeriodData
                                             .helpcareRiverPeriodData[_periodId]
                                             .years[year].months[month].value_month *
-                                            10 / idealFlowPeriodData[_periodId].years[year].months[month].value_month; 
+                                            10) / idealFlowPeriodData[_periodId].years[year].months[month].value_month; 
                         }
                         yearScore += score;
                     }
                     peridoScore += yearScore / 12;
                 }
-                peridoSore.score = peridoScore / ( (idealFlowPeriodData[_periodId].year_end - idealFlowPeriodData[_periodId].year_start) + 1);
+                
+                peridoSore.score = +((peridoScore / ( (idealFlowPeriodData[_periodId].year_end - idealFlowPeriodData[_periodId].year_start) + 1)).toFixed(2));
             }
             streamflowTotalScore += peridoSore.score;
         }

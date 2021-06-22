@@ -1,9 +1,7 @@
 import { changeGameObjectImage, generateGameObjectImage } from "../../functions/image-functions/image-functions";
 import { generateGameObjectText } from "../../functions/text-functions/text-functions";
 import { GameElementSpecificationsInterface } from "../../interfaces/game-element-specifications-interface";
-// @ts-ignore
-import { boxDecisionElements, buttonElements, GameElementsString, IconsKeyStrings } from "../../settings/game-constants-strings/game-elements-strings";
-import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-strings/game-events-strings";
+import { boxDecisionElements, GameElementsString, IconsKeyStrings } from "../../settings/game-constants-strings/game-elements-strings";
 
 export class DecisionBoxComponent extends Phaser.GameObjects.Container {
 
@@ -12,12 +10,13 @@ export class DecisionBoxComponent extends Phaser.GameObjects.Container {
     private boxBackground: Phaser.GameObjects.Image;
     private checkBoxBackground: Phaser.GameObjects.Image;
     private decisionText: Phaser.GameObjects.Text;
-    private decisionSelected: boolean = false;
+    private decisionSelected: boolean;
 
     constructor(_scene: Phaser.Scene, _decisionBoxSpecifications: GameElementSpecificationsInterface) {
         super(_scene, _decisionBoxSpecifications.scale.objectPositionX, _decisionBoxSpecifications.scale.objectPositionY);
         
         this.scene = _scene;
+        this.decisionSelected = false;
         this.decisionBoxSpecifications = _decisionBoxSpecifications;
         this.generateBox();
         // this.addFuncionality();
@@ -37,9 +36,9 @@ export class DecisionBoxComponent extends Phaser.GameObjects.Container {
             scale: {
                 objectWidthRatio: 1,
                 objectHeightRatio: 1,
-                objectWidth: this.decisionBoxSpecifications.scale.objectWidth * 0.09,
+                objectWidth: this.decisionBoxSpecifications.scale.objectWidth * 0.085,
                 objectHeight: this.decisionBoxSpecifications.scale.objectHeight * 0.70,
-                objectPositionX: -this.decisionBoxSpecifications.scale.objectWidth * 0.50,
+                objectPositionX: -this.decisionBoxSpecifications.scale.objectWidth * 0.49,
                 objectPositionY: 0 
                 ,
             }
@@ -60,17 +59,6 @@ export class DecisionBoxComponent extends Phaser.GameObjects.Container {
         this.add([this.boxBackground, this.checkBoxBackground, this.decisionText]);
         this.setSize(this.decisionBoxSpecifications.scale.objectWidth, this.decisionBoxSpecifications.scale.objectHeight );
     }
-
-    // private addFuncionality() {
-    //     this.setInteractive().on(
-    //         EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-    //             // this.updateSelectedCheckBox(this.checkBoxBackground);
-    //             // _gameObjectImage.texture.key === IconsKeyStrings.BLANK_CHECK_ICON ? IconsKeyStrings.CHECK_ICON : IconsKeyStrings.BLANK_CHECK_ICON,
-    //             this.checkBoxBackground.texture.key === IconsKeyStrings.BLANK_CHECK_ICON ? this.updateToSelectedCheckBox() : this.updateToBlankCheckBox();
-    //             // this.up
-    //         }
-    //     );
-    // }
 
     public updateOption(optionId: string, optionText: string, wasSelected: boolean) {
         this.updateToBlankCheckBox();

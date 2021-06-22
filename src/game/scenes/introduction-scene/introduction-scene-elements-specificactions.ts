@@ -110,7 +110,7 @@ export const introductionSceneElementSpecifictions: GameElementSpecificationsInt
         type: 'text',
         element: 'content',
         name: 'scene-content',
-        content: 'Sean bienvenidos a la Cuenca del Rio San Pedro, ahora forman parte del equipo encargado de gestionar los recursos hídricos de la cuenca. Su trabajo es tomar las mejores deciciones para un uso adecudo de los recurso hídricos y hacer prosperar esta zona del Ecuador.\nConversen entre ustedes y trabajen en equipo para tomar 2 deciciones en cada periodo de 10 años, desde 2020 al 2050.\n\nEs hora de demostrar sus conocimientos y obtener los mejores resultados para la cuenca.',
+        content: 'Sean bienvenidos a la Cuenca Hidrográ fica del río San Pedro, ahora forman parte del equipo encargado de gestionar los recursos hídricos de la cuenca. Su trabajo es tomar las mejores decisiones para un uso adecuado de los recurso hídricos y hacer prosperar esta zona del Ecuador.\nConversen entre ustedes y trabajen en equipo para tomar 2 decisiones en cada periodo de 10 años, desde 2020 al 2050.\n\nEs hora de demostrar sus conocimientos y obtener los mejores resultados para la cuenca.',
         // content: 'GIRHA (Gestión Integral del Recurso Hídrico y Ambiental)\nes un Juego Serio creado con el objetivo de promover de una manera atractiva y divertida el uso adecuado de los recursos hídricos de la cuenca del Río San Pedro, mediante la toma de decisiones, comunicación y trabajo en equipo, con un diseño amigable y fácil de usar.',
         style: {
             fontFamily: GameFontStylesString.SMALL_FONT,

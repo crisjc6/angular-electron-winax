@@ -229,7 +229,8 @@ export class DecisionMakingScene extends Phaser.Scene {
 
     private updateSceneDataDecision() {
         this.getDecision();
-        this.decisiontitle.setText('DECISIÓN N° ' + this.decisionNumber);
+        const currentPeriod = GameSpecifications.currentDecisionsPeriod;
+        this.decisiontitle.setText('PERIODO ' + currentPeriod.year_start + ' - ' + currentPeriod.year_end +' DECISIÓN N° ' + this.decisionNumber );
         this.decisionText.setText(this.currentDecision.decision_text);
         
         const decisionOptions: DecisionOptionInterface[] = JSON.parse(JSON.stringify(this.currentDecision.decision_options));

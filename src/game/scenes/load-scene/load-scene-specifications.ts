@@ -20,7 +20,7 @@ export const loadSceneElementsSpecifications: GameElementSpecificationsInterface
         type: 'text',
         element: 'title',
         name: 'load-text',
-        content: 'EJECUTANDO DECISIONES PARA LOS PRÓXIMOS 5 AÑOS\n\nESPERE UN MOMENTO . . .',
+        content: 'EJECUTANDO DECISIONES PARA LOS PRÓXIMOS 10 AÑOS\n\nESPERE UN MOMENTO . . .',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.WHITE_HEXADECIMAL_STRING,

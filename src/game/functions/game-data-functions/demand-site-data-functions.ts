@@ -164,7 +164,7 @@ export function calculateDemandSiteScore(_periodId: string) {
                                     gameData.indicatorsPeriodData.demandSitePeriodData.riegoC8[_periodId].period_percent;
             
           // console.log('\n demandSiteTotalScore: ' + demandSitePeriodScore); 
-            peridoSore.score = (demandSitePeriodScore / numberIndicators) / 10;
+            peridoSore.score = +(((demandSitePeriodScore / numberIndicators) / 10).toFixed(2));
         }
         demandSiteTotalScore += peridoSore.score;
       }

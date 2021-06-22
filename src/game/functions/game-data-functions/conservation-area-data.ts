@@ -11,25 +11,48 @@ export function getConservationAreData() {
     for (let index = 0; index < GameSpecifications.decisionIds.length; index++) {
       const decisionID = GameSpecifications.decisionIds[index];
       const decisionOptions: DecisionOptionInterface[] = JSON.parse(JSON.stringify(GameSpecifications.currentDecisionsPeriod.decisions[decisionID].decision_options));
-
-      for(let optionId in decisionOptions) {
+      
+      for(let optionId in decisionOptions) { 
         if (
-          GameSpecifications.currentDecisionsPeriod
-            .decisions[
-            decisionID
+          GameSpecifications.gameDecisionsData[
+                GameSpecifications.currentDecisionsPeriod.id
+            ].decisions[
+                decisionID
             ].decision_options[
-            optionId
+                optionId
             ].decision_option_was_selected
         ) {
-          const decisionOptionSelected = JSON.parse(JSON.stringify(GameSpecifications.currentDecisionsPeriod
-            .decisions[
-            decisionID
-            ].decision_options[
-            optionId
-            ]));
+          const decisionOptionSelected = JSON.parse(JSON.stringify(
+                                              GameSpecifications.gameDecisionsData[
+                                                      GameSpecifications.currentDecisionsPeriod.id
+                                                  ].decisions[
+                                                      decisionID
+                                                  ].decision_options[
+                                                      optionId
+                                                  ]
+                                          ));
           DecisionStatus.conservatio_areas += decisionOptionSelected.decision_option_area_value;
           periodArea += decisionOptionSelected.decision_option_area_value;
         }
+        // GameSpecifications.gameDecisionsData[
+        // if (
+        //   GameSpecifications.currentDecisionsPeriod
+        //     .decisions[
+        //     decisionID
+        //     ].decision_options[
+        //     optionId
+        //     ].decision_option_was_selected
+        // ) {
+        //   const decisionOptionSelected = JSON.parse(JSON.stringify(GameSpecifications.currentDecisionsPeriod
+        //         .decisions[
+        //         decisionID
+        //         ].decision_options[
+        //         optionId
+        //         ]
+        //       ));
+        //   DecisionStatus.conservatio_areas += decisionOptionSelected.decision_option_area_value;
+        //   periodArea += decisionOptionSelected.decision_option_area_value;
+        // }
       }
     }
     
@@ -53,13 +76,16 @@ export function calculateConservationAreaScore(_periodArea: number, _periodId: s
   const finalArea = 100 // 1140; //x1
   const initialSore = 0; //y0
   const finalScore = 10; //y1
-
+  // Interpolacion
+  
   const conservationAreaScore = +(initialSore + (((_periodArea - initialArea) / (finalArea - initialArea)) * (finalScore - initialSore))).toFixed(1);
+
+  console.log('Resultado: ' + conservationAreaScore);
 
   gameData.gameScores.conservationAreaScores.periodScores.forEach(
     (periodScore)  => {
       if (periodScore.periodId === _periodId) {
-        periodScore.score = conservationAreaScore;
+        periodScore.score = +(conservationAreaScore.toFixed(2));
       }
       conservationAreaTotalScore += periodScore.score;
     }

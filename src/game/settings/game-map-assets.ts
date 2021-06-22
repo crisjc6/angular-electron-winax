@@ -66,6 +66,33 @@ export const gameMapAssets: GameAssetsSpecificationsInterface[] = [
         key: 'on-sound-icon-background',
         path: '../../assets/game-assets/boot-load-assets/icons-assets/on-sound-icon-background.png'
     },
+
+
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'acus-icon-background',
+        path: '../../assets/game-assets/boot-load-assets/icons-assets/acus-icon-background.png'
+    },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'agricola-icon-background',
+        path: '../../assets/game-assets/boot-load-assets/icons-assets/agricola-icon-background.png'
+    },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'agua-riego-icon-background',
+        path: '../../assets/game-assets/boot-load-assets/icons-assets/agua-riego-icon-background.png'
+    },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'bosque-icon-background',
+        path: '../../assets/game-assets/boot-load-assets/icons-assets/bosque-icon-background.png'
+    },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'fabrica-icon-background',
+        path: '../../assets/game-assets/boot-load-assets/icons-assets/fabrica-icon-background.png'
+    },
     // {
     //     type: GameElementsString.IMAGE_STRING,
     //     key: 'star-icon-obtained-background',
@@ -86,6 +113,80 @@ export const gameMapAssets: GameAssetsSpecificationsInterface[] = [
     //     key: 'big-star-icon-obtained-background',
     //     path: '../../assets/game-assets/boot-load-assets/icons-assets/big-star-icon-obtained-background.png'
     // },
+    /*****************************ICON MAPS****************** */
+
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'P_20_30_1_1-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/P_20_30_1_1-background.png'
+    // },
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'P_20_30_1_2-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/P_20_30_1_2-background.png'
+    // },
+
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'P_20_30_2_2-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/P_20_30_2_2-background.png'
+    // },
+
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'P_20_30_2_3-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/P_20_30_2_3-background.png'
+    // },
+
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'P_30_40_1_2-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/P_30_40_1_2-background.png'
+    // },
+
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'P_30_40_1_3-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/P_30_40_1_3-background.png'
+    // },
+
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'P_30_40_2_1-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/P_30_40_2_1-background.png'
+    // },
+
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'P_30_40_2_3-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/P_30_40_2_3-background.png'
+    // },
+
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'P_40_50_1_1-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/P_40_50_1_1-background.png'
+    // },
+
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'P_40_50_1_3-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/P_40_50_1_3-background.png'
+    // },
+
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'P_40_50_2_1-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/P_40_50_2_1-background.png'
+    // },
+
+    // {
+    //     type: GameElementsString.IMAGE_STRING,
+    //     key: 'P_40_50_2_2-background',
+    //     path: '../../assets/game-assets/boot-load-assets/icons-assets/P_40_50_2_2-background.png'
+    // },
+
+
      /*************************** CARDS *******************************/
      {
         type: GameElementsString.IMAGE_STRING,

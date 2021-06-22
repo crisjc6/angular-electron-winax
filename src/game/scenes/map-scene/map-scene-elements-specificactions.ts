@@ -37,7 +37,7 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
         content: 'CUENCA DEL\nRÍO SAN PEDRO - CHISINCHE',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
-            color: ColorsString.RED_HEXADECIMAL_STRING,
+            color: ColorsString.DARK_BLUE_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
             // strokeThickness: textFontSize.Medium.strokeThickness,
@@ -122,4 +122,264 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
             objectPositionY: 580,
         }
     },
+    /**********************************************************************/
+    //////////////////////////////////////////// 20-30-1 ////////////////
+    {
+        type: 'image',
+        element: 'icon',
+        assetName: 'agua-riego-icon-background',
+        name: 'P_20_30_1_1-background',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 65,
+            objectHeight: 40,
+            objectPositionX: 532,
+            objectPositionY: 402,
+        }
+    },
+    {
+        type: 'image',
+        element: 'icon',
+        assetName: 'agricola-icon-background',
+        name: 'P_20_30_1_2-background',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 43,
+            objectHeight: 35,
+            objectPositionX: 575,
+            objectPositionY: 307,
+        }
+    },
+    //////////////////////////////////////// 20-30-2 ////////////////////
+    {
+        type: 'image',
+        element: 'icon',
+        assetName: 'bosque-icon-background',
+        name: 'P_20_30_2_2-background',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 65,
+            objectHeight: 50,
+            objectPositionX: 226,
+            objectPositionY: 330,
+        }
+    },
+    {
+        type: 'image',
+        element: 'icon',
+        assetName: 'acus-icon-background',
+        name: 'P_20_30_2_3-background',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 52,
+            objectHeight: 52,
+            objectPositionX: 145,
+            objectPositionY: 445,
+        }
+    },
+    ///////////////////////////////// 30-40-1 ///////////////////////////
+    {
+        type: 'image',
+        element: 'icon',
+        assetName: 'acus-icon-background',
+        name: 'P_30_40_1_2-background',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 52,
+            objectHeight: 52,
+            objectPositionX: 537,
+            objectPositionY: 345,
+        }
+    },
+    {
+        type: 'image',
+        element: 'icon',
+        assetName: 'fabrica-icon-background',
+        name: 'P_30_40_1_3-background',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 52,
+            objectHeight: 52,
+            objectPositionX: 435,
+            objectPositionY: 454,
+        }
+    },
+    ///////////////////////////////// 30-40-2 ///////////////////////////
+    {
+        type: 'image',
+        element: 'icon',
+        assetName: 'acus-icon-background',
+        name: 'P_30_40_2_1-background',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 52,
+            objectHeight: 52,
+            objectPositionX: 120,
+            objectPositionY: 460,
+        }
+    },
+    {
+        type: 'image',
+        element: 'icon',
+        assetName: 'acus-icon-background',
+        name: 'P_30_40_2_3-background',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 52,
+            objectHeight: 52,
+            objectPositionX: 609,
+            objectPositionY: 369,
+        }
+    },
+    /////////////////////////////// 40-50-1 /////////////////////////////
+    {
+        type: 'image',
+        element: 'icon',
+        assetName: 'fabrica-icon-background',
+        name: 'P_40_50_1_1-background',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 52,
+            objectHeight: 52,
+            objectPositionX: 221,
+            objectPositionY: 416,
+        }
+    },
+    {
+        type: 'image',
+        element: 'icon',
+        assetName: 'agricola-icon-background',
+        name: 'P_40_50_1_3-background',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 43,
+            objectHeight: 35,
+            objectPositionX: 483,
+            objectPositionY: 373,
+        }
+    },
+    //////////////////////////////// 40-50-2 ////////////////////////////
+    {
+        type: 'image',
+        element: 'icon',
+        assetName: 'agua-riego-icon-background',
+        name: 'P_40_50_2_1-background',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 65,
+            objectHeight: 40,
+            objectPositionX: 437,
+            objectPositionY: 404,
+        }
+    },
+    {
+        type: 'image',
+        element: 'icon',
+        assetName: 'acus-icon-background',
+        name: 'P_40_50_2_2-background',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 52,
+            objectHeight: 52,
+            objectPositionX: 665,
+            objectPositionY: 341,
+        }
+    },
+
 ]

@@ -8,9 +8,11 @@ import { loadFonts } from "../../functions/font-styles/font-styles-functions";
 import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
 import { gameMapAssets } from "../../settings/game-map-assets";
 import { gameRouterLink, GameSpecifications, gameStatus } from "../../settings/game-system-specifications";
-import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
+import { DecisionOptionsString, GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
 import { gameData } from "../../settings/game-data/game-data";
+import { GameObjectIconsMap, _gameObjectIconsMap } from "../../settings/game-decisions-data";
+
 
 export class MapScene extends Phaser.Scene {
 
@@ -20,15 +22,17 @@ export class MapScene extends Phaser.Scene {
     private homeButton: ButtonComponent;
     private totalScore: Phaser.GameObjects.Text;
 
+    // private mapsIcons: Array<GameObjectIconsMap>;
+    
+    
     // private scoreButton: ButtonComponent;
     // private soundButton: ButtonComponent;
     // private infoButton: ButtonComponent;
     // private helpButton: ButtonComponent;
     private sceneData: SceneDataInterface;
 
-    init(data) {
+    init() {
         gameStatus.status = 'mapScene';
-        // this.updateSceneScore();
     }
 
     constructor() {
@@ -76,18 +80,19 @@ export class MapScene extends Phaser.Scene {
         this.homeButton = this.gameObjects.get(
             GameSceneElementsString.SCENE_HOME_BUTTON,
         ).gameObject;
+
         // this.soundButton = this.gameObjects.get(
         //     SceneGameElementsString.SCENE_SOUND_BUTTON,
         // ).gameObject;
+        this.hideMapIcons();
+    }   
 
-        // this.infoButton = this.gameObjects.get(
-        //     SceneGameElementsString.SCENE_INFO_BUTTON,
-        // ).gameObject;
-
-        // this.helpButton = this.gameObjects.get(
-        //     SceneGameElementsString.SCENE_HELP_BUTTON,
-        // ).gameObject;
-
+    private hideMapIcons() {
+        for (let iconId in _gameObjectIconsMap) {
+            this.gameObjects.get(
+                _gameObjectIconsMap[iconId].gameObjectName
+            ).gameObject.setVisible(false);
+        }
     }
 
     private addFunctionality() {
@@ -96,8 +101,9 @@ export class MapScene extends Phaser.Scene {
             'wake',
             () => {
                 GameSpecifications.gameOver = !(GameSpecifications.decisionPeriodIds.length > 0);
-                console.log(GameSpecifications.gameOver);
+                // console.log(GameSpecifications.gameOver);
                 this.updateSceneScore();
+                this.showIconDecision();
             }
         );
 
@@ -122,8 +128,8 @@ export class MapScene extends Phaser.Scene {
                     const gameData: SceneDataInterface = {
                         returnSceneName: this.scene.key
                     }
-                    this.scene.launch(GameSceneIdsStrings.END_SCENE_ID, gameData);
-                    // this.scene.launch(GameSceneIdsStrings.DECISION_MAKING_SCENE_ID, gameData);
+                    // this.scene.launch(GameSceneIdsStrings.END_SCENE_ID, gameData);
+                    this.scene.launch(GameSceneIdsStrings.DECISION_MAKING_SCENE_ID, gameData);
                 }
 
             }
@@ -136,28 +142,6 @@ export class MapScene extends Phaser.Scene {
                 gameRouterLink.routerLink.navigate(['/']);
             }
         );
-
-        // addPointerOverOnInteractiveObject(this.infoButton);
-        // this.infoButton.setInteractive().on(
-        //     EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-        //         this.scene.pause();
-        //         const gameData: SceneDataInterface = {
-        //             returnSceneName: this.scene.key
-        //         }
-        //         this.scene.launch(GameSceneIdsStrings.INFO_SCENE_ID, gameData);
-        //     }
-        // );
-
-        // addPointerOverOnInteractiveObject(this.infoButton);
-        // this.helpButton.setInteractive().on(
-        //     EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-        //         this.scene.pause();
-        //         const gameData: SceneDataInterface = {
-        //             returnSceneName: this.scene.key
-        //         }
-        //         this.scene.launch(GameSceneIdsStrings.HELP_SCENE_ID, gameData);
-        //     }
-        // );
 
         // addSettingsButtonFunctionality(this, this.settingsButton);
         // this.soundButton.setInteractive().on(
@@ -194,6 +178,22 @@ export class MapScene extends Phaser.Scene {
             );
         }
       }
+    }
+
+    private showIconDecision() {
+        if (GameSpecifications.currentDecisionsPeriod != null) {
+            for (let decisionId in GameSpecifications.gameDecisionsData[GameSpecifications.currentDecisionsPeriod.id].decisions) {
+                for (let decisionOptionId in GameSpecifications.gameDecisionsData[GameSpecifications.currentDecisionsPeriod.id].decisions[decisionId].decision_options) {
+                    const decisionOptionWasSelected = GameSpecifications.gameDecisionsData[GameSpecifications.currentDecisionsPeriod.id].decisions[decisionId].decision_options[decisionOptionId].decision_option_was_selected;
+                    if (decisionOptionWasSelected && decisionOptionId in _gameObjectIconsMap) {
+                        // this.mapsIcons[decisionOptionId].gameObject.setVisible(true);
+                        this.gameObjects.get( 
+                            _gameObjectIconsMap[decisionOptionId].gameObjectName
+                        ).gameObject.setVisible(true);
+                    }
+                }
+              }
+        }
     }
 
 }

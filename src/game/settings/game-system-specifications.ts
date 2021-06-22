@@ -16,7 +16,7 @@ export const GameSpecifications:{
     canvasWidth: number;
     canvasHeight: number;
 } = {
-    name: 'DARCH',
+    name: 'GIRHA',
     continueGame: false,
     gameDecisionsData: null,
     currentPeriodIndex: 0,
