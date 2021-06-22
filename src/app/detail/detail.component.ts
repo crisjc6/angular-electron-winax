@@ -6,6 +6,7 @@ import {ChartComponent,
   ApexTitleSubtitle,
   ApexResponsive,
   ApexYAxis,
+  ApexTooltip,
   ApexDataLabels,
   ApexAnnotations
 } from "ng-apexcharts";
@@ -32,6 +33,8 @@ export type ChartOptions = {
   title?: ApexTitleSubtitle;
   dataLabels?: ApexDataLabels;
   anotations?: ApexAnnotations;
+  tooltip?: ApexTooltip;
+
 
 };
 @Component({
@@ -683,7 +686,18 @@ export class DetailComponent implements OnInit {
         ]
       },
       xaxis: {
-        categories: _dataSet.years,
+        type: "datetime",
+        categories: _dataSet.years.map(
+          (valor) => {
+            return valor.toString();
+          }
+        ),
+        tickAmount: 7
+      },
+      tooltip: {
+        x: {
+          format: "yyyy"
+        }
       },
       yaxis: {
         title: {
