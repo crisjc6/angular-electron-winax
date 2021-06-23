@@ -81,7 +81,6 @@ export class MapScene extends Phaser.Scene {
         this.homeButton = this.gameObjects.get(
             GameSceneElementsString.SCENE_HOME_BUTTON,
         ).gameObject;
-
         // this.soundButton = this.gameObjects.get(
         //     SceneGameElementsString.SCENE_SOUND_BUTTON,
         // ).gameObject;
@@ -90,6 +89,9 @@ export class MapScene extends Phaser.Scene {
 
     private hideMapIcons() {
         for (let iconId in _gameObjectIconsMap) {
+            this.gameObjects.get(
+                _gameObjectIconsMap[iconId].gameObjectName
+            ).gameObject.disableInteractive();
             this.gameObjects.get(
                 _gameObjectIconsMap[iconId].gameObjectName
             ).gameObject.setVisible(false);
@@ -193,7 +195,7 @@ export class MapScene extends Phaser.Scene {
                         ).gameObject.setVisible(true);
                     }
                 }
-              }
+            }
         }
     }
 
