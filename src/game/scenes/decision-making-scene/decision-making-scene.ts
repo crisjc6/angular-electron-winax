@@ -189,30 +189,13 @@ export class DecisionMakingScene extends Phaser.Scene {
             ].decision_option_was_selected = false;
         }
         
-            GameSpecifications.gameDecisionsData[
-                GameSpecifications.currentDecisionsPeriod.id
-            ].decisions[
-                GameSpecifications.currentDecisionId
-            ].decision_options[
-                selectedOtionId
-            ].decision_option_was_selected = true;
-
-        // for(let optionId in decisionOptions) {
-        //     GameSpecifications.currentDecisionsPeriod
-        //         .decisions[
-        //             GameSpecifications.currentDecisionId
-        //         ].decision_options[
-        //             optionId
-        //         ].decision_option_was_selected = false;
-        // }
-        
-        // GameSpecifications.currentDecisionsPeriod
-        //     .decisions[
-        //         GameSpecifications.currentDecisionId
-        //     ].decision_options[
-        //         selectedOtionId
-        //     ].decision_option_was_selected = true;
-            // console.log(GameSpecifications.currentDecisionsPeriod);
+        GameSpecifications.gameDecisionsData[
+            GameSpecifications.currentDecisionsPeriod.id
+        ].decisions[
+            GameSpecifications.currentDecisionId
+        ].decision_options[
+            selectedOtionId
+        ].decision_option_was_selected = true;
     }
 
     private selectedDecision(decisionOption: DecisionBoxComponent){
@@ -229,7 +212,8 @@ export class DecisionMakingScene extends Phaser.Scene {
 
     private updateSceneDataDecision() {
         this.getDecision();
-        this.decisiontitle.setText('DECISIÓN N° ' + this.decisionNumber);
+        const currentPeriod = GameSpecifications.currentDecisionsPeriod;
+        this.decisiontitle.setText('PERIODO ' + currentPeriod.year_start + ' - ' + currentPeriod.year_end +' DECISIÓN N° ' + this.decisionNumber );
         this.decisionText.setText(this.currentDecision.decision_text);
         
         const decisionOptions: DecisionOptionInterface[] = JSON.parse(JSON.stringify(this.currentDecision.decision_options));

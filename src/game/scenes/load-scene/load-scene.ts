@@ -66,21 +66,6 @@ export class LoadScene extends Phaser.Scene {
       }
     }
 
-    // for(let decisionId in GameSpecifications.currentDecisionsPeriod.decisions) {
-    //   for(let decisionOptionId in GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options) {
-    //     const decisionOptionWasSelected = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_was_selected;
-    //     const decisionOptionWeapVariable = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_weap_variable;
-    //     const decisionOptionValue = GameSpecifications.currentDecisionsPeriod.decisions[decisionId].decision_options[decisionOptionId].decision_option_value;
-
-    //     if (decisionOptionWasSelected) {
-    //       weapApi.BranchVariable(decisionOptionWeapVariable).Expression = decisionOptionValue;
-    //     } else {
-    //       weapApi.BranchVariable(decisionOptionWeapVariable).Expression = 0;
-    //     }
-
-    //   }
-    // }
-    // generateCsv(WEAP);
     getDataWeap(weapApi);
     
     servicioGraficaAC.serviceArea.habilitarActualizacion();

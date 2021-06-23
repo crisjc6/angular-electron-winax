@@ -37,7 +37,7 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
         content: 'CUENCA DEL\nRÍO SAN PEDRO - CHISINCHE',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
-            color: ColorsString.RED_HEXADECIMAL_STRING,
+            color: ColorsString.DARK_BLUE_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
             // strokeThickness: textFontSize.Medium.strokeThickness,
@@ -122,4 +122,341 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
             objectPositionY: 580,
         }
     },
+    /**********************************************************************/
+    //     type: 'button',
+    //     element: 'bottom-title-button',
+    //     assetName: 'home-icon-background',
+    //     content: 'INICIO',
+    //     name: 'home-button',
+    //     style: {
+    //         fontFamily: GameFontStylesString.BASE_FONT,
+    //         color: ColorsString.BLACK_HEXADECIMAL_STRING,
+    //         align: AlingString.CENTER_STRING,
+    //         stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+    //         strokeThickness: textFontSize.VerySmall.strokeThickness,
+    //         fontSize: textFontSize.VerySmall.fontSize,
+    //     },
+    //////////////////////////////////////////// 20-30-1 ////////////////
+    {
+        type: 'button',
+        element: 'bottom-title-button',
+        assetName: 'agua-riego-icon-background',
+        name: 'P_20_30_1_1-background',
+        content: 'R. Aloasi',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: 2,
+            fontSize: '10px'
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 60,
+            objectHeight: 40,
+            objectPositionX: 520,
+            objectPositionY: 410,
+        }
+    },
+    {
+        type: 'button',
+        element: 'bottom-title-button',
+        assetName: 'agricola-icon-background',
+        name: 'P_20_30_1_2-background',
+        content: 'A. Ilinizas',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: 2,
+            fontSize: '9px'
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 49,
+            objectHeight: 41,
+            objectPositionX: 578,
+            objectPositionY: 306,
+        }
+    },
+    //////////////////////////////////////// 20-30-2 ////////////////////
+    {
+        type: 'button',
+        element: 'bottom-title-button',
+        assetName: 'bosque-icon-background',
+        name: 'P_20_30_2_2-background',
+        content: 'B. Comercial',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: 2,
+            fontSize: '10px'
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 65,
+            objectHeight: 53,
+            objectPositionX: 225,
+            objectPositionY: 335,
+        }
+    },
+    {
+        type: 'button',
+        element: 'bottom-title-button',
+        assetName: 'acus-icon-background',
+        name: 'P_20_30_2_3-background',
+        content: 'Restauración',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: 2,
+            fontSize: '10px'
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 44,
+            objectHeight: 44,
+            objectPositionX: 175,
+            objectPositionY: 447,
+        }
+    },
+    ///////////////////////////////// 30-40-1 ///////////////////////////
+    {
+        type: 'button',
+        element: 'bottom-title-button',
+        assetName: 'acus-icon-background',
+        name: 'P_30_40_1_2-background',
+        content: 'Silvopastura',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: 2,
+            fontSize: '10px'
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 40,
+            objectHeight: 44,
+            objectPositionX: 535,
+            objectPositionY: 345,
+        }
+    },
+    {
+        type: 'button',
+        element: 'bottom-title-button',
+        assetName: 'fabrica-icon-background',
+        name: 'P_30_40_1_3-background',
+        content: 'F. Leche',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: 2,
+            fontSize: '10px'
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 48,
+            objectHeight: 50,
+            objectPositionX: 432,
+            objectPositionY: 465,
+        }
+    },
+    ///////////////////////////////// 30-40-2 ///////////////////////////
+    {
+        type: 'button',
+        element: 'bottom-title-button',
+        assetName: 'acus-icon-background',
+        name: 'P_30_40_2_1-background',
+        content: 'Área Protegida',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: 2,
+            fontSize: '10px'
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 48,
+            objectHeight: 60,
+            objectPositionX: 120,
+            objectPositionY: 460,
+        }
+    },
+    {
+        type: 'button',
+        element: 'bottom-title-button',
+        // assetName: 'acus-icon-background',
+        assetName: 'bosque-icon-background',
+        name: 'P_30_40_2_3-background',
+        content: 'Bosque Protector',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: 2,
+            fontSize: '10px'
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 56,
+            objectHeight: 66,
+            objectPositionX: 590,
+            objectPositionY: 390,
+        }
+    },
+    /////////////////////////////// 40-50-1 /////////////////////////////
+    {
+        type: 'button',
+        element: 'bottom-title-button',
+        assetName: 'fabrica-icon-background',
+        name: 'P_40_50_1_1-background',
+        content: 'F. Papa',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: 2,
+            fontSize: '10px'
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 48,
+            objectHeight: 48,
+            objectPositionX: 233,
+            objectPositionY: 425,
+        }
+    },
+    {
+        type: 'button',
+        element: 'bottom-title-button',
+        assetName: 'agricola-icon-background',
+        name: 'P_40_50_1_3-background',
+        content: 'Uvilla',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: 2,
+            fontSize: '10px'
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 43,
+            objectHeight: 40,
+            objectPositionX: 480,
+            objectPositionY: 378,
+        }
+    },
+    //////////////////////////////// 40-50-2 ////////////////////////////
+    {
+        type: 'button',
+        element: 'bottom-title-button',
+        assetName: 'agua-riego-icon-background',
+        name: 'P_40_50_2_1-background',
+        content: 'Aspersión',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: 2,
+            fontSize: '10px'
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 64,
+            objectHeight: 38,
+            objectPositionX: 433,
+            objectPositionY: 410,
+        }
+    },
+    {
+        type: 'button',
+        element: 'bottom-title-button',
+        assetName: 'acus-icon-background',
+        name: 'P_40_50_2_2-background',
+        content: 'Conservación',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: 2,
+            fontSize: '10px'
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 45,
+            objectHeight: 48,
+            objectPositionX: 652,
+            objectPositionY: 365,
+        }
+    },
+    {
+        type: 'button',
+        element: 'simple-button',
+        assetName: 'view-more-button-background',
+        name: 'view-icons-table',
+        content: 'VER TABLA\n DE ÍCONOS',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.DARK_BLUE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '11px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 86,
+            objectHeight: 40,
+            objectPositionX: 60,
+            objectPositionY: 323,
+        },
+    },
+    {
+        type: 'image',
+        element: 'background',
+        assetName: 'icons-table-background',
+        name: 'icons-table',
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 200,
+            objectHeight: 255,
+            objectPositionX: 108,
+            objectPositionY: 323,
+        },
+        originX: 0,
+        originY: 0.5
+    }
+
 ]
+
+//view-more-button-background

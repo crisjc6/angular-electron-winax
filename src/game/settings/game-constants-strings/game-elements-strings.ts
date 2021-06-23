@@ -37,7 +37,9 @@ export const enum GameSceneElementsString {
     SCENE_TOTAL_SCORE = 'total-score',
     SCENE_PROGRESS_TEXT = 'progress-text',
     SCENE_QUIT_BUTTON = 'quit-button',
-    SCENE_TITLE_TEXT = 'scene-title'
+    SCENE_TITLE_TEXT = 'scene-title',
+    SCENE_VIEW_ICONS_TABLE = 'view-icons-table',
+    SCENE_ICONS_TABLE = 'icons-table'
 }
 
 export const enum DecisionSceneElementsString {
@@ -89,6 +91,29 @@ export const enum IconsKeyStrings {
     OFF_SOUND_ICON = 'off-sound-icon-background',
     CHECK_ICON = 'check-icon-background',
     BLANK_CHECK_ICON = 'blank-check-icon-background',
+}
+
+export const enum DecisionOptionsString {
+    P_20_30_1_1 = 'P_20_30_1_1',
+    P_20_30_1_2 = 'P_20_30_1_2',
+    P_20_30_1_3 = 'P_20_30_1_3',
+    P_20_30_2_1 = 'P_20_30_2_1',
+    P_20_30_2_2 = 'P_20_30_2_2',
+    P_20_30_2_3 = 'P_20_30_2_3',
+
+    P_30_40_1_1 = 'P_30_40_1_1',
+    P_30_40_1_2 = 'P_30_40_1_2',
+    P_30_40_1_3 = 'P_30_40_1_3',
+    P_30_40_2_1 = 'P_30_40_2_1',
+    P_30_40_2_2 = 'P_30_40_2_2',
+    P_30_40_2_3 = 'P_30_40_2_3',
+
+    P_40_50_1_1 = 'P_40_50_1_1',
+    P_40_50_1_2 = 'P_40_50_1_2',
+    P_40_50_1_3 = 'P_40_50_1_3',
+    P_40_50_2_1 = 'P_40_50_2_1',
+    P_40_50_2_2 = 'P_40_50_2_2',
+    P_40_50_2_3 = 'P_40_50_2_3',
 }
 
 

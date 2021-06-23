@@ -109,7 +109,7 @@ export class EndScene extends Phaser.Scene {
           TypeResultsElementsString.RIVER_HEALTH_30_40_TEXT
       ).gameObject;
 
-      this.riverHealth_30_40_text = this.sceneGameObjects.get(
+      this.riverHealth_40_50_text = this.sceneGameObjects.get(
           TypeResultsElementsString.RIVER_HEALTH_40_50_TEXT
       ).gameObject;
 
@@ -127,7 +127,7 @@ export class EndScene extends Phaser.Scene {
     }
 
     private updateDataScene() {
-        this.totalScoreText.setText('PUNTAJE TOTAL: ' + gameData.gameScores.totalScore);
+        this.totalScoreText.setText('PUNTAJE TOTAL: ' + gameData.gameScores.totalScore + '/120');
         
         this.acus_20_30_text.setText(gameData.gameScores.conservationAreaScores.periodScores[0].score);
         
@@ -151,6 +151,6 @@ export class EndScene extends Phaser.Scene {
         
         this.riverHealth_30_40_text.setText(gameData.gameScores.helpcareRiverScores.periodScores[1].score);
 
-        this.riverHealth_30_40_text.setText(gameData.gameScores.helpcareRiverScores.periodScores[2].score);
+        this.riverHealth_40_50_text.setText(gameData.gameScores.helpcareRiverScores.periodScores[2].score);
     }
 }

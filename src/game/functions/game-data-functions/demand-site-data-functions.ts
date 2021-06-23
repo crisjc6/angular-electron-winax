@@ -139,21 +139,7 @@ export function calculateDemandSiteScore(_periodId: string) {
 
     gameData.gameScores.demandSiteScores.periodScores.forEach(
       (peridoSore) => {
-        // peridoSore.score = 0;
         if (peridoSore.periodId === _periodId) {
-          // /**************AÑADIR LOGICA PARA CALCULAR SCORE****************/
-            // console.log(
-            //   'c1: ' + gameData.indicatorsPeriodData.demandSitePeriodData.riegoC1[_periodId].period_percent + 
-            //   '\nc2: ' + gameData.indicatorsPeriodData.demandSitePeriodData.riegoC2[_periodId].period_percent + 
-            //   '\nc3: ' + gameData.indicatorsPeriodData.demandSitePeriodData.riegoC3[_periodId].period_percent + 
-            //   '\nc4: ' + gameData.indicatorsPeriodData.demandSitePeriodData.riegoC4[_periodId].period_percent + 
-            //   '\nc5: ' + gameData.indicatorsPeriodData.demandSitePeriodData.riegoC5[_periodId].period_percent + 
-            //   '\nc6: ' + gameData.indicatorsPeriodData.demandSitePeriodData.riegoC6[_periodId].period_percent + 
-            //   '\nc7: ' + gameData.indicatorsPeriodData.demandSitePeriodData.riegoC7[_periodId].period_percent + 
-            //   '\nc8: ' + gameData.indicatorsPeriodData.demandSitePeriodData.riegoC8[_periodId].period_percent +
-            //   '\nnumberIndicators: ' + numberIndicators
-            // );
-
             demandSitePeriodScore += gameData.indicatorsPeriodData.demandSitePeriodData.riegoC1[_periodId].period_percent + 
                                     gameData.indicatorsPeriodData.demandSitePeriodData.riegoC2[_periodId].period_percent + 
                                     gameData.indicatorsPeriodData.demandSitePeriodData.riegoC3[_periodId].period_percent + 
@@ -163,8 +149,7 @@ export function calculateDemandSiteScore(_periodId: string) {
                                     gameData.indicatorsPeriodData.demandSitePeriodData.riegoC7[_periodId].period_percent + 
                                     gameData.indicatorsPeriodData.demandSitePeriodData.riegoC8[_periodId].period_percent;
             
-          // console.log('\n demandSiteTotalScore: ' + demandSitePeriodScore); 
-            peridoSore.score = (demandSitePeriodScore / numberIndicators) / 10;
+            peridoSore.score = +(((demandSitePeriodScore / numberIndicators) / 10).toFixed(2));
         }
         demandSiteTotalScore += peridoSore.score;
       }
@@ -179,5 +164,5 @@ export function calculateDemandSiteScore(_periodId: string) {
       ).toFixed(2);
       
     gameData.playerData.score = gameData.gameScores.totalScore;
-  }
+}
   

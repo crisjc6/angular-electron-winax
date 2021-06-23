@@ -109,7 +109,7 @@ export const _progressBarSpecifications: GameElementSpecificationsInterface = {
         objectWidth: 1150,
         objectHeight: 50,
         objectPositionX: 683,
-        objectPositionY: 590,
+        objectPositionY: 580,
     }
 };
 

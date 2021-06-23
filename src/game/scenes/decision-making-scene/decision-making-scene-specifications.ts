@@ -1,5 +1,5 @@
 import { GameElementSpecificationsInterface } from "../../interfaces/game-element-specifications-interface";
-import { AlingString, ColorsString, GameFontStylesString, textFontSize } from "../../settings/game-constants-strings/text-styles-string";
+import { AlingString, ColorsString, ColorsValue, GameFontStylesString, textFontSize } from "../../settings/game-constants-strings/text-styles-string";
 
 export const decisionMakingSceneElementsSpecifications: GameElementSpecificationsInterface[] = [
     {
@@ -19,13 +19,13 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
     {
         type: 'image',
         element: 'background',
-        assetName: 'panel-card-background',
+        assetName: 'panel-card-2-background',
         name: 'panel-backgroud',
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
             // objectWidth: 1066,
-            objectWidth: 750,
+            objectWidth: 770,
             objectHeight: 560,
             objectPositionX: 405,
             objectPositionY: 315,
@@ -52,7 +52,7 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectHeight: 75,
             objectPositionX: 762,
             // objectPositionY: 90,
-            objectPositionY: 60,
+            objectPositionY: 70,
         },
     },
     {
@@ -62,9 +62,9 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
         content: 'DECISIÓN N° 1',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
-            color: ColorsString.RED_HEXADECIMAL_STRING,
+            color: ColorsString.LIGHT_GREEN_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
-            fontSize: textFontSize.Medium.fontSize,
+            fontSize: '25px',
         },
         scale: {
             objectWidthRatio: 1,
@@ -74,7 +74,7 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectPositionX: 405,
             // objectPositionY: 154,
             // objectPositionY: 120,
-            objectPositionY: 90,
+            objectPositionY: 89,
         },
     },
     {
@@ -83,10 +83,12 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
         name: 'decision-text',
         content: 'Por el rápido aumento de la población del Ecuador, el cantón Mejía al ser eminentemente agrícola-ganadero y para aumentar su economía planea incrementar su producción agrícola por lo que se podrían ejecutar las siguientes acciones:',
         style: {
-            fontFamily: GameFontStylesString.BASE_FONT,
-            color: ColorsString.DARK_PURPLE_HEXADECIMAL_STRING,
+            fontFamily: GameFontStylesString.SMALL_FONT,
+            color: ColorsString.RED_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             fontSize: textFontSize.VerySmall.fontSize,
+            strokeThickness: 1,
+            stroke: ColorsString.RED_HEXADECIMAL_STRING
         },
         scale: {
             objectWidthRatio: 1,
@@ -96,7 +98,7 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectPositionX: 405,
             // objectPositionY: 241,
             // objectPositionY: 210,
-            objectPositionY: 180,
+            objectPositionY: 174,
         },
     },
     {
@@ -106,17 +108,17 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
         content: 'Aumentar 200 Ha con cobertura de regadío en la parroquia de Aloasí.',
         style: {
             fontFamily: GameFontStylesString.SMALL_FONT,
-            color: ColorsString.GREEN_HEXADECIMAL_STRING,
+            color: ColorsString.BLUE_HEXADECIMAL_STRING,
             align: AlingString.JUSTIFY_STRING,
             fontSize: textFontSize.LitleVerySmall.fontSize
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 600,
+            objectWidth: 650,
             objectHeight: 70,
             objectPositionX: 405,
-            objectPositionY: 290,
+            objectPositionY: 285,
             // objectPositionY: 729,
         }
     },
@@ -127,17 +129,17 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
         content: 'Expandir el área agrícola hasta la cota de los 3800 msnm en el cerro el Corazón e Ilinizas para aumentar la producción de papas.',
         style: {
             fontFamily: GameFontStylesString.SMALL_FONT,
-            color: ColorsString.GREEN_HEXADECIMAL_STRING,
+            color: ColorsString.BLUE_HEXADECIMAL_STRING,
             align: AlingString.JUSTIFY_STRING,
             fontSize: textFontSize.LitleVerySmall.fontSize
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 600,
+            objectWidth: 650,
             objectHeight: 70,
             objectPositionX: 405,
-            objectPositionY: 370,
+            objectPositionY: 376,
             // objectPositionY: 729,
         }
     },
@@ -148,17 +150,17 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
         content: 'Invertir en la repotenciación del parque del Agua como un atractivo turístico en la época de verano.',
         style: {
             fontFamily: GameFontStylesString.SMALL_FONT,
-            color: ColorsString.GREEN_HEXADECIMAL_STRING,
+            color: ColorsString.BLUE_HEXADECIMAL_STRING,
             align: AlingString.JUSTIFY_STRING,
             fontSize: textFontSize.LitleVerySmall.fontSize
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 600,
+            objectWidth: 650,
             objectHeight: 70,
             objectPositionX: 405,
-            objectPositionY: 455,
+            objectPositionY: 461,
             // objectPositionY: 729,
         }
     },
@@ -180,7 +182,7 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectWidth: 200,
             objectHeight: 60,
             objectPositionX: 550,
-            objectPositionY: 540,
+            objectPositionY: 543,
             // objectPositionY: 729,
         }
     },
@@ -202,7 +204,7 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectWidth: 200,
             objectHeight: 60,
             objectPositionX: 250,
-            objectPositionY: 540,
+            objectPositionY: 543,
             // objectPositionY: 729,
         }
     }

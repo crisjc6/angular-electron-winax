@@ -2269,66 +2269,66 @@ export const _idealFlowPeriodData = {
         year_id: 2020,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -2337,66 +2337,66 @@ export const _idealFlowPeriodData = {
         year_id: 2021,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -2405,66 +2405,66 @@ export const _idealFlowPeriodData = {
         year_id: 2022,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -2473,66 +2473,66 @@ export const _idealFlowPeriodData = {
         year_id: 2023,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -2540,67 +2540,66 @@ export const _idealFlowPeriodData = {
       2024 : {
         year_id: 2024,
         month_start: 1,
-        month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -2609,66 +2608,66 @@ export const _idealFlowPeriodData = {
         year_id: 2025,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -2677,66 +2676,66 @@ export const _idealFlowPeriodData = {
         year_id: 2026,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -2745,66 +2744,66 @@ export const _idealFlowPeriodData = {
         year_id: 2027,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -2813,66 +2812,66 @@ export const _idealFlowPeriodData = {
         year_id: 2028,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -2881,66 +2880,66 @@ export const _idealFlowPeriodData = {
         year_id: 2029,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -2949,69 +2948,69 @@ export const _idealFlowPeriodData = {
         year_id: 2300,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
-        } 
+        }
       }
     }
   },
@@ -3026,66 +3025,66 @@ export const _idealFlowPeriodData = {
         year_id: 2031,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3094,66 +3093,66 @@ export const _idealFlowPeriodData = {
         year_id: 2032,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3162,66 +3161,66 @@ export const _idealFlowPeriodData = {
         year_id: 2033,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3230,66 +3229,66 @@ export const _idealFlowPeriodData = {
         year_id: 2034,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3298,66 +3297,66 @@ export const _idealFlowPeriodData = {
         year_id: 2035,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3366,66 +3365,66 @@ export const _idealFlowPeriodData = {
         year_id: 2036,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3434,66 +3433,66 @@ export const _idealFlowPeriodData = {
         year_id: 2037,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3502,66 +3501,66 @@ export const _idealFlowPeriodData = {
         year_id: 238,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3570,66 +3569,66 @@ export const _idealFlowPeriodData = {
         year_id: 2039,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3638,66 +3637,66 @@ export const _idealFlowPeriodData = {
         year_id: 2040,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3715,66 +3714,66 @@ export const _idealFlowPeriodData = {
         year_id: 2041,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3783,66 +3782,66 @@ export const _idealFlowPeriodData = {
         year_id: 2042,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3851,66 +3850,66 @@ export const _idealFlowPeriodData = {
         year_id: 2043,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3919,66 +3918,66 @@ export const _idealFlowPeriodData = {
         year_id: 2044,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -3987,66 +3986,66 @@ export const _idealFlowPeriodData = {
         year_id: 2045,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -4055,66 +4054,66 @@ export const _idealFlowPeriodData = {
         year_id: 2046,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -4123,66 +4122,66 @@ export const _idealFlowPeriodData = {
         year_id: 2047,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -4191,66 +4190,66 @@ export const _idealFlowPeriodData = {
         year_id: 2048,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -4259,66 +4258,66 @@ export const _idealFlowPeriodData = {
         year_id: 2049,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -4327,66 +4326,66 @@ export const _idealFlowPeriodData = {
         year_id: 2050,
         month_start: 1,
         month_end: 12,
-        year_value: 1.86166667, // = 13.034 / 12
+        year_value: 1.715, // = 20.581 / 12
         months : {
           1 : {
             id_month : 1,
-            value_month : 0.781,
+            value_month : 1.766,
             percent_month : 0
           },
           2 : {
             id_month : 2,
-            value_month : 1.117,
+            value_month : 2.136,
             percent_month : 0
           },
           3 : {
             id_month : 3,
-            value_month : 0.905,
+            value_month : 2.015,
             percent_month : 0
           },
           4 : {
             id_month : 4,
-            value_month : 1.692,
+            value_month : 2.538,
             percent_month : 0
           },
           5 : {
             id_month : 5,
-            value_month : 1.637,
+            value_month : 2.456,
             percent_month : 0
           },
           6 : {
             id_month : 6,
-            value_month : 1.663,
+            value_month : 1.667,
             percent_month : 0
           },
           7 : {
             id_month : 7,
-            value_month : 0.898,
+            value_month : 1.346,
             percent_month : 0
           },
           8 : {
             id_month : 8,
-            value_month : 0.869,
+            value_month : 1.303,
             percent_month : 0
           },
           9 : {
             id_month : 9,
-            value_month : 0.819,
+            value_month : 1.373,
             percent_month : 0
           },
           10 : {
             id_month : 10,
-            value_month : 0.855,
+            value_month : 1.282,
             percent_month : 0
           },
           11 : {
             id_month : 11,
-            value_month : 1.010,
+            value_month : 1.516,
             percent_month : 0
           },
           12 : {
             id_month : 12,
-            value_month : 0.788,
+            value_month : 1.182,
             percent_month : 0
           }
         }
@@ -4394,3 +4393,4 @@ export const _idealFlowPeriodData = {
     }
   }
 }
+

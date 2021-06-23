@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.gameStatus = exports.servicioGraficaAC = exports.gameRouterLink = exports.GameSpecifications = void 0;
 exports.GameSpecifications = {
-    name: 'DARCH',
+    name: 'GIRHA',
     continueGame: false,
     gameDecisionsData: null,
     currentPeriodIndex: 0,

@@ -14,7 +14,7 @@ export const GameDecisionsData = {
         decisions:{
             'P_20_30_1' : {
                 decision_id : 'P_20_30_1',
-                decision_text : 'Por el rápido aumento de la población del Ecuador, el cantón Mejía al ser eminentemente agrícola_ganadero y para aumentar su economía planea incrementar su producción agrícola por lo que se podrían ejecutar las siguientes acciones:',
+                decision_text : 'Por el rápido aumento de la población del Ecuador, el cantón Mejía al ser eminentemente agrícola-ganadero y para aumentar su economía planea incrementar su producción agrícola por lo que se podrían ejecutar las siguientes acciones:',
                 decision_asset : '',
                 decision_options : {
                     'P_20_30_1_1' : {
@@ -28,7 +28,7 @@ export const GameDecisionsData = {
                     },
                     'P_20_30_1_2' : {
                         decision_option_id : 'P_20_30_1_2',
-                        decision_option_text : 'Expandir el área agrícola hasta la cota de los 3800 msnm en el cerro el Corazón e Ilinizas para aumentar la producción de papas.',
+                        decision_option_text : 'Expandir el área agrícola hasta la cota de los 3800 msnm en el cerro el Corazón e Ilinizas de la parroquia el Chaupi para aumentar 100 Ha en la producción de papas.',
                         decision_option_asset : '',
                         decision_option_was_selected : false,
                         decision_option_value : 100,
@@ -48,7 +48,7 @@ export const GameDecisionsData = {
             },
             'P_20_30_2' : {
                 decision_id : 'P_20_30_2',
-                decision_text : 'El cantón Mejía como un eje para la restauración de su Patrimonio Natural se une al Programa de Reforestación del GAD Provincial Pichincha mediante la firma de un convenio marco que incluye:',
+                decision_text : 'El cantón Mejía tiene una rápida perdida de su patrimonio natural, páramo y bosque, por lo que se une al Programa de Reforestación del GAD Provincial Pichincha mediante la firma de un convenio marco, que puede incluir las siguientes actividades:',
                 decision_asset : '',
                 decision_options : {
                     'P_20_30_2_1' : {
@@ -62,7 +62,7 @@ export const GameDecisionsData = {
                     },
                     'P_20_30_2_2' : {
                         decision_option_id : 'P_20_30_2_2',
-                        decision_option_text : 'Ampliar el área de las plantaciones forestales de Ciprés con fines comerciales en el páramo del cantón Latacunga.',
+                        decision_option_text : 'Ampliar en 100 Ha el área de plantaciones forestales con fines comerciales en el páramo del Rumiñahui.',
                         decision_option_asset : '',
                         decision_option_was_selected : false,
                         decision_option_value : 100,
@@ -71,7 +71,7 @@ export const GameDecisionsData = {
                     },
                     'P_20_30_2_3' : {
                         decision_option_id : 'P_20_30_2_3',
-                        decision_option_text : 'Restauración activa de 100 Ha.',
+                        decision_option_text : 'Restauración activa de 100 Ha con especies nativas arbustivas en el volcán Pasochoa.',
                         decision_option_asset: '',
                         decision_option_was_selected: false,
                         decision_option_value : 100,
@@ -90,7 +90,7 @@ export const GameDecisionsData = {
         decisions:{
             'P_30_40_1' : {
                 decision_id : 'P_30_40_1',
-                decision_text : 'La principal actividad productiva del cantón Mejía es la producción lechera, por lo que se desea potenciarla en los siguientes 10 años.',
+                decision_text : 'La principal actividad productiva del cantón Mejía es la producción lechera, por lo que se desea potenciarla en los siguientes 10 años:',
                 decision_asset : '',
                 decision_options : {
                     'P_30_40_1_1' : {
@@ -113,7 +113,7 @@ export const GameDecisionsData = {
                     },
                     'P_30_40_1_3' : {
                         decision_option_id : 'P_30_40_1_3',
-                        decision_option_text : 'Implementar una planta procesadora de leche de 10 000 litros diarios.',
+                        decision_option_text : 'Implementar una planta procesadora de leche con una capacidad de 10 000 litros diarios, en el parque industrial el Obraje, parroquia Machachi.',
                         decision_option_asset : '',
                         decision_option_was_selected : false,
                         decision_option_value : 20000,
@@ -124,7 +124,7 @@ export const GameDecisionsData = {
             },
             'P_30_40_2' : {
                 decision_id : 'P_30_40_2',
-                decision_text : 'En el cantón Mejía existe el Refugio de vida silvestre Pasochoa con una extensión de 600 Ha, este predio dentro del PUGS (Plan de uso y Gestión del Suelo) y PDOT (Plan de Desarrollo y ordenamiento Territorial) del cantón Mejía se lo clasifica como suelo de protección. Para ampliar la protección de este volcán se pretende:',
+                decision_text : 'En el cantón Mejía se planifica crear un sistema cantonal de área protegidas, para conservar su páramo y bosque, que pueden incluir las siguientes actividades:',
                 decision_asset : '',
                 decision_options : {
                     'P_30_40_2_1' : {
@@ -147,7 +147,7 @@ export const GameDecisionsData = {
                     },
                     'P_30_40_2_3' : {
                         decision_option_id : 'P_30_40_2_3',
-                        decision_option_text : 'Reforestar con especies nativas el bosque protector Umbría en la parroquia de Aloasi.',
+                        decision_option_text : 'Reforestar con especies nativas 40 ha del bosque protector Umbría en la parroquia de Aloasí.',
                         decision_option_asset: '',
                         decision_option_was_selected: false,
                         decision_option_value : 40,
@@ -171,7 +171,7 @@ export const GameDecisionsData = {
                 decision_options : {
                     'P_40_50_1_1' : {
                         decision_option_id : 'P_40_50_1_1',
-                        decision_option_text : 'Creación de una fábrica procesadora de papa con una capacidad de 10 000 quintales anuales.',
+                        decision_option_text : 'Creación de una fábrica procesadora de papa con una capacidad de 10 000 quintales anuales el sector del Pedregal, parroquia Machachi.',
                         decision_option_asset : '',
                         decision_option_was_selected : false,
                         decision_option_value : 1000,
@@ -214,7 +214,7 @@ export const GameDecisionsData = {
                     },
                     'P_40_50_2_2' : {
                         decision_option_id : 'P_40_50_2_2',
-                        decision_option_text : 'Implementar proyectos de turismo comunitario para conservar de 400 Ha de páramo del volcán Rumiñahui.',
+                        decision_option_text : 'Implementar proyectos de turismo comunitario para conservar de 400 Ha de páramo del cerro el Corazón.',
                         decision_option_asset : '',
                         decision_option_was_selected : false,
                         decision_option_value : 200,
@@ -235,3 +235,76 @@ export const GameDecisionsData = {
         }
     }
 }
+
+export interface GameObjectIconsMap {
+    id: string;
+    gameObjectName: string;
+    gameObject: Phaser.GameObjects.Image;
+}
+
+export const _gameObjectIconsMap = {
+    'P_20_30_1_1' : {
+        id: 'P_20_30_1_1',
+        gameObjectName: 'P_20_30_1_1-background',
+        gameObject: null
+    },
+    'P_20_30_1_2' : {
+        id: 'P_20_30_1_2',
+        gameObjectName: 'P_20_30_1_2-background',
+        gameObject: null
+    },
+    'P_20_30_2_2' : {
+        id: 'P_20_30_2_2',
+        gameObjectName: 'P_20_30_2_2-background',
+        gameObject: null
+    },
+    'P_20_30_2_3' : {
+        id: 'P_20_30_2_3',
+        gameObjectName: 'P_20_30_2_3-background',
+        gameObject: null
+    },
+    'P_30_40_1_2' : {
+        id: 'P_30_40_1_2',
+        gameObjectName: 'P_30_40_1_2-background',
+        gameObject: null
+    },
+    'P_30_40_1_3' : {
+        id: 'P_30_40_1_3',
+        gameObjectName: 'P_30_40_1_3-background',
+        gameObject: null
+    },
+    //////////////////////////////
+    'P_30_40_2_1' : {
+        id: 'P_30_40_2_1',
+        gameObjectName: 'P_30_40_2_1-background',
+        gameObject: null
+    },
+    'P_30_40_2_3' : {
+        id: 'P_30_40_2_3',
+        gameObjectName: 'P_30_40_2_3-background',
+        gameObject: null
+    },
+    /*********************************/
+    'P_40_50_1_1' : {
+        id: 'P_40_50_1_1',
+        gameObjectName: 'P_40_50_1_1-background',
+        gameObject: null
+    },
+    'P_40_50_1_3' : {
+        id: 'P_40_50_1_3',
+        gameObjectName: 'P_40_50_1_3-background',
+        gameObject: null
+    },
+    //////////////////////////////
+    'P_40_50_2_1' : {
+        id: 'P_40_50_2_1',
+        gameObjectName: 'P_40_50_2_1-background',
+        gameObject: null
+    },
+    'P_40_50_2_2' : {
+        id: 'P_40_50_2_2',
+        gameObjectName: 'P_40_50_2_2-background',
+        gameObject: null
+    }
+  }
+  

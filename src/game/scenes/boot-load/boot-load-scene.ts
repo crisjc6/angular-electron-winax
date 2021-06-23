@@ -9,6 +9,7 @@ import { GameObjectScaleInterface } from "../../interfaces/game-object-scale-int
 import { scaleGameObject } from "../../functions/scale-functions/scale-functions";
 import { generateGameObjectImage } from "../../functions/image-functions/image-functions";
 import { generateGameObjectText } from "../../functions/text-functions/text-functions";
+import { cursorURL } from "../../settings/game-system-specifications";
 
 export class BootLoadScene extends Phaser.Scene {
   private progressBarScale: GameObjectScaleInterface;
@@ -68,6 +69,9 @@ export class BootLoadScene extends Phaser.Scene {
   }
 
   private createScene() {
+
+    
+    this.input.setDefaultCursor(cursorURL.defaultCursorURL);
 
     const backgroundSpecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(_loadBackgroundSpecifications));
     const sceneBackground = this.generateImage(backgroundSpecifications);
@@ -158,18 +162,18 @@ export class BootLoadScene extends Phaser.Scene {
     this.newGraphics = this.add.graphics();
 
     this.progressBarScale = scale;
-    this.progressBarScale.objectPositionX = scale.objectPositionX - scale.objectWidth / 2;
-    this.progressBarScale.objectPositionY = scale.objectPositionY - scale.objectHeight / 2;
+    this.progressBarScale.objectPositionX = (scale.objectPositionX - scale.objectWidth / 2);
+    this.progressBarScale.objectPositionY = (scale.objectPositionY - scale.objectHeight / 2)-5;
 
     const progressBar = new Phaser.Geom.Rectangle(this.progressBarScale.objectPositionX, this.progressBarScale.objectPositionY, this.progressBarScale.objectWidth, this.progressBarScale.objectHeight);
     this.graphics.fillStyle(ColorsValue.WHITE_HEXADECIMAL_VALUE, 1);
     this.graphics.fillRectShape(progressBar);
 
     this.loadBarScale = scale;
-    this.loadBarScale.objectWidth = scale.objectWidth - 10;
-    this.loadBarScale.objectHeight = scale.objectHeight - 10;
-    this.loadBarScale.objectPositionX = this.progressBarScale.objectPositionX + 5;
-    this.loadBarScale.objectPositionY = this.progressBarScale.objectPositionY + 5;
+    this.loadBarScale.objectWidth = scale.objectWidth - 11;
+    this.loadBarScale.objectHeight = scale.objectHeight - 11;
+    this.loadBarScale.objectPositionX = this.progressBarScale.objectPositionX + 6;
+    this.loadBarScale.objectPositionY = this.progressBarScale.objectPositionY + 6;
 
     this.updateLoadBar(0.0003);
   }

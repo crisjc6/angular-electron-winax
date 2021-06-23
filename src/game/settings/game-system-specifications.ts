@@ -1,5 +1,10 @@
 import { GameDecisionInterface } from "../interfaces/game-decision-interface"
 
+export const cursorURL = {
+    defaultCursorURL: 'url(assets/game-assets/boot-load-assets/cursors-assets/cursor-pointer.cur), pointer',
+    interactiveCursorURL: 'url(assets/game-assets/boot-load-assets/cursors-assets/cursor-hand.cur), pointer'
+}
+
 export const GameSpecifications:{
     name: string;
     continueGame: boolean;
@@ -16,7 +21,7 @@ export const GameSpecifications:{
     canvasWidth: number;
     canvasHeight: number;
 } = {
-    name: 'DARCH',
+    name: 'GIRHA',
     continueGame: false,
     gameDecisionsData: null,
     currentPeriodIndex: 0,
