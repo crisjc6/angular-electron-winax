@@ -3,7 +3,7 @@ import { endSceneElementsSpecifications } from "./end-scene-specifications";
 import { GameSceneIdsStrings } from "../../settings/game-constants-strings/game-scene-ids-string";
 import { GameSceneElementsString, TypeResultsElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
-import { gameRouterLink, gameStatus } from "../../settings/game-system-specifications";
+import { gameRouterLink, gameStatus, servicioPuntajes } from "../../settings/game-system-specifications";
 import { ButtonComponent } from "../../components/button-component/button-component";
 import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-strings/game-events-strings";
 import { gameData } from "../../settings/game-data/game-data";
@@ -33,7 +33,7 @@ export class EndScene extends Phaser.Scene {
     private riverHealth_40_50_text: Phaser.GameObjects.Text;
 
     init() {
-        
+        servicioPuntajes.serviceScore.save(gameData.playerData);
     }
 
     constructor() {

@@ -50,7 +50,6 @@ export class TopBestPlayerScene extends Phaser.Scene {
     }
 
     private addFunctionality() {
-        // addTintOnGameButton(this.closeButton);
         this.closeButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 this.scene.stop(this.scene.key);

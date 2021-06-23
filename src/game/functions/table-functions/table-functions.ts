@@ -2,6 +2,7 @@ import { GameElementSpecificationsInterface } from "../../interfaces/game-elemen
 import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ScoreTableComponent } from "../../components/score-table-component/score-table-component";
 import { scoreDB } from "../../../assets/db/db";
+import { servicioPuntajes } from "../../settings/game-system-specifications";
 
 export function generateGameObjectTable(
     _scene: Phaser.Scene,
@@ -12,7 +13,11 @@ export function generateGameObjectTable(
 
     switch (_tableSpecifications.element) {
         case GameSceneElementsString.SCENE_SCORE_TABLE : {
-            gameObject = new ScoreTableComponent(_scene, _tableSpecifications, JSON.parse(JSON.stringify(scoreDB)));
+            gameObject = new ScoreTableComponent(
+                _scene,
+                _tableSpecifications, 
+                servicioPuntajes.serviceScore.getPuntajes()
+            )
             break;
         }
 
