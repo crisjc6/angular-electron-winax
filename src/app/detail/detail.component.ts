@@ -123,7 +123,7 @@ export class DetailComponent implements OnInit {
     return {
       series: [
         {
-          name: 'Area Conservación',
+          name: 'Area Conservación (ACUS)',
           data: _dataSet.values
         }
       ],
@@ -342,7 +342,7 @@ export class DetailComponent implements OnInit {
 
       ],
       title: {
-        text: 'Demanda cobertura del sítio',
+        text: 'Cobertura de la Demanda',
         align: 'left'
       },
       chart: {
@@ -426,12 +426,12 @@ export class DetailComponent implements OnInit {
     return {
       series: [
         {
-          name: 'Fujo del rio',
+          name: 'Fujo del río',
           data: _dataSet.values
         }
       ],
       title: {
-        text: 'Salud del rio',
+        text: 'Salud del río',
         align: 'left'
       },
       chart: {

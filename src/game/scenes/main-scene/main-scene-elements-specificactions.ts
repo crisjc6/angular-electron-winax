@@ -27,11 +27,14 @@ export const mainSceneElementSpecifictions: GameElementSpecificationsInterface[]
         content: 'JUEGO SERIO GIRHA\nRÍO SAN PEDRO - CHISINCHE',
         style: {
             fontFamily: GameFontStylesString.BIG_FONT,
-            color: ColorsString.RED_HEXADECIMAL_STRING,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
+            stroke: ColorsString.DARK_GRAY_HEXADECIMAL_STRING,
+            // stroke: ColorsString.DARK_GREEN_HEXADECIMAL_STRING,
             // stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
-            stroke: ColorsString.LIGHT_GRAY_HEXADECIMAL_STRING,
-            strokeThickness: textFontSize.Regular.strokeThickness,
+            // stroke: ColorsString.DARK_GRAY_HEXADECIMAL_STRING,
+            // stroke: ColorsString.DARK_GREEN_HEXADECIMAL_STRING,
+            // strokeThickness: textFontSize.Regular.strokeThickness,
             fontSize: '70px',
         },
         scale: {

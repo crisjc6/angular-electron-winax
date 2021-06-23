@@ -82,7 +82,7 @@ export const loginSceneElementsSpecifications: GameElementSpecificationsInterfac
         content: 'INGRESA EL NOMBRE DE TU EQUIPO',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
-            color: ColorsString.DARK_PURPLE_HEXADECIMAL_STRING,
+            color: ColorsString.DARK_BLUE_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             fontSize: textFontSize.Medium.fontSize,
         },
