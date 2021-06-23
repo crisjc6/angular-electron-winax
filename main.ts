@@ -1,7 +1,6 @@
 import { app, BrowserWindow, screen } from "electron";
 import * as path from "path";
 import * as url from "url";
-import { GameSpecifications } from "./src/game/settings/game-system-specifications";
 
 let win: BrowserWindow = null;
 const args = process.argv.slice(1),
@@ -42,7 +41,6 @@ function createWindow(): BrowserWindow {
       })
     );
     
-    GameSpecifications.appPath = __dirname;
     // console.log(' Paht win:' + __dirname);
   }
 
