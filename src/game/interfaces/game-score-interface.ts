@@ -1,7 +1,7 @@
 export interface GameScoreDataInterface {
-    id: number;
-    teamName: string;
-    score: number;
+    id?: number;
+    teamName?: string;
+    score?: number;
 }
 
 export interface ScoreItemInterface {
