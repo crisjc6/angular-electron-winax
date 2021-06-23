@@ -8,8 +8,8 @@ import { loadFonts } from "../../functions/font-styles/font-styles-functions";
 import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
 import { gameMapAssets } from "../../settings/game-map-assets";
 import { cursorURL, gameRouterLink, GameSpecifications, gameStatus } from "../../settings/game-system-specifications";
-import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
-import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
+import { buttonElements, GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
+import { ColorsString, ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
 import { gameData } from "../../settings/game-data/game-data";
 import { _gameObjectIconsMap } from "../../settings/game-decisions-data";
 
@@ -20,6 +20,8 @@ export class MapScene extends Phaser.Scene {
     private playButton: ButtonComponent;
     private homeButton: ButtonComponent;
     private totalScore: Phaser.GameObjects.Text;
+    private viewIconsTableButton: ButtonComponent;
+    private iconsTable: Phaser.GameObjects.Image;
 
     // private mapsIcons: Array<GameObjectIconsMap>;
     
@@ -81,6 +83,14 @@ export class MapScene extends Phaser.Scene {
         this.homeButton = this.gameObjects.get(
             GameSceneElementsString.SCENE_HOME_BUTTON,
         ).gameObject;
+
+        this.viewIconsTableButton = this.gameObjects.get(
+            GameSceneElementsString.SCENE_VIEW_ICONS_TABLE,
+        ).gameObject;
+
+        this.iconsTable = this.gameObjects.get(
+            GameSceneElementsString.SCENE_ICONS_TABLE,
+        ).gameObject;
         // this.soundButton = this.gameObjects.get(
         //     SceneGameElementsString.SCENE_SOUND_BUTTON,
         // ).gameObject;
@@ -88,6 +98,7 @@ export class MapScene extends Phaser.Scene {
     }   
 
     private hideMapIcons() {
+        this.iconsTable.setVisible(false);
         for (let iconId in _gameObjectIconsMap) {
             this.gameObjects.get(
                 _gameObjectIconsMap[iconId].gameObjectName
@@ -99,6 +110,37 @@ export class MapScene extends Phaser.Scene {
     }
 
     private addFunctionality() {
+
+        this.viewIconsTableButton.setInteractive().on(
+            EventsTouchedGameObjectsStrings.POINTERDOWN,
+            () => {
+                // console.log(this.iconsTable.visible);
+                if (this.iconsTable.visible) {
+                    const buttonText = this.viewIconsTableButton.getByName(
+                                            buttonElements.BUTTON_TEXT
+                                        ) as Phaser.GameObjects.Text;
+                    const buttonBackground = this.viewIconsTableButton.getByName(
+                                                    buttonElements.BUTTON_BACKGROUND
+                                                ) as Phaser.GameObjects.Image;
+                    buttonBackground.clearTint();
+                    buttonText.setColor(ColorsString.BLUE_HEXADECIMAL_STRING);
+                    buttonText.setText('VER TABLA\nDE ÍCONOS');
+                    this.iconsTable.setVisible(false);
+                } else {
+                    const buttonText = this.viewIconsTableButton.getByName(
+                                            buttonElements.BUTTON_TEXT
+                                        ) as Phaser.GameObjects.Text;
+                    const buttonBackground = this.viewIconsTableButton.getByName(
+                                                    buttonElements.BUTTON_BACKGROUND
+                                                ) as Phaser.GameObjects.Image;
+                                                
+                    buttonText.setColor(ColorsString.DARK_GRAY_HEXADECIMAL_STRING);
+                    buttonText.setText('OCULTAR\nTABLA');
+                    buttonBackground.setTint(ColorsValue.LIGHT_GREEN_HEXADECIMAL_VALUE);
+                    this.iconsTable.setVisible(true);
+                }
+            }
+        );
 
         this.events.on(
             'wake',

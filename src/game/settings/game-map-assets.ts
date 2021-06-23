@@ -23,6 +23,11 @@ export const gameMapAssets: GameAssetsSpecificationsInterface[] = [
         key: 'quit-button-background',
         path: '.../../assets/game-assets/boot-load-assets/buttons-assets/quit-button-background.png'
     },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'view-more-button-background',
+        path: '.../../assets/game-assets/boot-load-assets/buttons-assets/view-more-button-background.png'
+    },
 
     /*************************** ICONS *******************************/
    
@@ -203,7 +208,11 @@ export const gameMapAssets: GameAssetsSpecificationsInterface[] = [
         key: 'scene-title-background',
         path: '.../../assets/game-assets/boot-load-assets/cards-assets/scene-title-background.png'
     },
-    
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'icons-table-background',
+        path: '.../../assets/game-assets/boot-load-assets/cards-assets/icons-table-background.png'
+    },
     /*************************** MAPS *******************************/
     
     {

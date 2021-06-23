@@ -419,5 +419,44 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
             objectPositionY: 365,
         }
     },
+    {
+        type: 'button',
+        element: 'simple-button',
+        assetName: 'view-more-button-background',
+        name: 'view-icons-table',
+        content: 'VER TABLA\n DE ÍCONOS',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.DARK_BLUE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '11px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 86,
+            objectHeight: 40,
+            objectPositionX: 60,
+            objectPositionY: 323,
+        },
+    },
+    {
+        type: 'image',
+        element: 'background',
+        assetName: 'icons-table-background',
+        name: 'icons-table',
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 200,
+            objectHeight: 255,
+            objectPositionX: 108,
+            objectPositionY: 323,
+        },
+        originX: 0,
+        originY: 0.5
+    }
 
 ]
+
+//view-more-button-background
