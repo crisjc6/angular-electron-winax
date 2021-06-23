@@ -4,7 +4,7 @@ import { loadSceneElementsSpecifications } from "./load-scene-specifications";
 import { GameSceneIdsStrings } from "../../settings/game-constants-strings/game-scene-ids-string";
 import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
-import { GameSpecifications, servicioGraficaAC } from "../../settings/game-system-specifications";
+import { GameSpecifications, gameStatus, servicioGraficaAC } from "../../settings/game-system-specifications";
 import { getDataWeap, runWEAP } from "../../functions/weap-data-functions/weap-data-functions"
 
 export class LoadScene extends Phaser.Scene {
@@ -74,6 +74,7 @@ export class LoadScene extends Phaser.Scene {
 
   private startNextScene() {
     servicioGraficaAC.serviceArea.deshabilitarActualizacion();
+    gameStatus.status = GameSpecifications.decisionPeriodIds.length > 0 ? 'mapScene' : 'game-over';
     this.scene.stop();
     this.scene.wake(this.sceneData.returnSceneName);
   }

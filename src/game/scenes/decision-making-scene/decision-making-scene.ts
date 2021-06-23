@@ -108,7 +108,6 @@ export class DecisionMakingScene extends Phaser.Scene {
     }
 
     private addFunctionality() {
-        // addTintOnGameButton(this.closeButton);
         this.closeButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 GameSpecifications.decisionPeriodIds.push(GameSpecifications.currentPeriodId);
@@ -117,7 +116,6 @@ export class DecisionMakingScene extends Phaser.Scene {
             }
         );
 
-        // addPointerOverOnInteractiveObject(this.saveSettingsButtons);
         this.continueButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 if (this.decisionNumber === 1) {

@@ -145,7 +145,7 @@ export class MapScene extends Phaser.Scene {
         this.events.on(
             'wake',
             () => {
-                GameSpecifications.gameOver = !(GameSpecifications.decisionPeriodIds.length > 0);
+                GameSpecifications.gameOver = (!(GameSpecifications.decisionPeriodIds.length > 0)  && gameStatus.status === 'game-over');
                 // console.log(GameSpecifications.gameOver);
                 this.updateSceneScore();
                 this.showIconDecision();
@@ -182,9 +182,13 @@ export class MapScene extends Phaser.Scene {
 
         this.homeButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                // this.scene.pause();
-                gameStatus.status = 'mainScene';
-                gameRouterLink.routerLink.navigate(['/']);
+                this.scene.pause();
+                const gameData: SceneDataInterface = {
+                    returnSceneName: this.scene.key
+                }
+                this.scene.launch(GameSceneIdsStrings.WARNING_MESSAGE_SCENE_ID, gameData);
+                // gameStatus.status = 'mainScene';
+                // gameRouterLink.routerLink.navigate(['/']);
             }
         );
 

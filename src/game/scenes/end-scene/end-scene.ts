@@ -7,6 +7,7 @@ import { gameRouterLink, gameStatus } from "../../settings/game-system-specifica
 import { ButtonComponent } from "../../components/button-component/button-component";
 import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-strings/game-events-strings";
 import { gameData } from "../../settings/game-data/game-data";
+import { SceneDataInterface } from "../../interfaces/scene-data-interface";
 
 export class EndScene extends Phaser.Scene {
 
@@ -119,9 +120,14 @@ export class EndScene extends Phaser.Scene {
         // addTintOnGameButton(this.closeButton);
         this.quitButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                gameStatus.status = 'mainScene';
-                this.scene.stop(this.scene.key);
-                gameRouterLink.routerLink.navigate(['/']);
+                this.scene.pause();
+                const gameData: SceneDataInterface = {
+                    returnSceneName: this.scene.key
+                }
+                this.scene.launch(GameSceneIdsStrings.WARNING_MESSAGE_SCENE_ID, gameData);
+                // gameStatus.status = 'mainScene';
+                // this.scene.stop(this.scene.key);
+                // gameRouterLink.routerLink.navigate(['/']);
             }
         );
     }
