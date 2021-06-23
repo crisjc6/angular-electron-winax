@@ -95,7 +95,7 @@ export const introductionSceneElementSpecifictions: GameElementSpecificationsInt
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.DARK_RED_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
-            fontSize: textFontSize.Regular.fontSize,
+            fontSize: '30px',
         },
         scale: {
             objectWidthRatio: 1,
@@ -110,13 +110,14 @@ export const introductionSceneElementSpecifictions: GameElementSpecificationsInt
         type: 'text',
         element: 'content',
         name: 'scene-content',
-        content: 'Sean bienvenidos a la Cuenca Hidrográ fica del río San Pedro, ahora forman parte del equipo encargado de gestionar los recursos hídricos de la cuenca. Su trabajo es tomar las mejores decisiones para un uso adecuado de los recurso hídricos y hacer prosperar esta zona del Ecuador.\nConversen entre ustedes y trabajen en equipo para tomar 2 decisiones en cada periodo de 10 años, desde 2020 al 2050.\n\nEs hora de demostrar sus conocimientos y obtener los mejores resultados para la cuenca.',
+        content: 'Sean bienvenidos a la cuenca hidrográfica del río San Pedro, está ubicada en el cantón Mejía, en donde existen diferentes usos competitivos del agua como regadío, generación hidroeléctrica, consumo humano, industrial, mantenimiento de ecosistemas, entre los principales; esto ha traído conflictos debido a la demanda del recurso por cada sector y a la presión del crecimiento poblacional.\nAhora ustedes forman parte del consejo de cuenca encargado de gestionar los recursos hídricos de esta cuenca hidrográfica. Su trabajo es tomar las mejores decisiones, sin olvidar su rol como representantes de un sector, para un uso adecuado del agua. Conversen entre ustedes y trabajen en equipo para tomar 2 decisiones en cada periodo de 10 años, desde el 2021 al 2050.\n\nEs hora de construir una visión común que beneficie a todos los sectores y obtener los mejores resultados para la cuenca.',
+        // content: 'Sean bienvenidos a la Cuenca Hidrográ fica del río San Pedro, ahora forman parte del equipo encargado de gestionar los recursos hídricos de la cuenca. Su trabajo es tomar las mejores decisiones para un uso adecuado de los recurso hídricos y hacer prosperar esta zona del Ecuador.\nConversen entre ustedes y trabajen en equipo para tomar 2 decisiones en cada periodo de 10 años, desde 2020 al 2050.\n\nEs hora de demostrar sus conocimientos y obtener los mejores resultados para la cuenca.',
         // content: 'GIRHA (Gestión Integral del Recurso Hídrico y Ambiental)\nes un Juego Serio creado con el objetivo de promover de una manera atractiva y divertida el uso adecuado de los recursos hídricos de la cuenca del Río San Pedro, mediante la toma de decisiones, comunicación y trabajo en equipo, con un diseño amigable y fácil de usar.',
         style: {
             fontFamily: GameFontStylesString.SMALL_FONT,
             color: ColorsString.DARK_BLUE_HEXADECIMAL_STRING,
             align: AlingString.JUSTIFY_STRING,
-            fontSize: '27px',
+            fontSize: '23px',
         },
         scale: {
             objectWidthRatio: 1,
@@ -124,7 +125,7 @@ export const introductionSceneElementSpecifictions: GameElementSpecificationsInt
             objectWidth: 1050,
             objectHeight: 500,
             objectPositionX: 683,
-            objectPositionY: 386,
+            objectPositionY: 410,
         }
     },
     {
@@ -171,12 +172,12 @@ export const introductionSceneElementSpecifictions: GameElementSpecificationsInt
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 270,
+            objectWidth: 265,
             objectHeight: 70,
             // objectPositionX: 695,
             // objectPositionY: 540,
-            objectPositionX: 1005,
-            objectPositionY: 642,
+            objectPositionX: 1040,
+            objectPositionY: 656,
             // objectPositionY: 666,
             // objectPositionY: 729,
         }

@@ -84,11 +84,11 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
         content: 'Por el rápido aumento de la población del Ecuador, el cantón Mejía al ser eminentemente agrícola-ganadero y para aumentar su economía planea incrementar su producción agrícola por lo que se podrían ejecutar las siguientes acciones:',
         style: {
             fontFamily: GameFontStylesString.SMALL_FONT,
-            color: ColorsString.RED_HEXADECIMAL_STRING,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             fontSize: textFontSize.VerySmall.fontSize,
             strokeThickness: 1,
-            stroke: ColorsString.RED_HEXADECIMAL_STRING
+            stroke: ColorsString.BLACK_HEXADECIMAL_STRING
         },
         scale: {
             objectWidthRatio: 1,

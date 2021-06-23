@@ -99,7 +99,7 @@ export class BootLoadScene extends Phaser.Scene {
     const progressLoadTextSpecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(_progressBarSpecifications));
     const progressLoadAnimationSpecifications: GameElementSpecificationsInterface = JSON.parse(JSON.stringify(_progressBarSpecifications));
     progressLoadTextSpecifications.scale.objectPositionY += 110;
-    progressLoadAnimationSpecifications.scale.objectPositionY -= 10;
+    progressLoadAnimationSpecifications.scale.objectPositionY -= 18;
     this.progressText = this.generateText(progressLoadTextSpecifications);
     this.progressAnimation = this.generateText(progressLoadAnimationSpecifications);
 

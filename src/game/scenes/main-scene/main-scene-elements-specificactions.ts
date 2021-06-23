@@ -34,7 +34,7 @@ export const mainSceneElementSpecifictions: GameElementSpecificationsInterface[]
             // stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
             // stroke: ColorsString.DARK_GRAY_HEXADECIMAL_STRING,
             // stroke: ColorsString.DARK_GREEN_HEXADECIMAL_STRING,
-            // strokeThickness: textFontSize.Regular.strokeThickness,
+            strokeThickness: textFontSize.Regular.strokeThickness,
             fontSize: '70px',
         },
         scale: {

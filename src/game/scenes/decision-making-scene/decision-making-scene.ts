@@ -73,8 +73,9 @@ export class DecisionMakingScene extends Phaser.Scene {
         
         this.decisiontitle = this.sceneGameObjects.get(
             DecisionSceneElementsString.DECISION_TITLE
-        ).gameObject;
-        
+        ).gameObject as Phaser.GameObjects.Text;
+        this.decisiontitle.setAlpha(0.98);
+
         this.decisionText = this.sceneGameObjects.get(
             DecisionSceneElementsString.DECISION_TEXT
         ).gameObject;
