@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.gameStatus = exports.servicioGraficaAC = exports.gameRouterLink = exports.GameSpecifications = void 0;
+exports.gameStatus = exports.servicioPuntajes = exports.servicioGraficaAC = exports.gameRouterLink = exports.GameSpecifications = void 0;
 exports.GameSpecifications = {
     name: 'GIRHA',
     continueGame: false,
@@ -22,6 +22,9 @@ exports.gameRouterLink = {
 };
 exports.servicioGraficaAC = {
     serviceArea: null
+};
+exports.servicioPuntajes = {
+    serviceScore: null
 };
 exports.gameStatus = {
     status: 'mainScene',

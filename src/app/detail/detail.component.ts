@@ -12,7 +12,7 @@ import {ChartComponent,
 } from "ng-apexcharts";
 import { phaserGameConfigMap } from '../../game/settings/phaser-game-config-specifications-map';
 import {CsvService} from "../shared/services/csv.service";
-import {gameRouterLink, servicioGraficaAC} from "../../game/settings/game-system-specifications";
+import {gameRouterLink, servicioGraficaAC, servicioPuntajes} from "../../game/settings/game-system-specifications";
 import {CargandoService} from "../shared/services/cargando.service";
 import {GraficaAreaConvervacionService} from "../shared/services/grafica-area-convervacion.service";
 import {Component, OnInit, ViewChild} from "@angular/core";
@@ -22,6 +22,8 @@ import {IndicatorsDataChartsInterface} from "../../game/interfaces/indicators-da
 import { GameScoresinterface } from "../../game/interfaces/game-score-interface";
 import {precipitationYearsValues} from "../costantes/precipitacion";
 import {populationYearsValues} from "../costantes/poblacion";
+import {ScoreService} from "../shared/services/puntaje.service";
+
 
 export type ChartOptions = {
   series?: ApexAxisChartSeries;
@@ -58,13 +60,13 @@ export class DetailComponent implements OnInit {
 
   constructor(private router: Router,
               private weapService: WeapService,
-              // private csvService: CsvService,
+              private scoreService: ScoreService,
               private readonly _cargandoService: CargandoService,
               private graficaAreaConservacioService: GraficaAreaConvervacionService,
   ) {
     gameRouterLink.routerLink = this.router;
     servicioGraficaAC.serviceArea = graficaAreaConservacioService;
-
+    servicioPuntajes.serviceScore = scoreService;
     /**********Corregir cambiarlo a una sola llamada ***********/
     this.gameDataCharts = this.graficaAreaConservacioService.exportarDataXY().indicatorsDataChart;
     this.gameDataScores = this.graficaAreaConservacioService.exportarDataXY().gameScores;
@@ -205,7 +207,6 @@ export class DetailComponent implements OnInit {
       }
     }
   }
-
   drawHydropowerChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
     return {
       series: [
@@ -291,7 +292,6 @@ export class DetailComponent implements OnInit {
       }
     }
   }
-
   drawCoverageChart(_dataSet: DataChartInterface | any ): Partial<ChartOptions> {
     return {
       series: [
@@ -421,7 +421,6 @@ export class DetailComponent implements OnInit {
       }
     }
   }
-
   drawStreamFlowChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
     return {
       series: [
@@ -448,14 +447,14 @@ export class DetailComponent implements OnInit {
       anotations : {
         yaxis: [
           {
-            y: 1.4,
+            y: 1.715,
             y2: 0,
             borderColor: '#000',
             fillColor: '#fa4646'
           },
           {
             y: 5,
-            y2: 1.4,
+            y2: 1.715,
             borderColor: '#000',
             fillColor: '#8df58a'
           }

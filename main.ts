@@ -1,10 +1,30 @@
 import { app, BrowserWindow, screen } from "electron";
 import * as path from "path";
 import * as url from "url";
+import * as Store from "electron-store"
 
 let win: BrowserWindow = null;
+const store = new Store();
 const args = process.argv.slice(1),
   serve = args.some((val) => val === "--serve");
+
+if (!store.get("puntajes")) {
+  store.set("puntajes", [{
+    teamName: '-',
+    score: 0,
+  },
+    {    teamName: '-',
+      score: 0,},
+    {
+      teamName: '-',
+      score: 0,
+    },
+    {
+      teamName: '-',
+      score: 0,
+    }
+  ]);
+}
 
 function createWindow(): BrowserWindow {
   // const size = screen.getPrimaryDisplay().workAreaSize;
@@ -40,7 +60,7 @@ function createWindow(): BrowserWindow {
         slashes: true,
       })
     );
-    
+
     // console.log(' Paht win:' + __dirname);
   }
 
