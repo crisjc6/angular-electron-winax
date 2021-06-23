@@ -1,5 +1,10 @@
 import { GameDecisionInterface } from "../interfaces/game-decision-interface"
 
+export const cursorURL = {
+    defaultCursorURL: 'url(assets/game-assets/boot-load-assets/cursors-assets/cursor-pointer.cur), pointer',
+    interactiveCursorURL: 'url(assets/game-assets/boot-load-assets/cursors-assets/cursor-hand.cur), pointer'
+}
+
 export const GameSpecifications:{
     name: string;
     continueGame: boolean;

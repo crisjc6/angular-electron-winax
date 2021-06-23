@@ -7,7 +7,7 @@ import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-s
 import { loadFonts } from "../../functions/font-styles/font-styles-functions";
 import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
 import { gameMapAssets } from "../../settings/game-map-assets";
-import { gameRouterLink, GameSpecifications, gameStatus } from "../../settings/game-system-specifications";
+import { cursorURL, gameRouterLink, GameSpecifications, gameStatus } from "../../settings/game-system-specifications";
 import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
 import { gameData } from "../../settings/game-data/game-data";
@@ -42,6 +42,8 @@ export class MapScene extends Phaser.Scene {
 
     preload() {
         loadFonts();
+        
+        this.input.setDefaultCursor(cursorURL.defaultCursorURL);
         loadAssetsArrayGame(this, gameMapAssets);
         this.gameObjects = new Map();
     }

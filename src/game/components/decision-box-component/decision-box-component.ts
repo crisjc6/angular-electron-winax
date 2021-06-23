@@ -2,6 +2,9 @@ import { changeGameObjectImage, generateGameObjectImage } from "../../functions/
 import { generateGameObjectText } from "../../functions/text-functions/text-functions";
 import { GameElementSpecificationsInterface } from "../../interfaces/game-element-specifications-interface";
 import { boxDecisionElements, GameElementsString, IconsKeyStrings } from "../../settings/game-constants-strings/game-elements-strings";
+import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-strings/game-events-strings";
+import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
+import { cursorURL } from "../../settings/game-system-specifications";
 
 export class DecisionBoxComponent extends Phaser.GameObjects.Container {
 
@@ -19,6 +22,7 @@ export class DecisionBoxComponent extends Phaser.GameObjects.Container {
         this.decisionSelected = false;
         this.decisionBoxSpecifications = _decisionBoxSpecifications;
         this.generateBox();
+        this.addPointerOverOnInteractiveObject();
         // this.addFuncionality();
     }
 
@@ -91,6 +95,22 @@ export class DecisionBoxComponent extends Phaser.GameObjects.Container {
         );
         
         this.decisionSelected = false;
+    }
+    
+    private addPointerOverOnInteractiveObject () {
+        this.setInteractive({ cursor: cursorURL.interactiveCursorURL}).on(
+            EventsTouchedGameObjectsStrings.POINTEROVER,
+            () => {
+                this.checkBoxBackground.setTint(ColorsValue.LIGHT_GRAY_HEXADECIMAL_VALUE);
+            }
+        );
+
+        this.setInteractive({ cursor: cursorURL.interactiveCursorURL}).on(
+            EventsTouchedGameObjectsStrings.POINTEROUT,
+            () => {
+                this.checkBoxBackground.clearTint();
+            }
+        );
     }
 
 }

@@ -3,6 +3,8 @@ import { generateGameObjectText } from "../../functions/text-functions/text-func
 import { GameElementSpecificationsInterface } from "../../interfaces/game-element-specifications-interface";
 // @ts-ignore
 import { buttonElements, GameElementsString } from "../../settings/game-constants-strings/game-elements-strings";
+import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-strings/game-events-strings";
+import { cursorURL } from "../../settings/game-system-specifications";
 
 export class ButtonComponent extends Phaser.GameObjects.Container {
 
@@ -16,6 +18,7 @@ export class ButtonComponent extends Phaser.GameObjects.Container {
         this.scene = _scene;
         this.buttonSpecifications = _buttonElement;
         this.generateButton();
+        this.addPointerOverOnInteractiveObject();
     }
 
     private generateButton() {
@@ -65,5 +68,21 @@ export class ButtonComponent extends Phaser.GameObjects.Container {
             this.buttonBackground.setDisplaySize(this.buttonSpecifications.scale.objectWidth, this.buttonSpecifications.scale.objectHeight - this.buttonText.height);
         }
         return verticalAlignment;
+    }
+    
+    private addPointerOverOnInteractiveObject () {
+        this.setInteractive({ cursor: cursorURL.interactiveCursorURL}).on(
+            EventsTouchedGameObjectsStrings.POINTEROVER,
+            () => {
+                this.y += 7;
+            }
+        );
+
+        this.setInteractive({ cursor: cursorURL.interactiveCursorURL}).on(
+            EventsTouchedGameObjectsStrings.POINTEROUT,
+            () => {
+                this.y -= 7;
+            }
+        );
     }
 }
