@@ -22,6 +22,7 @@ import {IndicatorsDataChartsInterface} from "../../game/interfaces/indicators-da
 import { GameScoresinterface } from "../../game/interfaces/game-score-interface";
 import {precipitationYearsValues} from "../costantes/precipitacion";
 import {populationYearsValues} from "../costantes/poblacion";
+import {ScoreService} from "../shared/services/puntaje.service";
 
 export type ChartOptions = {
   series?: ApexAxisChartSeries;
@@ -55,10 +56,12 @@ export class DetailComponent implements OnInit {
   bloqueado = false;
   gameDataCharts: IndicatorsDataChartsInterface;
   gameDataScores: GameScoresinterface;
+  clicks: number = 0;
+  saved: boolean = true;
 
   constructor(private router: Router,
               private weapService: WeapService,
-              // private csvService: CsvService,
+              private scoreService: ScoreService,
               private readonly _cargandoService: CargandoService,
               private graficaAreaConservacioService: GraficaAreaConvervacionService,
   ) {
@@ -74,6 +77,16 @@ export class DetailComponent implements OnInit {
   ngOnInit(): void {
     this.game = new Phaser.Game(phaserGameConfigMap);
     this.escucharCambiosGraficaAC();
+    this.clicks = this.scoreService.get("clicks");
+  }
+  addClicks = (): void => {
+    this.clicks++;
+    this.saved = false;
+  }
+
+  save = (): void => {
+    this.scoreService.set("clicks", this.clicks);
+    this.saved = true;
   }
 
   async escucharCambiosEnCargandoService() {
@@ -205,7 +218,6 @@ export class DetailComponent implements OnInit {
       }
     }
   }
-
   drawHydropowerChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
     return {
       series: [
@@ -291,7 +303,6 @@ export class DetailComponent implements OnInit {
       }
     }
   }
-
   drawCoverageChart(_dataSet: DataChartInterface | any ): Partial<ChartOptions> {
     return {
       series: [
@@ -421,7 +432,6 @@ export class DetailComponent implements OnInit {
       }
     }
   }
-
   drawStreamFlowChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
     return {
       series: [

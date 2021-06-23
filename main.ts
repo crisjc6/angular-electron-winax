@@ -2,10 +2,16 @@ import { app, BrowserWindow, screen } from "electron";
 import * as path from "path";
 import * as url from "url";
 import { GameSpecifications } from "./src/game/settings/game-system-specifications";
+const Store = require("electron-store");
 
 let win: BrowserWindow = null;
+const store = new Store();
 const args = process.argv.slice(1),
   serve = args.some((val) => val === "--serve");
+
+if (!store.get("clicks")) {
+  store.set("clicks", 0);
+}
 
 function createWindow(): BrowserWindow {
   // const size = screen.getPrimaryDisplay().workAreaSize;
@@ -41,7 +47,7 @@ function createWindow(): BrowserWindow {
         slashes: true,
       })
     );
-    
+
     GameSpecifications.appPath = __dirname;
     // console.log(' Paht win:' + __dirname);
   }
