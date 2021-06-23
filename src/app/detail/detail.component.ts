@@ -125,7 +125,7 @@ export class DetailComponent implements OnInit {
     return {
       series: [
         {
-          name: 'Area Conservación',
+          name: 'Area Conservación (ACUS)',
           data: _dataSet.values
         }
       ],
@@ -211,7 +211,7 @@ export class DetailComponent implements OnInit {
     return {
       series: [
         {
-          name: 'Hidroenergia',
+          name: 'Hidroenergía',
           data: _dataSet.values
         }
       ],
@@ -287,7 +287,7 @@ export class DetailComponent implements OnInit {
       },
       yaxis: {
         title: {
-          text: 'Caudal (M^3/s)',
+          text: 'Caudal (m3/s)',
         }
       }
     }
@@ -296,11 +296,11 @@ export class DetailComponent implements OnInit {
     return {
       series: [
         {
-          name: 'P.P Leche',
+          name: 'F. Leche',
           data: _dataSet.plantaProcesadoraLeche.values
         },
         {
-          name: 'P.P Papa',
+          name: 'F. Papa',
           data: _dataSet.plantaProcesadoraPapa.values
         },
         {
@@ -342,7 +342,7 @@ export class DetailComponent implements OnInit {
 
       ],
       title: {
-        text: 'Demanda cobertura del sítio',
+        text: 'Cobertura de las demandas',
         align: 'left'
       },
       chart: {
@@ -425,12 +425,12 @@ export class DetailComponent implements OnInit {
     return {
       series: [
         {
-          name: 'Fujo del rio',
+          name: 'Fujo del río (m3/s)',
           data: _dataSet.values
         }
       ],
       title: {
-        text: 'Salud del rio',
+        text: 'Salud del río',
         align: 'left'
       },
       chart: {
@@ -515,7 +515,7 @@ export class DetailComponent implements OnInit {
       },
       yaxis: {
         title: {
-          text: 'Flujo (M^3/s)',
+          text: 'Flujo (m3/s)',
         }
       }
     }
@@ -524,7 +524,7 @@ export class DetailComponent implements OnInit {
     return {
       series: [
         {
-          name: 'Precipitacion',
+          name: 'Precipitación',
           data: _dataSet.values.map(
             (valor)=> {
               return +valor.toFixed(2)

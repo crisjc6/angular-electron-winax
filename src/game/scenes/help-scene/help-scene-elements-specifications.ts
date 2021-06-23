@@ -77,9 +77,9 @@ export const helpSceneElementsSpecifications: GameElementSpecificationsInterface
         type: 'text',
         element: 'content',
         name: 'game-help',
-        content: 'Toma decisiones sobre la gestión de los recuros hídricos de la Cuenca del Río San Pedro, dando clic en el Botón JUGAR\n\n'+
-                 'Accede al juego ingresando el nombre de tu EQUIPO, toma las mejores decisiones y comprueba las consecuencias de tus acciones.\n\n'+
-                 'Accede a la Tabla de Puntuación para visualizar el puntaje alcanzado por los equipos.',
+        content: 'Da clic en el botón JUGAR para iniciar la toma de decisiones sobre la gestión de los recuros hídricos de la Cuenca del Río San Pedro. \n\n'+
+                 'Ingresando el nombre de tu EQUIPO, toma las mejores decisiones y comprueba las consecuencias de tus acciones.\n\n'+
+                 'Accede a la Tabla de Puntuación para visualizar los puntajes alcanzados en el juego.',
         style: {
             fontFamily: GameFontStylesString.SMALL_FONT,
             color: ColorsString.BLUE_HEXADECIMAL_STRING,

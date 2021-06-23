@@ -76,9 +76,12 @@ export const _titleGameSpecifications: GameElementSpecificationsInterface = {
     content: 'JUEGO SERIO GIRHA\nRÍO SAN PEDRO - CHISINCHE',
     style: {
         fontFamily: GameFontStylesString.BIG_FONT,
-        color: ColorsString.RED_HEXADECIMAL_STRING,
+        // color: ColorsString.RED_HEXADECIMAL_STRING,
+        color: ColorsString.WHITE_HEXADECIMAL_STRING,
         align: AlingString.CENTER_STRING,
-        stroke: ColorsString.LIGHT_GRAY_HEXADECIMAL_STRING,
+        stroke: ColorsString.DARK_GRAY_HEXADECIMAL_STRING,
+        // stroke: ColorsString.DARK_GREEN_HEXADECIMAL_STRING,
+        // stroke: ColorsString.LIGHT_GRAY_HEXADECIMAL_STRING,
         strokeThickness: textFontSize.Regular.strokeThickness,
         fontSize: '70px',
     },
@@ -109,7 +112,7 @@ export const _progressBarSpecifications: GameElementSpecificationsInterface = {
         objectWidth: 1150,
         objectHeight: 50,
         objectPositionX: 683,
-        objectPositionY: 580,
+        objectPositionY: 575,
     }
 };
 
@@ -134,3 +137,4 @@ export const _progressTextSpecifications: GameElementSpecificationsInterface = {
         objectPositionY: 650,
     }
 };
+

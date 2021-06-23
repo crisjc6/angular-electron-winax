@@ -63,7 +63,7 @@ export const loginSceneElementsSpecifications: GameElementSpecificationsInterfac
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.RED_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
-            fontSize: textFontSize.LittleBig.fontSize,
+            fontSize: textFontSize.Regular.fontSize,
         },
         scale: {
             objectWidthRatio: 1,
@@ -79,12 +79,12 @@ export const loginSceneElementsSpecifications: GameElementSpecificationsInterfac
         type: 'text',
         element: 'title',
         name: 'sound-title',
-        content: 'INGRESA EL NOMBRE DE TU EQUIPO',
+        content: 'INGRESA EL NOMBRE DE TU EQUIPO\n(CONSEJO DE CUENCA)',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
-            color: ColorsString.DARK_PURPLE_HEXADECIMAL_STRING,
+            color: ColorsString.DARK_BLUE_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
-            fontSize: textFontSize.Medium.fontSize,
+            fontSize: '30PX',
         },
         scale: {
             objectWidthRatio: 1,

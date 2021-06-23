@@ -28,7 +28,7 @@ export const GameDecisionsData = {
                     },
                     'P_20_30_1_2' : {
                         decision_option_id : 'P_20_30_1_2',
-                        decision_option_text : 'Expandir el área agrícola hasta la cota de los 3800 msnm en el cerro el Corazón e Ilinizas de la parroquia el Chaupi para aumentar 100 Ha en la producción de papas.',
+                        decision_option_text : 'Expandir el área agrícola hasta la cota de los 3800 msnm en el páramo del cerro el Corazón e Ilinizas de la parroquia El Chaupi, para aumentar 100 Ha en la producción de papas.',
                         decision_option_asset : '',
                         decision_option_was_selected : false,
                         decision_option_value : 100,

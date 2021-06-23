@@ -11,4 +11,5 @@ export const enum GameSceneIdsStrings {
     DECISION_MAKING_SCENE_ID = 'DecisionMakingScene',
     INTRODUCTION_SCENE_ID = 'IntroductionScene',
     END_SCENE_ID = 'EndScene',
+    WARNING_MESSAGE_SCENE_ID = 'WarningMessageScene',
 }

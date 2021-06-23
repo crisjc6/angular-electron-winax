@@ -20,7 +20,7 @@ export class MapScene extends Phaser.Scene {
     private playButton: ButtonComponent;
     private homeButton: ButtonComponent;
     private totalScore: Phaser.GameObjects.Text;
-    private viewIconsTableButton: ButtonComponent;
+    private viewIconsTableText: Phaser.GameObjects.Text;
     private iconsTable: Phaser.GameObjects.Image;
 
     // private mapsIcons: Array<GameObjectIconsMap>;
@@ -84,13 +84,14 @@ export class MapScene extends Phaser.Scene {
             GameSceneElementsString.SCENE_HOME_BUTTON,
         ).gameObject;
 
-        this.viewIconsTableButton = this.gameObjects.get(
+        this.viewIconsTableText = this.gameObjects.get(
             GameSceneElementsString.SCENE_VIEW_ICONS_TABLE,
         ).gameObject;
 
         this.iconsTable = this.gameObjects.get(
             GameSceneElementsString.SCENE_ICONS_TABLE,
-        ).gameObject;
+        ).gameObject as Phaser.GameObjects.Image;
+        this.iconsTable.setAlpha(0.9);
         // this.soundButton = this.gameObjects.get(
         //     SceneGameElementsString.SCENE_SOUND_BUTTON,
         // ).gameObject;
@@ -111,32 +112,54 @@ export class MapScene extends Phaser.Scene {
 
     private addFunctionality() {
 
-        this.viewIconsTableButton.setInteractive().on(
+        this.viewIconsTableText.setInteractive({ cursor: cursorURL.interactiveCursorURL}).on(
+            EventsTouchedGameObjectsStrings.POINTEROVER,
+            () => {
+                this.viewIconsTableText.setColor(ColorsString.RED_HEXADECIMAL_STRING);  
+            }
+        );
+
+        this.viewIconsTableText.setInteractive({ cursor: cursorURL.interactiveCursorURL}).on(
+            EventsTouchedGameObjectsStrings.POINTEROUT,
+            () => {
+                this.viewIconsTableText.setColor(ColorsString.GREEN_HEXADECIMAL_STRING);
+                if (this.iconsTable.visible) {
+                    this.viewIconsTableText.setColor(ColorsString.RED_HEXADECIMAL_STRING);
+                }
+            }
+        );
+
+        this.viewIconsTableText.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN,
             () => {
                 // console.log(this.iconsTable.visible);
                 if (this.iconsTable.visible) {
-                    const buttonText = this.viewIconsTableButton.getByName(
-                                            buttonElements.BUTTON_TEXT
-                                        ) as Phaser.GameObjects.Text;
-                    const buttonBackground = this.viewIconsTableButton.getByName(
-                                                    buttonElements.BUTTON_BACKGROUND
-                                                ) as Phaser.GameObjects.Image;
-                    buttonBackground.clearTint();
-                    buttonText.setColor(ColorsString.BLUE_HEXADECIMAL_STRING);
-                    buttonText.setText('VER TABLA\nDE ÍCONOS');
+                    // const buttonText = this.viewIconsTableButton.getByName(
+                    //                         buttonElements.BUTTON_TEXT
+                    //                     ) as Phaser.GameObjects.Text;
+                    // const buttonBackground = this.viewIconsTableButton.getByName(
+                    //                                 buttonElements.BUTTON_BACKGROUND
+                    //                             ) as Phaser.GameObjects.Image;
+                    // buttonBackground.clearTint();
+                    // buttonText.setColor(ColorsString.BLUE_HEXADECIMAL_STRING);
+                    // buttonText.setText('VER TABLA\nDE ÍCONOS');
+                    this.viewIconsTableText.setText('VER LEYENDAS >');
+                    this.viewIconsTableText.setColor(ColorsString.GREEN_HEXADECIMAL_STRING);
                     this.iconsTable.setVisible(false);
                 } else {
-                    const buttonText = this.viewIconsTableButton.getByName(
-                                            buttonElements.BUTTON_TEXT
-                                        ) as Phaser.GameObjects.Text;
-                    const buttonBackground = this.viewIconsTableButton.getByName(
-                                                    buttonElements.BUTTON_BACKGROUND
-                                                ) as Phaser.GameObjects.Image;
+                    // const buttonText = this.viewIconsTableButton.getByName(
+                    //                         buttonElements.BUTTON_TEXT
+                    //                     ) as Phaser.GameObjects.Text;
+                    // const buttonBackground = this.viewIconsTableButton.getByName(
+                    //                                 buttonElements.BUTTON_BACKGROUND
+                    //                             ) as Phaser.GameObjects.Image;
                                                 
-                    buttonText.setColor(ColorsString.DARK_GRAY_HEXADECIMAL_STRING);
-                    buttonText.setText('OCULTAR\nTABLA');
-                    buttonBackground.setTint(ColorsValue.LIGHT_GREEN_HEXADECIMAL_VALUE);
+                    // buttonText.setColor(ColorsString.DARK_GRAY_HEXADECIMAL_STRING);
+                    // buttonText.setText('OCULTAR\nTABLA');
+                    // buttonBackground.setTint(ColorsValue.LIGHT_GREEN_HEXADECIMAL_VALUE);
+                    
+                    this.viewIconsTableText.setColor(ColorsString.RED_HEXADECIMAL_STRING);
+                    this.viewIconsTableText.setText('< OCULTAR LEYENDAS');
                     this.iconsTable.setVisible(true);
                 }
             }
@@ -145,7 +168,7 @@ export class MapScene extends Phaser.Scene {
         this.events.on(
             'wake',
             () => {
-                GameSpecifications.gameOver = !(GameSpecifications.decisionPeriodIds.length > 0);
+                GameSpecifications.gameOver = (!(GameSpecifications.decisionPeriodIds.length > 0)  && gameStatus.status === 'game-over');
                 // console.log(GameSpecifications.gameOver);
                 this.updateSceneScore();
                 this.showIconDecision();
@@ -182,9 +205,13 @@ export class MapScene extends Phaser.Scene {
 
         this.homeButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                // this.scene.pause();
-                gameStatus.status = 'mainScene';
-                gameRouterLink.routerLink.navigate(['/']);
+                this.scene.pause();
+                const gameData: SceneDataInterface = {
+                    returnSceneName: this.scene.key
+                }
+                this.scene.launch(GameSceneIdsStrings.WARNING_MESSAGE_SCENE_ID, gameData);
+                // gameStatus.status = 'mainScene';
+                // gameRouterLink.routerLink.navigate(['/']);
             }
         );
 

@@ -73,8 +73,9 @@ export class DecisionMakingScene extends Phaser.Scene {
         
         this.decisiontitle = this.sceneGameObjects.get(
             DecisionSceneElementsString.DECISION_TITLE
-        ).gameObject;
-        
+        ).gameObject as Phaser.GameObjects.Text;
+        this.decisiontitle.setAlpha(0.98);
+
         this.decisionText = this.sceneGameObjects.get(
             DecisionSceneElementsString.DECISION_TEXT
         ).gameObject;
@@ -108,7 +109,6 @@ export class DecisionMakingScene extends Phaser.Scene {
     }
 
     private addFunctionality() {
-        // addTintOnGameButton(this.closeButton);
         this.closeButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 GameSpecifications.decisionPeriodIds.push(GameSpecifications.currentPeriodId);
@@ -117,7 +117,6 @@ export class DecisionMakingScene extends Phaser.Scene {
             }
         );
 
-        // addPointerOverOnInteractiveObject(this.saveSettingsButtons);
         this.continueButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 if (this.decisionNumber === 1) {

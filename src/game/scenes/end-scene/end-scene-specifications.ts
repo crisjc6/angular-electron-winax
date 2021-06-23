@@ -92,7 +92,7 @@ export const endSceneElementsSpecifications: GameElementSpecificationsInterface[
         type: 'text',
         element: 'title',
         name: 'period-20-30-title',
-        content: 'PERIODO\n2020 - 2030',
+        content: 'PERÍODO\n2020 - 2030',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.DARK_PINK_HEXADECIMAL_STRING,
@@ -112,7 +112,7 @@ export const endSceneElementsSpecifications: GameElementSpecificationsInterface[
         type: 'text',
         element: 'title',
         name: 'period-30-40-title',
-        content: 'PERIODO\n2030 - 2040',
+        content: 'PERÍODO\n2030 - 2040',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.DARK_PINK_HEXADECIMAL_STRING,
@@ -132,7 +132,7 @@ export const endSceneElementsSpecifications: GameElementSpecificationsInterface[
         type: 'text',
         element: 'title',
         name: 'period-40-50-title',
-        content: 'PERIODO\n2040 - 2050',
+        content: 'PERÍODO\n2040 - 2050',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.DARK_PINK_HEXADECIMAL_STRING,

@@ -1,4 +1,4 @@
-import { BootLoadScene } from "../scenes/boot-load/boot-load-scene";
+import { BootLoadScene } from "../scenes/boot-load-scene/boot-load-scene";
 import { MainScene } from "../scenes/main-scene/main-scene";
 import { InfoScene } from "../scenes/info-scene/info-scene";
 import { TopBestPlayerScene } from "../scenes/top-best-players-scene/top-best-players-scene";
