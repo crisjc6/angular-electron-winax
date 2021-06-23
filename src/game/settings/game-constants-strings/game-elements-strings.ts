@@ -32,6 +32,7 @@ export const enum GameSceneElementsString {
     SCENE_HELP_BUTTON = 'help-button',
     SCENE_PLAY_BUTTON = 'play-button',
     SCENE_QUIT_BUTTON = 'quit-button',
+    SCENE_RETURN_BUTTON = 'return-button',
     SCENE_BACKGROUND = 'scene-backgroud',
     SCENE_SCORE_TABLE = 'score-table',
     SCENE_MESSAGE = 'message',

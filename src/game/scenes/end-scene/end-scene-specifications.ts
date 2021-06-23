@@ -483,22 +483,44 @@ export const endSceneElementsSpecifications: GameElementSpecificationsInterface[
     {
         type: 'button',
         element: 'simple-button',
-        assetName: 'next-button-background',
-        name: 'quit-button',
-        content: 'SALIR',
+        assetName: 'quit-button-background',
+        name: 'return-button',
+        content: 'REGRESAR AL MAPA',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.WHITE_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
-            fontSize: textFontSize.Small.fontSize
+            fontSize: textFontSize.VerySmall.fontSize
         },
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 200,
+            objectWidth: 250,
             objectHeight: 60,
-            objectPositionX: 550,
+            objectPositionX: 250,
             objectPositionY: 540,
         }
-    }
+    },
+    
+    // {
+    //     type: 'button',
+    //     element: 'simple-button',
+    //     assetName: 'next-button-background',
+    //     name: 'quit-button',
+    //     content: 'SALIR',
+    //     style: {
+    //         fontFamily: GameFontStylesString.BASE_FONT,
+    //         color: ColorsString.WHITE_HEXADECIMAL_STRING,
+    //         align: AlingString.CENTER_STRING,
+    //         fontSize: textFontSize.Small.fontSize
+    //     },
+    //     scale: {
+    //         objectWidthRatio: 1,
+    //         objectHeightRatio: 1,
+    //         objectWidth: 200,
+    //         objectHeight: 60,
+    //         objectPositionX: 550,
+    //         objectPositionY: 540,
+    //     }
+    // }
 ]

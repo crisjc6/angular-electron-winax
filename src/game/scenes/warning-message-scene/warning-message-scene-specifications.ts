@@ -19,7 +19,7 @@ export const warningMessageSceneElementsSpecifications: GameElementSpecification
     {
         type: 'image',
         element: 'background',
-        assetName: 'panel-card-2-background',
+        assetName: 'panel-card-background',
         name: 'panel-backgroud',
         scale: {
             objectWidthRatio: 1,

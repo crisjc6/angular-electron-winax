@@ -450,8 +450,8 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 200,
-            objectHeight: 255,
+            objectWidth: 220,
+            objectHeight: 250,
             objectPositionX: 170,
             objectPositionY: 323,
         },
