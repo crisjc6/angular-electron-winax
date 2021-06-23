@@ -57,7 +57,6 @@ export class DetailComponent implements OnInit {
   bloqueado = false;
   gameDataCharts: IndicatorsDataChartsInterface;
   gameDataScores: GameScoresinterface;
-  puntajess = [];
 
   constructor(private router: Router,
               private weapService: WeapService,
