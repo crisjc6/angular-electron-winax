@@ -3,8 +3,31 @@ import * as path from "path";
 import * as url from "url";
 
 let win: BrowserWindow = null;
+const store = new Store();
 const args = process.argv.slice(1),
   serve = args.some((val) => val === "--serve");
+
+if (!store.get("clicks")) {
+  store.set("clicks", 0);
+}
+
+if (!store.get("puntajes")) {
+  store.set("puntajes", [{
+    teamName: '-',
+    score: 0,
+  },
+    {    teamName: '-',
+      score: 0,},
+    {
+      teamName: '-',
+      score: 0,
+    },
+    {
+      teamName: '-',
+      score: 0,
+    }
+  ]);
+}
 
 function createWindow(): BrowserWindow {
   // const size = screen.getPrimaryDisplay().workAreaSize;

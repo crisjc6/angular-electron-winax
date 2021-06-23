@@ -29,7 +29,10 @@ export class EndScene extends Phaser.Scene {
     private riverHealth_20_30_text: Phaser.GameObjects.Text;
     private riverHealth_30_40_text: Phaser.GameObjects.Text;
     private riverHealth_40_50_text: Phaser.GameObjects.Text;
-    
+
+    init() {
+
+    }
 
     constructor() {
         super({
@@ -64,47 +67,47 @@ export class EndScene extends Phaser.Scene {
         this.totalScoreText = this.sceneGameObjects.get(
             TypeResultsElementsString.TOTAL_SCORE_TEXT
         ).gameObject;
-        
+
         this.acus_20_30_text = this.sceneGameObjects.get(
             TypeResultsElementsString.ACUS_20_30_TEXT
         ).gameObject;
-        
+
         this.acus_30_40_text = this.sceneGameObjects.get(
             TypeResultsElementsString.ACUS_30_40_TEXT
         ).gameObject;
-        
+
         this.acus_40_50_text = this.sceneGameObjects.get(
             TypeResultsElementsString.ACUS_40_50_TEXT
         ).gameObject;
-        
+
         this.hydroelectric_20_30_text = this.sceneGameObjects.get(
             TypeResultsElementsString.HYDROELECTRIC_20_30_TEXT
         ).gameObject;
-        
+
         this.hydroelectric_30_40_text = this.sceneGameObjects.get(
             TypeResultsElementsString.HYDROELECTRIC_30_40_TEXT
         ).gameObject;
-        
+
         this.hydroelectric_40_50_text = this.sceneGameObjects.get(
             TypeResultsElementsString.HYDROELECTRIC_40_50_TEXT
         ).gameObject;
-        
+
         this.coverage_20_30_text = this.sceneGameObjects.get(
             TypeResultsElementsString.COVERAGE_20_30_TEXT
         ).gameObject;
-        
+
         this.coverage_30_40_text = this.sceneGameObjects.get(
             TypeResultsElementsString.COVERAGE_30_40_TEXT
         ).gameObject;
-        
+
         this.coverage_40_50_text = this.sceneGameObjects.get(
             TypeResultsElementsString.COVERAGE_40_50_TEXT
         ).gameObject;
-        
+
         this.riverHealth_20_30_text = this.sceneGameObjects.get(
             TypeResultsElementsString.RIVER_HEALTH_20_30_TEXT
         ).gameObject;
-        
+
         this.riverHealth_30_40_text = this.sceneGameObjects.get(
           TypeResultsElementsString.RIVER_HEALTH_30_40_TEXT
       ).gameObject;
@@ -130,25 +133,25 @@ export class EndScene extends Phaser.Scene {
         this.totalScoreText.setText('PUNTAJE TOTAL: ' + gameData.gameScores.totalScore + '/120');
         
         this.acus_20_30_text.setText(gameData.gameScores.conservationAreaScores.periodScores[0].score);
-        
+
         this.acus_30_40_text.setText(gameData.gameScores.conservationAreaScores.periodScores[1].score);
-        
+
         this.acus_40_50_text.setText(gameData.gameScores.conservationAreaScores.periodScores[2].score);
-        
+
         this.hydroelectric_20_30_text.setText(gameData.gameScores.hydroelectricTurbineScores.periodScores[0].score);
-        
+
         this.hydroelectric_30_40_text.setText(gameData.gameScores.hydroelectricTurbineScores.periodScores[1].score);
-        
+
         this.hydroelectric_40_50_text.setText(gameData.gameScores.hydroelectricTurbineScores.periodScores[2].score);
-        
+
         this.coverage_20_30_text.setText(gameData.gameScores.demandSiteScores.periodScores[0].score);
-        
+
         this.coverage_30_40_text.setText(gameData.gameScores.demandSiteScores.periodScores[1].score);
-        
+
         this.coverage_40_50_text.setText(gameData.gameScores.demandSiteScores.periodScores[2].score);
-        
+
         this.riverHealth_20_30_text.setText(gameData.gameScores.helpcareRiverScores.periodScores[0].score);
-        
+
         this.riverHealth_30_40_text.setText(gameData.gameScores.helpcareRiverScores.periodScores[1].score);
 
         this.riverHealth_40_50_text.setText(gameData.gameScores.helpcareRiverScores.periodScores[2].score);
