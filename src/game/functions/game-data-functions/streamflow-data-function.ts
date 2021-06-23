@@ -25,7 +25,6 @@ export function calculateStreamflowScore(_periodId: string) {
   
     gameData.gameScores.helpcareRiverScores.periodScores.forEach(
         (peridoSore) => {
-            // peridoSore.score = 0;
             if (peridoSore.periodId === _periodId) {
                 
                 const idealFlowPeriodData = JSON.parse(JSON.stringify(_idealFlowPeriodData));

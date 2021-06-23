@@ -189,30 +189,13 @@ export class DecisionMakingScene extends Phaser.Scene {
             ].decision_option_was_selected = false;
         }
         
-            GameSpecifications.gameDecisionsData[
-                GameSpecifications.currentDecisionsPeriod.id
-            ].decisions[
-                GameSpecifications.currentDecisionId
-            ].decision_options[
-                selectedOtionId
-            ].decision_option_was_selected = true;
-
-        // for(let optionId in decisionOptions) {
-        //     GameSpecifications.currentDecisionsPeriod
-        //         .decisions[
-        //             GameSpecifications.currentDecisionId
-        //         ].decision_options[
-        //             optionId
-        //         ].decision_option_was_selected = false;
-        // }
-        
-        // GameSpecifications.currentDecisionsPeriod
-        //     .decisions[
-        //         GameSpecifications.currentDecisionId
-        //     ].decision_options[
-        //         selectedOtionId
-        //     ].decision_option_was_selected = true;
-            // console.log(GameSpecifications.currentDecisionsPeriod);
+        GameSpecifications.gameDecisionsData[
+            GameSpecifications.currentDecisionsPeriod.id
+        ].decisions[
+            GameSpecifications.currentDecisionId
+        ].decision_options[
+            selectedOtionId
+        ].decision_option_was_selected = true;
     }
 
     private selectedDecision(decisionOption: DecisionBoxComponent){

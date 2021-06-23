@@ -8,11 +8,10 @@ import { loadFonts } from "../../functions/font-styles/font-styles-functions";
 import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
 import { gameMapAssets } from "../../settings/game-map-assets";
 import { gameRouterLink, GameSpecifications, gameStatus } from "../../settings/game-system-specifications";
-import { DecisionOptionsString, GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
+import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
 import { gameData } from "../../settings/game-data/game-data";
-import { GameObjectIconsMap, _gameObjectIconsMap } from "../../settings/game-decisions-data";
-
+import { _gameObjectIconsMap } from "../../settings/game-decisions-data";
 
 export class MapScene extends Phaser.Scene {
 
