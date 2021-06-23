@@ -3,7 +3,7 @@ import { endSceneElementsSpecifications } from "./end-scene-specifications";
 import { GameSceneIdsStrings } from "../../settings/game-constants-strings/game-scene-ids-string";
 import { GameSceneElementsString, TypeResultsElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 import { ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
-import { gameRouterLink, gameStatus } from "../../settings/game-system-specifications";
+import { gameRouterLink, gameStatus, servicioPuntajes } from "../../settings/game-system-specifications";
 import { ButtonComponent } from "../../components/button-component/button-component";
 import { EventsTouchedGameObjectsStrings } from "../../settings/game-constants-strings/game-events-strings";
 import { gameData } from "../../settings/game-data/game-data";
@@ -16,6 +16,7 @@ export class EndScene extends Phaser.Scene {
 
     private sceneBackground: Phaser.GameObjects.Image;
     private quitButton: ButtonComponent;
+    // private returnButton: ButtonComponent;
     private totalScoreText: Phaser.GameObjects.Text;
 
     private acus_20_30_text: Phaser.GameObjects.Text;
@@ -32,7 +33,7 @@ export class EndScene extends Phaser.Scene {
     private riverHealth_40_50_text: Phaser.GameObjects.Text;
 
     init() {
-
+        servicioPuntajes.serviceScore.save(gameData.playerData);
     }
 
     constructor() {
@@ -64,6 +65,11 @@ export class EndScene extends Phaser.Scene {
             GameSceneElementsString.SCENE_QUIT_BUTTON
         ).gameObject;
         this.quitButton.setX(this.sceneBackground.x);
+
+
+        // this.returnButton = this.sceneGameObjects.get(
+        //     GameSceneElementsString.SCENE_RETURN_BUTTON
+        // ).gameObject;
 
         this.totalScoreText = this.sceneGameObjects.get(
             TypeResultsElementsString.TOTAL_SCORE_TEXT
@@ -133,6 +139,17 @@ export class EndScene extends Phaser.Scene {
                 // gameRouterLink.routerLink.navigate(['/']);
             }
         );
+
+        // this.returnButton.setInteractive().on(
+        //     EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+        //         this.scene.stop();
+        //         this.scene.wake(GameSceneIdsStrings.MAP_SCENE_ID);
+        //         // gameStatus.status = 'mainScene';
+        //         // this.scene.stop(this.scene.key);
+        //         // gameRouterLink.routerLink.navigate(['/']);
+        //     }
+        // );
+        
     }
 
     private updateDataScene() {

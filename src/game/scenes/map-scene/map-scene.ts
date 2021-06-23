@@ -92,9 +92,6 @@ export class MapScene extends Phaser.Scene {
             GameSceneElementsString.SCENE_ICONS_TABLE,
         ).gameObject as Phaser.GameObjects.Image;
         this.iconsTable.setAlpha(0.9);
-        // this.soundButton = this.gameObjects.get(
-        //     SceneGameElementsString.SCENE_SOUND_BUTTON,
-        // ).gameObject;
         this.hideMapIcons();
     }   
 
@@ -134,30 +131,10 @@ export class MapScene extends Phaser.Scene {
             () => {
                 // console.log(this.iconsTable.visible);
                 if (this.iconsTable.visible) {
-                    // const buttonText = this.viewIconsTableButton.getByName(
-                    //                         buttonElements.BUTTON_TEXT
-                    //                     ) as Phaser.GameObjects.Text;
-                    // const buttonBackground = this.viewIconsTableButton.getByName(
-                    //                                 buttonElements.BUTTON_BACKGROUND
-                    //                             ) as Phaser.GameObjects.Image;
-                    // buttonBackground.clearTint();
-                    // buttonText.setColor(ColorsString.BLUE_HEXADECIMAL_STRING);
-                    // buttonText.setText('VER TABLA\nDE ÍCONOS');
                     this.viewIconsTableText.setText('VER LEYENDAS >');
                     this.viewIconsTableText.setColor(ColorsString.GREEN_HEXADECIMAL_STRING);
                     this.iconsTable.setVisible(false);
                 } else {
-                    // const buttonText = this.viewIconsTableButton.getByName(
-                    //                         buttonElements.BUTTON_TEXT
-                    //                     ) as Phaser.GameObjects.Text;
-                    // const buttonBackground = this.viewIconsTableButton.getByName(
-                    //                                 buttonElements.BUTTON_BACKGROUND
-                    //                             ) as Phaser.GameObjects.Image;
-                                                
-                    // buttonText.setColor(ColorsString.DARK_GRAY_HEXADECIMAL_STRING);
-                    // buttonText.setText('OCULTAR\nTABLA');
-                    // buttonBackground.setTint(ColorsValue.LIGHT_GREEN_HEXADECIMAL_VALUE);
-                    
                     this.viewIconsTableText.setColor(ColorsString.RED_HEXADECIMAL_STRING);
                     this.viewIconsTableText.setText('< OCULTAR LEYENDAS');
                     this.iconsTable.setVisible(true);
@@ -169,26 +146,13 @@ export class MapScene extends Phaser.Scene {
             'wake',
             () => {
                 GameSpecifications.gameOver = (!(GameSpecifications.decisionPeriodIds.length > 0)  && gameStatus.status === 'game-over');
-                // console.log(GameSpecifications.gameOver);
+                
                 this.updateSceneScore();
                 this.showIconDecision();
             }
         );
 
-        // scene.events.on('wake', function(){});
 
-        // addPointerOverOnInteractiveObject(this.scoreButton);
-        // this.scoreButton.setInteractive().on(
-        //     EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-        //         this.scene.pause();
-        //         const gameData: SceneDataInterface = {
-        //             returnSceneName: this.scene.key
-        //         }
-        //         this.scene.launch(GameSceneIdsStrings.TOP_BEST_PLAYER_SCENE_ID, gameData);
-        //     }
-        // );
-
-        // addPointerOverOnInteractiveObject(this.playButton);
         this.playButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 if (GameSpecifications.decisionPeriodIds.length > 0) {
@@ -199,6 +163,11 @@ export class MapScene extends Phaser.Scene {
                     // this.scene.launch(GameSceneIdsStrings.END_SCENE_ID, gameData);
                     this.scene.launch(GameSceneIdsStrings.DECISION_MAKING_SCENE_ID, gameData);
                 }
+                if (GameSpecifications.gameOver) {
+                    this.scene.pause();
+                    this.scene.launch(GameSceneIdsStrings.END_SCENE_ID);
+                }
+
 
             }
         );
@@ -210,41 +179,25 @@ export class MapScene extends Phaser.Scene {
                     returnSceneName: this.scene.key
                 }
                 this.scene.launch(GameSceneIdsStrings.WARNING_MESSAGE_SCENE_ID, gameData);
-                // gameStatus.status = 'mainScene';
-                // gameRouterLink.routerLink.navigate(['/']);
             }
         );
-
-        // addSettingsButtonFunctionality(this, this.settingsButton);
-        // this.soundButton.setInteractive().on(
-        //     EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-        //         switchGameSoundStatus(this, this.soundButton, true);
-        //         // this.scene.pause();
-        //         // const gameData: SceneDataInterface = {
-        //         //     returnSceneName: this.scene.key
-        //         // }
-        //         // this.scene.launch(GameSceneIdsStrings.SETTINGS_SCENE_ID, gameData);
-        //     }
-        // );
     }
 
-    // private updateSoundButtonStatus() {
-    //     const buttonBackground = this.soundButton.getByName(buttonElements.BUTTON_BACKGROUND) as Phaser.GameObjects.Image;
-    //     if (gameStatus.isSoundMuted === true) {
-    //         buttonBackground.setTexture(IconsKeyStrings.OFF_SOUND_ICON);
-    //     } else {
-    //         buttonBackground.setTexture(IconsKeyStrings.ON_SOUND_ICON);
-    //     }
-    // }
 
     private updateSceneScore() {
       if (this.totalScore !== undefined) {
         this.totalScore.setText('PUNTAJE: ' + gameData.playerData.score);
         if (GameSpecifications.gameOver) {
+
+            const playButtonText = this.playButton.getByName(
+                buttonElements.BUTTON_TEXT
+            ) as Phaser.GameObjects.Text;
+            playButtonText.setText('RESULTADOS');
+            
             setTimeout(
                 () => {
                     this.scene.pause();
-                    this.scene.start(GameSceneIdsStrings.END_SCENE_ID);
+                    this.scene.launch(GameSceneIdsStrings.END_SCENE_ID);
                 },
                 10
             );
