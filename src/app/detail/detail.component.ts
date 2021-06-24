@@ -429,7 +429,7 @@ export class DetailComponent implements OnInit {
       series: [
         {
           name: 'Caudal del río (m3/s)',
-          data: _dataSet.values
+          data: _dataSet.values,
         }
       ],
       title: {
@@ -519,7 +519,8 @@ export class DetailComponent implements OnInit {
       yaxis: {
         title: {
           text: `Caudal (m3/s)`,
-        }
+        },
+        tickAmount:5,
       }
     }
   }
