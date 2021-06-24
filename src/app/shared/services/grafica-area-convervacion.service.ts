@@ -24,7 +24,6 @@ export class GraficaAreaConvervacionService {
     getHydropowerChartData();
     getDemandSiteChartData();
     getStreamFlowChartData();
-    // readStreamflowCSV();
     console.log(gameData);
     return gameData;
   }

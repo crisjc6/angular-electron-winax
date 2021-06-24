@@ -18,6 +18,8 @@ export interface IndicatorsDataChartsInterface {
       riegoC8: DataChartInterface;
   };
   helpcareRiverDataChart: DataChartInterface;
+  populationDataChart: DataChartInterface;
+  precipitationDataChart: DataChartInterface;
 }
 
 export interface IndicatorsPeriodDataInterface {

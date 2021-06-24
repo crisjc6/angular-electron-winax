@@ -44,6 +44,7 @@ export const gameRouterLink: {routerLink: any} = {
 export const servicioGraficaAC: {serviceArea: any} = {
     serviceArea: null
 }
+
 export const servicioPuntajes: {serviceScore: any} = {
     serviceScore: null
 }
