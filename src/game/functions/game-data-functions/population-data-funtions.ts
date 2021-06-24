@@ -8,7 +8,7 @@ export function getPopulationChartData() {
         
         for (let i = 0; i < gameData.indicatorsDataChart.populationDataChart.years.length; i++ ) {
             if (gameData.indicatorsDataChart.precipitationDataChart.years[i] === startYear && startYear <= endYear) {
-                gameData.indicatorsDataChart.populationDataChart.values[i] = populationYearsValues.years[i];
+                gameData.indicatorsDataChart.populationDataChart.values[i] = populationYearsValues.values[i];
                 startYear++;
             }
         }

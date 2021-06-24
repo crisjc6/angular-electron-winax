@@ -8,7 +8,7 @@ export function getPrecipitationChartData() {
         
         for (let i = 0; i < gameData.indicatorsDataChart.precipitationDataChart.years.length; i++ ) {
             if (gameData.indicatorsDataChart.precipitationDataChart.years[i] === startYear && startYear <= endYear) {
-                gameData.indicatorsDataChart.precipitationDataChart.values[i] = precipitationYearsValues.years[i];
+                gameData.indicatorsDataChart.precipitationDataChart.values[i] = precipitationYearsValues.values[i];
                 startYear++;
             }
         }
