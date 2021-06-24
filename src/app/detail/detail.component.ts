@@ -146,7 +146,7 @@ export class DetailComponent implements OnInit {
         }
       ],
       title: {
-        text: 'Áreas de Conservación',
+        text: 'Áreas de Conservación (ACUS)',
         align: 'left'
       },
       chart: {
@@ -343,19 +343,6 @@ export class DetailComponent implements OnInit {
           name: 'RC8',
           data: _dataSet.riegoC8.values
         },
-        {
-          name: 'F. Leche',
-          data: _dataSet.plantaProcesadoraLeche.values
-        },
-        {
-          name: 'F. Papa',
-          data: _dataSet.plantaProcesadoraPapa.values
-        },
-        {
-          name: 'P. Uvilla',
-          data: _dataSet.plantacionUvilla.values
-        },
-
       ],
       title: {
         text: 'Cobertura de las demandas',
