@@ -64,7 +64,7 @@ export class EndScene extends Phaser.Scene {
         this.quitButton = this.sceneGameObjects.get(
             GameSceneElementsString.SCENE_QUIT_BUTTON
         ).gameObject;
-        this.quitButton.setX(this.sceneBackground.x);
+        // this.quitButton.setX(this.sceneBackground.x);
 
         this.returnButton = this.sceneGameObjects.get(
             GameSceneElementsString.SCENE_RETURN_BUTTON
@@ -132,9 +132,6 @@ export class EndScene extends Phaser.Scene {
                     returnSceneName: this.scene.key
                 }
                 this.scene.launch(GameSceneIdsStrings.WARNING_MESSAGE_SCENE_ID, gameData);
-                // gameStatus.status = 'mainScene';
-                // this.scene.stop(this.scene.key);
-                // gameRouterLink.routerLink.navigate(['/']);
             }
         );
 
@@ -142,12 +139,8 @@ export class EndScene extends Phaser.Scene {
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 this.scene.stop();
                 this.scene.wake(GameSceneIdsStrings.MAP_SCENE_ID);
-                // gameStatus.status = 'mainScene';
-                // this.scene.stop(this.scene.key);
-                // gameRouterLink.routerLink.navigate(['/']);
             }
         );
-        
     }
 
     private updateDataScene() {
