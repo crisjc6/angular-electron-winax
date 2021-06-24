@@ -462,8 +462,8 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
         type: 'text',
         element: 'text',
         // assetName: 'view-more-button-background',
-        name: 'view-icons-table',
-        content: 'VER LEYENDAS >',
+        name: 'view-decision-list',
+        content: 'VER DECISIONES >',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
             color: ColorsString.GREEN_HEXADECIMAL_STRING,
@@ -476,12 +476,34 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
             objectWidth: 145,
             objectHeight: 20,
             objectPositionX: 23,
-            objectPositionY: 313,
+            objectPositionY: 340,
         },
         originX: 0,
         originY: 0
     },
-
+    {
+        type: 'text-card',
+        element: 'text-card',
+        assetName: 'panel-card-background',
+        name: 'decision-list',
+        content: '',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '14px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 230,
+            objectHeight: 240,
+            objectPositionX: 170,
+            objectPositionY: 335,
+        },
+        originX: 0,
+        originY: 0.5
+    },
 ]
 
 //view-more-button-background

@@ -9,6 +9,7 @@ import { GameElementSpecificationsInterface } from "./../../interfaces/game-elem
 import { GameElementsString } from "./../../settings/game-constants-strings/game-elements-strings";
 import { HtmlDOMComponent } from "./../../components/html-dom-component/html-dom-component";
 import { DecisionBoxComponent } from "./../../components/decision-box-component/decision-box-component";
+import { TextCardComponent } from "./../../components/text-card-component/text-card-component";
 
 export class GameFacade {
     private gameScene: Phaser.Scene;
@@ -65,7 +66,7 @@ export class GameFacade {
             }
 
             case GameElementsString.TEXT_CARD_STRING: {
-                gameObject = null;
+                gameObject = new TextCardComponent(this.gameScene, _gameElementSpecifications);
                 break;
             }
 
