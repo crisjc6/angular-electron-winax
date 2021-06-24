@@ -104,7 +104,7 @@ export class ScoreTableComponent extends Phaser.GameObjects.Container {
             
             itemObjects.itemContainer.y = positionY;
             this.add(itemObjects.itemContainer);
-            this.scoreItems.set(row + 1, itemObjects);
+            this.scoreItems.set(row, itemObjects);
         }
     }
 
@@ -137,6 +137,7 @@ export class ScoreTableComponent extends Phaser.GameObjects.Container {
 
     public updateDependenceScoreTable() {
         this.scoreTableBackground.clearAlpha();
+        console.log(this.tableData);
         for (let row = 0; row <= this.rowsNumber; row++) {
             const scoreItem: ScoreItemInterface  = this.scoreItems.get(row);
             if ((scoreItem !== null && scoreItem !== undefined) && (this.tableData[row] !== null && this.tableData[row] !== undefined)) {

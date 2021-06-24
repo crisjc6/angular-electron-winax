@@ -33,7 +33,7 @@ export class LoadScene extends Phaser.Scene {
     setTimeout(() => {
       // this.startNextScene();
       this.loadWeapValue();
-    }, 2);
+    }, 1);
   }
 
   private generateScene() {

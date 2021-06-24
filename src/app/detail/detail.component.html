@@ -24,7 +24,7 @@
           <br>
           <span class="score">Pts.</span>
           <br>
-          <span class="score">{{gameDataScores.conservationAreaScores.indicatorTotalScore}}</span>
+          <span class="score">{{gameData.gameScores.conservationAreaScores.indicatorTotalScore}}</span>
           <br>
           <button
             type="button"
@@ -48,14 +48,14 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr  *ngFor="let score of gameDataScores.conservationAreaScores.periodScores">
-                    <th>{{score.periodId}}:</th>
+                  <tr  *ngFor="let score of gameData.gameScores.conservationAreaScores.periodScores; let i = index">
+                    <th>{{i+1}}</th>
                     <td>{{score.score}}</td>
                   </tr>
                   <tr>
                     <th class="bg-light">Total:
                     </th>
-                    <td class="bg-light">{{gameDataScores.conservationAreaScores.indicatorTotalScore}}</td>
+                    <td class="bg-light">{{gameData.gameScores.conservationAreaScores.indicatorTotalScore}}</td>
                   </tr>
                   </tbody>
                 </table>
@@ -84,7 +84,7 @@
           <br>
           <span class="score">Pts.</span>
           <br>
-          <span class="score">{{gameDataScores.hydroelectricTurbineScores.indicatorTotalScore}}</span>
+          <span class="score">{{gameData.gameScores.hydroelectricTurbineScores.indicatorTotalScore}}</span>
           <br>
           <button
             type="button"
@@ -108,14 +108,14 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr  *ngFor="let score of gameDataScores.hydroelectricTurbineScores.periodScores">
-                    <th>{{score.periodId}}:</th>
+                  <tr  *ngFor="let score of gameData.gameScores.hydroelectricTurbineScores.periodScores; let i = index">
+                    <th>{{i+1}}</th>
                     <td>{{score.score}}</td>
                   </tr>
                   <tr>
                     <th class="bg-light">Total:
                     </th>
-                    <td class="bg-light">{{gameDataScores.hydroelectricTurbineScores.indicatorTotalScore}}</td>
+                    <td class="bg-light">{{gameData.gameScores.hydroelectricTurbineScores.indicatorTotalScore}}</td>
                   </tr>
                   </tbody>
                 </table>
@@ -145,7 +145,7 @@
           <br>
           <span class="score">Pts.</span>
           <br>
-          <span class="score">{{gameDataScores.demandSiteScores.indicatorTotalScore}}</span>
+          <span class="score">{{gameData.gameScores.demandSiteScores.indicatorTotalScore}}</span>
           <br>
           <button
             type="button"
@@ -169,14 +169,14 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr  *ngFor="let score of gameDataScores.demandSiteScores.periodScores">
-                    <th>{{score.periodId}}:</th>
+                  <tr  *ngFor="let score of gameData.gameScores.demandSiteScores.periodScores; let i = index">
+                    <th>{{i+1}}</th>
                     <td>{{score.score}}</td>
                   </tr>
                   <tr>
                     <th class="bg-light">Total:
                     </th>
-                    <td class="bg-light">{{gameDataScores.demandSiteScores.indicatorTotalScore}}</td>
+                    <td class="bg-light">{{gameData.gameScores.demandSiteScores.indicatorTotalScore}}</td>
                   </tr>
                   </tbody>
                 </table>
@@ -205,7 +205,7 @@
           <br>
           <span class="score">Pts.</span>
           <br>
-          <span class="score">{{gameDataScores.helpcareRiverScores.indicatorTotalScore}}</span>
+          <span class="score">{{gameData.gameScores.helpcareRiverScores.indicatorTotalScore}}</span>
           <br>
           <button
             type="button"
@@ -229,14 +229,14 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr  *ngFor="let score of gameDataScores.helpcareRiverScores.periodScores">
-                    <th>{{score.periodId}}:</th>
+                  <tr  *ngFor="let score of gameData.gameScores.helpcareRiverScores.periodScores; let i = index">
+                    <th>{{i+1}}</th>
                     <td>{{score.score}}</td>
                   </tr>
                   <tr>
                     <th class="bg-light">Total:
                     </th>
-                    <td class="bg-light">{{gameDataScores.helpcareRiverScores.indicatorTotalScore}}</td>
+                    <td class="bg-light">{{gameData.gameScores.helpcareRiverScores.indicatorTotalScore}}</td>
                   </tr>
                   </tbody>
                 </table>

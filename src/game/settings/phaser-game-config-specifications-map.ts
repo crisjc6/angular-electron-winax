@@ -10,23 +10,23 @@ export const phaserGameConfigMap = {
     parent: 'phaser_game_map',
     type: Phaser.AUTO,
     scale: {
-        mode: Phaser.Scale.NONE,
+        mode: Phaser.Scale.WIDTH_CONTROLS_HEIGHT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
         width: 812,
-        // window.innerWidth/window.innerHeight > 21/9 ? 1366 :
+        // width: window.innerWidth/window.innerHeight > 21/9 ? 812 :
         //         window.innerWidth/window.innerHeight >= 16/10 && window.innerWidth/window.innerHeight <= 21/9 ?
-        //             (window.innerWidth > 1440 ? 1440 :  (window.innerWidth < 1024 ? 1366 : window.innerWidth )):
-        //         window.innerWidth/window.innerHeight > 4/3 && window.innerWidth/window.innerHeight < 16/10 ? 1366 :
-                // window.innerWidth/window.innerHeight >= 1 && window.innerWidth/window.innerHeight <= 4/3 ? 1024 :
-                // 1366,
+        //             (window.innerWidth > 1440 ? 812 :  (window.innerWidth < 1024 ? 812 : window.innerWidth )):
+        //         window.innerWidth/window.innerHeight > 4/3 && window.innerWidth/window.innerHeight < 16/10 ? 812 :
+        //         window.innerWidth/window.innerHeight >= 1 && window.innerWidth/window.innerHeight <= 4/3 ? 812 :
+        //         812,
 
         height: 635
-        // window.innerWidth/window.innerHeight > 21/9 ? 761 :
+        // height: window.innerWidth/window.innerHeight > 21/9 ? 800 :
         //         window.innerWidth/window.innerHeight >= 16/10 && window.innerWidth/window.innerHeight <= 21/9 ?
-        //             (window.innerHeight > 800 ? 761 :  (window.innerHeight < 655 ? 761 : window.innerHeight )):
-        //         window.innerWidth/window.innerHeight > 4/3 && window.innerWidth/window.innerHeight < 16/10 ? 761 :
-                // window.innerWidth/window.innerHeight >= 1 && window.innerWidth/window.innerHeight <= 4/3 ? 720 :
-                // 761,
+        //             (window.innerHeight > 800 ? 800 :  (window.innerHeight < 655 ? 800 : window.innerHeight )):
+        //         window.innerWidth/window.innerHeight > 4/3 && window.innerWidth/window.innerHeight < 16/10 ? 800 :
+        //         window.innerWidth/window.innerHeight >= 1 && window.innerWidth/window.innerHeight <= 4/3 ? 800 :
+        //         800,
 
     },
     render: {

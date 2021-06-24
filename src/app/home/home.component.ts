@@ -1,11 +1,12 @@
 import { WeapService } from "../shared/services/weap-service";
-import { gameRouterLink, GameSpecifications } from "../../game/settings/game-system-specifications";
+import { gameRouterLink, GameSpecifications, servicioPuntajes } from "../../game/settings/game-system-specifications";
 // const fs = (<any>window).require("fs");
 
 import { WordService } from "../shared/services/word-service";
 import { phaserGameConfig } from "../../game/settings/phaser-game-config-specifications";
 import {Component, OnInit} from "@angular/core";
 import {Router} from "@angular/router";
+import { ScoreService } from "../shared/services/puntaje.service";
 
 const myid = "123445";
 const vsinfo = `das ist ja mal eine Info\nund was für eine!`;
@@ -23,8 +24,10 @@ export class HomeComponent implements OnInit {
   constructor(
     private wordService: WordService,
     private weapService: WeapService,
-    private _router: Router
+    private _router: Router,
+    private scoreService: ScoreService,
   ) {
+    servicioPuntajes.serviceScore = scoreService;
     gameRouterLink.routerLink = this._router;
   }
 

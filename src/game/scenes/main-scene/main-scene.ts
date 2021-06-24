@@ -4,19 +4,15 @@ import { mainSceneElementSpecifictions } from "./main-scene-elements-specificact
 import { GameSceneIdsStrings } from "./../../settings/game-constants-strings/game-scene-ids-string";
 import { ButtonComponent } from "./../../components/button-component/button-component";
 import { EventsTouchedGameObjectsStrings } from "./../../settings/game-constants-strings/game-events-strings";
-import { loadFonts } from "../../functions/font-styles/font-styles-functions";
-import { loadAssetsArrayGame } from "../../functions/load-assets-functions/load-assets-functions";
-import { gameAssets } from "../../settings/game-assets";
 import { gameStatus } from "../../settings/game-system-specifications";
-import { buttonElements, IconsKeyStrings, GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
-import { switchGameSoundStatus } from '../../functions/sound-functions/sound-function'; 
+import { GameSceneElementsString } from "../../settings/game-constants-strings/game-elements-strings";
 
 export class MainScene extends Phaser.Scene {
     
     private gameObjects: any;    
     private playButton: ButtonComponent;
     private scoreButton: ButtonComponent;
-    private soundButton: ButtonComponent;
+    // private soundButton: ButtonComponent;
     private infoButton: ButtonComponent;
     private helpButton: ButtonComponent;
 
@@ -41,7 +37,7 @@ export class MainScene extends Phaser.Scene {
         this.gameObjects = fachada.getGameObjects;
         this.getElements();
         this.addFunctionality();
-        this.updateSoundButtonStatus();
+        // this.updateSoundButtonStatus();
     }
 
     update() {
@@ -58,9 +54,9 @@ export class MainScene extends Phaser.Scene {
             GameSceneElementsString.SCENE_PLAY_BUTTON,
         ).gameObject;
 
-        this.soundButton = this.gameObjects.get(
-            GameSceneElementsString.SCENE_SOUND_BUTTON,
-        ).gameObject;
+        // this.soundButton = this.gameObjects.get(
+        //     GameSceneElementsString.SCENE_SOUND_BUTTON,
+        // ).gameObject;
 
         this.infoButton = this.gameObjects.get(
             GameSceneElementsString.SCENE_INFO_BUTTON,
@@ -119,20 +115,20 @@ export class MainScene extends Phaser.Scene {
             }
         );
         
-        // addSettingsButtonFunctionality(this, this.settingsButton);
-        this.soundButton.setInteractive().on(
-            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                switchGameSoundStatus(this, this.soundButton, true);
-            }
-        );
+        // // addSettingsButtonFunctionality(this, this.settingsButton);
+        // this.soundButton.setInteractive().on(
+        //     EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+        //         switchGameSoundStatus(this, this.soundButton, true);
+        //     }
+        // );
     }
 
-    private updateSoundButtonStatus() {
-        const buttonBackground = this.soundButton.getByName(buttonElements.BUTTON_BACKGROUND) as Phaser.GameObjects.Image;
-        if (gameStatus.isSoundMuted === true) {
-            buttonBackground.setTexture(IconsKeyStrings.OFF_SOUND_ICON);
-        } else {
-            buttonBackground.setTexture(IconsKeyStrings.ON_SOUND_ICON);
-        }
-    }
+    // private updateSoundButtonStatus() {
+    //     const buttonBackground = this.soundButton.getByName(buttonElements.BUTTON_BACKGROUND) as Phaser.GameObjects.Image;
+    //     if (gameStatus.isSoundMuted === true) {
+    //         buttonBackground.setTexture(IconsKeyStrings.OFF_SOUND_ICON);
+    //     } else {
+    //         buttonBackground.setTexture(IconsKeyStrings.ON_SOUND_ICON);
+    //     }
+    // }
 }

@@ -26,6 +26,21 @@ export const _periodScoreDefault: {
   }
 ]
 
+export const _conservationPeriotAreaDefault = {
+  'Periodo20_30' : {
+      periodId: 'Periodo20_30',
+      conservationArea: 0 
+  },
+  'Periodo30_40' : {
+      periodId: 'Periodo30_40',
+      conservationArea: 0 
+  },
+  'Periodo40_50' : {
+      periodId: 'Periodo40_50',
+      conservationArea: 0 
+  }
+}
+
 export const _gameScoresDefault: GameScoresinterface = {
   periodDataIds: [],
   totalScore: 0,
@@ -69,7 +84,9 @@ export const _indicatorsDataChartDefault: IndicatorsDataChartsInterface = {
       riegoC7: JSON.parse(JSON.stringify(_dataChartDefault)),
       riegoC8: JSON.parse(JSON.stringify(_dataChartDefault))
   },
-  helpcareRiverDataChart: JSON.parse(JSON.stringify(_dataChartDefault))
+  helpcareRiverDataChart: JSON.parse(JSON.stringify(_dataChartDefault)),
+  populationDataChart: JSON.parse(JSON.stringify(_dataChartDefault)),
+  precipitationDataChart: JSON.parse(JSON.stringify(_dataChartDefault))
 }
 
 export const _periodDataDefault = {

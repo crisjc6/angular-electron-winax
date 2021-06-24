@@ -18,11 +18,12 @@ import {GraficaAreaConvervacionService} from "../shared/services/grafica-area-co
 import {Component, OnInit, ViewChild} from "@angular/core";
 import {Router} from "@angular/router";
 import {DataChartInterface} from "../../game/interfaces/game-data-chart-interface";
-import {IndicatorsDataChartsInterface} from "../../game/interfaces/indicators-data-interface"
-import { GameScoresinterface } from "../../game/interfaces/game-score-interface";
+import {IndicatorsDataChartsInterface, IndicatorsPeriodDataInterface} from "../../game/interfaces/indicators-data-interface"
+import { GameScoreDataInterface, GameScoresinterface } from "../../game/interfaces/game-score-interface";
 import {precipitationYearsValues} from "../costantes/precipitacion";
 import {populationYearsValues} from "../costantes/poblacion";
 import {ScoreService} from "../shared/services/puntaje.service";
+import { gameData } from "../../game/settings/game-data/game-data";
 
 
 export type ChartOptions = {
@@ -55,8 +56,16 @@ export class DetailComponent implements OnInit {
   public chartOptionsPR: Partial<ChartOptions>;
   private game: Phaser.Game;
   bloqueado = false;
-  gameDataCharts: IndicatorsDataChartsInterface;
-  gameDataScores: GameScoresinterface;
+
+  gameData: {
+    playerData: GameScoreDataInterface;
+    indicatorsPeriodData: IndicatorsPeriodDataInterface;
+    indicatorsDataChart: IndicatorsDataChartsInterface;
+    gameScores: GameScoresinterface;
+  } = JSON.parse(JSON.stringify(gameData));
+
+  // gameDataCharts: IndicatorsDataChartsInterface;
+  // gameDataScores: GameScoresinterface;
 
   constructor(private router: Router,
               private weapService: WeapService,
@@ -68,9 +77,10 @@ export class DetailComponent implements OnInit {
     servicioGraficaAC.serviceArea = graficaAreaConservacioService;
     servicioPuntajes.serviceScore = scoreService;
     /**********Corregir cambiarlo a una sola llamada ***********/
-    this.gameDataCharts = this.graficaAreaConservacioService.exportarDataXY().indicatorsDataChart;
-    this.gameDataScores = this.graficaAreaConservacioService.exportarDataXY().gameScores;
-    this.drawAllCharts(this.gameDataCharts);
+    // this.gameData = this.graficaAreaConservacioService.exportarDataXY();
+    // this.gameDataCharts = this.graficaAreaConservacioService.exportarDataXY().indicatorsDataChart;
+    // this.gameDataScores = this.graficaAreaConservacioService.exportarDataXY().gameScores;
+    this.drawAllCharts(this.gameData.indicatorsDataChart);
   }
 
   ngOnInit(): void {
@@ -102,12 +112,16 @@ export class DetailComponent implements OnInit {
 
   escucharCambiosGraficaAC() {
     this.graficaAreaConservacioService.seActualizoDatos
-      .subscribe((cambio)=>{
+      .subscribe(
+        (cambio)=>{
+        console.log('Sucribe: ' + cambio + '\n')
         if(cambio == true) {
           /**********Corregir cambiarlo a una sola llamada ***********/
-          this.gameDataCharts = this.graficaAreaConservacioService.exportarDataXY().indicatorsDataChart;
-          this.gameDataScores = this.graficaAreaConservacioService.exportarDataXY().gameScores;
-          this.drawAllCharts(this.gameDataCharts);
+          // this.gameDataCharts = this.graficaAreaConservacioService.exportarDataXY().indicatorsDataChart;
+          // this.gameDataScores = this.graficaAreaConservacioService.exportarDataXY().gameScores;
+
+          this.gameData = this.graficaAreaConservacioService.exportarDataXY();
+          this.drawAllCharts(this.gameData.indicatorsDataChart);
         }
       })
   }
@@ -117,8 +131,10 @@ export class DetailComponent implements OnInit {
     this.chartOptionsHT = this.drawHydropowerChart(_gameDataCharts.hydroelectricTurbineDataChart);
     this.chartOptionsDC = this.drawCoverageChart(_gameDataCharts.demandSiteDataChart);
     this.chartOptionsSR = this.drawStreamFlowChart(_gameDataCharts.helpcareRiverDataChart);
-    this.chartOptionsPR = this.precipitationChart(precipitationYearsValues);
-    this.chartOptionsP = this.populationChart(populationYearsValues);
+    this.chartOptionsPR = this.precipitationChart(_gameDataCharts.precipitationDataChart);
+    this.chartOptionsP = this.populationChart(_gameDataCharts.populationDataChart);
+    // this.chartOptionsPR = this.precipitationChart(precipitationYearsValues);
+    // this.chartOptionsP = this.populationChart(populationYearsValues);
   }
 
   drawConservationAreaChart(_dataSet: DataChartInterface): Partial<ChartOptions> {
@@ -296,18 +312,6 @@ export class DetailComponent implements OnInit {
     return {
       series: [
         {
-          name: 'F. Leche',
-          data: _dataSet.plantaProcesadoraLeche.values
-        },
-        {
-          name: 'F. Papa',
-          data: _dataSet.plantaProcesadoraPapa.values
-        },
-        {
-          name: 'P. Uvilla',
-          data: _dataSet.plantacionUvilla.values
-        },
-        {
           name: 'RC1',
           data: _dataSet.riegoC1.values
         },
@@ -338,6 +342,18 @@ export class DetailComponent implements OnInit {
         {
           name: 'RC8',
           data: _dataSet.riegoC8.values
+        },
+        {
+          name: 'F. Leche',
+          data: _dataSet.plantaProcesadoraLeche.values
+        },
+        {
+          name: 'F. Papa',
+          data: _dataSet.plantaProcesadoraPapa.values
+        },
+        {
+          name: 'P. Uvilla',
+          data: _dataSet.plantacionUvilla.values
         },
 
       ],
@@ -425,7 +441,7 @@ export class DetailComponent implements OnInit {
     return {
       series: [
         {
-          name: 'Fujo del río (m3/s)',
+          name: 'Caudal del río (m3/s)',
           data: _dataSet.values
         }
       ],
@@ -515,7 +531,7 @@ export class DetailComponent implements OnInit {
       },
       yaxis: {
         title: {
-          text: 'Flujo (m3/s)',
+          text: `Caudal (m3/s)`,
         }
       }
     }
@@ -604,7 +620,7 @@ export class DetailComponent implements OnInit {
       },
       yaxis: {
         title: {
-          text: 'Milímetros Agua (mm)',
+          text: 'mm',
         }
       }
     }

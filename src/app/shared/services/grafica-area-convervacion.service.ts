@@ -7,6 +7,8 @@ import {getStreamFlowChartData} from '../../../game/functions/game-data-function
 
 // import {HydropowerChartData} from "../../../game/settings/hydropower_turbine_data";
 import { gameData } from "../../../game/settings/game-data/game-data";
+import {getPopulationChartData} from "../../../game/functions/game-data-functions/population-data-funtions";
+import {getPrecipitationChartData} from "../../../game/functions/game-data-functions/precipitation-data-funtions";
 
 @Injectable({ providedIn: "root" })
 export class GraficaAreaConvervacionService {
@@ -24,7 +26,8 @@ export class GraficaAreaConvervacionService {
     getHydropowerChartData();
     getDemandSiteChartData();
     getStreamFlowChartData();
-    // readStreamflowCSV();
+    getPopulationChartData();
+    getPrecipitationChartData();
     console.log(gameData);
     return gameData;
   }
