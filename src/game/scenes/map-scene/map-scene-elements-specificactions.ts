@@ -457,7 +457,30 @@ export const mapSceneElemntSpecifictions: GameElementSpecificationsInterface[] =
         },
         originX: 0,
         originY: 0.5
-    }
+    },
+    {
+        type: 'text',
+        element: 'text',
+        // assetName: 'view-more-button-background',
+        name: 'view-icons-table',
+        content: 'VER LEYENDAS >',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.GREEN_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: '12px',
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 145,
+            objectHeight: 20,
+            objectPositionX: 23,
+            objectPositionY: 313,
+        },
+        originX: 0,
+        originY: 0
+    },
 
 ]
 

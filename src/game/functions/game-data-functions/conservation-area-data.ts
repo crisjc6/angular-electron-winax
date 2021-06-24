@@ -62,7 +62,7 @@ export function calculateConservationAreaScore(_periodArea: number, _periodId: s
       if (periodScore.periodId === _periodId) {
         periodScore.score = +(conservationAreaScore.toFixed(2));
       }
-      conservationAreaTotalScore += periodScore.score;
+      conservationAreaTotalScore += +((periodScore.score).toFixed(2));
     }
   );
   

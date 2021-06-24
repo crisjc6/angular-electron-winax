@@ -10,7 +10,7 @@ export const phaserGameConfigMap = {
     parent: 'phaser_game_map',
     type: Phaser.AUTO,
     scale: {
-        mode: Phaser.Scale.WIDTH_CONTROLS_HEIGHT,
+        mode: Phaser.Scale.NONE,
         autoCenter: Phaser.Scale.CENTER_BOTH,
         width: 812,
         // width: window.innerWidth/window.innerHeight > 21/9 ? 812 :
