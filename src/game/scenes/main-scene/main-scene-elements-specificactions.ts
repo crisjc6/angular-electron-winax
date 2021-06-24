@@ -118,7 +118,7 @@ export const mainSceneElementSpecifictions: GameElementSpecificationsInterface[]
             objectHeight: 100,
             // objectWidth: 100,
             // objectHeight: 140,
-            objectPositionX: 360,
+            objectPositionX: 394,
             objectPositionY: 666,
         },
     },
@@ -168,11 +168,11 @@ export const mainSceneElementSpecifictions: GameElementSpecificationsInterface[]
         scale: {
             objectWidthRatio: 1,
             objectHeightRatio: 1,
-            objectWidth: 71,
+            objectWidth: 90,
             objectHeight: 100,
             // objectPositionX: 695,
             // objectPositionY: 666,
-            objectPositionX: 520,
+            objectPositionX: 610,
             objectPositionY: 666,
         }
     }

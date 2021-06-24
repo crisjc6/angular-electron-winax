@@ -56,6 +56,30 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
         },
     },
     {
+        type: 'button',
+        element: 'bottom-title-button',
+        assetName: 'close-button-background',
+        name: 'hide-button',
+        content: 'MAPA',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.RED_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: textFontSize.VeryVerySmall.fontSize,
+            strokeThickness: textFontSize.VeryVerySmall.strokeThickness,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 55,
+            objectHeight: 75,
+            objectPositionX: 680,
+            // objectPositionY: 90,
+            objectPositionY: 70,
+        },
+    },
+    {
         type: 'text',
         element: 'title',
         name: 'decision-title',
@@ -207,5 +231,43 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
             objectPositionY: 543,
             // objectPositionY: 729,
         }
-    }
+    },
+    // {
+    //     type: 'image',
+    //     element: 'background',
+    //     assetName: 'map-decision-background',
+    //     name: 'map-decision-backgroud',
+    //     scale: {
+    //         objectWidthRatio: 1,
+    //         objectHeightRatio: 1,
+    //         // objectWidth: 1066,
+    //         objectWidth: 734,
+    //         objectHeight: 420,
+    //         objectPositionX: 405,
+    //         objectPositionY: 315,
+    //     },
+    // },
+    // {
+    //     type: 'text',
+    //     element: 'text',
+    //     // assetName: 'view-more-button-background',
+    //     name: 'view-map-text',
+    //     content: 'VER MAPA',
+    //     style: {
+    //         fontFamily: GameFontStylesString.BASE_FONT,
+    //         color: ColorsString.GREEN_HEXADECIMAL_STRING,
+    //         align: AlingString.CENTER_STRING,
+    //         fontSize: '14px',
+    //     },
+    //     scale: {
+    //         objectWidthRatio: 1,
+    //         objectHeightRatio: 1,
+    //         objectWidth: 145,
+    //         objectHeight: 20,
+    //         objectPositionX: 540,
+    //         objectPositionY: 60,
+    //     },
+    //     originX: 0,
+    //     originY: 0
+    // },
 ]

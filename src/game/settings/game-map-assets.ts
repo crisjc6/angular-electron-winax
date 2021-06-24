@@ -220,7 +220,7 @@ export const gameMapAssets: GameAssetsSpecificationsInterface[] = [
         key: 'map-background',
         path: '.../../assets/game-assets/boot-load-assets/world-assets/maps-assets/map-background.png'
     },
-
+    
     /*************************** BACKGROUNS *******************************/
     {
         type: GameElementsString.IMAGE_STRING,
