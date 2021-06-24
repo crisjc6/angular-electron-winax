@@ -32,6 +32,9 @@ export class DecisionMakingScene extends Phaser.Scene {
     private decisionOption2: DecisionBoxComponent;
     private decisionOption3: DecisionBoxComponent;
 
+    private hideButton: ButtonComponent;
+    private isSceneHide =  false;
+
     init(sceneData: SceneDataInterface) {
         this.sceneData = sceneData;
         this.decisionNumber = 1;
@@ -48,6 +51,7 @@ export class DecisionMakingScene extends Phaser.Scene {
     }
 
     create() {
+        this.isSceneHide = false;
         this.generateScene();
         this.getElements();
         this.addFunctionality();
@@ -106,6 +110,15 @@ export class DecisionMakingScene extends Phaser.Scene {
             GameSceneElementsString.SCENE_CONTINUE_BUTTON
         ).gameElementSpecification;
 
+        this.hideButton = this.sceneGameObjects.get(
+            GameSceneElementsString.SCENE_HIDE_BUTTON
+        ).gameObject;
+
+        // this.mapImage = this.sceneGameObjects.get(
+        //     GameSceneElementsString.SCENE_MAP_DECISION_BACKGROUND
+        // ).gameObject as Phaser.GameObjects.Image;
+        // this.mapImage.setVisible(false);
+
     }
 
     private addFunctionality() {
@@ -142,7 +155,6 @@ export class DecisionMakingScene extends Phaser.Scene {
             }
         );
 
-        // // addPointerOverOnInteractiveObject(this.saveSettingsButtons);
         this.backButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 GameSpecifications.currentDecisionIndex = 0;
@@ -158,6 +170,25 @@ export class DecisionMakingScene extends Phaser.Scene {
         this.selectedDecision(this.decisionOption3);
         
         this.disableButton(this.continueButton);
+
+        this.hideButton.setInteractive().on(
+            EventsTouchedGameObjectsStrings.POINTERDOWN,
+            () => {
+                // console.log(this.iconsTable.visible);
+                if (this.isSceneHide) {
+                    // this.hideButton.setText('VER MAPA');
+                    // this.hideButton.setColor(ColorsString.GREEN_HEXADECIMAL_STRING);
+                    // this.mapImage.setVisible(false);
+                    this.showAllScene();
+                } else {
+                    // this.hideButton.setColor(ColorsString.RED_HEXADECIMAL_STRING);
+                    // this.hideButton.setText('OCULTAR MAPA');
+                    // this.mapImage.setVisible(true);
+                    this.hideAllScene();
+                }
+            }
+        );
+
     }
 
     private getDecisionPeriod() {
@@ -278,5 +309,61 @@ export class DecisionMakingScene extends Phaser.Scene {
         buttonBackground.clearTint();
         buttonBackground.clearAlpha();
         gameObjectButton.setInteractive();
+    }
+
+    private hideAllScene() {
+        this.isSceneHide = true;
+        this.sceneGameObjects.forEach(
+            (values, keys) => {
+                
+                if (
+                    keys === GameSceneElementsString.SCENE_CLOSE_BUTTON ||
+                    keys === GameSceneElementsString.SCENE_BACKGROUND
+                ) {
+                    if (keys === GameSceneElementsString.SCENE_BACKGROUND) {
+                        values.gameObject.setY(-170);
+                    }
+                    values.gameObject.setVisible(true);
+                } else {
+                    values.gameObject.setVisible(false);
+                }
+                
+                if (keys === GameSceneElementsString.SCENE_HIDE_BUTTON ) {
+                    const hideButtonText = values.gameObject.getByName(
+                        buttonElements.BUTTON_TEXT
+                    ) as Phaser.GameObjects.Text;
+                    hideButtonText.setText('REGREZAR');
+                    values.gameObject.setVisible(true);
+                }
+            }
+        );
+    }
+
+    private showAllScene() {
+        this.isSceneHide = false;
+        this.sceneGameObjects.forEach(
+            (values, keys) => {
+                if (keys === GameSceneElementsString.SCENE_BACKGROUND) {
+                    values.gameObject.setY(315);
+                }
+
+                values.gameObject.setVisible(true);
+
+                if (
+                    keys === GameSceneElementsString.SCENE_BACK_BUTTON &&
+                    this.continueButton.x === this.sceneBackground.x
+                ) {
+                    this.backButton.setVisible(false);
+                }
+                
+                if (keys === GameSceneElementsString.SCENE_HIDE_BUTTON ) {
+                    const hideButtonText = values.gameObject.getByName(
+                        buttonElements.BUTTON_TEXT
+                    ) as Phaser.GameObjects.Text;
+                    hideButtonText.setText('MAPA');
+                    values.gameObject.setVisible(true);
+                }
+            }
+        );
     }
 }

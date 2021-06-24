@@ -16,7 +16,7 @@ export class EndScene extends Phaser.Scene {
 
     private sceneBackground: Phaser.GameObjects.Image;
     private quitButton: ButtonComponent;
-    // private returnButton: ButtonComponent;
+    private returnButton: ButtonComponent;
     private totalScoreText: Phaser.GameObjects.Text;
 
     private acus_20_30_text: Phaser.GameObjects.Text;
@@ -66,10 +66,9 @@ export class EndScene extends Phaser.Scene {
         ).gameObject;
         this.quitButton.setX(this.sceneBackground.x);
 
-
-        // this.returnButton = this.sceneGameObjects.get(
-        //     GameSceneElementsString.SCENE_RETURN_BUTTON
-        // ).gameObject;
+        this.returnButton = this.sceneGameObjects.get(
+            GameSceneElementsString.SCENE_RETURN_BUTTON
+        ).gameObject;
 
         this.totalScoreText = this.sceneGameObjects.get(
             TypeResultsElementsString.TOTAL_SCORE_TEXT
@@ -126,7 +125,6 @@ export class EndScene extends Phaser.Scene {
     }
 
     private addFunctionality() {
-        // addTintOnGameButton(this.closeButton);
         this.quitButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
                 this.scene.pause();
@@ -140,15 +138,15 @@ export class EndScene extends Phaser.Scene {
             }
         );
 
-        // this.returnButton.setInteractive().on(
-        //     EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-        //         this.scene.stop();
-        //         this.scene.wake(GameSceneIdsStrings.MAP_SCENE_ID);
-        //         // gameStatus.status = 'mainScene';
-        //         // this.scene.stop(this.scene.key);
-        //         // gameRouterLink.routerLink.navigate(['/']);
-        //     }
-        // );
+        this.returnButton.setInteractive().on(
+            EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
+                this.scene.stop();
+                this.scene.wake(GameSceneIdsStrings.MAP_SCENE_ID);
+                // gameStatus.status = 'mainScene';
+                // this.scene.stop(this.scene.key);
+                // gameRouterLink.routerLink.navigate(['/']);
+            }
+        );
         
     }
 

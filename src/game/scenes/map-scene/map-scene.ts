@@ -146,12 +146,11 @@ export class MapScene extends Phaser.Scene {
             'wake',
             () => {
                 GameSpecifications.gameOver = (!(GameSpecifications.decisionPeriodIds.length > 0)  && gameStatus.status === 'game-over');
-                
                 this.updateSceneScore();
                 this.showIconDecision();
+                this.updateGameOverState();
             }
         );
-
 
         this.playButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
@@ -163,12 +162,19 @@ export class MapScene extends Phaser.Scene {
                     // this.scene.launch(GameSceneIdsStrings.END_SCENE_ID, gameData);
                     this.scene.launch(GameSceneIdsStrings.DECISION_MAKING_SCENE_ID, gameData);
                 }
-                if (GameSpecifications.gameOver) {
+                // if (GameSpecifications.gameOver) {
+                //     this.scene.pause();
+                //     this.scene.launch(GameSceneIdsStrings.END_SCENE_ID);
+                // }
+
+                const playButtonText = this.playButton.getByName(
+                    buttonElements.BUTTON_TEXT
+                ) as Phaser.GameObjects.Text;
+                // playButtonText.setText('RESULTADOS');
+                if (playButtonText.text === 'RESULTADOS') {
                     this.scene.pause();
                     this.scene.launch(GameSceneIdsStrings.END_SCENE_ID);
                 }
-
-
             }
         );
 
@@ -185,25 +191,20 @@ export class MapScene extends Phaser.Scene {
 
 
     private updateSceneScore() {
-      if (this.totalScore !== undefined) {
-        this.totalScore.setText('PUNTAJE: ' + gameData.playerData.score);
-        if (GameSpecifications.gameOver) {
+        if (this.totalScore !== undefined) {
+            this.totalScore.setText('PUNTAJE: ' + gameData.playerData.score);
+        }
+    }
 
+    private updateGameOverState() {
+        if (GameSpecifications.gameOver) {
             const playButtonText = this.playButton.getByName(
                 buttonElements.BUTTON_TEXT
             ) as Phaser.GameObjects.Text;
             playButtonText.setText('RESULTADOS');
-            
-            setTimeout(
-                () => {
-                    this.scene.pause();
-                    this.scene.launch(GameSceneIdsStrings.END_SCENE_ID);
-                },
-                10
-            );
         }
-      }
     }
+    
 
     private showIconDecision() {
         if (GameSpecifications.currentDecisionsPeriod != null) {
