@@ -98,6 +98,11 @@ export const gameMapAssets: GameAssetsSpecificationsInterface[] = [
         key: 'fabrica-icon-background',
         path: '.../../assets/game-assets/boot-load-assets/icons-assets/fabrica-icon-background.png'
     },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'minimizar-button-background',
+        path: '.../../assets/game-assets/boot-load-assets/icons-assets/minimizar-button-background.png'
+    },
     // {
     //     type: GameElementsString.IMAGE_STRING,
     //     key: 'star-icon-obtained-background',
@@ -207,6 +212,11 @@ export const gameMapAssets: GameAssetsSpecificationsInterface[] = [
         type: GameElementsString.IMAGE_STRING,
         key: 'scene-title-background',
         path: '.../../assets/game-assets/boot-load-assets/cards-assets/scene-title-background.png'
+    },
+    {
+        type: GameElementsString.IMAGE_STRING,
+        key: 'location-box-background',
+        path: '.../../assets/game-assets/boot-load-assets/cards-assets/location-box-background.png'
     },
     {
         type: GameElementsString.IMAGE_STRING,

@@ -12,6 +12,7 @@ import { buttonElements, GameSceneElementsString } from "../../settings/game-con
 import { ColorsString, ColorsValue } from "../../settings/game-constants-strings/text-styles-string";
 import { gameData } from "../../settings/game-data/game-data";
 import { _gameObjectIconsMap } from "../../settings/game-decisions-data";
+import { TextCardComponent } from "../../components/text-card-component/text-card-component";
 
 export class MapScene extends Phaser.Scene {
 
@@ -23,14 +24,15 @@ export class MapScene extends Phaser.Scene {
     private viewIconsTableText: Phaser.GameObjects.Text;
     private iconsTable: Phaser.GameObjects.Image;
 
+    private viewDecicionText: Phaser.GameObjects.Text;
+    private decisionList: TextCardComponent;
+
     // private mapsIcons: Array<GameObjectIconsMap>;
-    
-    
     // private scoreButton: ButtonComponent;
     // private soundButton: ButtonComponent;
     // private infoButton: ButtonComponent;
     // private helpButton: ButtonComponent;
-    private sceneData: SceneDataInterface;
+    // private sceneData: SceneDataInterface;
 
     init() {
         gameStatus.status = 'mapScene';
@@ -92,11 +94,30 @@ export class MapScene extends Phaser.Scene {
             GameSceneElementsString.SCENE_ICONS_TABLE,
         ).gameObject as Phaser.GameObjects.Image;
         this.iconsTable.setAlpha(0.9);
+        this.iconsTable.setVisible(false);
+
+        this.viewIconsTableText = this.gameObjects.get(
+            GameSceneElementsString.SCENE_VIEW_ICONS_TABLE,
+        ).gameObject;
+
+        this.iconsTable = this.gameObjects.get(
+            GameSceneElementsString.SCENE_ICONS_TABLE,
+        ).gameObject as Phaser.GameObjects.Image;
+
+        this.viewDecicionText = this.gameObjects.get(
+            GameSceneElementsString.SCENE_VIEW_DECISION_LIST_TEXT,
+        ).gameObject as Phaser.GameObjects.Text;
+
+        this.decisionList = this.gameObjects.get(
+            GameSceneElementsString.SCENE_DECISION_LIST_TEXT,
+        ).gameObject;
+        this.decisionList.setVisible(false);
+        // this.decisionList.setAlpha(0.9);
         this.hideMapIcons();
-    }   
+        this.decisionList.updateData();
+    }
 
     private hideMapIcons() {
-        this.iconsTable.setVisible(false);
         for (let iconId in _gameObjectIconsMap) {
             this.gameObjects.get(
                 _gameObjectIconsMap[iconId].gameObjectName
@@ -135,6 +156,10 @@ export class MapScene extends Phaser.Scene {
                     this.viewIconsTableText.setColor(ColorsString.GREEN_HEXADECIMAL_STRING);
                     this.iconsTable.setVisible(false);
                 } else {
+                    this.viewDecicionText.setText('VER DECISIONES >');
+                    this.viewDecicionText.setColor(ColorsString.GREEN_HEXADECIMAL_STRING);
+                    this.decisionList.setVisible(false);
+
                     this.viewIconsTableText.setColor(ColorsString.RED_HEXADECIMAL_STRING);
                     this.viewIconsTableText.setText('< OCULTAR LEYENDAS');
                     this.iconsTable.setVisible(true);
@@ -142,10 +167,47 @@ export class MapScene extends Phaser.Scene {
             }
         );
 
+        this.viewDecicionText.setInteractive({ cursor: cursorURL.interactiveCursorURL}).on(
+            EventsTouchedGameObjectsStrings.POINTEROVER,
+            () => {
+                this.viewDecicionText.setColor(ColorsString.RED_HEXADECIMAL_STRING);  
+            }
+        );
+
+        this.viewDecicionText.setInteractive({ cursor: cursorURL.interactiveCursorURL}).on(
+            EventsTouchedGameObjectsStrings.POINTEROUT,
+            () => {
+                this.viewDecicionText.setColor(ColorsString.GREEN_HEXADECIMAL_STRING);
+                if (this.decisionList.visible) {
+                    this.viewDecicionText.setColor(ColorsString.RED_HEXADECIMAL_STRING);
+                }
+            }
+        );
+
+        this.viewDecicionText.setInteractive().on(
+            EventsTouchedGameObjectsStrings.POINTERDOWN,
+            () => {
+                if (this.decisionList.visible) {
+                    this.viewDecicionText.setText('VER DECISIONES >');
+                    this.viewDecicionText.setColor(ColorsString.GREEN_HEXADECIMAL_STRING);
+                    this.decisionList.setVisible(false);
+                } else {
+                    this.viewIconsTableText.setText('VER LEYENDAS >');
+                    this.viewIconsTableText.setColor(ColorsString.GREEN_HEXADECIMAL_STRING);
+                    this.iconsTable.setVisible(false);
+                    
+                    this.viewDecicionText.setColor(ColorsString.RED_HEXADECIMAL_STRING);
+                    this.viewDecicionText.setText('< OCULTAR DECISIONES');
+                    this.decisionList.setVisible(true);
+                }
+            }
+        );
+        
         this.events.on(
             'wake',
             () => {
                 GameSpecifications.gameOver = (!(GameSpecifications.decisionPeriodIds.length > 0)  && gameStatus.status === 'game-over');
+                this.decisionList.updateData();
                 this.updateSceneScore();
                 this.showIconDecision();
                 this.updateGameOverState();
@@ -154,27 +216,25 @@ export class MapScene extends Phaser.Scene {
 
         this.playButton.setInteractive().on(
             EventsTouchedGameObjectsStrings.POINTERDOWN, () => {
-                if (GameSpecifications.decisionPeriodIds.length > 0) {
-                    this.scene.pause();
-                    const gameData: SceneDataInterface = {
-                        returnSceneName: this.scene.key
+                this.resetSceneStatus()
+                setTimeout(() => {
+                    if (GameSpecifications.decisionPeriodIds.length > 0) {
+                        this.scene.pause();
+                        const gameData: SceneDataInterface = {
+                            returnSceneName: this.scene.key
+                        }
+                        // this.scene.launch(GameSceneIdsStrings.END_SCENE_ID, gameData);
+                        this.scene.launch(GameSceneIdsStrings.DECISION_MAKING_SCENE_ID, gameData);
                     }
-                    // this.scene.launch(GameSceneIdsStrings.END_SCENE_ID, gameData);
-                    this.scene.launch(GameSceneIdsStrings.DECISION_MAKING_SCENE_ID, gameData);
-                }
-                // if (GameSpecifications.gameOver) {
-                //     this.scene.pause();
-                //     this.scene.launch(GameSceneIdsStrings.END_SCENE_ID);
-                // }
-
-                const playButtonText = this.playButton.getByName(
-                    buttonElements.BUTTON_TEXT
-                ) as Phaser.GameObjects.Text;
-                // playButtonText.setText('RESULTADOS');
-                if (playButtonText.text === 'RESULTADOS') {
-                    this.scene.pause();
-                    this.scene.launch(GameSceneIdsStrings.END_SCENE_ID);
-                }
+                    const playButtonText = this.playButton.getByName(
+                        buttonElements.BUTTON_TEXT
+                    ) as Phaser.GameObjects.Text;
+                    // playButtonText.setText('RESULTADOS');
+                    if (playButtonText.text === 'RESULTADOS') {
+                        this.scene.pause();
+                        this.scene.launch(GameSceneIdsStrings.END_SCENE_ID);
+                    }
+                }, 2);
             }
         );
 
@@ -188,7 +248,16 @@ export class MapScene extends Phaser.Scene {
             }
         );
     }
-
+    
+    private resetSceneStatus(){
+        this.viewDecicionText.setText('VER DECISIONES >');
+        this.viewDecicionText.setColor(ColorsString.GREEN_HEXADECIMAL_STRING);
+        this.decisionList.setVisible(false);
+        
+        this.viewIconsTableText.setText('VER LEYENDAS >');
+        this.viewIconsTableText.setColor(ColorsString.GREEN_HEXADECIMAL_STRING);
+        this.iconsTable.setVisible(false);
+    }
 
     private updateSceneScore() {
         if (this.totalScore !== undefined) {

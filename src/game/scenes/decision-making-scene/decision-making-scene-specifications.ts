@@ -58,12 +58,12 @@ export const decisionMakingSceneElementsSpecifications: GameElementSpecification
     {
         type: 'button',
         element: 'bottom-title-button',
-        assetName: 'close-button-background',
+        assetName: 'minimizar-button-background',
         name: 'hide-button',
         content: 'MAPA',
         style: {
             fontFamily: GameFontStylesString.BASE_FONT,
-            color: ColorsString.RED_HEXADECIMAL_STRING,
+            color: ColorsString.YELLOW_HEXADECIMAL_STRING,
             align: AlingString.CENTER_STRING,
             fontSize: textFontSize.VeryVerySmall.fontSize,
             strokeThickness: textFontSize.VeryVerySmall.strokeThickness,

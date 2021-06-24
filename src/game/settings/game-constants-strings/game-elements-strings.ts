@@ -42,6 +42,10 @@ export const enum GameSceneElementsString {
     SCENE_LOGIN_INPUT = 'login-input',
     SCENE_TOTAL_SCORE = 'total-score',
     SCENE_PROGRESS_TEXT = 'progress-text',
+
+    SCENE_VIEW_DECISION_LIST_TEXT = 'view-decision-list',
+    SCENE_DECISION_LIST_TEXT = 'decision-list',
+
     SCENE_TITLE_TEXT = 'scene-title',
     SCENE_VIEW_ICONS_TABLE = 'view-icons-table',
     SCENE_ICONS_TABLE = 'icons-table'
@@ -79,6 +83,11 @@ export const enum TypeResultsElementsString {
 export const enum buttonElements {
     BUTTON_BACKGROUND = 'button-Background',
     BUTTON_TEXT = 'button-text',
+}
+
+export const enum containerTextElements {
+    CONTAINER_TEXT_BACKGROUND = 'text-Background',
+    CONTAINER_TEXT = 'text',
 }
 
 export const enum boxDecisionElements {
