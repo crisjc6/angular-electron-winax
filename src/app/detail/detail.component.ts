@@ -141,7 +141,7 @@ export class DetailComponent implements OnInit {
     return {
       series: [
         {
-          name: 'Area Conservación (ACUS)',
+          name: 'Área Conservación (ACUS)',
           data: _dataSet.values
         }
       ],
