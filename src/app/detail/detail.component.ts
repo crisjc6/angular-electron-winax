@@ -685,13 +685,8 @@ export class DetailComponent implements OnInit {
         ]
       },
       xaxis: {
-        type: "datetime",
-        categories: _dataSet.years.map(
-          (valor) => {
-            return valor.toString();
-          }
-        ),
-        tickAmount: 7
+        categories: _dataSet.years,
+        tickAmount: 5
       },
       tooltip: {
         x: {
