@@ -146,28 +146,28 @@ export class EndScene extends Phaser.Scene {
     private updateDataScene() {
         this.totalScoreText.setText('PUNTAJE TOTAL: ' + gameData.gameScores.totalScore + '/120');
         
-        this.acus_20_30_text.setText(gameData.gameScores.conservationAreaScores.periodScores[0].score);
+        this.acus_20_30_text.setText((gameData.gameScores.conservationAreaScores.periodScores[0].score).toFixed(2));
 
-        this.acus_30_40_text.setText(gameData.gameScores.conservationAreaScores.periodScores[1].score);
+        this.acus_30_40_text.setText((gameData.gameScores.conservationAreaScores.periodScores[1].score).toFixed(2));
 
-        this.acus_40_50_text.setText(gameData.gameScores.conservationAreaScores.periodScores[2].score);
+        this.acus_40_50_text.setText((gameData.gameScores.conservationAreaScores.periodScores[2].score).toFixed(2));
 
-        this.hydroelectric_20_30_text.setText(gameData.gameScores.hydroelectricTurbineScores.periodScores[0].score);
+        this.hydroelectric_20_30_text.setText((gameData.gameScores.hydroelectricTurbineScores.periodScores[0].score).toFixed(2));
 
-        this.hydroelectric_30_40_text.setText(gameData.gameScores.hydroelectricTurbineScores.periodScores[1].score);
+        this.hydroelectric_30_40_text.setText((gameData.gameScores.hydroelectricTurbineScores.periodScores[1].score).toFixed(2));
 
-        this.hydroelectric_40_50_text.setText(gameData.gameScores.hydroelectricTurbineScores.periodScores[2].score);
+        this.hydroelectric_40_50_text.setText((gameData.gameScores.hydroelectricTurbineScores.periodScores[2].score).toFixed(2));
 
-        this.coverage_20_30_text.setText(gameData.gameScores.demandSiteScores.periodScores[0].score);
+        this.coverage_20_30_text.setText((gameData.gameScores.demandSiteScores.periodScores[0].score).toFixed(2));
 
-        this.coverage_30_40_text.setText(gameData.gameScores.demandSiteScores.periodScores[1].score);
+        this.coverage_30_40_text.setText((gameData.gameScores.demandSiteScores.periodScores[1].score).toFixed(2));
 
-        this.coverage_40_50_text.setText(gameData.gameScores.demandSiteScores.periodScores[2].score);
+        this.coverage_40_50_text.setText((gameData.gameScores.demandSiteScores.periodScores[2].score).toFixed(2));
 
-        this.riverHealth_20_30_text.setText(gameData.gameScores.helpcareRiverScores.periodScores[0].score);
+        this.riverHealth_20_30_text.setText((gameData.gameScores.helpcareRiverScores.periodScores[0].score).toFixed(2));
 
-        this.riverHealth_30_40_text.setText(gameData.gameScores.helpcareRiverScores.periodScores[1].score);
+        this.riverHealth_30_40_text.setText((gameData.gameScores.helpcareRiverScores.periodScores[1].score).toFixed(2));
 
-        this.riverHealth_40_50_text.setText(gameData.gameScores.helpcareRiverScores.periodScores[2].score);
+        this.riverHealth_40_50_text.setText((gameData.gameScores.helpcareRiverScores.periodScores[2].score).toFixed(2));
     }
 }

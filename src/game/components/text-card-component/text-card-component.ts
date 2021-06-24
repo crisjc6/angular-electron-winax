@@ -31,9 +31,8 @@ export class TextCardComponent extends Phaser.GameObjects.Container {
         buttonTextSpecifications.scale.objectWidth = this.textCardSpecifications.scale.objectWidth * 0.95;
         this.text = generateGameObjectText(this.scene, buttonTextSpecifications);
         this.text.setName(containerTextElements.CONTAINER_TEXT);
-        // this.text.setPosition(this.textBackground.displayWidth/2, 0);
         this.text.setPosition(this.textBackground.displayWidth/2, (-(this.textBackground.displayHeight / 2)) + 24);
-        this.text. setOrigin(0.5);
+        this.text. setOrigin(0.5, 0);
 
         this.add([this.textBackground, this.text]);
         this.setSize(this.textCardSpecifications.scale.objectWidth, this.textCardSpecifications.scale.objectHeight );

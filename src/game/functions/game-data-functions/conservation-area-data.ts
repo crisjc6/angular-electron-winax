@@ -3,7 +3,7 @@ import { DecisionStatus } from '../../settings/game-decisions-data';
 import { GameSpecifications } from '../../settings/game-system-specifications';
 
 export function getConservationAreData() {
-    let periodArea = 0;
+    let periodArea = 0.00;
     DecisionStatus.conservatio_areas = 10809;
 
     if(GameSpecifications.currentDecisionsPeriod != null) {
